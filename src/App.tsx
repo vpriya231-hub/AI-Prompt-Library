@@ -12,16 +12,15 @@ import {
   Copy, 
   CreditCard,
   ArrowLeft,
-  Eye 
+  Download 
 } from 'lucide-react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 import { auth, db } from './lib/firebase';
-import { CollectionTier, AIModel } from './types';
+import { CollectionTier, AIModel, ProCollectionItem } from './types';
 import { PromptCollectionSheet } from './components/PromptCollectionSheet';
 import { ProScreen } from './components/ProScreen';
 import { SettingsScreen } from './components/SettingsScreen';
-import { ProPdfViewerModal, ProCollectionItem } from './components/ProPdfViewerModal';
 import { PWAInstallButton } from './components/PWAInstallButton';
 
 // Custom precision arrow icon matching the exact Android screenshot glyph (>|)
@@ -356,7 +355,6 @@ export default function App() {
   const [isProExpanded, setIsProExpanded] = useState(true);
   const [activeModel, setActiveModel] = useState<AIModel | null>(null);
   const [selectedCollection, setSelectedCollection] = useState<CollectionTier | null>(null);
-  const [selectedPdfCollection, setSelectedPdfCollection] = useState<ProCollectionItem | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [showProScreen, setShowProScreen] = useState(false);
   const [copiedPrompt, setCopiedPrompt] = useState<string | null>(null);
@@ -544,7 +542,6 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-2 mt-1">
-              <PWAInstallButton variant="header" />
               {/* Settings Gear Icon */}
               <button
                 id="settings-gear-btn"
@@ -832,8 +829,18 @@ export default function App() {
                   <button
                     key={col.id}
                     id={`pro-collection-pill-${col.id}`}
-                    onClick={() => setSelectedPdfCollection(col)}
+                    onClick={() => {
+                      const matchedPdfFileName = col.pdf;
+                      const link = document.createElement('a');
+                      link.href = `/assets/${matchedPdfFileName}`;
+                      link.setAttribute('download', matchedPdfFileName);
+                      link.setAttribute('target', '_self');
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
                     className="group bg-[#F5EFFB] hover:bg-[#EFE5F8] active:bg-[#E8DCF4] border border-[#E8DEF2] hover:border-[#D5C3E5] rounded-2xl sm:rounded-full px-4 sm:px-5 py-3.5 flex items-center justify-between text-left transition-all duration-150 shadow-2xs hover:shadow-xs cursor-pointer"
+                    title={`Download ${col.name} PDF`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       <span className="text-xl sm:text-2xl flex-shrink-0 w-7 flex items-center justify-center select-none">
@@ -853,7 +860,7 @@ export default function App() {
                       <span className="text-[10.5px] font-bold bg-white/90 px-2 py-0.5 rounded-full border border-[#E0D3EC]">
                         PDF
                       </span>
-                      <Eye className="w-4 h-4" />
+                      <Download className="w-4 h-4" />
                     </div>
                   </button>
                 ))}
@@ -878,13 +885,6 @@ export default function App() {
         />
       )}
 
-      {/* PRO Collection PDF Viewer Modal */}
-      {selectedPdfCollection && (
-        <ProPdfViewerModal
-          collection={selectedPdfCollection}
-          onClose={() => setSelectedPdfCollection(null)}
-        />
-      )}
 
       {/* Clean Temporary Toast Notification Badge for Coming Soon Models */}
       {toastMessage && (

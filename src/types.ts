@@ -28,3 +28,12 @@ export interface AIModel {
   description: string;
   categories?: { name: string; samplePrompt: string; tags: string[] }[];
 }
+
+export interface ProCollectionItem {
+  id: string;
+  name: string;
+  emoji: string;
+  pdf: string;
+  description: string;
+}
+
