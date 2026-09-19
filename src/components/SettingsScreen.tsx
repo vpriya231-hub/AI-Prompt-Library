@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ChevronRight, RotateCcw } from 'lucide-react';
+import { ArrowLeft, ChevronRight, RotateCcw, Info } from 'lucide-react';
 import { deleteUser } from 'firebase/auth';
 import { useAuth } from '../context/AuthContext';
 import { GoogleIcon } from './GoogleIcon';
@@ -420,6 +420,27 @@ export function SettingsScreen({
               </div>
               <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
             </a>
+
+            {/* 4. Disclaimer Card */}
+            <div 
+              id="settings-disclaimer-card"
+              className="bg-[#EFE8F6]/80 rounded-[22px] p-4 sm:p-5 border border-[#E6DBEE] space-y-2.5 shadow-2xs mt-2"
+            >
+              <div className="flex items-center gap-2 text-[#5B4296]">
+                <Info className="w-4 h-4 flex-shrink-0" />
+                <h4 className="text-[14px] font-bold text-[#1E1B22] leading-tight">
+                  Disclaimer
+                </h4>
+              </div>
+              <p className="text-[12.5px] text-[#4B5563] leading-relaxed">
+                AI Prompt Library is an independent educational and productivity tool. We are not affiliated with, endorsed by, or associated with OpenAI (ChatGPT), Google (Gemini), Anthropic (Claude), or xAI (Grok). All trademarks, logos, and brand names belong to their respective owners.
+              </p>
+              <div className="pt-1.5 border-t border-[#E2D5EC]/70">
+                <p className="text-[11.5px] text-[#6B7280] font-medium">
+                  © 2026 AI Prompt Library • All rights reserved.
+                </p>
+              </div>
+            </div>
 
           </div>
 
