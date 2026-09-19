@@ -414,6 +414,16 @@ export default function App() {
     setTimeout(() => setCopiedPrompt(null), 2000);
   };
 
+  const handleDownload = (fileName: string) => {
+    const link = document.createElement('a');
+    link.href = `/assets/${fileName}`;
+    link.download = fileName;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // If PRO screen is open, display full-screen PRO view matching screenshots
   if (showProScreen) {
     return (
@@ -778,25 +788,36 @@ export default function App() {
                           className="w-full bg-[#5B4296] text-white font-bold text-[14px] sm:text-[15px] py-4 px-6 rounded-full tracking-wide shadow-xs flex items-center justify-center gap-2 text-center select-none cursor-default"
                         >
                           <Check className="w-5 h-5 stroke-[3] text-emerald-300" />
-                          <span>✓ PRO Lifetime Activated</span>
+                          <span>✓ PRO Lifetime Active</span>
                         </div>
                         <p className="text-[12.5px] text-center text-[#6B7280]">
                           Your account has full lifetime access.
                         </p>
                       </div>
                     ) : (
-                      /* For Free / Logged-out Users: Show the upgrade button and Android app notice */
+                      /* For Free / Logged-out Users: Direct Play Store purchase link */
                       <div className="space-y-3">
                         <button
                           id="pro-cta-button"
-                          onClick={() => setShowProScreen(true)}
+                          onClick={() => {
+                            window.open('https://play.google.com/store/apps/details?id=com.aipromptlibrary.app', '_blank', 'noopener,noreferrer');
+                          }}
                           className="w-full bg-[#5B4296] hover:bg-[#4E3783] active:bg-[#432F73] text-white font-bold text-[14px] sm:text-[15px] py-4 px-6 rounded-full tracking-wide shadow-xs transition-all transform active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 text-center"
                         >
                           GET PRO • ₹599 LIFETIME
                         </button>
-                        <p className="text-[12px] text-center text-[#6B7280]">
-                          📲 Upgrade via Google Play in the Android app to unlock lifetime PRO across devices
+                        <p className="text-[12px] text-center text-[#6B7280] leading-relaxed">
+                          PRO purchases are managed securely via Google Play. Once upgraded in the Android app, sign in here with the same Google account to instantly unlock PRO on Web &amp; Windows.
                         </p>
+                        <div className="text-center pt-0.5">
+                          <button
+                            id="view-pro-screen-btn"
+                            onClick={() => setShowProScreen(true)}
+                            className="text-[12.5px] font-semibold text-[#654A9E] hover:text-[#4B3676] hover:underline cursor-pointer"
+                          >
+                            View Full PRO Features &amp; Details →
+                          </button>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -829,16 +850,7 @@ export default function App() {
                   <button
                     key={col.id}
                     id={`pro-collection-pill-${col.id}`}
-                    onClick={() => {
-                      const matchedPdfFileName = col.pdf;
-                      const link = document.createElement('a');
-                      link.href = `/assets/${matchedPdfFileName}`;
-                      link.setAttribute('download', matchedPdfFileName);
-                      link.setAttribute('target', '_self');
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }}
+                    onClick={() => handleDownload(col.pdf)}
                     className="group bg-[#F5EFFB] hover:bg-[#EFE5F8] active:bg-[#E8DCF4] border border-[#E8DEF2] hover:border-[#D5C3E5] rounded-2xl sm:rounded-full px-4 sm:px-5 py-3.5 flex items-center justify-between text-left transition-all duration-150 shadow-2xs hover:shadow-xs cursor-pointer"
                     title={`Download ${col.name} PDF`}
                   >

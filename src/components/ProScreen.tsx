@@ -34,13 +34,18 @@ const UNLOCK_ITEMS = [
   { emoji: '📝', label: 'Meeting Summaries & Action Items' },
 ];
 
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.aipromptlibrary.app';
+
 export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange }: ProScreenProps) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [signingIn, setSigningIn] = useState(false);
   const [isProUser, setIsProUser] = useState(hasUnlockedPro);
   const [authError, setAuthError] = useState<string | null>(null);
-  const [showAndroidModal, setShowAndroidModal] = useState(false);
+
+  const handleOpenPlayStore = () => {
+    window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
+  };
 
   // Monitor auth state changes and sync PRO status from Firestore (strictly read-only)
   useEffect(() => {
@@ -254,69 +259,82 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange }: ProScre
         <div className="max-w-2xl mx-auto w-full space-y-2.5">
           
           {isProUser ? (
-            /* User already has PRO Lifetime */
+            /* Active PRO Users: non-clickable verified status badge */
             <div className="space-y-2">
-              <div className="w-full bg-emerald-600 text-white font-bold text-[15px] py-4 rounded-full flex items-center justify-center gap-2 shadow-sm">
-                <Check className="w-5 h-5 stroke-[3]" />
-                ✓ PRO Lifetime Active
+              <div 
+                id="pro-screen-active-badge"
+                className="w-full bg-[#5B4296] text-white font-bold text-[15px] py-4 rounded-full flex items-center justify-center gap-2 shadow-sm select-none cursor-default"
+              >
+                <Check className="w-5 h-5 stroke-[3] text-emerald-300" />
+                <span>✓ PRO Lifetime Active</span>
               </div>
               <button
+                id="return-to-library-btn"
                 onClick={onBack}
                 className="w-full bg-[#EAE3F2] hover:bg-[#E0D7E8] text-[#1E1B22] font-semibold text-[14px] py-3 rounded-full transition-colors cursor-pointer"
               >
                 Return to Library
               </button>
             </div>
-          ) : !user ? (
-            /* NOT LOGGED IN: Matches Screenshot 2 exactly with Android notice */
-            <div className="space-y-2.5">
-              <div className="bg-[#EFE8F6] p-2.5 rounded-xl border border-[#DFD3EC] text-center text-xs text-[#5B4296] font-medium">
-                📲 Official Play Store Purchase: Upgrade via our Android app on Google Play to unlock lifetime PRO across devices.
-              </div>
-
-              {/* Deep purple "Continue with Google" button */}
-              <button
-                id="pro-google-signin-btn"
-                onClick={handleGoogleSignIn}
-                disabled={signingIn}
-                className="w-full bg-[#654A9E] hover:bg-[#573F89] active:bg-[#4B3676] text-white font-bold text-[15px] py-4 px-6 rounded-full shadow-sm transition-all transform active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75"
-              >
-                {signingIn ? (
-                  <span className="inline-flex items-center gap-2">
-                    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    Signing in...
-                  </span>
-                ) : (
-                  'Continue with Google'
-                )}
-              </button>
-
-              {/* Disabled button below: "Sign in to Continue" */}
-              <button
-                disabled
-                className="w-full bg-[#EFE8F6] text-[#A298B3] font-semibold text-[15px] py-4 px-6 rounded-full cursor-not-allowed text-center select-none"
-              >
-                Sign in to Continue
-              </button>
-            </div>
           ) : (
-            /* LOGGED IN BUT NOT PRO: Web Purchase Handling with Android Notice */
-            <div className="space-y-2.5">
-              <div className="bg-[#EFE8F6] p-2.5 rounded-xl border border-[#DFD3EC] text-center text-xs text-[#5B4296] font-medium">
-                📲 Upgrade via the Android app on Google Play. Status automatically syncs with {user.email}.
-              </div>
-
+            /* Free / Non-PRO Users: Redirect to Play Store */
+            <div className="space-y-3">
               <button
-                id="pro-unlock-android-btn"
-                onClick={() => setShowAndroidModal(true)}
+                id="pro-screen-purchase-btn"
+                onClick={handleOpenPlayStore}
                 className="w-full bg-[#654A9E] hover:bg-[#573F89] active:bg-[#4B3676] text-white font-bold text-[15px] py-4 px-6 rounded-full shadow-sm transition-all transform active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
               >
-                Unlock via Android App
+                Unlock PRO on Google Play • ₹599
               </button>
 
-              <p className="text-[12px] text-center text-[#6B7280]">
-                Signed in as <span className="font-semibold text-[#1E1B22]">{user.email}</span>
+              <p className="text-[12px] text-center text-[#6B7280] leading-relaxed">
+                PRO purchases are managed securely via Google Play. Once upgraded in the Android app, sign in here with the same Google account to instantly unlock PRO on Web &amp; Windows.
               </p>
+
+              {!user ? (
+                <div className="pt-1 border-t border-[#E8DEF2]">
+                  <button
+                    id="pro-google-signin-btn"
+                    onClick={handleGoogleSignIn}
+                    disabled={signingIn}
+                    className="w-full bg-white hover:bg-[#F3EDF8] text-[#654A9E] border border-[#D5C6E3] font-semibold text-[14px] py-3 px-5 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75 shadow-2xs"
+                  >
+                    {signingIn ? (
+                      <span className="inline-flex items-center gap-2">
+                        <span className="w-4 h-4 border-2 border-[#654A9E] border-t-transparent rounded-full animate-spin" />
+                        Signing in...
+                      </span>
+                    ) : (
+                      'Already upgraded? Sign in with Google to sync'
+                    )}
+                  </button>
+                </div>
+              ) : (
+                <div className="flex items-center justify-between text-[12px] text-[#6B7280] pt-1">
+                  <span>Signed in as <strong className="text-[#1E1B22]">{user.email}</strong></span>
+                  <button
+                    id="pro-refresh-status-btn"
+                    onClick={async () => {
+                      try {
+                        const userDoc = await getDoc(doc(db, "users", user.uid));
+                        const data = userDoc.exists() ? userDoc.data() : null;
+                        const proActive = Boolean(data?.isPro === true || data?.pro === true);
+                        if (proActive) {
+                          setIsProUser(true);
+                          if (onProStatusChange) onProStatusChange(true);
+                        } else {
+                          setAuthError('PRO status not yet found. If you recently purchased on Android, please allow a few moments for Google Play to sync.');
+                        }
+                      } catch (err) {
+                        console.warn(err);
+                      }
+                    }}
+                    className="text-[#654A9E] font-semibold hover:underline cursor-pointer"
+                  >
+                    Sync Status
+                  </button>
+                </div>
+              )}
             </div>
           )}
 
@@ -326,50 +344,6 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange }: ProScre
           </p>
         </div>
       </footer>
-
-      {/* Android Play Store Upgrade Info Modal */}
-      {showAndroidModal && (
-        <div 
-          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4"
-          onClick={() => setShowAndroidModal(false)}
-        >
-          <div 
-            className="w-full max-w-sm bg-[#F7F4FA] rounded-3xl border border-[#E5DCED] shadow-2xl p-6 space-y-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#EFE8F6] flex items-center justify-center text-xl flex-shrink-0">
-                📱
-              </div>
-              <div>
-                <h3 className="text-[17px] font-bold text-[#1E1B22] leading-tight">
-                  Google Play In-App Purchase
-                </h3>
-                <p className="text-[12px] text-[#6B7280]">
-                  Official Play Store Billing
-                </p>
-              </div>
-            </div>
-
-            <p className="text-[14px] text-[#4B5563] leading-relaxed">
-              To purchase PRO Lifetime Access, please complete the upgrade via our Android app on Google Play Store.
-            </p>
-
-            <div className="bg-[#EFE8F6] p-3 rounded-xl text-xs text-[#5B4296] font-medium">
-              💡 <strong>Instant Sync:</strong> Once purchased on Android with your Google account (<strong>{user?.email}</strong>), your PRO status will automatically sync here!
-            </div>
-
-            <div className="space-y-2 pt-2">
-              <button
-                onClick={() => setShowAndroidModal(false)}
-                className="w-full bg-[#654A9E] hover:bg-[#573F89] text-white font-bold text-sm py-3 rounded-full cursor-pointer transition-all"
-              >
-                Got It
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );

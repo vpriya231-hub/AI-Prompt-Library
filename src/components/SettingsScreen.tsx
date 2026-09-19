@@ -385,11 +385,13 @@ export function SettingsScreen({
               <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
             </div>
 
-            {/* 5. Rate App */}
-            <div 
+            {/* 6. Rate App */}
+            <a 
               id="menu-rate-app"
-              onClick={() => showToast('Coming Soon')}
-              className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs"
+              href="https://play.google.com/store/apps/details?id=com.aipromptlibrary.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs block text-inherit"
             >
               <div className="flex items-center gap-3.5">
                 <span className="text-[24px] select-none flex-shrink-0 leading-none">
@@ -400,12 +402,12 @@ export function SettingsScreen({
                     Rate App
                   </h4>
                   <p className="text-[13px] text-[#6B7280] mt-0.5">
-                    Coming Soon
+                    Review on Google Play Store
                   </p>
                 </div>
               </div>
               <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
-            </div>
+            </a>
 
           </div>
 
