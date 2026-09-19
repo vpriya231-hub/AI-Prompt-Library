@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ChevronRight, RotateCcw } from 'lucide-react';
 import { PWAInstallButton } from './PWAInstallButton';
 import { 
   signInWithPopup, 
@@ -27,9 +27,58 @@ export function SettingsScreen({
   const [user, setUser] = useState<User | null>(null);
   const [isProUser, setIsProUser] = useState(hasUnlockedPro);
   const [signingIn, setSigningIn] = useState(false);
+  const [restoring, setRestoring] = useState(false);
+  const [restoreNotice, setRestoreNotice] = useState<string | null>(null);
+  const [localToast, setLocalToast] = useState<string | null>(null);
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deletingAccount, setDeletingAccount] = useState(false);
+
+  const triggerToast = (message: string) => {
+    setLocalToast(message);
+    showToast(message);
+    setTimeout(() => setLocalToast(null), 3500);
+  };
+
+  const handleRestorePurchases = async () => {
+    setRestoring(true);
+    try {
+      let currentUser = user;
+      if (!currentUser) {
+        triggerToast('Please sign in with your Google account to restore purchases...');
+        const result = await signInWithPopup(auth, googleProvider);
+        currentUser = result.user;
+        setUser(currentUser);
+      }
+
+      // Show brief loading spinner / toast
+      triggerToast('Checking active purchase status...');
+
+      // Re-query Firestore users/{uid} to fetch latest isPro field
+      const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
+      const data = userDoc.exists() ? userDoc.data() : null;
+      const proActive = Boolean(data?.isPro === true || data?.pro === true);
+
+      if (proActive) {
+        setIsProUser(true);
+        if (onProStatusChange) onProStatusChange(true);
+        triggerToast('✓ PRO restored successfully! Lifetime access active.');
+      } else {
+        const email = currentUser.email || 'your account';
+        const msg = `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account used on Google Play Store.`;
+        setRestoreNotice(msg);
+        triggerToast(`No active PRO license found for ${email}.`);
+      }
+    } catch (err: unknown) {
+      console.error('Restore purchase error:', err);
+      const error = err as { code?: string; message?: string };
+      if (error?.code !== 'auth/popup-closed-by-user') {
+        triggerToast(error?.message || 'Failed to restore purchases. Please try again.');
+      }
+    } finally {
+      setRestoring(false);
+    }
+  };
 
   // Listen to Auth state and fetch Pro status from Firestore (strictly read-only)
   useEffect(() => {
@@ -224,16 +273,28 @@ export function SettingsScreen({
                   </div>
                 </div>
 
-                {/* Signed In Action Buttons: Sign Out and Delete Account */}
+                {/* Signed In Action Buttons: Sign Out, Restore, and Delete Account */}
                 <div className="pt-3 border-t border-[#E3D6ED] space-y-2">
-                  <div className="flex items-center justify-between gap-3">
-                    <button
-                      id="settings-signout-btn"
-                      onClick={handleSignOut}
-                      className="text-xs font-semibold text-[#4B5563] hover:text-[#1E1B22] bg-white/70 hover:bg-white px-3.5 py-1.5 rounded-xl border border-[#D8C7E7] transition-colors cursor-pointer"
-                    >
-                      Sign Out
-                    </button>
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-2">
+                      <button
+                        id="settings-signout-btn"
+                        onClick={handleSignOut}
+                        className="text-xs font-semibold text-[#4B5563] hover:text-[#1E1B22] bg-white/70 hover:bg-white px-3.5 py-1.5 rounded-xl border border-[#D8C7E7] transition-colors cursor-pointer"
+                      >
+                        Sign Out
+                      </button>
+                      <button
+                        id="settings-account-restore-btn"
+                        onClick={handleRestorePurchases}
+                        disabled={restoring}
+                        className="text-xs font-semibold text-[#654A9E] hover:text-[#533B84] bg-white/70 hover:bg-white px-3 py-1.5 rounded-xl border border-[#D8C7E7] transition-colors cursor-pointer flex items-center gap-1.5 disabled:opacity-60"
+                        title="Sync active PRO status from your Google account"
+                      >
+                        <RotateCcw className={`w-3.5 h-3.5 ${restoring ? 'animate-spin' : ''}`} />
+                        <span>{restoring ? 'Checking...' : 'Restore'}</span>
+                      </button>
+                    </div>
 
                     {isProUser ? (
                       <button
@@ -263,6 +324,33 @@ export function SettingsScreen({
                 </div>
               </div>
             )}
+          </div>
+
+          {/* Restore Purchases Option right under Account Section */}
+          <div 
+            id="menu-restore-purchases"
+            onClick={handleRestorePurchases}
+            className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs group"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center text-[#654A9E] flex-shrink-0 group-hover:bg-white group-hover:scale-105 transition-all shadow-2xs">
+                <RotateCcw className={`w-5 h-5 stroke-[2.2] ${restoring ? 'animate-spin' : ''}`} />
+              </div>
+              <div>
+                <h4 className="text-[15px] font-bold text-[#1E1B22] leading-tight flex items-center gap-2">
+                  <span>Restore Purchases</span>
+                  {isProUser && (
+                    <span className="text-[10px] font-bold bg-[#654A9E] text-white px-2 py-0.5 rounded-full shadow-2xs">
+                      ACTIVE
+                    </span>
+                  )}
+                </h4>
+                <p className="text-[13px] text-[#6B7280] mt-0.5">
+                  {restoring ? 'Checking active purchase status...' : 'Sync active PRO status from your Google account'}
+                </p>
+              </div>
+            </div>
+            <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
           </div>
 
           {/* Menu Items matching Screenshot 1 */}
@@ -492,6 +580,77 @@ export function SettingsScreen({
               </button>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Restore Notice Modal */}
+      {restoreNotice && (
+        <div 
+          id="restore-settings-notice-backdrop"
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4"
+          onClick={() => setRestoreNotice(null)}
+        >
+          <div 
+            id="restore-settings-notice-dialog"
+            className="w-full max-w-sm bg-[#F7F4FA] rounded-[24px] border border-[#E5DCED] shadow-2xl p-6 space-y-4 animate-in fade-in zoom-in-95 duration-150"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#EFE8F6] flex items-center justify-center text-xl flex-shrink-0">
+                🔍
+              </div>
+              <div>
+                <h3 className="text-[17px] font-bold text-[#1E1B22] leading-tight">
+                  No Active PRO License Found
+                </h3>
+                <p className="text-[12px] text-[#6B7280]">
+                  Google Play License Check
+                </p>
+              </div>
+            </div>
+
+            <p className="text-[13.5px] text-[#4B5563] leading-relaxed">
+              {restoreNotice}
+            </p>
+
+            <div className="bg-[#EFE8F6] p-3.5 rounded-2xl text-xs text-[#5B4296] font-medium leading-relaxed border border-[#E3D4EE]">
+              💡 <strong>Tip:</strong> If you recently upgraded via Google Play in the Android app, ensure you are signed in with the same Google account.
+            </div>
+
+            <div className="space-y-2 pt-2">
+              <button
+                onClick={async () => {
+                  setRestoreNotice(null);
+                  try {
+                    await signOut(auth);
+                    setUser(null);
+                    handleRestorePurchases();
+                  } catch (e) {
+                    console.error(e);
+                  }
+                }}
+                className="w-full bg-[#654A9E] hover:bg-[#573F89] text-white font-bold text-[13.5px] py-3 rounded-full cursor-pointer transition-all shadow-2xs"
+              >
+                Sign in with Another Account
+              </button>
+              <button
+                onClick={() => setRestoreNotice(null)}
+                className="w-full bg-white hover:bg-gray-50 text-[#4B5563] border border-[#D5C6E3] font-semibold text-[13px] py-2.5 rounded-full cursor-pointer transition-all"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Local Screen Toast */}
+      {localToast && (
+        <div 
+          id="settings-screen-toast"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#2D2438] text-white text-[13px] font-medium py-3 px-5 rounded-full shadow-xl border border-[#483B59] flex items-center gap-2 animate-in fade-in slide-in-from-bottom-3 duration-200 pointer-events-none max-w-[90vw] text-center"
+        >
+          <span>{localToast}</span>
         </div>
       )}
 

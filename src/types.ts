@@ -33,7 +33,8 @@ export interface ProCollectionItem {
   id: string;
   name: string;
   emoji: string;
-  pdf: string;
+  url: string;
+  pdf?: string;
   description: string;
 }
 

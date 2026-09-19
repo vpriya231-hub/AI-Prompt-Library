@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Check, AlertCircle, LogOut } from 'lucide-react';
+import { ArrowLeft, Check, AlertCircle, LogOut, RotateCcw } from 'lucide-react';
 import { 
   signInWithPopup, 
   onAuthStateChanged, 
@@ -13,6 +13,7 @@ interface ProScreenProps {
   onBack: () => void;
   hasUnlockedPro: boolean;
   onProStatusChange?: (isPro: boolean) => void;
+  showToast?: (message: string) => void;
 }
 
 const UNLOCK_ITEMS = [
@@ -36,15 +37,66 @@ const UNLOCK_ITEMS = [
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.aipromptlibrary.app';
 
-export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange }: ProScreenProps) {
+export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast }: ProScreenProps) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [signingIn, setSigningIn] = useState(false);
+  const [restoring, setRestoring] = useState(false);
   const [isProUser, setIsProUser] = useState(hasUnlockedPro);
   const [authError, setAuthError] = useState<string | null>(null);
+  const [localToast, setLocalToast] = useState<string | null>(null);
+  const [noticeModal, setNoticeModal] = useState<{ title: string; message: string } | null>(null);
+
+  const triggerToast = (msg: string) => {
+    setLocalToast(msg);
+    if (showToast) showToast(msg);
+    setTimeout(() => setLocalToast(null), 3500);
+  };
 
   const handleOpenPlayStore = () => {
     window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleRestorePurchase = async () => {
+    setRestoring(true);
+    try {
+      let currentUser = user;
+      if (!currentUser) {
+        // If the user is NOT signed in: Trigger Google Sign-in popup first
+        const result = await signInWithPopup(auth, googleProvider);
+        currentUser = result.user;
+        setUser(currentUser);
+      }
+
+      // Show a brief loading spinner / toast
+      triggerToast('Checking active purchase status...');
+
+      // Re-query Firestore users/{uid} to fetch latest isPro field
+      const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
+      const data = userDoc.exists() ? userDoc.data() : null;
+      const isPro = Boolean(data?.isPro === true || data?.pro === true);
+
+      if (isPro) {
+        setIsProUser(true);
+        if (onProStatusChange) onProStatusChange(true);
+        triggerToast('✓ PRO restored successfully! Lifetime access active.');
+      } else {
+        const email = currentUser.email || 'your account';
+        setNoticeModal({
+          title: 'No Active PRO License Found',
+          message: `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account used on Google Play Store.`
+        });
+        triggerToast(`No active PRO license found for ${email}.`);
+      }
+    } catch (err: unknown) {
+      console.error('Restore purchase failed:', err);
+      const error = err as { code?: string; message?: string };
+      if (error?.code !== 'auth/popup-closed-by-user') {
+        triggerToast(error?.message || 'Failed to restore purchase.');
+      }
+    } finally {
+      setRestoring(false);
+    }
   };
 
   // Monitor auth state changes and sync PRO status from Firestore (strictly read-only)
@@ -291,50 +343,45 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange }: ProScre
                 PRO purchases are managed securely via Google Play. Once upgraded in the Android app, sign in here with the same Google account to instantly unlock PRO on Web &amp; Windows.
               </p>
 
-              {!user ? (
-                <div className="pt-1 border-t border-[#E8DEF2]">
-                  <button
-                    id="pro-google-signin-btn"
-                    onClick={handleGoogleSignIn}
-                    disabled={signingIn}
-                    className="w-full bg-white hover:bg-[#F3EDF8] text-[#654A9E] border border-[#D5C6E3] font-semibold text-[14px] py-3 px-5 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75 shadow-2xs"
-                  >
-                    {signingIn ? (
-                      <span className="inline-flex items-center gap-2">
-                        <span className="w-4 h-4 border-2 border-[#654A9E] border-t-transparent rounded-full animate-spin" />
-                        Signing in...
-                      </span>
-                    ) : (
-                      'Already upgraded? Sign in with Google to sync'
-                    )}
-                  </button>
-                </div>
-              ) : (
-                <div className="flex items-center justify-between text-[12px] text-[#6B7280] pt-1">
-                  <span>Signed in as <strong className="text-[#1E1B22]">{user.email}</strong></span>
-                  <button
-                    id="pro-refresh-status-btn"
-                    onClick={async () => {
-                      try {
-                        const userDoc = await getDoc(doc(db, "users", user.uid));
-                        const data = userDoc.exists() ? userDoc.data() : null;
-                        const proActive = Boolean(data?.isPro === true || data?.pro === true);
-                        if (proActive) {
-                          setIsProUser(true);
-                          if (onProStatusChange) onProStatusChange(true);
-                        } else {
-                          setAuthError('PRO status not yet found. If you recently purchased on Android, please allow a few moments for Google Play to sync.');
-                        }
-                      } catch (err) {
-                        console.warn(err);
-                      }
-                    }}
-                    className="text-[#654A9E] font-semibold hover:underline cursor-pointer"
-                  >
-                    Sync Status
-                  </button>
-                </div>
-              )}
+              {/* Restore Purchase secondary action */}
+              <div className="pt-2 border-t border-[#E8DEF2] space-y-2 text-center">
+                <button
+                  id="pro-restore-purchase-btn"
+                  onClick={handleRestorePurchase}
+                  disabled={restoring}
+                  className="w-full bg-[#EFE8F6] hover:bg-[#E7DDF0] active:bg-[#DFD3EA] text-[#5B4296] font-bold text-[14.5px] py-3.5 px-5 rounded-full border border-[#DFD1EC] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 shadow-2xs"
+                >
+                  {restoring ? (
+                    <>
+                      <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                      <span>Checking active purchase status...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>🔄</span>
+                      <span>Restore Purchase</span>
+                    </>
+                  )}
+                </button>
+                <p className="text-[12px] text-[#6B7280] leading-snug px-2">
+                  Already bought PRO on Google Play? Sign in with your purchasing Google account to restore.
+                </p>
+
+                {user && (
+                  <div className="flex items-center justify-between text-[11.5px] text-[#6B7280] px-1 pt-1">
+                    <span className="truncate max-w-[200px] sm:max-w-xs">
+                      Signed in as <strong className="text-[#1E1B22]">{user.email}</strong>
+                    </span>
+                    <button
+                      id="pro-sign-out-btn"
+                      onClick={handleSignOut}
+                      className="text-[#843A4B] hover:underline cursor-pointer flex-shrink-0 font-medium"
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           )}
 
@@ -344,6 +391,77 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange }: ProScre
           </p>
         </div>
       </footer>
+
+      {/* Restore Notice Modal */}
+      {noticeModal && (
+        <div 
+          id="restore-notice-backdrop"
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4"
+          onClick={() => setNoticeModal(null)}
+        >
+          <div 
+            id="restore-notice-dialog"
+            className="w-full max-w-sm bg-[#F7F4FA] rounded-[24px] border border-[#E5DCED] shadow-2xl p-6 space-y-4 animate-in fade-in zoom-in-95 duration-150"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#EFE8F6] flex items-center justify-center text-xl flex-shrink-0">
+                🔍
+              </div>
+              <div>
+                <h3 className="text-[17px] font-bold text-[#1E1B22] leading-tight">
+                  {noticeModal.title}
+                </h3>
+                <p className="text-[12px] text-[#6B7280]">
+                  Google Play License Check
+                </p>
+              </div>
+            </div>
+
+            <p className="text-[13.5px] text-[#4B5563] leading-relaxed">
+              {noticeModal.message}
+            </p>
+
+            <div className="bg-[#EFE8F6] p-3.5 rounded-2xl text-xs text-[#5B4296] font-medium leading-relaxed border border-[#E3D4EE]">
+              💡 <strong>Tip:</strong> If you recently upgraded in the Google Play Android app, please verify that you are signed in here with that same Google account.
+            </div>
+
+            <div className="space-y-2 pt-2">
+              <button
+                onClick={async () => {
+                  setNoticeModal(null);
+                  try {
+                    await signOut(auth);
+                    setUser(null);
+                    handleRestorePurchase();
+                  } catch (e) {
+                    console.error(e);
+                  }
+                }}
+                className="w-full bg-[#654A9E] hover:bg-[#573F89] text-white font-bold text-[13.5px] py-3 rounded-full cursor-pointer transition-all shadow-2xs"
+              >
+                Sign in with Another Account
+              </button>
+              <button
+                onClick={() => setNoticeModal(null)}
+                className="w-full bg-white hover:bg-gray-50 text-[#4B5563] border border-[#D5C6E3] font-semibold text-[13px] py-2.5 rounded-full cursor-pointer transition-all"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Local Screen Toast */}
+      {localToast && (
+        <div 
+          id="pro-screen-toast"
+          className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-[#2D2438] text-white text-[13px] font-medium py-3 px-5 rounded-full shadow-xl border border-[#483B59] flex items-center gap-2 animate-in fade-in slide-in-from-bottom-3 duration-200 pointer-events-none max-w-[90vw] text-center"
+        >
+          <span>{localToast}</span>
+        </div>
+      )}
 
     </div>
   );

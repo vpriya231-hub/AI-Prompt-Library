@@ -12,7 +12,7 @@ import {
   Copy, 
   CreditCard,
   ArrowLeft,
-  Download 
+  ExternalLink 
 } from 'lucide-react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
@@ -21,7 +21,6 @@ import { CollectionTier, AIModel, ProCollectionItem } from './types';
 import { PromptCollectionSheet } from './components/PromptCollectionSheet';
 import { ProScreen } from './components/ProScreen';
 import { SettingsScreen } from './components/SettingsScreen';
-import { PWAInstallButton } from './components/PWAInstallButton';
 
 // Custom precision arrow icon matching the exact Android screenshot glyph (>|)
 function ModelNavArrow() {
@@ -331,22 +330,22 @@ const COLLECTION_TIERS: CollectionTier[] = [
 ];
 
 export const PRO_COLLECTIONS: ProCollectionItem[] = [
-  { id: 'business_startup', name: 'Business Startup', emoji: '🚀', pdf: 'business_startup.pdf', description: 'Ideation, GTM, Strategy & Pitch Decks' },
-  { id: 'coding', name: 'Coding', emoji: '💻', pdf: 'coding.pdf', description: 'System Design, Architecture & Clean Code' },
-  { id: 'marketing', name: 'Marketing', emoji: '📈', pdf: 'marketing.pdf', description: 'SEO, Ads, Copywriting & Funnels' },
-  { id: 'design', name: 'Design', emoji: '🎨', pdf: 'design.pdf', description: 'UI/UX, Branding & Design Systems' },
-  { id: 'writing', name: 'Writing', emoji: '📝', pdf: 'writing.pdf', description: 'Storytelling, Fiction & Direct Response' },
-  { id: 'ai_agents', name: 'AI Agents', emoji: '🤖', pdf: 'ai_agents.pdf', description: 'Autonomous Swarms & Task Workflows' },
-  { id: 'research', name: 'Research', emoji: '📚', pdf: 'research.pdf', description: 'Deep Research & Market Analysis' },
-  { id: 'youtube', name: 'YouTube', emoji: '🎬', pdf: 'youtube.pdf', description: 'Algorithm, Retention & Scriptwriting' },
-  { id: 'devops_cloud', name: 'DevOps & Cloud Prompts', emoji: '☁️', pdf: 'devops_cloud.pdf', description: 'AWS, Docker, K8s & CI/CD Pipelines' },
-  { id: 'cybersecurity_ethical_hacking', name: 'Cybersecurity & Ethical Hacking', emoji: '🛡️', pdf: 'cybersecurity_ethical_hacking.pdf', description: 'Penetration Testing & Cloud Security' },
-  { id: 'sql_database_optimization', name: 'SQL & Database Optimization', emoji: '🗄️', pdf: 'sql_database_optimization.pdf', description: 'Query Tuning, Schema Design & Indexing' },
-  { id: 'api_development_integration', name: 'API Development & Integration', emoji: '🔌', pdf: 'api_development_integration.pdf', description: 'REST, GraphQL, Webhooks & gRPC' },
-  { id: 'resume_cover_letter', name: 'Resume & Cover Letter Building', emoji: '📄', pdf: 'resume_cover_letter.pdf', description: 'ATS Optimization & High-Impact Bullets' },
-  { id: 'job_interview_preparation', name: 'Job Interview Preparation & Mock Interviews', emoji: '🎤', pdf: 'job_interview_preparation.pdf', description: 'Live Mock Roleplay & Technical Screens' },
-  { id: 'time_management_productivity', name: 'Time Management & Productivity Systems', emoji: '⏱️', pdf: 'time_management_productivity.pdf', description: 'Deep Work, Pomodoro & GTD Systems' },
-  { id: 'meeting_summaries_action_items', name: 'Meeting Summaries & Action Items', emoji: '📝', pdf: 'meeting_summaries_action_items.pdf', description: 'Executive Briefings & Action Trackers' }
+  { id: 'business_startup', name: 'Business Startup', emoji: '🚀', url: 'https://drive.google.com/file/d/15yAO8S-UYXDwfHwt9VEo14V888NrpBTj/view?usp=sharing', description: 'Ideation, GTM, Strategy & Pitch Decks' },
+  { id: 'coding', name: 'Coding', emoji: '💻', url: 'https://drive.google.com/file/d/1E7w9UoIS353hXQXL8EUBKqoK7wQwkcc7/view?usp=sharing', description: 'System Design, Architecture & Clean Code' },
+  { id: 'marketing', name: 'Marketing', emoji: '📈', url: 'https://drive.google.com/file/d/1d9UdU0PseTbti4-jeknRKyTgiyNzyFIk/view?usp=sharing', description: 'SEO, Ads, Copywriting & Funnels' },
+  { id: 'design', name: 'Design', emoji: '🎨', url: 'https://drive.google.com/file/d/1pETO4SbqroqQJJxnqpY9dK7Mtt1Em21Y/view?usp=sharing', description: 'UI/UX, Branding & Design Systems' },
+  { id: 'writing', name: 'Writing', emoji: '📝', url: 'https://drive.google.com/file/d/1yVLgBQWcHFfjnPCBkOeAXAxQBpvWubWB/view?usp=sharing', description: 'Storytelling, Fiction & Direct Response' },
+  { id: 'ai_agents', name: 'AI Agents', emoji: '🤖', url: 'https://drive.google.com/file/d/1a7e1c66qXSLk4Hz2nWu3SGBmz1ERXJbw/view?usp=sharing', description: 'Autonomous Swarms & Task Workflows' },
+  { id: 'research', name: 'Research', emoji: '📚', url: 'https://drive.google.com/file/d/1K9HRwhF7ZPqcnlUYJy52LH8UZAol_y12/view?usp=sharing', description: 'Deep Research & Market Analysis' },
+  { id: 'youtube', name: 'YouTube', emoji: '🎬', url: 'https://drive.google.com/file/d/1KqtJehP5eVRUfZBspmggyS6_wi9AZKdt/view?usp=sharing', description: 'Algorithm, Retention & Scriptwriting' },
+  { id: 'devops_cloud', name: 'DevOps & Cloud Prompts', emoji: '☁️', url: 'https://drive.google.com/file/d/1vLbldMoFCmUrzkaitvH9cdAvJqzSKHsB/view?usp=sharing', description: 'AWS, Docker, K8s & CI/CD Pipelines' },
+  { id: 'cybersecurity_ethical_hacking', name: 'Cybersecurity & Ethical Hacking', emoji: '🛡️', url: 'https://drive.google.com/file/d/1vj1hDrNev9NsO4p0lpg8tZSHrk8efWQC/view?usp=sharing', description: 'Penetration Testing & Cloud Security' },
+  { id: 'sql_database_optimization', name: 'SQL & Database Optimization', emoji: '🗄️', url: 'https://drive.google.com/file/d/1C0_LSdK76J6UnAkjdEq5y95hM1JCx05Q/view?usp=sharing', description: 'Query Tuning, Schema Design & Indexing' },
+  { id: 'api_development_integration', name: 'API Development & Integration', emoji: '🔌', url: 'https://drive.google.com/file/d/1YHwdDTdOjv67eXQ5S9-uQXUntVNWTMNK/view?usp=sharing', description: 'REST, GraphQL, Webhooks & gRPC' },
+  { id: 'resume_cover_letter', name: 'Resume & Cover Letter Building', emoji: '📄', url: 'https://drive.google.com/file/d/1ypkqp8t_dbNPQiI-zJXBPZ6mtuFrhBJb/view?usp=sharing', description: 'ATS Optimization & High-Impact Bullets' },
+  { id: 'job_interview_preparation', name: 'Job Interview Preparation & Mock Interviews', emoji: '🎤', url: 'https://drive.google.com/file/d/15Fw7Lkt_eCdOfUMhfooB_8OsMGIASX4D/view?usp=sharing', description: 'Live Mock Roleplay & Technical Screens' },
+  { id: 'time_management_productivity', name: 'Time Management & Productivity Systems', emoji: '⏱️', url: 'https://drive.google.com/file/d/1Nj68VqHHKQ86jOMHbtj-ja8FqvPS6i32/view?usp=sharing', description: 'Deep Work, Pomodoro & GTD Systems' },
+  { id: 'meeting_summaries_action_items', name: 'Meeting Summaries & Action Items', emoji: '📝', url: 'https://drive.google.com/file/d/1jrpmXytPZMfa9S-WNh-4odrY9kZbUhlb/view?usp=sharing', description: 'Executive Briefings & Action Trackers' }
 ];
 
 export default function App() {
@@ -414,14 +413,8 @@ export default function App() {
     setTimeout(() => setCopiedPrompt(null), 2000);
   };
 
-  const handleDownload = (fileName: string) => {
-    const link = document.createElement('a');
-    link.href = `/assets/${fileName}`;
-    link.download = fileName;
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleOpenPdf = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   // If PRO screen is open, display full-screen PRO view matching screenshots
@@ -431,6 +424,7 @@ export default function App() {
         onBack={() => setShowProScreen(false)} 
         hasUnlockedPro={hasUnlockedPro}
         onProStatusChange={(isPro) => setHasUnlockedPro(isPro)}
+        showToast={showToast}
       />
     );
   }
@@ -850,9 +844,9 @@ export default function App() {
                   <button
                     key={col.id}
                     id={`pro-collection-pill-${col.id}`}
-                    onClick={() => handleDownload(col.pdf)}
+                    onClick={() => handleOpenPdf(col.url)}
                     className="group bg-[#F5EFFB] hover:bg-[#EFE5F8] active:bg-[#E8DCF4] border border-[#E8DEF2] hover:border-[#D5C3E5] rounded-2xl sm:rounded-full px-4 sm:px-5 py-3.5 flex items-center justify-between text-left transition-all duration-150 shadow-2xs hover:shadow-xs cursor-pointer"
-                    title={`Download ${col.name} PDF`}
+                    title={`Open ${col.name} in Google Drive`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       <span className="text-xl sm:text-2xl flex-shrink-0 w-7 flex items-center justify-center select-none">
@@ -872,7 +866,7 @@ export default function App() {
                       <span className="text-[10.5px] font-bold bg-white/90 px-2 py-0.5 rounded-full border border-[#E0D3EC]">
                         PDF
                       </span>
-                      <Download className="w-4 h-4" />
+                      <ExternalLink className="w-4 h-4" />
                     </div>
                   </button>
                 ))}
