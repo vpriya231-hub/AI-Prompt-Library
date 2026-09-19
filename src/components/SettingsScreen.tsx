@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, ChevronRight, RotateCcw } from 'lucide-react';
-import { PWAInstallButton } from './PWAInstallButton';
-import { 
-  signInWithPopup, 
-  onAuthStateChanged, 
-  signOut, 
-  deleteUser, 
-  User 
-} from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
-import { auth, googleProvider, db } from '../lib/firebase';
+import { deleteUser } from 'firebase/auth';
+import { useAuth } from '../context/AuthContext';
+import { GoogleIcon } from './GoogleIcon';
 
 interface SettingsScreenProps {
   onBack: () => void;
@@ -21,16 +14,14 @@ interface SettingsScreenProps {
 export function SettingsScreen({ 
   onBack, 
   showToast, 
-  hasUnlockedPro, 
+  hasUnlockedPro: _hasUnlockedPro, 
   onProStatusChange 
 }: SettingsScreenProps) {
-  const [user, setUser] = useState<User | null>(null);
-  const [isProUser, setIsProUser] = useState(hasUnlockedPro);
+  const { currentUser, isProUser, signInWithGoogle, signOutUser, checkProStatus } = useAuth();
   const [signingIn, setSigningIn] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [restoreNotice, setRestoreNotice] = useState<string | null>(null);
   const [localToast, setLocalToast] = useState<string | null>(null);
-  const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deletingAccount, setDeletingAccount] = useState(false);
 
@@ -40,31 +31,57 @@ export function SettingsScreen({
     setTimeout(() => setLocalToast(null), 3500);
   };
 
+  const handleGoogleSignIn = async () => {
+    setSigningIn(true);
+    try {
+      const signedInUser = await signInWithGoogle();
+      if (signedInUser) {
+        triggerToast(`Signed in as ${signedInUser.email}`);
+        const proActive = await checkProStatus(signedInUser);
+        if (proActive) {
+          if (onProStatusChange) onProStatusChange(true);
+          triggerToast('✓ PRO Lifetime access active!');
+        }
+      }
+    } catch (error: unknown) {
+      console.error('Sign-in failed:', error);
+      const err = error as { code?: string; message?: string };
+      if (err?.code === 'auth/unauthorized-domain') {
+        // Modal automatically triggered by AuthContext
+        console.warn('Unauthorized domain detected. Modal opened.');
+      } else if (err?.code === 'auth/popup-blocked') {
+        triggerToast('Popup was blocked by your browser. Please allow popups for Google Sign-In.');
+      } else if (err?.code !== 'auth/popup-closed-by-user') {
+        triggerToast(err?.message || 'Google Sign-In failed. Please try again.');
+      }
+    } finally {
+      setSigningIn(false);
+    }
+  };
+
   const handleRestorePurchases = async () => {
     setRestoring(true);
     try {
-      let currentUser = user;
-      if (!currentUser) {
+      let targetUser = currentUser;
+      if (!targetUser) {
         triggerToast('Please sign in with your Google account to restore purchases...');
-        const result = await signInWithPopup(auth, googleProvider);
-        currentUser = result.user;
-        setUser(currentUser);
+        targetUser = await signInWithGoogle();
+      }
+      if (!targetUser) {
+        setRestoring(false);
+        return;
       }
 
       // Show brief loading spinner / toast
       triggerToast('Checking active purchase status...');
 
-      // Re-query Firestore users/{uid} to fetch latest isPro field
-      const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
-      const data = userDoc.exists() ? userDoc.data() : null;
-      const proActive = Boolean(data?.isPro === true || data?.pro === true);
+      const proActive = await checkProStatus(targetUser);
 
       if (proActive) {
-        setIsProUser(true);
         if (onProStatusChange) onProStatusChange(true);
         triggerToast('✓ PRO restored successfully! Lifetime access active.');
       } else {
-        const email = currentUser.email || 'your account';
+        const email = targetUser.email || 'your account';
         const msg = `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account used on Google Play Store.`;
         setRestoreNotice(msg);
         triggerToast(`No active PRO license found for ${email}.`);
@@ -80,94 +97,38 @@ export function SettingsScreen({
     }
   };
 
-  // Listen to Auth state and fetch Pro status from Firestore (strictly read-only)
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        try {
-          // Exact read-only check for users/{uid}
-          const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
-          const data = userDoc.exists() ? userDoc.data() : null;
-          const proActive = Boolean(data?.isPro === true || data?.pro === true);
-          setIsProUser(proActive);
-          if (onProStatusChange) onProStatusChange(proActive);
-        } catch (err) {
-          console.warn('Firestore read-only PRO status check error:', err);
-          setIsProUser(hasUnlockedPro);
-        }
-      } else {
-        setIsProUser(false);
-        if (onProStatusChange) onProStatusChange(false);
-      }
-    });
-
-    return () => unsubscribe();
-  }, [hasUnlockedPro, onProStatusChange]);
-
-  const handleGoogleSignIn = async () => {
-    setSigningIn(true);
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const signedInUser = result.user;
-      setUser(signedInUser);
-      
-      // Exact read-only query upon login
-      try {
-        const userDoc = await getDoc(doc(db, 'users', signedInUser.uid));
-        const data = userDoc.exists() ? userDoc.data() : null;
-        const proActive = Boolean(data?.isPro === true || data?.pro === true);
-        setIsProUser(proActive);
-        if (onProStatusChange) onProStatusChange(proActive);
-      } catch (err) {
-        console.warn('Firestore read-only PRO check error:', err);
-      }
-
-      showToast('Signed in successfully!');
-    } catch (err: unknown) {
-      console.error('Sign-in failed:', err);
-      const error = err as { code?: string; message?: string };
-      if (error?.code !== 'auth/popup-closed-by-user') {
-        showToast(error?.message || 'Google Sign-In failed.');
-      }
-    } finally {
-      setSigningIn(false);
-    }
-  };
-
   const handleSignOut = async () => {
     try {
-      await signOut(auth);
-      setUser(null);
-      setIsProUser(hasUnlockedPro);
-      showToast('Signed out');
+      await signOutUser();
+      if (onProStatusChange) onProStatusChange(false);
+      triggerToast('Signed out successfully.');
     } catch (err) {
       console.error('Sign out error:', err);
-      showToast('Error signing out');
+      triggerToast('Error signing out');
     }
   };
 
   const handleDeleteAccount = async () => {
-    if (!user) return;
+    if (!currentUser) return;
     if (isProUser) {
-      showToast('Pro account cannot be deleted while premium access is active.');
+      triggerToast('Pro account cannot be deleted while premium access is active.');
       setShowDeleteConfirm(false);
       return;
     }
 
     setDeletingAccount(true);
     try {
-      await deleteUser(user);
-      setUser(null);
+      await deleteUser(currentUser);
+      await signOutUser();
       setShowDeleteConfirm(false);
-      showToast('Account deleted successfully');
+      triggerToast('Account deleted successfully');
     } catch (err: unknown) {
       console.error('Delete user error:', err);
       const error = err as { code?: string; message?: string };
       if (error?.code === 'auth/requires-recent-login') {
-        showToast('Please sign in again before deleting your account.');
+        triggerToast('Please sign in again before deleting your account.');
       } else {
-        showToast(error?.message || 'Failed to delete account.');
+        triggerToast(error?.message || 'Failed to delete account.');
       }
     } finally {
       setDeletingAccount(false);
@@ -216,47 +177,56 @@ export function SettingsScreen({
           {/* 1. Dynamic Account Card matching Screenshot 1 */}
           <div 
             id="settings-account-card"
-            className="bg-[#EFE8F6] rounded-[22px] p-5 border border-[#E6DBEE] space-y-3.5 shadow-2xs transition-all"
+            className="bg-[#EFE8F6] rounded-[22px] p-5 border border-[#E6DBEE] space-y-4 shadow-2xs transition-all"
           >
-            {/* Not Signed In State (Screenshot 1: Account -> Not Signed In -> FREE) */}
-            {!user ? (
-              <div 
-                onClick={handleGoogleSignIn}
-                className="cursor-pointer space-y-3 group"
-                title="Tap to sign in with Google"
-              >
-                <div>
-                  <h3 className="text-[17px] font-bold text-[#1E1B22] tracking-tight">
-                    Account
-                  </h3>
-                  <p className="text-[15px] font-bold text-[#1E1B22] mt-2 group-hover:text-[#654A9E] transition-colors">
-                    {signingIn ? 'Opening Google Sign-In...' : 'Not Signed In'}
-                  </p>
-                </div>
-
-                <div className="pt-1 flex items-center justify-between">
-                  <span className="text-[13.5px] font-medium text-[#595364] tracking-wide">
-                    FREE
-                  </span>
-                  <span className="text-xs text-[#654A9E] font-semibold underline underline-offset-2">
-                    Sign in with Google
-                  </span>
-                </div>
-              </div>
-            ) : (
-              /* Signed In State (Free Tier or PRO Tier) */
-              <div className="space-y-3">
+            {/* Not Signed In State */}
+            {!currentUser ? (
+              <div className="space-y-3.5">
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="text-[17px] font-bold text-[#1E1B22] tracking-tight">
                       Account
                     </h3>
-                    <p className="text-[15px] font-bold text-[#1E1B22] mt-1.5 break-all">
-                      {user.displayName || user.email || 'Signed In'}
+                    <p className="text-[15px] font-bold text-[#1E1B22] mt-1">
+                      Not Signed In
                     </p>
-                    {user.displayName && user.email && (
-                      <p className="text-[12.5px] text-[#6B7280] break-all">{user.email}</p>
-                    )}
+                  </div>
+                  <span className="text-[13.5px] font-medium text-[#595364] tracking-wide pt-0.5">
+                    FREE
+                  </span>
+                </div>
+
+                <button
+                  id="settings-google-signin-btn"
+                  onClick={handleGoogleSignIn}
+                  disabled={signingIn}
+                  className="w-full bg-white hover:bg-gray-50 active:bg-gray-100 text-[#1E1B22] font-semibold text-[14px] py-3 px-4 rounded-full border border-[#D5C6E3] transition-all cursor-pointer flex items-center justify-center gap-3 shadow-2xs hover:shadow-xs disabled:opacity-60"
+                >
+                  {signingIn ? (
+                    <>
+                      <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                      <span>Opening Google Sign-In...</span>
+                    </>
+                  ) : (
+                    <>
+                      <GoogleIcon className="w-5 h-5 flex-shrink-0" />
+                      <span>Sign in with Google</span>
+                    </>
+                  )}
+                </button>
+
+                <p className="text-[12px] text-[#6B7280] leading-snug px-1">
+                  Sign in with Google to sync your purchase or verify active PRO lifetime access.
+                </p>
+              </div>
+            ) : (
+              /* Signed In State (Free Tier or PRO Tier) */
+              <div className="space-y-3.5">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="text-[17px] font-bold text-[#1E1B22] tracking-tight">
+                      Account
+                    </h3>
                   </div>
 
                   {/* Tier Badge */}
@@ -270,6 +240,31 @@ export function SettingsScreen({
                         FREE
                       </span>
                     )}
+                  </div>
+                </div>
+
+                {/* Profile Info with Avatar */}
+                <div className="flex items-center gap-3">
+                  {currentUser.photoURL ? (
+                    <img 
+                      src={currentUser.photoURL} 
+                      alt={currentUser.displayName || 'User avatar'} 
+                      className="w-10 h-10 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-2xs">
+                      {(currentUser.displayName || currentUser.email || 'U')[0].toUpperCase()}
+                    </div>
+                  )}
+
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[15px] font-bold text-[#1E1B22] truncate leading-tight">
+                      {currentUser.displayName || 'Google Account'}
+                    </p>
+                    <p className="text-[12.5px] text-[#6B7280] truncate leading-tight mt-0.5">
+                      {currentUser.email}
+                    </p>
                   </div>
                 </div>
 
@@ -299,7 +294,7 @@ export function SettingsScreen({
                     {isProUser ? (
                       <button
                         id="settings-delete-account-disabled"
-                        onClick={() => showToast('Active PRO lifetime accounts require support verification for deletion. Please refer to our Account Deletion Policy.')}
+                        onClick={() => triggerToast('Active PRO lifetime accounts require support verification for deletion. Please refer to our Account Deletion Policy.')}
                         className="text-xs font-semibold text-gray-600 bg-gray-100/90 hover:bg-gray-200/80 px-3.5 py-1.5 rounded-xl border border-gray-300 transition-colors cursor-pointer select-none"
                         title="Active PRO lifetime accounts require support verification for deletion."
                       >
@@ -353,12 +348,9 @@ export function SettingsScreen({
             <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
           </div>
 
-          {/* Menu Items matching Screenshot 1 */}
+          {/* Menu Items: App Version, Privacy Policy, Account Deletion Policy */}
           <div className="space-y-3">
             
-            {/* PWA Install / Status */}
-            <PWAInstallButton variant="menu" />
-
             {/* 1. App Version */}
             <div 
               id="menu-app-version"
@@ -429,119 +421,10 @@ export function SettingsScreen({
               <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
             </a>
 
-            {/* 4. Disclaimer */}
-            <div 
-              id="menu-disclaimer"
-              onClick={() => setShowDisclaimer(true)}
-              className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs"
-            >
-              <div className="flex items-center gap-3.5">
-                <span className="text-[24px] select-none flex-shrink-0 leading-none">
-                  📄
-                </span>
-                <div>
-                  <h4 className="text-[15px] font-bold text-[#1E1B22] leading-tight">
-                    Disclaimer
-                  </h4>
-                  <p className="text-[13px] text-[#6B7280] mt-0.5">
-                    Third-party trademarks
-                  </p>
-                </div>
-              </div>
-              <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
-            </div>
-
-            {/* 5. About Developer */}
-            <div 
-              id="menu-about-developer"
-              onClick={() => showToast('Created by V Astra AI Studio')}
-              className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs"
-            >
-              <div className="flex items-center gap-3.5">
-                <div className="w-6 h-6 rounded-md bg-[#26A69A] flex items-center justify-center text-white font-bold text-[13px] leading-none select-none flex-shrink-0 shadow-2xs">
-                  i
-                </div>
-                <div>
-                  <h4 className="text-[15px] font-bold text-[#1E1B22] leading-tight">
-                    About Developer
-                  </h4>
-                  <p className="text-[13px] text-[#6B7280] mt-0.5">
-                    V Astra AI Studio
-                  </p>
-                </div>
-              </div>
-              <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
-            </div>
-
-            {/* 6. Rate App */}
-            <a 
-              id="menu-rate-app"
-              href="https://play.google.com/store/apps/details?id=com.aipromptlibrary.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs block text-inherit"
-            >
-              <div className="flex items-center gap-3.5">
-                <span className="text-[24px] select-none flex-shrink-0 leading-none">
-                  ⭐
-                </span>
-                <div>
-                  <h4 className="text-[15px] font-bold text-[#1E1B22] leading-tight">
-                    Rate App
-                  </h4>
-                  <p className="text-[13px] text-[#6B7280] mt-0.5">
-                    Review on Google Play Store
-                  </p>
-                </div>
-              </div>
-              <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
-            </a>
-
           </div>
 
         </div>
       </main>
-
-      {/* Disclaimer Modal Dialog matching Screenshot 2 exactly */}
-      {showDisclaimer && (
-        <div 
-          id="disclaimer-dialog-backdrop"
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-5"
-          onClick={() => setShowDisclaimer(false)}
-        >
-          <div 
-            id="disclaimer-dialog-box"
-            className="w-full max-w-[360px] bg-white rounded-[24px] shadow-2xl p-6 sm:p-7 space-y-4 animate-in fade-in zoom-in-95 duration-150"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="text-[20px] font-bold text-[#1E1B22] tracking-tight">
-              Disclaimer
-            </h3>
-
-            <div className="text-[13.5px] text-[#374151] leading-relaxed space-y-3.5">
-              <p>
-                ChatGPT, Gemini, Claude, Grok, Perplexity, and Microsoft Copilot names, logos, and trademarks are the property of their respective owners.
-              </p>
-              <p>
-                AI Prompt Library is an independent application created by V Astra AI Studio to help users discover and organize AI prompt collections.
-              </p>
-              <p>
-                This application is not affiliated with, endorsed by, sponsored by, or officially associated with OpenAI, Google, Anthropic, xAI, Perplexity AI, Microsoft, or any of their affiliates.
-              </p>
-            </div>
-
-            <div className="pt-2 flex justify-end">
-              <button
-                id="disclaimer-ok-btn"
-                onClick={() => setShowDisclaimer(false)}
-                className="text-[15px] font-bold text-[#654A9E] hover:text-[#523A82] active:text-[#432F6E] px-4 py-2 rounded-xl hover:bg-[#F3EDF7] transition-colors cursor-pointer"
-              >
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Account Deletion Confirmation Dialog */}
       {showDeleteConfirm && (
@@ -622,8 +505,7 @@ export function SettingsScreen({
                 onClick={async () => {
                   setRestoreNotice(null);
                   try {
-                    await signOut(auth);
-                    setUser(null);
+                    await signOutUser();
                     handleRestorePurchases();
                   } catch (e) {
                     console.error(e);

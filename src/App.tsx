@@ -3,24 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   Search, 
   Settings, 
   X, 
   Check, 
-  Copy, 
-  CreditCard,
   ArrowLeft,
   ExternalLink 
 } from 'lucide-react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
-import { auth, db } from './lib/firebase';
-import { CollectionTier, AIModel, ProCollectionItem } from './types';
+import { CollectionTier, AIModel } from './types';
 import { PromptCollectionSheet } from './components/PromptCollectionSheet';
 import { ProScreen } from './components/ProScreen';
 import { SettingsScreen } from './components/SettingsScreen';
+import { useAuth } from './context/AuthContext';
 
 // Custom precision arrow icon matching the exact Android screenshot glyph (>|)
 function ModelNavArrow() {
@@ -329,24 +325,8 @@ const COLLECTION_TIERS: CollectionTier[] = [
   }
 ];
 
-export const PRO_COLLECTIONS: ProCollectionItem[] = [
-  { id: 'business_startup', name: 'Business Startup', emoji: '🚀', url: 'https://drive.google.com/file/d/15yAO8S-UYXDwfHwt9VEo14V888NrpBTj/view?usp=sharing', description: 'Ideation, GTM, Strategy & Pitch Decks' },
-  { id: 'coding', name: 'Coding', emoji: '💻', url: 'https://drive.google.com/file/d/1E7w9UoIS353hXQXL8EUBKqoK7wQwkcc7/view?usp=sharing', description: 'System Design, Architecture & Clean Code' },
-  { id: 'marketing', name: 'Marketing', emoji: '📈', url: 'https://drive.google.com/file/d/1d9UdU0PseTbti4-jeknRKyTgiyNzyFIk/view?usp=sharing', description: 'SEO, Ads, Copywriting & Funnels' },
-  { id: 'design', name: 'Design', emoji: '🎨', url: 'https://drive.google.com/file/d/1pETO4SbqroqQJJxnqpY9dK7Mtt1Em21Y/view?usp=sharing', description: 'UI/UX, Branding & Design Systems' },
-  { id: 'writing', name: 'Writing', emoji: '📝', url: 'https://drive.google.com/file/d/1yVLgBQWcHFfjnPCBkOeAXAxQBpvWubWB/view?usp=sharing', description: 'Storytelling, Fiction & Direct Response' },
-  { id: 'ai_agents', name: 'AI Agents', emoji: '🤖', url: 'https://drive.google.com/file/d/1a7e1c66qXSLk4Hz2nWu3SGBmz1ERXJbw/view?usp=sharing', description: 'Autonomous Swarms & Task Workflows' },
-  { id: 'research', name: 'Research', emoji: '📚', url: 'https://drive.google.com/file/d/1K9HRwhF7ZPqcnlUYJy52LH8UZAol_y12/view?usp=sharing', description: 'Deep Research & Market Analysis' },
-  { id: 'youtube', name: 'YouTube', emoji: '🎬', url: 'https://drive.google.com/file/d/1KqtJehP5eVRUfZBspmggyS6_wi9AZKdt/view?usp=sharing', description: 'Algorithm, Retention & Scriptwriting' },
-  { id: 'devops_cloud', name: 'DevOps & Cloud Prompts', emoji: '☁️', url: 'https://drive.google.com/file/d/1vLbldMoFCmUrzkaitvH9cdAvJqzSKHsB/view?usp=sharing', description: 'AWS, Docker, K8s & CI/CD Pipelines' },
-  { id: 'cybersecurity_ethical_hacking', name: 'Cybersecurity & Ethical Hacking', emoji: '🛡️', url: 'https://drive.google.com/file/d/1vj1hDrNev9NsO4p0lpg8tZSHrk8efWQC/view?usp=sharing', description: 'Penetration Testing & Cloud Security' },
-  { id: 'sql_database_optimization', name: 'SQL & Database Optimization', emoji: '🗄️', url: 'https://drive.google.com/file/d/1C0_LSdK76J6UnAkjdEq5y95hM1JCx05Q/view?usp=sharing', description: 'Query Tuning, Schema Design & Indexing' },
-  { id: 'api_development_integration', name: 'API Development & Integration', emoji: '🔌', url: 'https://drive.google.com/file/d/1YHwdDTdOjv67eXQ5S9-uQXUntVNWTMNK/view?usp=sharing', description: 'REST, GraphQL, Webhooks & gRPC' },
-  { id: 'resume_cover_letter', name: 'Resume & Cover Letter Building', emoji: '📄', url: 'https://drive.google.com/file/d/1ypkqp8t_dbNPQiI-zJXBPZ6mtuFrhBJb/view?usp=sharing', description: 'ATS Optimization & High-Impact Bullets' },
-  { id: 'job_interview_preparation', name: 'Job Interview Preparation & Mock Interviews', emoji: '🎤', url: 'https://drive.google.com/file/d/15Fw7Lkt_eCdOfUMhfooB_8OsMGIASX4D/view?usp=sharing', description: 'Live Mock Roleplay & Technical Screens' },
-  { id: 'time_management_productivity', name: 'Time Management & Productivity Systems', emoji: '⏱️', url: 'https://drive.google.com/file/d/1Nj68VqHHKQ86jOMHbtj-ja8FqvPS6i32/view?usp=sharing', description: 'Deep Work, Pomodoro & GTD Systems' },
-  { id: 'meeting_summaries_action_items', name: 'Meeting Summaries & Action Items', emoji: '📝', url: 'https://drive.google.com/file/d/1jrpmXytPZMfa9S-WNh-4odrY9kZbUhlb/view?usp=sharing', description: 'Executive Briefings & Action Trackers' }
-];
+import { PRO_COLLECTIONS } from './data/proCollections';
+export { PRO_COLLECTIONS };
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -357,27 +337,12 @@ export default function App() {
   const [showSettings, setShowSettings] = useState(false);
   const [showProScreen, setShowProScreen] = useState(false);
   const [copiedPrompt, setCopiedPrompt] = useState<string | null>(null);
-  const [hasUnlockedPro, setHasUnlockedPro] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Root auth synchronization - Strictly read-only check on users/{uid}
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      if (currentUser) {
-        try {
-          const userDoc = await getDoc(doc(db, "users", currentUser.uid));
-          const data = userDoc.exists() ? userDoc.data() : null;
-          const isProUser = Boolean(data?.isPro === true || data?.pro === true);
-          setHasUnlockedPro(isProUser);
-        } catch (err) {
-          console.warn('Root Firestore PRO check error:', err);
-        }
-      } else {
-        setHasUnlockedPro(false);
-      }
-    });
-    return () => unsubscribe();
-  }, []);
+  // Global reactive Auth & PRO state
+  const { isProUser, setIsProUser } = useAuth();
+  const hasUnlockedPro = isProUser;
+  const setHasUnlockedPro = setIsProUser;
 
   // Real-time case-insensitive instant search matching both model name and developer/company
   const filteredModels = useMemo(() => {
@@ -787,21 +752,28 @@ export default function App() {
                         <p className="text-[12.5px] text-center text-[#6B7280]">
                           Your account has full lifetime access.
                         </p>
+                        <div className="text-center pt-0.5">
+                          <button
+                            id="view-pro-details-active-btn"
+                            onClick={() => setShowProScreen(true)}
+                            className="text-[12.5px] font-semibold text-[#654A9E] hover:text-[#4B3676] hover:underline cursor-pointer"
+                          >
+                            View PRO Details &amp; Collections →
+                          </button>
+                        </div>
                       </div>
                     ) : (
-                      /* For Free / Logged-out Users: Direct Play Store purchase link */
+                      /* For Free / Logged-out Users: Navigate to PRO screen */
                       <div className="space-y-3">
                         <button
                           id="pro-cta-button"
-                          onClick={() => {
-                            window.open('https://play.google.com/store/apps/details?id=com.aipromptlibrary.app', '_blank', 'noopener,noreferrer');
-                          }}
+                          onClick={() => setShowProScreen(true)}
                           className="w-full bg-[#5B4296] hover:bg-[#4E3783] active:bg-[#432F73] text-white font-bold text-[14px] sm:text-[15px] py-4 px-6 rounded-full tracking-wide shadow-xs transition-all transform active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 text-center"
                         >
                           GET PRO • ₹599 LIFETIME
                         </button>
                         <p className="text-[12px] text-center text-[#6B7280] leading-relaxed">
-                          PRO purchases are managed securely via Google Play. Once upgraded in the Android app, sign in here with the same Google account to instantly unlock PRO on Web &amp; Windows.
+                          Pay once. Unlock 16 exclusive prompt books forever across Android, Web &amp; Windows.
                         </p>
                         <div className="text-center pt-0.5">
                           <button
