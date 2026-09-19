@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remix AI Prompt Library</title>
+    <meta name="description" content="Curated collection of powerful AI prompts and cheat codes for ChatGPT, Gemini, Claude, and more." />
+    <meta property="og:title" content="Remix AI Prompt Library" />
+    <meta property="og:description" content="Curated collection of powerful AI prompts and cheat codes for ChatGPT, Gemini, Claude, and more." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA & Mobile Web App Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" href="https://i.ibb.co/PzYjVDMj/file-000000001800820b85cd990819ae7f86.png" />
+    <link rel="apple-touch-icon" href="https://i.ibb.co/PzYjVDMj/file-000000001800820b85cd990819ae7f86.png" />
+    <meta name="theme-color" content="#6D28D9" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="AI Prompt Library" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(reg) {
+              console.log('PWA Service Worker registered:', reg.scope);
+            })
+            .catch(function(err) {
+              console.warn('PWA Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix AI Prompt Library",
+  "description": "Pixel-perfect mobile Web UI clone of the AI Prompt Library Home screen featuring AI models, cheat codes, search, and the PRO prompt library pass.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

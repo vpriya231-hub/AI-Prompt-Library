@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "shortcut": "/explain",
+    "title": "Explain Clearly",
+    "category": "Learning",
+    "description": "Explain any topic in a simple, structured and beginner-friendly way.",
+    "prompt": "Explain the following topic clearly as if teaching a beginner. Start with a simple definition, explain the core concepts step by step, provide practical examples, highlight common misconceptions, summarize the key points and end with a quick revision checklist.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 2,
+    "shortcut": "/summarize",
+    "title": "Smart Summary",
+    "category": "Writing",
+    "description": "Generate concise and structured summaries.",
+    "prompt": "Summarize the following content while preserving all important ideas. Organize the output into key points, important facts, conclusions and action items if applicable. Keep it concise but complete.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 3,
+    "shortcut": "/brainstorm",
+    "title": "Brainstorm Ideas",
+    "category": "Creativity",
+    "description": "Generate creative and practical ideas for any challenge.",
+    "prompt": "Brainstorm a wide range of creative, practical and innovative ideas for the following challenge. Include quick wins, long-term ideas, unconventional approaches and rank the best ideas with reasons.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 4,
+    "shortcut": "/improve",
+    "title": "Improve Writing",
+    "category": "Writing",
+    "description": "Rewrite text to improve clarity, grammar and style.",
+    "prompt": "Rewrite the following text to improve clarity, grammar, readability and overall quality while preserving the original meaning. Suggest optional enhancements where appropriate.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 5,
+    "shortcut": "/study",
+    "title": "Study Assistant",
+    "category": "Education",
+    "description": "Create an effective study guide for any subject.",
+    "prompt": "Create a complete study guide for the following topic. Include key concepts, definitions, examples, memory tips, common mistakes, practice questions, revision notes and a quick self-test.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 6,
+    "shortcut": "/analyze",
+    "title": "Analyze",
+    "category": "Analysis",
+    "description": "Perform structured analysis of any topic or problem.",
+    "prompt": "Analyze the following topic systematically. Identify strengths, weaknesses, assumptions, opportunities, risks, important relationships and provide balanced conclusions with supporting reasoning.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 7,
+    "shortcut": "/plan",
+    "title": "Smart Planner",
+    "category": "Planning",
+    "description": "Generate organized plans for goals and projects.",
+    "prompt": "Create a practical step-by-step plan for the following goal. Break it into phases, milestones, timelines, required resources, potential challenges and measurable success indicators.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 8,
+    "shortcut": "/review",
+    "title": "Review Content",
+    "category": "Writing",
+    "description": "Review content and provide constructive feedback.",
+    "prompt": "Review the following content carefully. Evaluate clarity, structure, accuracy, grammar, readability, strengths, weaknesses and provide actionable suggestions for improvement.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 9,
+    "shortcut": "/translate",
+    "title": "Translate Naturally",
+    "category": "Language",
+    "description": "Translate while preserving meaning and tone.",
+    "prompt": "Translate the following text into the requested language while preserving the original meaning, tone and context. Where appropriate, adapt expressions naturally instead of translating literally.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 10,
+    "shortcut": "/claudestart",
+    "title": "Claude Workspace",
+    "category": "AI",
+    "description": "Use Claude as a thoughtful reasoning, writing and analysis assistant.",
+    "prompt": "Act as an expert reasoning, writing and analysis assistant. Carefully understand the following request, identify objectives, assumptions, missing information and constraints. Think through multiple approaches, explain trade-offs where useful, produce a well-structured response and conclude with practical recommendations and suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 11,
+    "shortcut": "/rewrite",
+    "title": "Professional Rewrite",
+    "category": "Writing",
+    "description": "Rewrite content with improved style and clarity.",
+    "prompt": "Rewrite the following content to make it more professional, engaging and easy to understand while preserving the original meaning. Improve sentence flow, vocabulary and readability. If appropriate, provide an alternative version with a different tone.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 12,
+    "shortcut": "/outline",
+    "title": "Content Outline",
+    "category": "Writing",
+    "description": "Create a structured outline for any topic.",
+    "prompt": "Create a well-organized outline for the following topic. Include main sections, subsections, supporting ideas, examples and a logical flow suitable for writing or presentation.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 13,
+    "shortcut": "/compare",
+    "title": "Compare Topics",
+    "category": "Analysis",
+    "description": "Compare two or more subjects objectively.",
+    "prompt": "Compare the following subjects in detail. Highlight similarities, differences, strengths, weaknesses, practical applications and summarize the key conclusions in an easy-to-read table.\n\nSubjects:",
+    "isOfficial": false
+  },
+  {
+    "id": 14,
+    "shortcut": "/proscons",
+    "title": "Pros and Cons",
+    "category": "Decision Making",
+    "description": "Evaluate advantages and disadvantages objectively.",
+    "prompt": "Evaluate the following topic by listing its advantages, disadvantages, risks, opportunities and practical considerations. Conclude with a balanced recommendation.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 15,
+    "shortcut": "/quiz",
+    "title": "Quiz Generator",
+    "category": "Education",
+    "description": "Generate quizzes with answers and explanations.",
+    "prompt": "Create a quiz on the following topic. Include multiple-choice, true/false and short-answer questions. Provide the correct answers along with brief explanations for each.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 16,
+    "shortcut": "/timeline",
+    "title": "Timeline Creator",
+    "category": "Research",
+    "description": "Generate chronological timelines for events or projects.",
+    "prompt": "Create a detailed chronological timeline for the following topic. Include important milestones, dates (if known), major developments, significance and key outcomes.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 17,
+    "shortcut": "/research",
+    "title": "Research Assistant",
+    "category": "Research",
+    "description": "Produce a structured research overview.",
+    "prompt": "Research the following topic by organizing available knowledge into key concepts, current understanding, important evidence, notable examples, limitations, unanswered questions and future directions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 18,
+    "shortcut": "/email",
+    "title": "Email Writer",
+    "category": "Communication",
+    "description": "Draft clear and professional emails.",
+    "prompt": "Write a professional email for the following situation. Include an appropriate subject line, greeting, concise body, polite closing and adjust the tone to suit the intended audience.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 19,
+    "shortcut": "/meeting",
+    "title": "Meeting Assistant",
+    "category": "Productivity",
+    "description": "Organize meetings with agendas and action items.",
+    "prompt": "Prepare a complete meeting plan for the following purpose. Include objectives, agenda, discussion topics, expected outcomes, action items, responsibilities and follow-up recommendations.\n\nMeeting Purpose:",
+    "isOfficial": false
+  },
+  {
+    "id": 20,
+    "shortcut": "/claudethink",
+    "title": "Claude Think",
+    "category": "AI",
+    "description": "Use Claude for careful reasoning and structured problem solving.",
+    "prompt": "Act as an expert reasoning assistant. Carefully examine the following request, identify objectives, assumptions, missing information, constraints and possible interpretations. Consider multiple solution paths, explain important trade-offs, organize your reasoning into clear sections and provide practical, well-supported recommendations with suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 21,
+    "shortcut": "/article",
+    "title": "Article Writer",
+    "category": "Writing",
+    "description": "Write informative and engaging articles on any topic.",
+    "prompt": "Write a well-structured article about the following topic. Include an engaging introduction, clear headings, informative content, relevant examples, practical insights, a concise conclusion and a suggested title.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 22,
+    "shortcut": "/blog",
+    "title": "Blog Post Creator",
+    "category": "Writing",
+    "description": "Create reader-friendly blog posts with a natural flow.",
+    "prompt": "Write a compelling blog post about the following topic. Use a conversational tone, engaging introduction, informative sections, practical examples, actionable tips and a memorable conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 23,
+    "shortcut": "/story",
+    "title": "Story Generator",
+    "category": "Creative Writing",
+    "description": "Generate original stories with engaging plots.",
+    "prompt": "Write an original story based on the following idea. Include interesting characters, vivid settings, natural dialogue, a compelling conflict, satisfying resolution and an appropriate title.\n\nStory Idea:",
+    "isOfficial": false
+  },
+  {
+    "id": 24,
+    "shortcut": "/resume",
+    "title": "Resume Builder",
+    "category": "Career",
+    "description": "Create professional resumes tailored to specific roles.",
+    "prompt": "Create a professional resume for the following candidate and target role. Organize sections clearly, emphasize achievements, quantify results where possible and optimize the wording for recruiters.\n\nCandidate Information:",
+    "isOfficial": false
+  },
+  {
+    "id": 25,
+    "shortcut": "/coverletter",
+    "title": "Cover Letter",
+    "category": "Career",
+    "description": "Write personalized cover letters for job applications.",
+    "prompt": "Write a personalized cover letter for the following job application. Highlight relevant skills, experience, motivation, achievements and explain why the candidate is a strong fit.\n\nJob Details:",
+    "isOfficial": false
+  },
+  {
+    "id": 26,
+    "shortcut": "/interview",
+    "title": "Interview Coach",
+    "category": "Career",
+    "description": "Prepare for interviews with realistic questions and answers.",
+    "prompt": "Prepare an interview guide for the following role. Generate likely interview questions, strong sample answers, technical questions if applicable, behavioral scenarios, preparation tips and common mistakes to avoid.\n\nJob Role:",
+    "isOfficial": false
+  },
+  {
+    "id": 27,
+    "shortcut": "/speech",
+    "title": "Speech Writer",
+    "category": "Communication",
+    "description": "Create impactful speeches for different occasions.",
+    "prompt": "Write a well-structured speech for the following occasion. Include an engaging opening, key messages, supporting examples, emotional appeal where appropriate, a memorable closing and delivery tips.\n\nOccasion:",
+    "isOfficial": false
+  },
+  {
+    "id": 28,
+    "shortcut": "/presentation",
+    "title": "Presentation Builder",
+    "category": "Business",
+    "description": "Create professional presentation structures.",
+    "prompt": "Design a professional presentation for the following topic. Suggest slide titles, key points, visuals, speaker notes, audience engagement ideas and a strong closing slide.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 29,
+    "shortcut": "/proposal",
+    "title": "Proposal Writer",
+    "category": "Business",
+    "description": "Draft persuasive proposals with clear objectives.",
+    "prompt": "Write a professional proposal for the following project or opportunity. Include objectives, background, scope, methodology, timeline, budget considerations, expected outcomes and a persuasive conclusion.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 30,
+    "shortcut": "/claudewrite",
+    "title": "Claude Write",
+    "category": "AI",
+    "description": "Use Claude as an expert writing, editing and communication assistant.",
+    "prompt": "Act as an expert writer, editor and communication specialist. Carefully understand the following request, identify the intended audience, desired tone, objectives and constraints. Produce polished, natural, engaging and well-structured writing while maintaining accuracy, clarity and consistency. Offer optional improvements and practical recommendations where helpful.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 31,
+    "shortcut": "/checklist",
+    "title": "Checklist Creator",
+    "category": "Productivity",
+    "description": "Create practical checklists for any task or project.",
+    "prompt": "Create a detailed checklist for the following task or project. Organize items into logical phases, include priorities, dependencies, estimated effort, common mistakes to avoid and a final completion checklist.\n\nTask:",
+    "isOfficial": false
+  },
+  {
+    "id": 32,
+    "shortcut": "/decision",
+    "title": "Decision Helper",
+    "category": "Decision Making",
+    "description": "Evaluate options and recommend the best choice.",
+    "prompt": "Help evaluate the following decision. Identify objectives, available options, advantages, disadvantages, risks, uncertainties, long-term consequences and provide a reasoned recommendation.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 33,
+    "shortcut": "/faq",
+    "title": "FAQ Generator",
+    "category": "Writing",
+    "description": "Generate clear and useful frequently asked questions.",
+    "prompt": "Create a comprehensive FAQ for the following product, service or topic. Include common questions, concise answers, troubleshooting advice and additional resources where appropriate.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 34,
+    "shortcut": "/feedback",
+    "title": "Feedback Generator",
+    "category": "Communication",
+    "description": "Write thoughtful and constructive feedback.",
+    "prompt": "Write constructive, balanced and actionable feedback for the following situation. Highlight strengths, identify improvement areas, provide specific suggestions and maintain a respectful tone.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 35,
+    "shortcut": "/debate",
+    "title": "Debate Builder",
+    "category": "Analysis",
+    "description": "Present balanced arguments from multiple perspectives.",
+    "prompt": "Analyze the following topic by presenting strong arguments for and against it. Evaluate evidence, assumptions, counterarguments and conclude with a balanced assessment.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 36,
+    "shortcut": "/roadmap",
+    "title": "Roadmap Planner",
+    "category": "Planning",
+    "description": "Build strategic roadmaps with milestones.",
+    "prompt": "Create a strategic roadmap for the following goal or project. Include phases, milestones, priorities, required resources, dependencies, timelines, success metrics and review checkpoints.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 37,
+    "shortcut": "/lessons",
+    "title": "Lessons Learned",
+    "category": "Reflection",
+    "description": "Extract valuable lessons from experiences or events.",
+    "prompt": "Analyze the following experience, project or event. Identify successes, failures, root causes, lessons learned, best practices, improvement opportunities and recommendations for future situations.\n\nExperience:",
+    "isOfficial": false
+  },
+  {
+    "id": 38,
+    "shortcut": "/booksummary",
+    "title": "Book Summary",
+    "category": "Education",
+    "description": "Summarize books with key ideas and takeaways.",
+    "prompt": "Summarize the following book. Include the main themes, key concepts, important lessons, memorable ideas, practical applications, notable quotes (paraphrased if necessary) and a concise conclusion.\n\nBook:",
+    "isOfficial": false
+  },
+  {
+    "id": 39,
+    "shortcut": "/casestudy",
+    "title": "Case Study",
+    "category": "Research",
+    "description": "Develop structured case studies with actionable insights.",
+    "prompt": "Create a detailed case study for the following subject. Include background, objectives, methodology, key findings, analysis, challenges, solutions, lessons learned and recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 40,
+    "shortcut": "/claudeflow",
+    "title": "Claude Flow",
+    "category": "AI",
+    "description": "Use Claude for structured reasoning, planning and polished communication.",
+    "prompt": "Act as an expert reasoning, planning and communication assistant. Carefully understand the following request, identify goals, context, assumptions and constraints. Break the task into logical steps, evaluate multiple approaches when appropriate, produce a clear, well-organized response and finish with practical recommendations, optional improvements and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 41,
+    "shortcut": "/simplify",
+    "title": "Simplify Complex Topic",
+    "category": "Learning",
+    "description": "Break down difficult concepts into easy-to-understand explanations.",
+    "prompt": "Explain the following complex topic in the simplest possible way. Use plain language, relatable analogies, step-by-step explanations, practical examples and conclude with a short summary and quick revision points.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 42,
+    "shortcut": "/teach",
+    "title": "Teach Me",
+    "category": "Education",
+    "description": "Learn a topic through an interactive teaching approach.",
+    "prompt": "Teach me the following topic as if you are an experienced instructor. Start with the basics, gradually introduce advanced concepts, ask reflection questions, provide examples, common mistakes and finish with a short quiz.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 43,
+    "shortcut": "/proofread",
+    "title": "Proofread Document",
+    "category": "Writing",
+    "description": "Correct grammar, spelling and readability issues.",
+    "prompt": "Proofread the following document. Correct grammar, spelling, punctuation and formatting issues while preserving the author's voice. Suggest optional improvements for clarity, style and readability.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 44,
+    "shortcut": "/tone",
+    "title": "Adjust Tone",
+    "category": "Writing",
+    "description": "Rewrite content in a different tone or style.",
+    "prompt": "Rewrite the following content in the requested tone while preserving its meaning. Improve readability and ensure the writing feels natural and appropriate for the intended audience.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 45,
+    "shortcut": "/expand",
+    "title": "Expand Content",
+    "category": "Writing",
+    "description": "Expand ideas into detailed, well-structured content.",
+    "prompt": "Expand the following notes or draft into a detailed, well-organized document. Add explanations, transitions, examples, supporting details and maintain a logical structure without introducing unsupported claims.\n\nDraft:",
+    "isOfficial": false
+  },
+  {
+    "id": 46,
+    "shortcut": "/condense",
+    "title": "Condense Content",
+    "category": "Writing",
+    "description": "Reduce lengthy text while preserving key information.",
+    "prompt": "Condense the following content into a concise version without losing essential information. Preserve important facts, conclusions and action items while improving readability.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 47,
+    "shortcut": "/questions",
+    "title": "Generate Questions",
+    "category": "Education",
+    "description": "Create thoughtful questions for learning or discussion.",
+    "prompt": "Generate a diverse set of questions about the following topic. Include beginner, intermediate and advanced questions, discussion prompts, critical thinking questions and reflection exercises.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 48,
+    "shortcut": "/brainmap",
+    "title": "Brain Map",
+    "category": "Creativity",
+    "description": "Organize ideas into a structured concept map.",
+    "prompt": "Create a structured concept map for the following topic. Identify main ideas, supporting concepts, relationships, dependencies, examples and possible extensions in a clear hierarchical format.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 49,
+    "shortcut": "/reflection",
+    "title": "Reflection Guide",
+    "category": "Reflection",
+    "description": "Guide thoughtful reflection on experiences or ideas.",
+    "prompt": "Guide a structured reflection on the following experience or topic. Identify observations, emotions, lessons learned, strengths, improvement opportunities, future actions and reflective questions.\n\nTopic or Experience:",
+    "isOfficial": false
+  },
+  {
+    "id": 50,
+    "shortcut": "/claudecore",
+    "title": "Claude Core",
+    "category": "AI",
+    "description": "Use Claude as a thoughtful reasoning, writing and knowledge partner.",
+    "prompt": "Act as an expert reasoning, writing and knowledge assistant. Carefully understand the following request, identify objectives, context, assumptions, uncertainties and constraints. Produce a structured, balanced and insightful response with clear explanations, practical recommendations, optional alternatives and suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 51,
+    "shortcut": "/paraphrase",
+    "title": "Paraphrase Text",
+    "category": "Writing",
+    "description": "Rewrite text naturally while preserving its original meaning.",
+    "prompt": "Paraphrase the following text in clear, natural language while preserving its original meaning, intent and important details. Improve readability and avoid repetitive wording.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 52,
+    "shortcut": "/headline",
+    "title": "Headline Generator",
+    "category": "Writing",
+    "description": "Generate compelling titles and headlines.",
+    "prompt": "Generate multiple compelling headlines for the following content. Provide options in professional, creative, SEO-friendly and attention-grabbing styles. Rank the strongest choices and explain why they work.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 53,
+    "shortcut": "/caption",
+    "title": "Caption Writer",
+    "category": "Social Media",
+    "description": "Create engaging captions for social media posts.",
+    "prompt": "Write engaging captions for the following post. Provide multiple versions with different tones such as professional, friendly, humorous and inspirational. Include optional hashtags where appropriate.\n\nPost Description:",
+    "isOfficial": false
+  },
+  {
+    "id": 54,
+    "shortcut": "/script",
+    "title": "Script Writer",
+    "category": "Creative Writing",
+    "description": "Write scripts for videos, presentations or podcasts.",
+    "prompt": "Write a complete script for the following topic or idea. Include an engaging introduction, logical flow, natural dialogue or narration, key talking points, conclusion and optional production notes.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 55,
+    "shortcut": "/newsletter",
+    "title": "Newsletter Creator",
+    "category": "Writing",
+    "description": "Create informative and engaging newsletters.",
+    "prompt": "Write a professional newsletter for the following subject. Include an engaging introduction, key updates, valuable insights, practical tips, a call to action and a friendly closing.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 56,
+    "shortcut": "/pressrelease",
+    "title": "Press Release",
+    "category": "Business",
+    "description": "Write professional press releases.",
+    "prompt": "Write a professional press release for the following announcement. Include a compelling headline, summary, key details, supporting quotes, background information, contact details placeholder and a strong closing.\n\nAnnouncement:",
+    "isOfficial": false
+  },
+  {
+    "id": 57,
+    "shortcut": "/policy",
+    "title": "Policy Draft",
+    "category": "Business",
+    "description": "Draft clear organizational policies.",
+    "prompt": "Draft a professional policy document for the following subject. Include purpose, scope, responsibilities, procedures, compliance requirements, exceptions and review recommendations.\n\nPolicy Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 58,
+    "shortcut": "/workflow",
+    "title": "Workflow Designer",
+    "category": "Planning",
+    "description": "Design efficient workflows for tasks and processes.",
+    "prompt": "Design an efficient workflow for the following process. Break it into logical stages, identify roles, responsibilities, decision points, dependencies, automation opportunities and improvement suggestions.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 59,
+    "shortcut": "/mentor",
+    "title": "Personal Mentor",
+    "category": "Coaching",
+    "description": "Receive thoughtful mentoring and practical guidance.",
+    "prompt": "Act as an experienced mentor. Help with the following situation by asking clarifying questions if needed, identifying challenges, suggesting practical solutions, highlighting learning opportunities and recommending the best next steps.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 60,
+    "shortcut": "/claudeguide",
+    "title": "Claude Guide",
+    "category": "AI",
+    "description": "Use Claude as a careful mentor, writer and strategic thinking partner.",
+    "prompt": "Act as a thoughtful mentor, expert writer and strategic thinking partner. Carefully examine the following request, identify goals, context, assumptions, uncertainties and constraints. Provide a structured response with balanced reasoning, practical recommendations, alternative approaches where useful and a clear action plan.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 61,
+    "shortcut": "/mindmap",
+    "title": "Mind Map",
+    "category": "Learning",
+    "description": "Organize ideas into a structured mind map.",
+    "prompt": "Create a detailed mind map for the following topic. Organize ideas hierarchically with main concepts, subtopics, supporting details, relationships, practical examples and suggested areas for further exploration.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 62,
+    "shortcut": "/actionplan",
+    "title": "Action Plan",
+    "category": "Planning",
+    "description": "Turn goals into actionable execution plans.",
+    "prompt": "Develop a detailed action plan for the following objective. Break it into clear tasks, priorities, timelines, required resources, possible obstacles, mitigation strategies, success metrics and review checkpoints.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 63,
+    "shortcut": "/rootcause",
+    "title": "Root Cause Analysis",
+    "category": "Analysis",
+    "description": "Identify the underlying causes of a problem.",
+    "prompt": "Perform a root cause analysis for the following problem. Identify symptoms, immediate causes, underlying causes, contributing factors, evidence, possible solutions and preventive measures.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 64,
+    "shortcut": "/swot",
+    "title": "SWOT Analysis",
+    "category": "Business",
+    "description": "Evaluate strengths, weaknesses, opportunities and threats.",
+    "prompt": "Conduct a detailed SWOT analysis for the following subject. Clearly explain strengths, weaknesses, opportunities and threats. Conclude with strategic recommendations and priority actions.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 65,
+    "shortcut": "/risk",
+    "title": "Risk Assessment",
+    "category": "Business",
+    "description": "Assess risks and mitigation strategies.",
+    "prompt": "Perform a comprehensive risk assessment for the following project or situation. Identify risks, estimate likelihood and impact, propose mitigation strategies, contingency plans and monitoring recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 66,
+    "shortcut": "/decisionmatrix",
+    "title": "Decision Matrix",
+    "category": "Decision Making",
+    "description": "Compare options using weighted evaluation criteria.",
+    "prompt": "Create a decision matrix for the following options. Define evaluation criteria, assign relative importance, compare alternatives, explain trade-offs and recommend the best option with supporting reasoning.\n\nOptions:",
+    "isOfficial": false
+  },
+  {
+    "id": 67,
+    "shortcut": "/prioritize",
+    "title": "Priority Planner",
+    "category": "Productivity",
+    "description": "Prioritize tasks using structured frameworks.",
+    "prompt": "Prioritize the following tasks or objectives. Categorize them by urgency, importance, expected impact, effort required and dependencies. Recommend an execution order with justification.\n\nTasks:",
+    "isOfficial": false
+  },
+  {
+    "id": 68,
+    "shortcut": "/reflectionplus",
+    "title": "Deep Reflection",
+    "category": "Reflection",
+    "description": "Reflect deeply on experiences to extract meaningful insights.",
+    "prompt": "Guide a deep reflection on the following experience. Analyze what happened, why it happened, emotional responses, lessons learned, growth opportunities, alternative approaches and practical next steps.\n\nExperience:",
+    "isOfficial": false
+  },
+  {
+    "id": 69,
+    "shortcut": "/learningpath",
+    "title": "Learning Path",
+    "category": "Education",
+    "description": "Design a complete roadmap for mastering a subject.",
+    "prompt": "Create a complete learning roadmap for the following subject. Organize beginner, intermediate and advanced stages, recommend resources, practice activities, milestones, projects, assessment methods and mastery indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 70,
+    "shortcut": "/claudecompanion",
+    "title": "Claude Companion",
+    "category": "AI",
+    "description": "Use Claude as a trusted thinking, planning and writing companion.",
+    "prompt": "Act as a thoughtful thinking partner, planner and writing assistant. Carefully understand the following request, identify goals, assumptions, missing information and constraints. Explore multiple approaches where appropriate, explain your reasoning clearly, deliver a polished response and conclude with practical recommendations, optional improvements and suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 71,
+    "shortcut": "/concept",
+    "title": "Concept Explorer",
+    "category": "Learning",
+    "description": "Explore a concept from fundamentals to advanced understanding.",
+    "prompt": "Explore the following concept in depth. Begin with a simple definition, explain the underlying principles, provide practical examples, discuss advanced applications, common misconceptions, related concepts and conclude with key takeaways.\n\nConcept:",
+    "isOfficial": false
+  },
+  {
+    "id": 72,
+    "shortcut": "/framework",
+    "title": "Framework Builder",
+    "category": "Planning",
+    "description": "Design structured frameworks for solving problems.",
+    "prompt": "Design a practical framework for the following challenge. Define objectives, guiding principles, major components, workflows, decision points, evaluation criteria, implementation steps and success indicators.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 73,
+    "shortcut": "/insights",
+    "title": "Insight Generator",
+    "category": "Analysis",
+    "description": "Extract meaningful insights from information.",
+    "prompt": "Analyze the following information and generate meaningful insights. Identify patterns, trends, relationships, hidden observations, key findings, practical implications and recommended actions.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 74,
+    "shortcut": "/strategy",
+    "title": "Strategy Builder",
+    "category": "Business",
+    "description": "Develop practical and effective strategies.",
+    "prompt": "Develop a comprehensive strategy for the following objective. Include goals, situational analysis, strategic priorities, implementation phases, resource requirements, risks, KPIs and continuous improvement recommendations.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 75,
+    "shortcut": "/optimization",
+    "title": "Optimization Advisor",
+    "category": "Productivity",
+    "description": "Optimize systems, processes or workflows for better performance.",
+    "prompt": "Analyze the following process or system and recommend optimization opportunities. Identify inefficiencies, bottlenecks, improvement ideas, automation possibilities, expected benefits, implementation priorities and measurable outcomes.\n\nProcess or System:",
+    "isOfficial": false
+  },
+  {
+    "id": 76,
+    "shortcut": "/evaluation",
+    "title": "Evaluation Report",
+    "category": "Analysis",
+    "description": "Perform a balanced evaluation of any subject.",
+    "prompt": "Evaluate the following subject objectively. Assess quality, effectiveness, strengths, weaknesses, opportunities for improvement, supporting evidence and provide a balanced conclusion with recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 77,
+    "shortcut": "/scenario",
+    "title": "Scenario Planner",
+    "category": "Planning",
+    "description": "Explore multiple possible future scenarios.",
+    "prompt": "Develop multiple realistic scenarios for the following situation. Analyze best-case, expected-case and worst-case outcomes. Discuss risks, opportunities, assumptions, contingency plans and recommended actions for each scenario.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 78,
+    "shortcut": "/bestpractices",
+    "title": "Best Practices",
+    "category": "Knowledge",
+    "description": "Identify proven best practices for any field.",
+    "prompt": "List and explain the best practices for the following topic. Describe why each practice is effective, when it should be applied, common mistakes to avoid and practical implementation advice.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 79,
+    "shortcut": "/improvement",
+    "title": "Continuous Improvement",
+    "category": "Productivity",
+    "description": "Generate practical improvement recommendations.",
+    "prompt": "Review the following project, process or idea and identify opportunities for continuous improvement. Suggest quick wins, long-term improvements, measurable success indicators and implementation priorities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 80,
+    "shortcut": "/claudeinsight",
+    "title": "Claude Insight",
+    "category": "AI",
+    "description": "Use Claude for thoughtful analysis, learning and strategic guidance.",
+    "prompt": "Act as an expert analyst, educator and strategic advisor. Carefully study the following request, identify objectives, assumptions, missing information, risks and opportunities. Deliver a well-organized, evidence-based response with clear explanations, practical recommendations, alternative perspectives and suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 81,
+    "shortcut": "/examine",
+    "title": "Examine Thoroughly",
+    "category": "Analysis",
+    "description": "Examine a subject in depth from multiple perspectives.",
+    "prompt": "Examine the following subject thoroughly. Identify its purpose, key components, strengths, weaknesses, assumptions, dependencies, practical applications, limitations and opportunities for improvement. Conclude with actionable recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 82,
+    "shortcut": "/diagnose",
+    "title": "Problem Diagnosis",
+    "category": "Analysis",
+    "description": "Diagnose problems and recommend effective solutions.",
+    "prompt": "Diagnose the following problem systematically. Identify symptoms, root causes, contributing factors, available evidence, possible solutions, preventive measures and recommend the most effective course of action.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 83,
+    "shortcut": "/knowledgebase",
+    "title": "Knowledge Base",
+    "category": "Knowledge",
+    "description": "Organize information into a structured knowledge base.",
+    "prompt": "Create a structured knowledge base for the following topic. Organize information into categories, essential concepts, definitions, examples, frequently asked questions, references for further learning and a concise summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 84,
+    "shortcut": "/coach",
+    "title": "Personal Coach",
+    "category": "Coaching",
+    "description": "Receive structured coaching for goals and challenges.",
+    "prompt": "Act as a professional coach. Help with the following goal or challenge by identifying strengths, obstacles, opportunities, practical action steps, motivation strategies, progress tracking methods and accountability recommendations.\n\nGoal or Challenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 85,
+    "shortcut": "/imagine",
+    "title": "Creative Exploration",
+    "category": "Creativity",
+    "description": "Generate imaginative possibilities and innovative ideas.",
+    "prompt": "Explore the following idea creatively. Generate imaginative possibilities, innovative variations, unconventional approaches, practical applications, potential challenges and the most promising concepts with explanations.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 86,
+    "shortcut": "/exercises",
+    "title": "Practice Exercises",
+    "category": "Education",
+    "description": "Generate practice exercises with solutions.",
+    "prompt": "Create a comprehensive set of practice exercises for the following topic. Include beginner, intermediate and advanced questions along with complete answers and concise explanations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 87,
+    "shortcut": "/discussion",
+    "title": "Discussion Guide",
+    "category": "Communication",
+    "description": "Prepare structured discussions for meetings or learning.",
+    "prompt": "Create a structured discussion guide for the following topic. Include objectives, discussion questions, key talking points, differing viewpoints, reflection questions and expected outcomes.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 88,
+    "shortcut": "/resourceguide",
+    "title": "Resource Guide",
+    "category": "Learning",
+    "description": "Recommend structured learning resources.",
+    "prompt": "Create a resource guide for learning the following subject. Organize recommended books, articles, videos, courses, practice resources, communities, projects and an effective learning sequence.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 89,
+    "shortcut": "/improveplan",
+    "title": "Improvement Plan",
+    "category": "Planning",
+    "description": "Create a structured improvement plan.",
+    "prompt": "Develop a structured improvement plan for the following situation. Identify current challenges, desired outcomes, priority actions, timelines, required resources, success metrics, review checkpoints and continuous improvement strategies.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 90,
+    "shortcut": "/claudeadvisor",
+    "title": "Claude Advisor",
+    "category": "AI",
+    "description": "Use Claude as an analytical advisor and thoughtful decision partner.",
+    "prompt": "Act as an expert advisor, analyst and reasoning partner. Carefully analyze the following request by identifying objectives, assumptions, context, constraints, risks and opportunities. Evaluate multiple perspectives, explain important trade-offs, recommend the strongest solution and conclude with a practical action plan and suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 91,
+    "shortcut": "/deepdive",
+    "title": "Deep Dive Analysis",
+    "category": "Analysis",
+    "description": "Explore a topic comprehensively with layered reasoning.",
+    "prompt": "Conduct a deep-dive analysis of the following topic. Explain the background, core concepts, underlying mechanisms, important relationships, real-world applications, limitations, future developments and conclude with key insights and recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 92,
+    "shortcut": "/perspectives",
+    "title": "Multiple Perspectives",
+    "category": "Analysis",
+    "description": "Evaluate a subject from different viewpoints.",
+    "prompt": "Analyze the following subject from multiple perspectives such as technical, business, ethical, social, economic and practical. Highlight areas of agreement, disagreement, trade-offs and provide a balanced conclusion.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 93,
+    "shortcut": "/frameworkcompare",
+    "title": "Framework Comparison",
+    "category": "Knowledge",
+    "description": "Compare different frameworks or methodologies.",
+    "prompt": "Compare the following frameworks or methodologies. Explain their principles, strengths, weaknesses, ideal use cases, limitations and recommend which one is most suitable under different circumstances.\n\nFrameworks:",
+    "isOfficial": false
+  },
+  {
+    "id": 94,
+    "shortcut": "/masterclass",
+    "title": "Masterclass Lesson",
+    "category": "Education",
+    "description": "Create an expert-level lesson on any subject.",
+    "prompt": "Create a masterclass on the following topic. Start with foundational knowledge, progressively introduce advanced concepts, include practical examples, exercises, common mistakes, expert insights and a final knowledge assessment.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 95,
+    "shortcut": "/innovation",
+    "title": "Innovation Workshop",
+    "category": "Creativity",
+    "description": "Generate innovative solutions for complex challenges.",
+    "prompt": "Facilitate an innovation workshop for the following challenge. Generate multiple creative solutions, evaluate feasibility, potential impact, implementation complexity, risks, required resources and rank the strongest ideas.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 96,
+    "shortcut": "/decisionguide",
+    "title": "Decision Guide",
+    "category": "Decision Making",
+    "description": "Guide complex decisions using structured reasoning.",
+    "prompt": "Guide the following decision using structured reasoning. Clarify objectives, identify evaluation criteria, compare alternatives, analyze trade-offs, estimate risks, consider long-term consequences and recommend the most suitable option.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 97,
+    "shortcut": "/knowledgepath",
+    "title": "Knowledge Path",
+    "category": "Learning",
+    "description": "Organize learning into a structured progression.",
+    "prompt": "Design a structured knowledge pathway for the following subject. Organize learning stages, prerequisite concepts, practical exercises, milestone projects, assessment methods, recommended resources and mastery goals.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 98,
+    "shortcut": "/executivesummary",
+    "title": "Executive Summary",
+    "category": "Business",
+    "description": "Produce concise executive-level summaries.",
+    "prompt": "Prepare an executive summary for the following document, project or proposal. Highlight objectives, key findings, important insights, risks, opportunities, recommendations and suggested next actions in a concise executive format.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 99,
+    "shortcut": "/qualityreview",
+    "title": "Quality Review",
+    "category": "Quality Assurance",
+    "description": "Review work against quality standards.",
+    "prompt": "Perform a comprehensive quality review of the following work. Evaluate accuracy, completeness, clarity, consistency, structure, usability, strengths, weaknesses and provide prioritized improvement recommendations.\n\nWork:",
+    "isOfficial": false
+  },
+  {
+    "id": 100,
+    "shortcut": "/claudefoundation",
+    "title": "Claude Foundation",
+    "category": "AI",
+    "description": "Use Claude as a thoughtful reasoning, writing, learning and decision-support partner.",
+    "prompt": "Act as an expert reasoning, writing, learning and decision-support assistant. Carefully analyze the following request by identifying objectives, assumptions, context, constraints, missing information, risks and opportunities. Consider multiple solution paths where appropriate, explain important trade-offs, produce a clear and well-structured response, and conclude with practical recommendations, optional improvements and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  }
+]

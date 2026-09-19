@@ -1,0 +1,902 @@
+[
+  {
+    "id": 301,
+    "shortcut": "/chiefstrategy",
+    "title": "Chief Strategy Officer",
+    "category": "Master AI",
+    "description": "Develop executive-level business and technology strategies.",
+    "prompt": "Act as a Chief Strategy Officer. Analyze the following business or technology initiative. Define strategic objectives, competitive advantages, execution roadmap, organizational impact, risks, KPIs and long-term growth opportunities.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 302,
+    "shortcut": "/ctoadvisor",
+    "title": "Virtual CTO",
+    "category": "Master AI",
+    "description": "Receive guidance from a virtual Chief Technology Officer.",
+    "prompt": "Act as an experienced Chief Technology Officer. Evaluate the following company or product, identify technical challenges, propose scalable architecture, prioritize engineering investments, recommend hiring plans and define a multi-year technology roadmap.\n\nCompany or Product:",
+    "isOfficial": false
+  },
+  {
+    "id": 303,
+    "shortcut": "/researchplanner",
+    "title": "Research Planning",
+    "category": "Research",
+    "description": "Plan advanced research projects.",
+    "prompt": "Create a comprehensive research plan for the following topic. Define research questions, methodology, milestones, datasets, evaluation methods, risks and expected outcomes.\n\nResearch Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 304,
+    "shortcut": "/systemsynthesis",
+    "title": "Systems Synthesis",
+    "category": "Master AI",
+    "description": "Combine multiple complex systems into one architecture.",
+    "prompt": "Design an integrated architecture that combines the following systems into a unified platform. Explain integration patterns, data flow, governance, scalability and operational considerations.\n\nSystems:",
+    "isOfficial": false
+  },
+  {
+    "id": 305,
+    "shortcut": "/executivedecision",
+    "title": "Executive Decision Support",
+    "category": "Business",
+    "description": "Support executive-level decision making.",
+    "prompt": "Analyze the following executive decision. Compare available options, assess risks, estimate impact, evaluate financial and technical implications, then recommend the optimal decision with justification.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 306,
+    "shortcut": "/innovationroadmap",
+    "title": "Innovation Roadmap",
+    "category": "Innovation",
+    "description": "Create a long-term innovation strategy.",
+    "prompt": "Develop a five-year innovation roadmap for the following organization. Include emerging technologies, AI adoption, research priorities, investment strategy and measurable success indicators.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 307,
+    "shortcut": "/ecosystemdesign",
+    "title": "Platform Ecosystem Design",
+    "category": "Architecture",
+    "description": "Design large-scale digital ecosystems.",
+    "prompt": "Design a scalable digital ecosystem for the following platform. Explain core services, extension mechanisms, APIs, partner integrations, governance and future expansion.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 308,
+    "shortcut": "/globalai",
+    "title": "Global AI Platform",
+    "category": "Master AI",
+    "description": "Architect globally distributed AI platforms.",
+    "prompt": "Design a globally distributed AI platform for the following organization. Include multi-region deployment, compliance, governance, model lifecycle, monitoring and disaster recovery.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 309,
+    "shortcut": "/technologyforecast",
+    "title": "Technology Forecast",
+    "category": "Research",
+    "description": "Forecast technology trends.",
+    "prompt": "Analyze the following technology domain and forecast its evolution over the next 5 to 10 years. Discuss opportunities, risks, disruptive innovations and strategic recommendations.\n\nTechnology:",
+    "isOfficial": false
+  },
+  {
+    "id": 310,
+    "shortcut": "/portfolioanalysis",
+    "title": "Technology Portfolio Analysis",
+    "category": "Business",
+    "description": "Evaluate strategic technology investments.",
+    "prompt": "Analyze the following portfolio of products or technologies. Evaluate ROI, strategic alignment, technical risks, resource allocation and future investment priorities.\n\nPortfolio:",
+    "isOfficial": false
+  },
+  {
+    "id": 311,
+    "shortcut": "/organizationaldesign",
+    "title": "Engineering Organization Design",
+    "category": "Leadership",
+    "description": "Design world-class engineering organizations.",
+    "prompt": "Design an engineering organization for the following company. Define team structures, leadership roles, communication models, engineering processes, hiring strategy and scaling plans.\n\nCompany:",
+    "isOfficial": false
+  },
+  {
+    "id": 312,
+    "shortcut": "/complexanalysis",
+    "title": "Complex Systems Analysis",
+    "category": "Research",
+    "description": "Analyze highly complex systems.",
+    "prompt": "Perform a comprehensive systems analysis for the following complex environment. Identify interacting components, dependencies, bottlenecks, systemic risks and optimization opportunities.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 313,
+    "shortcut": "/masteradvisor",
+    "title": "Master AI Advisor",
+    "category": "Master AI",
+    "description": "Receive executive-level multidisciplinary guidance.",
+    "prompt": "Act as a multidisciplinary Master AI Advisor with expertise in enterprise architecture, artificial intelligence, software engineering, product strategy, cybersecurity, cloud computing and organizational leadership. Analyze the following initiative, identify opportunities and risks, compare multiple implementation strategies, recommend the optimal approach and provide a phased execution roadmap with measurable success metrics.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 314,
+    "shortcut": "/principalengineer",
+    "title": "Principal Engineer Review",
+    "category": "Master AI",
+    "description": "Review systems from a Principal Engineer's perspective.",
+    "prompt": "Act as a Principal Engineer. Review the following project for architecture, maintainability, scalability, operational excellence, technical debt, engineering standards and future extensibility. Provide prioritized recommendations with clear trade-offs.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 315,
+    "shortcut": "/distinguishedengineer",
+    "title": "Distinguished Engineer Assessment",
+    "category": "Master AI",
+    "description": "Perform a world-class technical assessment.",
+    "prompt": "Act as a Distinguished Engineer. Evaluate the following system at a strategic level. Identify architectural weaknesses, innovation opportunities, long-term risks, engineering excellence improvements and strategic technology investments.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 316,
+    "shortcut": "/enterpriseblueprint",
+    "title": "Enterprise Blueprint",
+    "category": "Architecture",
+    "description": "Design an enterprise-scale platform.",
+    "prompt": "Design a complete enterprise platform blueprint for the following business. Include business capabilities, platform architecture, integration patterns, governance, operational excellence and scalability planning.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 317,
+    "shortcut": "/airesearchlab",
+    "title": "AI Research Lab",
+    "category": "Research",
+    "description": "Plan an advanced AI research program.",
+    "prompt": "Design an AI research program for the following domain. Define research objectives, experimental methodology, datasets, evaluation methods, publication strategy and long-term research roadmap.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 318,
+    "shortcut": "/futureenterprise",
+    "title": "Future Enterprise Design",
+    "category": "Business",
+    "description": "Design the enterprise of the future.",
+    "prompt": "Design a future-ready enterprise for the following industry. Explain digital transformation, AI adoption, automation, governance, workforce evolution and competitive strategy over the next decade.\n\nIndustry:",
+    "isOfficial": false
+  },
+  {
+    "id": 319,
+    "shortcut": "/megaplatform",
+    "title": "Mega Platform Strategy",
+    "category": "Architecture",
+    "description": "Architect internet-scale platforms.",
+    "prompt": "Design an internet-scale platform for the following service. Cover distributed architecture, global availability, resilience, observability, security, cost optimization and operational governance.\n\nService:",
+    "isOfficial": false
+  },
+  {
+    "id": 320,
+    "shortcut": "/executivebriefing",
+    "title": "Executive Briefing",
+    "category": "Leadership",
+    "description": "Prepare executive-level strategic briefings.",
+    "prompt": "Prepare an executive briefing for the following initiative. Include objectives, strategic importance, risks, financial considerations, implementation roadmap, KPIs and executive recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 321,
+    "shortcut": "/technologygovernance",
+    "title": "Technology Governance",
+    "category": "Leadership",
+    "description": "Establish enterprise technology governance.",
+    "prompt": "Create a technology governance framework for the following organization. Include architecture governance, engineering standards, decision-making processes, risk management, compliance and continuous improvement.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 322,
+    "shortcut": "/systemsofsystems",
+    "title": "Systems of Systems",
+    "category": "Architecture",
+    "description": "Design interconnected enterprise systems.",
+    "prompt": "Design a 'system of systems' architecture for the following organization. Explain interactions, dependencies, orchestration, governance, scalability and operational resilience.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 323,
+    "shortcut": "/globaloperations",
+    "title": "Global Operations Strategy",
+    "category": "Operations",
+    "description": "Plan worldwide technical operations.",
+    "prompt": "Develop a global operations strategy for the following technology organization. Include support models, SRE practices, monitoring, incident management, regional operations and business continuity.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 324,
+    "shortcut": "/executivearchitecture",
+    "title": "Executive Architecture Review",
+    "category": "Master AI",
+    "description": "Evaluate architecture from an executive perspective.",
+    "prompt": "Act as an Executive Architect. Review the following architecture for business alignment, technical excellence, scalability, resilience, governance, security, operational maturity and long-term sustainability. Recommend executive priorities.\n\nArchitecture:",
+    "isOfficial": false
+  },
+  {
+    "id": 325,
+    "shortcut": "/masterconsultant",
+    "title": "Master Technology Consultant",
+    "category": "Master AI",
+    "description": "Receive world-class consulting guidance.",
+    "prompt": "Act as a Master Technology Consultant with expertise in AI, enterprise architecture, cloud platforms, cybersecurity, software engineering, business strategy and organizational transformation. Analyze the following challenge, compare multiple strategic approaches, evaluate technical and business trade-offs, recommend the optimal solution and provide a phased implementation roadmap with measurable outcomes.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 326,
+    "shortcut": "/staffengineer",
+    "title": "Staff Engineer Review",
+    "category": "Master AI",
+    "description": "Review systems from a Staff Engineer's perspective.",
+    "prompt": "Act as a Staff Engineer. Evaluate the following project for architectural quality, scalability, maintainability, engineering productivity, developer experience, technical debt and long-term sustainability. Recommend prioritized improvements with technical justifications.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 327,
+    "shortcut": "/hyperscale",
+    "title": "Hyperscale Platform Design",
+    "category": "Architecture",
+    "description": "Design platforms capable of hyperscale growth.",
+    "prompt": "Design a hyperscale architecture for the following platform. Address multi-region deployment, global load balancing, data replication, resilience, observability, cost optimization and operational excellence.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 328,
+    "shortcut": "/digitaltwin",
+    "title": "Digital Twin Strategy",
+    "category": "Innovation",
+    "description": "Design a digital twin solution.",
+    "prompt": "Design a digital twin solution for the following system. Explain data synchronization, simulation models, analytics, visualization, AI integration and operational benefits.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 329,
+    "shortcut": "/airesearchscientist",
+    "title": "AI Research Scientist",
+    "category": "Research",
+    "description": "Approach problems like an AI research scientist.",
+    "prompt": "Act as an AI Research Scientist. Develop a research strategy for the following problem including hypotheses, experimental design, datasets, evaluation metrics, reproducibility considerations and future research directions.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 330,
+    "shortcut": "/platformstrategy",
+    "title": "Platform Strategy",
+    "category": "Business",
+    "description": "Build a long-term platform strategy.",
+    "prompt": "Develop a strategic roadmap for the following platform. Include ecosystem growth, developer adoption, monetization opportunities, governance, technology evolution and competitive positioning.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 331,
+    "shortcut": "/sreblueprint",
+    "title": "Site Reliability Blueprint",
+    "category": "Operations",
+    "description": "Design an SRE operating model.",
+    "prompt": "Design a Site Reliability Engineering (SRE) operating model for the following platform. Include SLIs, SLOs, error budgets, incident response, observability, automation and reliability improvements.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 332,
+    "shortcut": "/globalsaas",
+    "title": "Global SaaS Expansion",
+    "category": "Business",
+    "description": "Plan worldwide SaaS growth.",
+    "prompt": "Create a global expansion strategy for the following SaaS product. Include localization, regional compliance, pricing, infrastructure, customer support, partnerships and go-to-market planning.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 333,
+    "shortcut": "/innovationportfolio",
+    "title": "Innovation Portfolio",
+    "category": "Innovation",
+    "description": "Manage enterprise innovation investments.",
+    "prompt": "Design an innovation portfolio for the following organization. Categorize initiatives by impact, feasibility, investment level, strategic alignment, risk and expected business value.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 334,
+    "shortcut": "/engineeringculture",
+    "title": "Engineering Culture",
+    "category": "Leadership",
+    "description": "Build a world-class engineering culture.",
+    "prompt": "Design an engineering culture framework for the following organization. Cover leadership principles, knowledge sharing, developer productivity, mentoring, quality standards and continuous improvement.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 335,
+    "shortcut": "/decisionarchitecture",
+    "title": "Decision Architecture",
+    "category": "Master AI",
+    "description": "Design enterprise decision systems.",
+    "prompt": "Design an enterprise decision architecture for the following organization. Explain governance, decision workflows, AI-assisted recommendations, auditability, accountability and continuous optimization.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 336,
+    "shortcut": "/resilienceblueprint",
+    "title": "Enterprise Resilience Blueprint",
+    "category": "Architecture",
+    "description": "Strengthen enterprise resilience.",
+    "prompt": "Create an enterprise resilience blueprint for the following platform. Include business continuity, disaster recovery, fault tolerance, redundancy, operational resilience and crisis management.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 337,
+    "shortcut": "/strategicforesight",
+    "title": "Strategic Foresight",
+    "category": "Research",
+    "description": "Explore future strategic scenarios.",
+    "prompt": "Perform a strategic foresight analysis for the following industry or technology. Develop multiple future scenarios, identify uncertainties, emerging opportunities, threats and strategic recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 338,
+    "shortcut": "/masterthinktank",
+    "title": "Master Think Tank",
+    "category": "Master AI",
+    "description": "Generate multidisciplinary executive recommendations.",
+    "prompt": "Act as an elite multidisciplinary think tank composed of world-class experts in AI, software engineering, cloud computing, cybersecurity, economics, product strategy and organizational leadership. Analyze the following challenge from multiple perspectives, debate alternative solutions, identify risks and opportunities, then recommend the optimal long-term strategy with an actionable implementation roadmap.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 339,
+    "shortcut": "/worldclasscto",
+    "title": "World-Class CTO",
+    "category": "Master AI",
+    "description": "Receive guidance from a world-class Chief Technology Officer.",
+    "prompt": "Act as a world-class Chief Technology Officer with experience building global technology companies. Evaluate the following organization, identify strategic technical priorities, engineering challenges, organizational risks, investment opportunities and define a five-year technology roadmap with measurable business outcomes.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 340,
+    "shortcut": "/grandstrategy",
+    "title": "Grand Strategy",
+    "category": "Strategy",
+    "description": "Develop a long-term strategic master plan.",
+    "prompt": "Develop a comprehensive grand strategy for the following organization or initiative. Cover competitive positioning, technology investments, innovation, organizational evolution, partnerships, risk mitigation and long-term sustainability.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 341,
+    "shortcut": "/futurelab",
+    "title": "Future Technology Lab",
+    "category": "Research",
+    "description": "Explore emerging technologies.",
+    "prompt": "Design a future technology laboratory for the following organization. Identify emerging technologies worth researching, define evaluation criteria, experimentation plans, expected business impact and technology adoption roadmap.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 342,
+    "shortcut": "/architectureboard",
+    "title": "Architecture Review Board",
+    "category": "Architecture",
+    "description": "Conduct an executive architecture review.",
+    "prompt": "Act as an enterprise Architecture Review Board. Evaluate the following architecture for scalability, resilience, governance, security, maintainability, operational maturity and business alignment. Produce a formal review report with recommendations.\n\nArchitecture:",
+    "isOfficial": false
+  },
+  {
+    "id": 343,
+    "shortcut": "/moonshot",
+    "title": "Moonshot Innovation",
+    "category": "Innovation",
+    "description": "Generate breakthrough innovation strategies.",
+    "prompt": "Design a moonshot innovation strategy for the following challenge. Encourage bold thinking while considering technical feasibility, investment requirements, execution phases, risks and transformational impact.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 344,
+    "shortcut": "/ecosystemgovernance",
+    "title": "Digital Ecosystem Governance",
+    "category": "Leadership",
+    "description": "Govern large digital ecosystems.",
+    "prompt": "Design a governance model for the following digital ecosystem. Include stakeholder management, policy development, platform standards, compliance, operational oversight and continuous improvement.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 345,
+    "shortcut": "/researchroadmap",
+    "title": "Research Roadmap",
+    "category": "Research",
+    "description": "Create a long-term scientific research roadmap.",
+    "prompt": "Develop a long-term research roadmap for the following scientific or technical domain. Define major milestones, expected breakthroughs, collaboration opportunities, funding priorities and success metrics.\n\nResearch Domain:",
+    "isOfficial": false
+  },
+  {
+    "id": 346,
+    "shortcut": "/enterpriseportfolio",
+    "title": "Enterprise Portfolio Strategy",
+    "category": "Business",
+    "description": "Optimize enterprise technology investments.",
+    "prompt": "Evaluate the following enterprise technology portfolio. Recommend investment priorities, modernization initiatives, retirement candidates, innovation opportunities and governance improvements.\n\nPortfolio:",
+    "isOfficial": false
+  },
+  {
+    "id": 347,
+    "shortcut": "/executivetradeoffs",
+    "title": "Executive Trade-off Analysis",
+    "category": "Strategy",
+    "description": "Evaluate strategic trade-offs.",
+    "prompt": "Analyze the following executive decision involving multiple trade-offs. Compare alternatives across cost, performance, scalability, security, user experience, operational complexity and long-term sustainability before recommending the best option.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 348,
+    "shortcut": "/technologyvision",
+    "title": "Technology Vision",
+    "category": "Leadership",
+    "description": "Define a compelling technology vision.",
+    "prompt": "Develop a technology vision for the following organization. Describe the future architecture, engineering culture, AI strategy, innovation priorities, talent development and measurable long-term objectives.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 349,
+    "shortcut": "/enterprisefutures",
+    "title": "Enterprise Futures",
+    "category": "Master AI",
+    "description": "Explore future enterprise evolution.",
+    "prompt": "Analyze how the following organization could evolve over the next decade. Consider AI, automation, emerging technologies, workforce transformation, global expansion, sustainability and competitive differentiation.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 350,
+    "shortcut": "/masterarchitect",
+    "title": "Master Enterprise Architect",
+    "category": "Master AI",
+    "description": "Receive guidance from a master enterprise architect.",
+    "prompt": "Act as a Master Enterprise Architect with expertise across enterprise architecture, artificial intelligence, distributed systems, cybersecurity, cloud platforms, organizational strategy and global technology operations. Perform a comprehensive assessment of the following initiative, identify critical success factors, strategic risks, architectural options, implementation phases and long-term transformation opportunities. Deliver recommendations suitable for executive leadership.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 351,
+    "shortcut": "/enterpriseintelligence",
+    "title": "Enterprise Intelligence",
+    "category": "Master AI",
+    "description": "Design an enterprise intelligence strategy.",
+    "prompt": "Design an enterprise intelligence strategy for the following organization. Include AI-driven decision support, knowledge management, predictive analytics, governance, operational intelligence and executive dashboards.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 352,
+    "shortcut": "/adaptiveenterprise",
+    "title": "Adaptive Enterprise",
+    "category": "Business",
+    "description": "Design a continuously adapting organization.",
+    "prompt": "Create a blueprint for an adaptive enterprise capable of responding rapidly to changing technologies, markets and customer needs. Include organizational design, technology strategy, governance and continuous learning.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 353,
+    "shortcut": "/executiveai",
+    "title": "Executive AI Council",
+    "category": "Leadership",
+    "description": "Establish AI leadership across the organization.",
+    "prompt": "Design an Executive AI Council for the following organization. Define governance, executive responsibilities, decision-making processes, investment priorities, risk oversight and success metrics.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 354,
+    "shortcut": "/knowledgeenterprise",
+    "title": "Enterprise Knowledge System",
+    "category": "Master AI",
+    "description": "Build an organization-wide knowledge platform.",
+    "prompt": "Design an enterprise knowledge system for the following organization. Include knowledge capture, retrieval, AI-assisted discovery, governance, lifecycle management and collaboration features.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 355,
+    "shortcut": "/futureworkforce",
+    "title": "Future Workforce Strategy",
+    "category": "Leadership",
+    "description": "Prepare the workforce for the AI era.",
+    "prompt": "Develop a workforce transformation strategy for the following organization. Include AI adoption, upskilling, leadership development, organizational change, talent acquisition and long-term workforce planning.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 356,
+    "shortcut": "/innovationengine",
+    "title": "Innovation Engine",
+    "category": "Innovation",
+    "description": "Build a sustainable innovation engine.",
+    "prompt": "Design an innovation engine for the following organization. Include idea generation, experimentation, prioritization, funding, execution, measurement and continuous improvement.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 357,
+    "shortcut": "/enterpriseanalytics",
+    "title": "Enterprise Analytics",
+    "category": "Data Strategy",
+    "description": "Design an enterprise analytics ecosystem.",
+    "prompt": "Design an enterprise analytics platform for the following organization. Include data architecture, governance, business intelligence, AI analytics, reporting, self-service capabilities and executive dashboards.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 358,
+    "shortcut": "/globalgovernance",
+    "title": "Global Governance Framework",
+    "category": "Leadership",
+    "description": "Govern global technology operations.",
+    "prompt": "Create a governance framework for a globally distributed technology organization. Cover strategic planning, architecture governance, security oversight, operational standards, compliance and executive reporting.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 359,
+    "shortcut": "/nextgenplatform",
+    "title": "Next-Generation Platform",
+    "category": "Architecture",
+    "description": "Design the next generation of digital platforms.",
+    "prompt": "Design a next-generation digital platform for the following business. Include AI-native capabilities, cloud architecture, extensibility, automation, ecosystem integration and long-term scalability.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 360,
+    "shortcut": "/strategicinnovation",
+    "title": "Strategic Innovation Program",
+    "category": "Innovation",
+    "description": "Create a strategic innovation program.",
+    "prompt": "Develop a strategic innovation program for the following organization. Define innovation themes, investment priorities, governance, KPIs, partnerships and commercialization strategy.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 361,
+    "shortcut": "/futureecosystem",
+    "title": "Future Ecosystem Planning",
+    "category": "Master AI",
+    "description": "Plan the evolution of digital ecosystems.",
+    "prompt": "Design the long-term evolution of the following digital ecosystem. Include platform expansion, partner strategy, AI integration, governance, monetization and global scalability.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 362,
+    "shortcut": "/executivetrust",
+    "title": "Executive Trust Framework",
+    "category": "Leadership",
+    "description": "Build trust in enterprise AI systems.",
+    "prompt": "Design an executive trust framework for AI adoption. Include transparency, explainability, governance, accountability, compliance, stakeholder communication and continuous assurance.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 363,
+    "shortcut": "/globalmasterplan",
+    "title": "Global Master Plan",
+    "category": "Master AI",
+    "description": "Develop a world-class enterprise transformation blueprint.",
+    "prompt": "Act as a global technology advisory board composed of world-leading experts in artificial intelligence, enterprise architecture, software engineering, cloud computing, cybersecurity, economics and organizational strategy. Create a comprehensive master plan for the following initiative, covering vision, architecture, governance, investment strategy, implementation roadmap, risk management, success metrics and long-term global expansion.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 364,
+    "shortcut": "/ainativeenterprise",
+    "title": "AI-Native Enterprise",
+    "category": "Master AI",
+    "description": "Design an organization built around AI from the ground up.",
+    "prompt": "Design an AI-native enterprise for the following industry. Cover organizational structure, AI-first workflows, governance, technology stack, security, compliance, workforce transformation and long-term scalability.\n\nIndustry:",
+    "isOfficial": false
+  },
+  {
+    "id": 365,
+    "shortcut": "/boardstrategy",
+    "title": "Board Strategy Brief",
+    "category": "Leadership",
+    "description": "Prepare a board-level strategic briefing.",
+    "prompt": "Prepare a board-level strategy document for the following initiative. Include executive summary, strategic objectives, investment analysis, risks, governance, implementation roadmap, KPIs and board recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 366,
+    "shortcut": "/sovereignai",
+    "title": "Sovereign AI Strategy",
+    "category": "Master AI",
+    "description": "Design sovereign AI capabilities.",
+    "prompt": "Design a sovereign AI strategy for the following country, organization or sector. Include infrastructure, model governance, security, privacy, talent development, regulatory considerations and long-term sustainability.\n\nContext:",
+    "isOfficial": false
+  },
+  {
+    "id": 367,
+    "shortcut": "/nationalplatform",
+    "title": "National Digital Platform",
+    "category": "Architecture",
+    "description": "Design digital infrastructure at national scale.",
+    "prompt": "Design a secure, scalable national digital platform for the following public service. Include architecture, citizen identity, interoperability, cybersecurity, governance, resilience and operational excellence.\n\nPublic Service:",
+    "isOfficial": false
+  },
+  {
+    "id": 368,
+    "shortcut": "/agireadiness",
+    "title": "AGI Readiness Assessment",
+    "category": "Master AI",
+    "description": "Prepare organizations for increasingly capable AI systems.",
+    "prompt": "Assess the readiness of the following organization for increasingly capable AI systems. Evaluate governance, technical maturity, security, workforce preparedness, ethics, risk management and strategic opportunities.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 369,
+    "shortcut": "/innovationnetwork",
+    "title": "Global Innovation Network",
+    "category": "Innovation",
+    "description": "Build a worldwide innovation ecosystem.",
+    "prompt": "Design a global innovation network for the following organization. Include research partnerships, startup collaboration, academic engagement, venture investments, governance and knowledge sharing.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 370,
+    "shortcut": "/autonomousenterprise",
+    "title": "Autonomous Enterprise",
+    "category": "Master AI",
+    "description": "Design highly automated organizations.",
+    "prompt": "Design an autonomous enterprise for the following business. Explain AI-driven operations, autonomous workflows, human oversight, governance, security, compliance and continuous optimization.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 371,
+    "shortcut": "/megadecision",
+    "title": "Strategic Decision Simulator",
+    "category": "Strategy",
+    "description": "Evaluate major strategic decisions.",
+    "prompt": "Simulate the outcomes of the following strategic decision. Analyze optimistic, realistic and pessimistic scenarios, financial implications, technical risks, operational impact and long-term consequences before recommending the best path.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 372,
+    "shortcut": "/futureeconomy",
+    "title": "Future Economy Analysis",
+    "category": "Research",
+    "description": "Analyze future economic and technology trends.",
+    "prompt": "Analyze how emerging technologies may reshape the following industry over the next decade. Discuss economic shifts, workforce implications, AI adoption, regulatory changes, competitive dynamics and strategic opportunities.\n\nIndustry:",
+    "isOfficial": false
+  },
+  {
+    "id": 373,
+    "shortcut": "/globalrisk",
+    "title": "Global Risk Intelligence",
+    "category": "Risk Management",
+    "description": "Assess strategic and operational risks.",
+    "prompt": "Develop a comprehensive global risk assessment for the following organization or initiative. Include technology risks, cybersecurity, operational resilience, geopolitical considerations, regulatory changes and mitigation strategies.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 374,
+    "shortcut": "/futureblueprint",
+    "title": "Future Enterprise Blueprint",
+    "category": "Master AI",
+    "description": "Design the next generation of enterprises.",
+    "prompt": "Create a future enterprise blueprint for the following organization. Define vision, AI-first architecture, organizational evolution, governance, innovation strategy, technology roadmap and measurable transformation outcomes.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 375,
+    "shortcut": "/masterexecutive",
+    "title": "Master Executive Advisor",
+    "category": "Master AI",
+    "description": "Receive guidance from a world-class executive advisory council.",
+    "prompt": "Act as an executive advisory council composed of world-class experts in artificial intelligence, enterprise architecture, economics, cybersecurity, software engineering, product strategy, organizational leadership and innovation. Perform a comprehensive analysis of the following initiative, identify strategic opportunities, evaluate multiple implementation options, assess risks, recommend the optimal long-term strategy and produce an executive-grade transformation roadmap.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 376,
+    "shortcut": "/globalthinktank",
+    "title": "Global Think Tank",
+    "category": "Master AI",
+    "description": "Analyze global challenges from multiple expert perspectives.",
+    "prompt": "Act as a global think tank composed of experts in artificial intelligence, economics, geopolitics, engineering, cybersecurity, sustainability and public policy. Analyze the following challenge, present multiple perspectives, identify opportunities and risks, and recommend a long-term strategic roadmap.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 377,
+    "shortcut": "/metaarchitecture",
+    "title": "Meta Architecture",
+    "category": "Architecture",
+    "description": "Design architectures for interconnected enterprise ecosystems.",
+    "prompt": "Design a meta-architecture that integrates multiple independent systems into a unified ecosystem. Explain governance, interoperability, scalability, resilience, security and future extensibility.\n\nSystems:",
+    "isOfficial": false
+  },
+  {
+    "id": 378,
+    "shortcut": "/civilizationsystems",
+    "title": "Civilization-Scale Systems",
+    "category": "Research",
+    "description": "Design systems for extremely large populations.",
+    "prompt": "Design a technology platform capable of supporting civilization-scale operations. Discuss architecture, governance, distributed infrastructure, resilience, AI integration, ethics and sustainability.\n\nUse Case:",
+    "isOfficial": false
+  },
+  {
+    "id": 379,
+    "shortcut": "/globalaigovernance",
+    "title": "Global AI Governance",
+    "category": "Master AI",
+    "description": "Develop international AI governance strategies.",
+    "prompt": "Create a global AI governance framework involving multiple countries and organizations. Cover standards, transparency, accountability, interoperability, security, regulatory cooperation and long-term oversight.\n\nScenario:",
+    "isOfficial": false
+  },
+  {
+    "id": 380,
+    "shortcut": "/researchinstitute",
+    "title": "Research Institute Planner",
+    "category": "Research",
+    "description": "Design a world-class research institute.",
+    "prompt": "Design a globally recognized research institute for the following scientific or technological field. Include organizational structure, research priorities, collaboration strategy, funding model, governance and innovation roadmap.\n\nField:",
+    "isOfficial": false
+  },
+  {
+    "id": 381,
+    "shortcut": "/executiveforesight",
+    "title": "Executive Foresight",
+    "category": "Leadership",
+    "description": "Anticipate long-term strategic change.",
+    "prompt": "Perform an executive foresight analysis for the following organization. Identify emerging trends, disruptive technologies, strategic uncertainties, future opportunities and executive recommendations.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 382,
+    "shortcut": "/futurecivilization",
+    "title": "Future Civilization",
+    "category": "Innovation",
+    "description": "Explore long-term technology evolution.",
+    "prompt": "Explore how artificial intelligence and emerging technologies could shape civilization over the next 50 years. Discuss infrastructure, education, healthcare, governance, economy, sustainability and ethical considerations.",
+    "isOfficial": false
+  },
+  {
+    "id": 383,
+    "shortcut": "/globaltransformation",
+    "title": "Global Transformation",
+    "category": "Business",
+    "description": "Lead worldwide organizational transformation.",
+    "prompt": "Design a global transformation strategy for the following multinational organization. Include AI adoption, digital modernization, governance, workforce transformation, operational excellence and long-term value creation.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 384,
+    "shortcut": "/technologyconstitution",
+    "title": "Technology Constitution",
+    "category": "Leadership",
+    "description": "Define foundational technology principles.",
+    "prompt": "Draft a technology constitution for the following organization. Define guiding principles, engineering values, AI governance, security standards, innovation philosophy, compliance expectations and decision-making frameworks.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 385,
+    "shortcut": "/globalinnovation",
+    "title": "Global Innovation Strategy",
+    "category": "Innovation",
+    "description": "Develop innovation strategies for worldwide impact.",
+    "prompt": "Develop a global innovation strategy for the following initiative. Include emerging technologies, partnerships, investment priorities, research programs, commercialization and measurable success metrics.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 386,
+    "shortcut": "/futuregovernance",
+    "title": "Future Governance",
+    "category": "Master AI",
+    "description": "Design governance models for future organizations.",
+    "prompt": "Design a governance model suitable for future AI-driven organizations. Include leadership structures, decision-making processes, AI oversight, accountability, transparency and organizational resilience.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 387,
+    "shortcut": "/masterforesight",
+    "title": "Master Strategic Foresight",
+    "category": "Master AI",
+    "description": "Generate long-term multidisciplinary strategic insights.",
+    "prompt": "Act as a multidisciplinary strategic foresight council. Analyze the following challenge from technological, economic, societal, environmental and geopolitical perspectives. Develop multiple future scenarios, assess opportunities and risks, and recommend the most resilient long-term strategy.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 388,
+    "shortcut": "/worldstrategy",
+    "title": "World Strategy Advisor",
+    "category": "Master AI",
+    "description": "Receive guidance from a world-class strategic advisory board.",
+    "prompt": "Act as a world-class strategic advisory board consisting of experts in AI, engineering, economics, global policy, cybersecurity, innovation, leadership and enterprise architecture. Conduct a comprehensive analysis of the following initiative, compare strategic alternatives, evaluate long-term consequences, recommend the optimal path and produce an executive-level implementation roadmap.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 389,
+    "shortcut": "/planetarysystems",
+    "title": "Planetary-Scale Systems",
+    "category": "Master AI",
+    "description": "Design technology systems for planetary-scale operations.",
+    "prompt": "Design a planetary-scale technology platform for the following initiative. Explain global architecture, resilience, distributed infrastructure, AI coordination, governance, sustainability, operational excellence and long-term evolution.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 390,
+    "shortcut": "/superintelligence",
+    "title": "Advanced AI Strategy",
+    "category": "Master AI",
+    "description": "Develop strategies for increasingly capable AI systems.",
+    "prompt": "Develop a long-term strategy for responsibly integrating increasingly capable AI systems into the following organization. Cover governance, safety, technical architecture, workforce readiness, compliance, monitoring and continuous improvement.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 391,
+    "shortcut": "/futureresearch",
+    "title": "Future Research Agenda",
+    "category": "Research",
+    "description": "Plan decades of scientific and technological research.",
+    "prompt": "Create a long-term research agenda for the following field. Identify breakthrough opportunities, research priorities, collaboration models, funding strategy, milestones and expected societal impact.\n\nField:",
+    "isOfficial": false
+  },
+  {
+    "id": 392,
+    "shortcut": "/globalplatformvision",
+    "title": "Global Platform Vision",
+    "category": "Architecture",
+    "description": "Create a vision for globally connected platforms.",
+    "prompt": "Design the long-term vision for a globally connected digital platform. Include architecture evolution, AI integration, governance, ecosystem expansion, resilience, sustainability and strategic milestones.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 393,
+    "shortcut": "/executiveinnovation",
+    "title": "Executive Innovation Council",
+    "category": "Leadership",
+    "description": "Lead innovation at the highest organizational level.",
+    "prompt": "Design an Executive Innovation Council for the following organization. Define governance, investment strategy, innovation pipelines, research priorities, executive responsibilities and measurable outcomes.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 394,
+    "shortcut": "/futureorganization",
+    "title": "Organization of the Future",
+    "category": "Business",
+    "description": "Design the next generation of organizations.",
+    "prompt": "Design a future-ready organization optimized for AI, automation and continuous innovation. Explain organizational structure, leadership model, technology strategy, governance, workforce evolution and long-term competitiveness.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 395,
+    "shortcut": "/worldinnovationlab",
+    "title": "World Innovation Lab",
+    "category": "Innovation",
+    "description": "Create a globally influential innovation laboratory.",
+    "prompt": "Design a world-class innovation laboratory focused on solving major technological challenges. Include research programs, governance, partnerships, commercialization strategy, funding model and global collaboration.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 396,
+    "shortcut": "/masterframework",
+    "title": "Master Decision Framework",
+    "category": "Master AI",
+    "description": "Build a comprehensive executive decision framework.",
+    "prompt": "Design a master decision-making framework for executive leadership. Include strategic analysis, AI-assisted recommendations, governance, risk evaluation, stakeholder impact, implementation planning and continuous review.\n\nDecision Context:",
+    "isOfficial": false
+  },
+  {
+    "id": 397,
+    "shortcut": "/legacyarchitecture",
+    "title": "Legacy Transformation",
+    "category": "Architecture",
+    "description": "Modernize large legacy technology ecosystems.",
+    "prompt": "Create a long-term modernization strategy for the following legacy technology ecosystem. Include phased migration, modernization priorities, risk management, governance, operational continuity and future scalability.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 398,
+    "shortcut": "/globalleadership",
+    "title": "Global Leadership Blueprint",
+    "category": "Leadership",
+    "description": "Develop leadership strategies for global organizations.",
+    "prompt": "Design a leadership blueprint for a globally distributed technology organization. Cover executive alignment, engineering leadership, AI governance, innovation culture, talent development and organizational resilience.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 399,
+    "shortcut": "/mastervision",
+    "title": "Master Vision",
+    "category": "Master AI",
+    "description": "Develop a world-class long-term strategic vision.",
+    "prompt": "Act as a panel of globally recognized experts across artificial intelligence, enterprise architecture, economics, innovation, engineering and organizational leadership. Develop a long-term strategic vision for the following initiative, including future scenarios, technology evolution, governance, investment priorities, execution phases and measurable success indicators.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 400,
+    "shortcut": "/grandmaster",
+    "title": "Grand Master AI Advisor",
+    "category": "Master AI",
+    "description": "Receive guidance from an elite multidisciplinary advisory council.",
+    "prompt": "Act as an elite Grand Master AI Advisory Council composed of internationally recognized experts in artificial intelligence, software engineering, enterprise architecture, cybersecurity, cloud computing, economics, innovation, product strategy and executive leadership. Perform a comprehensive assessment of the following initiative, identify critical opportunities and risks, compare multiple strategic options with trade-offs, recommend the optimal long-term approach, and produce a detailed executive transformation roadmap suitable for a global, production-grade organization.\n\nInitiative:",
+    "isOfficial": false
+  }
+]

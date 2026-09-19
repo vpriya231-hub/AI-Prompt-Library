@@ -1,0 +1,902 @@
+[
+  {
+    "id": 301,
+    "shortcut": "/masterresearch",
+    "title": "Master Research Director",
+    "category": "Research",
+    "description": "Lead complex research projects from planning to final recommendations.",
+    "prompt": "Act as a world-class research director. Design and oversee a complete research strategy for the following topic. Define objectives, research questions, assumptions, methodology, data sources, validation methods, limitations, expected outcomes, implementation recommendations and future research opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 302,
+    "shortcut": "/strategicarchitect",
+    "title": "Strategic Architect",
+    "category": "Strategy",
+    "description": "Design long-term strategies for complex objectives.",
+    "prompt": "Act as a senior strategic architect. Create a long-term strategy for the following objective. Include vision, mission, strategic pillars, execution roadmap, milestones, KPIs, stakeholder considerations, risks, contingency plans and success indicators.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 303,
+    "shortcut": "/executivethinker",
+    "title": "Executive Thinker",
+    "category": "Business",
+    "description": "Analyze challenges like a senior executive.",
+    "prompt": "Analyze the following challenge from the perspective of a senior executive. Evaluate business impact, operational concerns, financial implications, stakeholder expectations, strategic risks, opportunities and recommended executive actions.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 304,
+    "shortcut": "/masterreasoning",
+    "title": "Master Reasoning Engine",
+    "category": "AI",
+    "description": "Apply advanced structured reasoning to difficult problems.",
+    "prompt": "Carefully analyze the following problem using structured reasoning. Identify assumptions, constraints, hidden dependencies, alternative solutions, trade-offs, uncertainties and the strongest evidence-supported recommendation. Present the reasoning in a clear and organized format.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 305,
+    "shortcut": "/innovationmaster",
+    "title": "Innovation Master",
+    "category": "Creativity",
+    "description": "Develop breakthrough innovations using multidisciplinary thinking.",
+    "prompt": "Generate breakthrough solutions for the following challenge. Combine insights from technology, science, business, design and user experience. Evaluate feasibility, scalability, risks, implementation effort and expected impact before ranking the best ideas.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 306,
+    "shortcut": "/knowledgearchitect",
+    "title": "Knowledge Architect",
+    "category": "Knowledge",
+    "description": "Design a complete knowledge architecture.",
+    "prompt": "Create a comprehensive knowledge architecture for the following subject. Organize concepts into foundations, advanced topics, relationships, dependencies, practical applications, expert references and future developments.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 307,
+    "shortcut": "/systemmaster",
+    "title": "System Master Planner",
+    "category": "Systems",
+    "description": "Design robust and scalable systems.",
+    "prompt": "Design a complete system for the following requirements. Include architecture, major components, workflows, scalability strategy, security considerations, performance optimization, maintenance strategy, monitoring approach and implementation roadmap.\n\nRequirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 308,
+    "shortcut": "/futurestrategist",
+    "title": "Future Strategist",
+    "category": "Analysis",
+    "description": "Explore future scenarios with strategic planning.",
+    "prompt": "Forecast the future of the following topic over the next decade. Identify major trends, disruptive technologies, risks, opportunities, alternative scenarios, strategic implications and recommended preparation strategies.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 309,
+    "shortcut": "/masteraudit",
+    "title": "Master Audit",
+    "category": "Analysis",
+    "description": "Perform a comprehensive professional audit.",
+    "prompt": "Conduct a comprehensive audit of the following project, system or process. Evaluate objectives, performance, quality, efficiency, governance, risks, compliance, optimization opportunities and prioritized recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 310,
+    "shortcut": "/decisionmaster",
+    "title": "Decision Master",
+    "category": "Analysis",
+    "description": "Support mission-critical decisions with structured evaluation.",
+    "prompt": "Evaluate the following high-impact decision. Compare all realistic options, assess trade-offs, uncertainties, stakeholder impacts, long-term consequences, implementation challenges and recommend the strongest course of action with justification.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 311,
+    "shortcut": "/masterframework",
+    "title": "Master Framework",
+    "category": "Planning",
+    "description": "Build enterprise-grade solution frameworks.",
+    "prompt": "Develop a comprehensive framework for the following objective. Define principles, workflows, governance, evaluation criteria, feedback mechanisms, optimization strategies, KPIs and implementation phases.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 312,
+    "shortcut": "/executiveadvisor",
+    "title": "Executive Advisor",
+    "category": "Business",
+    "description": "Provide executive-level guidance and recommendations.",
+    "prompt": "Act as a senior executive advisor. Analyze the following situation, identify strategic priorities, stakeholder expectations, operational constraints, risks, opportunities and recommend a detailed executive action plan with measurable outcomes.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 313,
+    "shortcut": "/geminimaster",
+    "title": "Gemini Master Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a master-level reasoning, planning and strategy assistant.",
+    "prompt": "Act as a master-level AI strategist and reasoning assistant. Thoroughly analyze the following request by identifying objectives, assumptions, missing information, constraints, dependencies, risks and opportunities. Develop multiple solution paths, compare trade-offs, justify the optimal approach, create a phased execution roadmap, define measurable success metrics and conclude with expert recommendations and follow-up actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 314,
+    "shortcut": "/masterinsights",
+    "title": "Master Insights",
+    "category": "Analysis",
+    "description": "Extract executive-level insights from complex information.",
+    "prompt": "Analyze the following information at an executive level. Identify hidden patterns, strategic insights, critical dependencies, opportunities, risks, emerging trends and actionable recommendations. Conclude with the five highest-priority insights.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 315,
+    "shortcut": "/globalanalysis",
+    "title": "Global Analysis",
+    "category": "Research",
+    "description": "Evaluate a topic from worldwide perspectives.",
+    "prompt": "Analyze the following topic from global, regional and local perspectives. Discuss economic, technological, environmental, social, political and ethical implications. Highlight differences, similarities and long-term trends.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 316,
+    "shortcut": "/masterplannerpro",
+    "title": "Master Planner Pro",
+    "category": "Planning",
+    "description": "Develop enterprise-grade implementation plans.",
+    "prompt": "Create a comprehensive implementation plan for the following initiative. Include objectives, work breakdown structure, milestones, resource allocation, timelines, governance, communication strategy, KPIs, risk mitigation and post-implementation review.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 317,
+    "shortcut": "/enterpriseaudit",
+    "title": "Enterprise Audit",
+    "category": "Business",
+    "description": "Conduct a complete enterprise-level audit.",
+    "prompt": "Perform a comprehensive enterprise audit for the following organization, project or system. Evaluate governance, operational efficiency, financial considerations, quality, compliance, security, scalability and strategic improvement opportunities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 318,
+    "shortcut": "/mastercomparisonpro",
+    "title": "Master Comparison Pro",
+    "category": "Analysis",
+    "description": "Perform a comprehensive multi-factor comparison.",
+    "prompt": "Compare the following subjects using technical, financial, operational, scalability, usability, security, sustainability and future-readiness criteria. Present the results in a structured comparison table followed by strategic recommendations.\n\nSubjects:",
+    "isOfficial": false
+  },
+  {
+    "id": 319,
+    "shortcut": "/advancedforesight",
+    "title": "Advanced Foresight",
+    "category": "Strategy",
+    "description": "Explore long-term strategic futures.",
+    "prompt": "Develop long-term strategic forecasts for the following topic. Identify disruptive forces, emerging technologies, uncertainties, opportunities, risks, scenario outcomes and preparation strategies for the next 10–20 years.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 320,
+    "shortcut": "/systemsarchitect",
+    "title": "Systems Architect",
+    "category": "Systems",
+    "description": "Design resilient and scalable system architectures.",
+    "prompt": "Design an enterprise-grade architecture for the following system. Include major components, workflows, integrations, scalability strategy, fault tolerance, security, monitoring, maintenance and deployment considerations.\n\nSystem Requirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 321,
+    "shortcut": "/expertfacilitator",
+    "title": "Expert Facilitator",
+    "category": "Leadership",
+    "description": "Facilitate strategic planning and decision-making sessions.",
+    "prompt": "Act as a senior strategic facilitator. Guide the following planning session by defining objectives, discussion agenda, stakeholder perspectives, decision criteria, conflict resolution strategies, action items and measurable outcomes.\n\nPlanning Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 322,
+    "shortcut": "/strategicoptimizer",
+    "title": "Strategic Optimizer",
+    "category": "Strategy",
+    "description": "Optimize strategies for maximum long-term value.",
+    "prompt": "Evaluate the following strategy and optimize it for effectiveness, scalability, resilience and sustainability. Identify weaknesses, recommend improvements, estimate expected impact and prioritize implementation steps.\n\nStrategy:",
+    "isOfficial": false
+  },
+  {
+    "id": 323,
+    "shortcut": "/geminimasterpro",
+    "title": "Gemini Master Pro",
+    "category": "AI",
+    "description": "Use Gemini as a master-level strategic reasoning partner.",
+    "prompt": "Act as a world-class AI strategist, researcher and executive advisor. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, risks, opportunities and success criteria. Generate multiple solution strategies, compare trade-offs, justify the optimal recommendation, build a phased implementation roadmap, define measurable KPIs and conclude with executive-level recommendations and future considerations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 324,
+    "shortcut": "/executiveframework",
+    "title": "Executive Framework",
+    "category": "Strategy",
+    "description": "Build an executive-grade framework for complex initiatives.",
+    "prompt": "Design an executive framework for the following initiative. Define strategic objectives, governance structure, stakeholder roles, decision-making process, performance indicators, review mechanisms, escalation paths and long-term sustainability considerations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 325,
+    "shortcut": "/masterdiagnostics",
+    "title": "Master Diagnostics",
+    "category": "Analysis",
+    "description": "Diagnose complex problems with systematic evaluation.",
+    "prompt": "Perform a comprehensive diagnostic analysis of the following problem. Identify root causes, contributing factors, dependencies, risks, measurable indicators, corrective actions and preventive strategies. Prioritize recommendations by impact.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 326,
+    "shortcut": "/strategicroadmap",
+    "title": "Strategic Roadmap",
+    "category": "Planning",
+    "description": "Develop a long-term strategic roadmap.",
+    "prompt": "Create a strategic roadmap for the following objective. Include vision, strategic phases, milestones, dependencies, KPIs, risk management, review cycles, resource planning and expected outcomes.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 327,
+    "shortcut": "/knowledgeorchestrator",
+    "title": "Knowledge Orchestrator",
+    "category": "Knowledge",
+    "description": "Organize and connect advanced knowledge domains.",
+    "prompt": "Create a comprehensive knowledge ecosystem for the following subject. Organize foundational concepts, advanced topics, interdisciplinary relationships, practical applications, emerging trends, expert resources and future research opportunities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 328,
+    "shortcut": "/enterprisestrategy",
+    "title": "Enterprise Strategy",
+    "category": "Business",
+    "description": "Develop enterprise-level strategic initiatives.",
+    "prompt": "Act as a chief strategy officer. Develop an enterprise strategy for the following organization or initiative. Include strategic priorities, competitive positioning, operational excellence, innovation opportunities, governance, KPIs, risk mitigation and long-term growth recommendations.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 329,
+    "shortcut": "/masterforecast",
+    "title": "Master Forecast",
+    "category": "Analysis",
+    "description": "Forecast future developments using strategic analysis.",
+    "prompt": "Forecast the evolution of the following topic over the next 10–20 years. Evaluate emerging trends, disruptive technologies, economic influences, societal impacts, regulatory factors, risks, opportunities and strategic recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 330,
+    "shortcut": "/architectadvisor",
+    "title": "Architecture Advisor",
+    "category": "Systems",
+    "description": "Design scalable architectures with expert guidance.",
+    "prompt": "Act as a chief systems architect. Design a scalable architecture for the following requirements. Include components, integrations, security, scalability, resilience, monitoring, maintenance strategy, deployment model and future expansion considerations.\n\nRequirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 331,
+    "shortcut": "/executiveinsights",
+    "title": "Executive Insights",
+    "category": "Leadership",
+    "description": "Generate executive-level insights for decision-makers.",
+    "prompt": "Analyze the following situation from an executive leadership perspective. Identify strategic priorities, stakeholder concerns, organizational impact, risks, opportunities, recommended decisions and measurable success indicators.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 332,
+    "shortcut": "/masteroptimizer",
+    "title": "Master Optimizer",
+    "category": "Strategy",
+    "description": "Optimize strategies, systems and workflows for maximum effectiveness.",
+    "prompt": "Evaluate the following strategy, system or workflow. Identify inefficiencies, optimization opportunities, implementation priorities, expected benefits, risks and long-term sustainability improvements. Present recommendations in order of impact.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 333,
+    "shortcut": "/geminigrandmaster",
+    "title": "Gemini Grand Master",
+    "category": "AI",
+    "description": "Use Gemini as an elite AI strategist, architect and executive advisor.",
+    "prompt": "Act as an elite AI strategist, systems architect and executive advisor. Thoroughly analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, opportunities, risks and measurable success criteria. Generate multiple solution architectures, compare trade-offs, justify the optimal strategy, create a phased implementation roadmap, define governance and KPIs, anticipate future challenges and conclude with executive-level recommendations and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 334,
+    "shortcut": "/strategicblueprint",
+    "title": "Strategic Blueprint",
+    "category": "Strategy",
+    "description": "Create a complete strategic blueprint for complex initiatives.",
+    "prompt": "Develop a comprehensive strategic blueprint for the following initiative. Define vision, mission, strategic objectives, execution phases, governance model, stakeholder responsibilities, KPIs, risk management framework, communication strategy and long-term success metrics.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 335,
+    "shortcut": "/executiveforesight",
+    "title": "Executive Foresight",
+    "category": "Analysis",
+    "description": "Anticipate future opportunities and risks through strategic foresight.",
+    "prompt": "Perform a strategic foresight analysis for the following topic. Identify emerging trends, disruptive technologies, uncertainties, opportunities, threats, future scenarios and executive recommendations for the next 15 years.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 336,
+    "shortcut": "/mastergovernance",
+    "title": "Master Governance",
+    "category": "Business",
+    "description": "Design governance structures for large-scale initiatives.",
+    "prompt": "Design a governance framework for the following organization or initiative. Include leadership structure, decision-making authority, accountability mechanisms, compliance considerations, reporting structure, KPIs and continuous improvement processes.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 337,
+    "shortcut": "/enterpriseplanner",
+    "title": "Enterprise Planner",
+    "category": "Planning",
+    "description": "Build enterprise-level execution plans.",
+    "prompt": "Create an enterprise implementation plan for the following objective. Include strategic milestones, dependencies, resource allocation, governance, communication plans, quality assurance, review cycles and success measurements.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 338,
+    "shortcut": "/masterevaluator",
+    "title": "Master Evaluator",
+    "category": "Analysis",
+    "description": "Evaluate complex initiatives using multiple criteria.",
+    "prompt": "Evaluate the following initiative using technical, financial, operational, strategic, ethical, environmental and long-term sustainability criteria. Provide weighted conclusions and prioritized recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 339,
+    "shortcut": "/systemgovernor",
+    "title": "System Governor",
+    "category": "Systems",
+    "description": "Design governance and optimization strategies for complex systems.",
+    "prompt": "Analyze the following system and design a governance model. Include architecture oversight, operational controls, monitoring, performance optimization, scalability planning, security considerations and continuous improvement recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 340,
+    "shortcut": "/globalstrategist",
+    "title": "Global Strategist",
+    "category": "Strategy",
+    "description": "Develop strategies with a global perspective.",
+    "prompt": "Develop a global strategy for the following topic. Evaluate international trends, regional differences, geopolitical considerations, economic influences, cultural factors, risks, opportunities and long-term strategic recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 341,
+    "shortcut": "/masterleadership",
+    "title": "Master Leadership Advisor",
+    "category": "Leadership",
+    "description": "Provide executive leadership guidance for complex situations.",
+    "prompt": "Act as a senior leadership advisor. Analyze the following leadership challenge, identify stakeholder expectations, organizational dynamics, strategic priorities, risks, opportunities and recommend an executive action plan with measurable outcomes.\n\nLeadership Challenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 342,
+    "shortcut": "/innovationecosystem",
+    "title": "Innovation Ecosystem",
+    "category": "Creativity",
+    "description": "Design an ecosystem that supports continuous innovation.",
+    "prompt": "Design an innovation ecosystem for the following organization or initiative. Include culture, processes, technology, collaboration, governance, performance metrics, funding strategies and long-term innovation sustainability.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 343,
+    "shortcut": "/geminielite",
+    "title": "Gemini Elite Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an elite strategic, research and executive intelligence assistant.",
+    "prompt": "Act as an elite AI executive intelligence system. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, stakeholders, constraints, opportunities, risks and measurable outcomes. Generate multiple strategic solution paths, compare trade-offs, recommend the optimal architecture, develop an enterprise-grade implementation roadmap, define governance, KPIs, review mechanisms and conclude with executive recommendations, future risks and continuous improvement strategies.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 344,
+    "shortcut": "/mastersynthesis",
+    "title": "Master Synthesis",
+    "category": "Research",
+    "description": "Combine diverse information into a unified expert analysis.",
+    "prompt": "Synthesize the following information into one coherent expert report. Identify recurring themes, contradictions, hidden relationships, key insights, evidence strength, knowledge gaps, practical implications and strategic recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 345,
+    "shortcut": "/impactanalyzer",
+    "title": "Impact Analyzer",
+    "category": "Analysis",
+    "description": "Evaluate short-term and long-term impacts comprehensively.",
+    "prompt": "Analyze the following decision or event. Evaluate immediate, medium-term and long-term impacts across technical, financial, operational, social, environmental and strategic dimensions. Rank impacts by significance and recommend mitigation strategies.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 346,
+    "shortcut": "/masterscenario",
+    "title": "Master Scenario Planner",
+    "category": "Planning",
+    "description": "Generate multiple future scenarios for strategic planning.",
+    "prompt": "Create multiple future scenarios for the following topic. Develop optimistic, realistic, pessimistic and disruptive scenarios. For each, explain assumptions, driving factors, risks, opportunities, probability and recommended strategic responses.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 347,
+    "shortcut": "/executivemodel",
+    "title": "Executive Decision Model",
+    "category": "Business",
+    "description": "Build a structured executive decision model.",
+    "prompt": "Design an executive decision model for the following challenge. Define evaluation criteria, weighting factors, decision thresholds, risk tolerance, stakeholder priorities, success metrics and implementation guidance.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 348,
+    "shortcut": "/masteroptimizerpro",
+    "title": "Master Optimizer Pro",
+    "category": "Strategy",
+    "description": "Optimize complex systems for maximum performance.",
+    "prompt": "Evaluate the following system, workflow or strategy. Identify bottlenecks, inefficiencies, hidden opportunities, optimization priorities, measurable improvements, implementation risks and expected return on optimization.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 349,
+    "shortcut": "/futureblueprint",
+    "title": "Future Blueprint",
+    "category": "Strategy",
+    "description": "Design a future-ready strategic blueprint.",
+    "prompt": "Develop a future-ready blueprint for the following initiative. Consider emerging technologies, market evolution, scalability, resilience, sustainability, governance, innovation and long-term competitive advantage.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 350,
+    "shortcut": "/geminiplatinum",
+    "title": "Gemini Platinum Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a platinum-level reasoning and strategic intelligence assistant.",
+    "prompt": "Act as a platinum-level AI strategist, researcher and executive consultant. Analyze the following request by identifying objectives, assumptions, missing information, dependencies, stakeholders, opportunities, risks and success metrics. Produce multiple solution architectures, compare trade-offs, justify the optimal solution, create an implementation roadmap, define governance, KPIs, monitoring methods and conclude with executive recommendations and continuous improvement strategies.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 351,
+    "shortcut": "/executivebenchmark",
+    "title": "Executive Benchmark",
+    "category": "Business",
+    "description": "Benchmark performance against industry leaders.",
+    "prompt": "Benchmark the following organization, product or strategy against industry leaders. Compare strengths, weaknesses, innovation, efficiency, scalability, customer value, financial performance, competitive positioning and future readiness. Conclude with prioritized improvement recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 352,
+    "shortcut": "/masterpriorities",
+    "title": "Master Priorities",
+    "category": "Planning",
+    "description": "Determine the highest-impact priorities using structured analysis.",
+    "prompt": "Analyze the following objectives and identify the highest-priority actions. Consider urgency, impact, effort, dependencies, available resources, risks and long-term value. Present a ranked action plan with clear justification.\n\nObjectives:",
+    "isOfficial": false
+  },
+  {
+    "id": 353,
+    "shortcut": "/strategicnavigator",
+    "title": "Strategic Navigator",
+    "category": "Strategy",
+    "description": "Navigate complex strategic decisions with confidence.",
+    "prompt": "Act as a strategic navigator. Evaluate the following situation, identify possible pathways, compare advantages and disadvantages, estimate risks, highlight critical decision points and recommend the most effective strategic direction.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 354,
+    "shortcut": "/masterintelligence",
+    "title": "Master Intelligence",
+    "category": "Research",
+    "description": "Produce an intelligence-grade assessment from available information.",
+    "prompt": "Prepare an intelligence-style assessment for the following topic. Distinguish facts from assumptions, evaluate evidence quality, identify knowledge gaps, estimate confidence levels, detect emerging patterns and provide strategic recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 355,
+    "shortcut": "/riskcommander",
+    "title": "Risk Commander",
+    "category": "Risk",
+    "description": "Identify, assess and manage complex risks.",
+    "prompt": "Perform a comprehensive risk assessment for the following project or initiative. Identify strategic, operational, financial, legal, technical and reputational risks. Estimate likelihood, impact, mitigation measures, contingency plans and monitoring strategies.\n\nProject or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 356,
+    "shortcut": "/mastertransformation",
+    "title": "Master Transformation",
+    "category": "Business",
+    "description": "Design transformational change initiatives.",
+    "prompt": "Develop a transformation strategy for the following organization or initiative. Include vision, current-state assessment, target-state design, transition roadmap, stakeholder engagement, governance, KPIs, risks and long-term sustainability.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 357,
+    "shortcut": "/innovationroadmap",
+    "title": "Innovation Roadmap",
+    "category": "Creativity",
+    "description": "Plan innovation initiatives from concept to execution.",
+    "prompt": "Design an innovation roadmap for the following challenge. Identify opportunities, research requirements, prototype phases, validation methods, implementation milestones, success metrics, scaling strategy and continuous improvement plans.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 358,
+    "shortcut": "/masterevidence",
+    "title": "Master Evidence Review",
+    "category": "Research",
+    "description": "Evaluate evidence using structured critical analysis.",
+    "prompt": "Review the following evidence using critical analysis. Assess reliability, credibility, relevance, consistency, potential bias, conflicting evidence, confidence level and practical implications. Summarize the strongest conclusions.\n\nEvidence:",
+    "isOfficial": false
+  },
+  {
+    "id": 359,
+    "shortcut": "/executiveoptimizer",
+    "title": "Executive Optimizer",
+    "category": "Leadership",
+    "description": "Optimize executive strategies and organizational performance.",
+    "prompt": "Evaluate the following executive strategy or organizational plan. Identify strengths, weaknesses, improvement opportunities, measurable optimization actions, implementation priorities and expected business impact.\n\nStrategy or Plan:",
+    "isOfficial": false
+  },
+  {
+    "id": 360,
+    "shortcut": "/geminititan",
+    "title": "Gemini Titan Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Titan-level reasoning, planning and strategic intelligence partner.",
+    "prompt": "Act as a Titan-level AI strategist, researcher and enterprise architect. Analyze the following request by identifying objectives, assumptions, dependencies, stakeholders, constraints, opportunities, risks and measurable outcomes. Generate multiple enterprise-grade solution options, compare trade-offs, justify the optimal recommendation, create a phased implementation roadmap, define governance, KPIs, monitoring strategy, future enhancements and conclude with executive-level recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 361,
+    "shortcut": "/strategicmatrix",
+    "title": "Strategic Matrix",
+    "category": "Strategy",
+    "description": "Evaluate strategic options using a decision matrix.",
+    "prompt": "Build a strategic decision matrix for the following challenge. Define evaluation criteria, assign importance weights, score each option, explain trade-offs, identify risks and recommend the strongest strategic choice with supporting rationale.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 362,
+    "shortcut": "/masterecosystem",
+    "title": "Master Ecosystem",
+    "category": "Systems",
+    "description": "Design complete ecosystems for long-term success.",
+    "prompt": "Design a comprehensive ecosystem for the following initiative. Identify stakeholders, supporting technologies, governance, partnerships, workflows, scalability, sustainability, feedback mechanisms and continuous improvement opportunities.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 363,
+    "shortcut": "/executivebriefing",
+    "title": "Executive Briefing",
+    "category": "Business",
+    "description": "Prepare concise executive-level briefings.",
+    "prompt": "Prepare an executive briefing on the following topic. Summarize key findings, strategic implications, major risks, opportunities, stakeholder considerations, recommended actions and expected outcomes in a concise executive format.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 364,
+    "shortcut": "/masterevaluation",
+    "title": "Master Evaluation",
+    "category": "Analysis",
+    "description": "Perform a comprehensive multi-dimensional evaluation.",
+    "prompt": "Evaluate the following subject from technical, financial, operational, ethical, legal, environmental and strategic perspectives. Identify strengths, weaknesses, improvement opportunities and conclude with prioritized recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 365,
+    "shortcut": "/futuresimulator",
+    "title": "Future Simulator",
+    "category": "Forecasting",
+    "description": "Simulate possible future outcomes under different conditions.",
+    "prompt": "Simulate multiple future outcomes for the following scenario. Explore best-case, expected, worst-case and disruptive possibilities. Explain assumptions, probabilities, impacts, warning signs and recommended preparation strategies.\n\nScenario:",
+    "isOfficial": false
+  },
+  {
+    "id": 366,
+    "shortcut": "/mastergoals",
+    "title": "Master Goals",
+    "category": "Planning",
+    "description": "Transform high-level goals into actionable execution plans.",
+    "prompt": "Break down the following high-level goal into strategic objectives, milestones, measurable deliverables, dependencies, resource requirements, timelines, KPIs, risks and review checkpoints.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 367,
+    "shortcut": "/innovationlab",
+    "title": "Innovation Lab",
+    "category": "Creativity",
+    "description": "Generate, refine and validate innovative concepts.",
+    "prompt": "Act as an innovation laboratory. Generate multiple breakthrough ideas for the following challenge, evaluate feasibility, estimate impact, identify implementation barriers, prioritize the strongest concepts and outline validation experiments.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 368,
+    "shortcut": "/knowledgefusion",
+    "title": "Knowledge Fusion",
+    "category": "Knowledge",
+    "description": "Merge information from multiple disciplines into one expert perspective.",
+    "prompt": "Integrate knowledge from multiple disciplines to analyze the following topic. Explain relationships, common principles, unique perspectives, practical applications, future opportunities and expert recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 369,
+    "shortcut": "/masterexecution",
+    "title": "Master Execution",
+    "category": "Execution",
+    "description": "Create an execution-focused implementation strategy.",
+    "prompt": "Develop a detailed execution strategy for the following initiative. Define implementation phases, resource allocation, milestones, communication plans, quality assurance, performance tracking, contingency measures and success criteria.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 370,
+    "shortcut": "/geminiapex",
+    "title": "Gemini Apex Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an Apex-level AI strategist and enterprise reasoning partner.",
+    "prompt": "Act as an Apex-level AI strategist, executive advisor and systems architect. Analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, risks, opportunities and measurable success indicators. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a complete implementation roadmap, establish governance and KPIs, define monitoring mechanisms and conclude with executive recommendations and future optimization opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 371,
+    "shortcut": "/executivevision",
+    "title": "Executive Vision",
+    "category": "Leadership",
+    "description": "Develop a compelling long-term executive vision.",
+    "prompt": "Create an executive vision for the following organization, project or initiative. Define the long-term purpose, strategic aspirations, guiding principles, measurable objectives, expected impact, implementation priorities and future evolution.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 372,
+    "shortcut": "/masterframeworkpro",
+    "title": "Master Framework Pro",
+    "category": "Strategy",
+    "description": "Develop an enterprise-grade strategic framework.",
+    "prompt": "Design a comprehensive strategic framework for the following objective. Include governance, execution methodology, performance metrics, stakeholder alignment, review mechanisms, scalability strategy, continuous improvement and long-term sustainability.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 373,
+    "shortcut": "/researchorchestrator",
+    "title": "Research Orchestrator",
+    "category": "Research",
+    "description": "Coordinate advanced research from start to finish.",
+    "prompt": "Act as a research orchestrator. Plan a complete research program for the following topic including objectives, research questions, methodologies, evidence sources, validation techniques, ethical considerations, expected findings and implementation recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 374,
+    "shortcut": "/decisionnavigator",
+    "title": "Decision Navigator",
+    "category": "Analysis",
+    "description": "Guide high-impact decisions with structured evaluation.",
+    "prompt": "Analyze the following decision by identifying objectives, available options, evaluation criteria, uncertainties, stakeholder impacts, risks, opportunities, long-term consequences and the most rational recommendation.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 375,
+    "shortcut": "/masterblueprintpro",
+    "title": "Master Blueprint Pro",
+    "category": "Planning",
+    "description": "Create detailed blueprints for ambitious projects.",
+    "prompt": "Develop a complete blueprint for the following project. Include vision, architecture, implementation phases, milestones, governance, resource planning, KPIs, quality assurance, risk management and continuous optimization.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 376,
+    "shortcut": "/enterpriseintelligence",
+    "title": "Enterprise Intelligence",
+    "category": "Business",
+    "description": "Generate enterprise-grade strategic intelligence.",
+    "prompt": "Produce an enterprise intelligence report for the following organization, market or initiative. Evaluate competitive positioning, operational efficiency, innovation, market trends, financial considerations, strategic opportunities, risks and executive recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 377,
+    "shortcut": "/masterinsightpro",
+    "title": "Master Insight Pro",
+    "category": "Knowledge",
+    "description": "Reveal deep insights hidden within complex information.",
+    "prompt": "Analyze the following information to uncover hidden insights, recurring themes, anomalies, relationships, strategic implications, evidence quality, unanswered questions and high-impact recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 378,
+    "shortcut": "/futureintelligence",
+    "title": "Future Intelligence",
+    "category": "Forecasting",
+    "description": "Predict future developments using structured analysis.",
+    "prompt": "Analyze the future of the following topic using trend analysis, technology forecasting, economic drivers, societal shifts, uncertainty assessment, alternative scenarios and strategic preparation recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 379,
+    "shortcut": "/mastercontrol",
+    "title": "Master Control",
+    "category": "Execution",
+    "description": "Manage complex initiatives with executive oversight.",
+    "prompt": "Design a management and control system for the following initiative. Include governance, monitoring, performance tracking, quality control, escalation procedures, reporting mechanisms, risk management and continuous improvement processes.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 380,
+    "shortcut": "/geminiquantum",
+    "title": "Gemini Quantum Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Quantum-level AI strategist, analyst and executive planning partner.",
+    "prompt": "Act as a Quantum-level AI strategist, executive advisor and enterprise intelligence system. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, risks, opportunities and measurable outcomes. Generate multiple strategic solution architectures, evaluate trade-offs, recommend the optimal approach, design a phased execution roadmap, establish governance and KPIs, define monitoring systems, anticipate future challenges and conclude with executive-level recommendations and long-term optimization strategies.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 381,
+    "shortcut": "/masteralignment",
+    "title": "Master Alignment",
+    "category": "Strategy",
+    "description": "Align strategy, operations and stakeholders toward common objectives.",
+    "prompt": "Analyze the following organization, project or initiative and develop a comprehensive alignment strategy. Evaluate vision, objectives, stakeholders, operations, resources, governance, KPIs, communication, risks and optimization opportunities. Recommend a roadmap to maximize alignment and long-term success.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 382,
+    "shortcut": "/executiveplanner",
+    "title": "Executive Planner",
+    "category": "Planning",
+    "description": "Create executive-level implementation plans.",
+    "prompt": "Develop an executive implementation plan for the following objective. Include strategic phases, milestones, deliverables, resource planning, governance, communication strategy, review cycles, KPIs, risk mitigation and success measurements.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 383,
+    "shortcut": "/masteradvisor",
+    "title": "Master Advisor",
+    "category": "Leadership",
+    "description": "Provide expert executive advice for complex challenges.",
+    "prompt": "Act as a world-class executive advisor. Analyze the following challenge, identify opportunities, risks, stakeholder expectations, strategic alternatives, implementation considerations and provide actionable executive recommendations with supporting reasoning.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 384,
+    "shortcut": "/systemsintelligence",
+    "title": "Systems Intelligence",
+    "category": "Systems",
+    "description": "Analyze complex systems using holistic thinking.",
+    "prompt": "Perform a systems-level analysis of the following subject. Identify interconnected components, feedback loops, bottlenecks, dependencies, optimization opportunities, resilience strategies, monitoring methods and long-term sustainability recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 385,
+    "shortcut": "/masteropportunities",
+    "title": "Master Opportunities",
+    "category": "Analysis",
+    "description": "Identify and prioritize high-impact opportunities.",
+    "prompt": "Analyze the following situation and identify all significant opportunities. Rank them by potential impact, feasibility, implementation effort, strategic value, associated risks and expected return. Recommend the best opportunities to pursue first.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 386,
+    "shortcut": "/innovationdirector",
+    "title": "Innovation Director",
+    "category": "Creativity",
+    "description": "Lead innovation initiatives from idea to execution.",
+    "prompt": "Act as an innovation director. Develop a complete innovation strategy for the following challenge. Include ideation methods, validation process, prototyping roadmap, implementation milestones, KPIs, funding considerations, scaling strategy and continuous improvement recommendations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 387,
+    "shortcut": "/futurearchitect",
+    "title": "Future Architect",
+    "category": "Forecasting",
+    "description": "Design strategies for long-term future success.",
+    "prompt": "Create a future-ready architecture for the following organization, product or initiative. Evaluate long-term trends, emerging technologies, evolving customer expectations, risks, opportunities, scalability, resilience and strategic positioning.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 388,
+    "shortcut": "/mastergovernor",
+    "title": "Master Governor",
+    "category": "Governance",
+    "description": "Design governance systems for sustainable success.",
+    "prompt": "Design a governance model for the following initiative. Include leadership roles, decision-making structure, accountability mechanisms, compliance requirements, performance reviews, reporting systems, escalation processes and continuous improvement practices.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 389,
+    "shortcut": "/strategiccommand",
+    "title": "Strategic Command",
+    "category": "Execution",
+    "description": "Coordinate complex strategic execution with precision.",
+    "prompt": "Develop a strategic execution command plan for the following initiative. Define priorities, responsibilities, workflows, milestones, dependencies, monitoring methods, communication protocols, KPIs, contingency planning and success evaluation.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 390,
+    "shortcut": "/geminiinfinity",
+    "title": "Gemini Infinity Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an Infinity-level strategic intelligence and reasoning partner.",
+    "prompt": "Act as an Infinity-level AI strategist, enterprise architect, executive advisor and research intelligence system. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, risks, opportunities and measurable success criteria. Generate multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a comprehensive execution roadmap, establish governance, KPIs and monitoring systems, anticipate future developments and conclude with executive recommendations and continuous optimization strategies.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 391,
+    "shortcut": "/masterstrategypro",
+    "title": "Master Strategy Pro",
+    "category": "Strategy",
+    "description": "Develop comprehensive enterprise-level strategies.",
+    "prompt": "Develop a comprehensive enterprise strategy for the following objective. Define strategic vision, measurable goals, execution phases, governance, stakeholder alignment, resource planning, KPIs, risk management, innovation opportunities and long-term sustainability recommendations.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 392,
+    "shortcut": "/executiveintelligence",
+    "title": "Executive Intelligence",
+    "category": "Business",
+    "description": "Generate executive intelligence reports for informed decisions.",
+    "prompt": "Prepare an executive intelligence report for the following subject. Summarize critical findings, strategic implications, competitive landscape, opportunities, threats, operational considerations, recommended actions and measurable success indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 393,
+    "shortcut": "/masterriskpro",
+    "title": "Master Risk Pro",
+    "category": "Risk",
+    "description": "Perform enterprise-grade risk management analysis.",
+    "prompt": "Conduct a detailed enterprise risk assessment for the following initiative. Evaluate strategic, operational, financial, technical, legal, compliance and reputational risks. Recommend mitigation strategies, contingency plans, monitoring mechanisms and executive priorities.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 394,
+    "shortcut": "/knowledgeengine",
+    "title": "Knowledge Engine",
+    "category": "Knowledge",
+    "description": "Build a structured knowledge engine around any subject.",
+    "prompt": "Construct a comprehensive knowledge engine for the following topic. Organize foundational concepts, advanced theories, interdisciplinary connections, practical applications, emerging trends, expert references and future learning pathways.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 395,
+    "shortcut": "/masterroadmappro",
+    "title": "Master Roadmap Pro",
+    "category": "Planning",
+    "description": "Create enterprise-grade strategic roadmaps.",
+    "prompt": "Create a detailed strategic roadmap for the following initiative. Include vision, implementation phases, milestones, resource allocation, governance, KPIs, quality assurance, risk management, review cycles and optimization opportunities.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 396,
+    "shortcut": "/futurecommand",
+    "title": "Future Command",
+    "category": "Forecasting",
+    "description": "Lead organizations toward long-term success through future planning.",
+    "prompt": "Develop a future command strategy for the following organization or initiative. Analyze long-term trends, emerging technologies, global influences, potential disruptions, strategic opportunities, risks and recommended preparation strategies over the next decade.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 397,
+    "shortcut": "/masterorchestrator",
+    "title": "Master Orchestrator",
+    "category": "Execution",
+    "description": "Coordinate complex initiatives across multiple domains.",
+    "prompt": "Act as a master orchestrator. Design a complete execution strategy for the following initiative, including governance, stakeholder coordination, workflows, communication, monitoring, quality assurance, escalation procedures, KPIs and continuous improvement.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 398,
+    "shortcut": "/executiveecosystem",
+    "title": "Executive Ecosystem",
+    "category": "Systems",
+    "description": "Design interconnected ecosystems for sustainable growth.",
+    "prompt": "Design a resilient ecosystem for the following organization, product or initiative. Include stakeholders, technologies, governance, partnerships, workflows, performance metrics, scalability strategy, resilience planning and future expansion opportunities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 399,
+    "shortcut": "/masterlegacy",
+    "title": "Master Legacy",
+    "category": "Leadership",
+    "description": "Create strategies that deliver lasting organizational impact.",
+    "prompt": "Develop a legacy strategy for the following organization, leader or initiative. Define long-term vision, enduring principles, sustainable value creation, stakeholder impact, governance, succession planning, innovation strategy, KPIs and long-term success indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 400,
+    "shortcut": "/geminiomniscient",
+    "title": "Gemini Omniscient Workspace",
+    "category": "AI",
+    "description": "Use Gemini as the ultimate strategic intelligence, reasoning and executive decision-making partner.",
+    "prompt": "Act as an Omniscient-level AI strategist, executive advisor, enterprise architect, research director and systems intelligence expert. Thoroughly analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, risks, opportunities and measurable success criteria. Generate multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, produce a complete implementation roadmap, establish governance, KPIs, monitoring systems, future-proofing strategies and conclude with executive-level recommendations, long-term optimization opportunities and next actions.\n\nRequest:",
+    "isOfficial": false
+  }
+]

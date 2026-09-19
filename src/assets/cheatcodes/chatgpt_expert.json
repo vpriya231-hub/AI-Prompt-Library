@@ -1,0 +1,902 @@
+[
+  {
+    "id": 201,
+    "shortcut": "/promptchain",
+    "title": "Prompt Chaining",
+    "category": "Expert AI",
+    "description": "Design a multi-step prompt workflow.",
+    "prompt": "Create a prompt chain for the following objective. Break the task into logical stages, define the purpose of each stage, expected inputs, outputs and validation checks.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 202,
+    "shortcut": "/llmworkflow",
+    "title": "LLM Workflow",
+    "category": "Expert AI",
+    "description": "Build an end-to-end LLM workflow.",
+    "prompt": "Design an end-to-end LLM workflow for the following application. Include preprocessing, prompting, validation, post-processing and monitoring.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 203,
+    "shortcut": "/systemdesign",
+    "title": "AI System Design",
+    "category": "Expert AI",
+    "description": "Design an AI-powered system.",
+    "prompt": "Design a scalable AI-powered system for the following use case. Include architecture, components, data flow, APIs and deployment strategy.\n\nUse Case:",
+    "isOfficial": false
+  },
+  {
+    "id": 204,
+    "shortcut": "/ragplan",
+    "title": "Knowledge Retrieval Plan",
+    "category": "Expert AI",
+    "description": "Plan retrieval-augmented workflows.",
+    "prompt": "Design a retrieval-based AI workflow for the following application. Describe document ingestion, indexing, retrieval strategy, ranking and response generation.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 205,
+    "shortcut": "/evaluation",
+    "title": "AI Evaluation Framework",
+    "category": "Expert AI",
+    "description": "Evaluate AI responses.",
+    "prompt": "Create an evaluation framework for the following AI application. Define quality metrics, accuracy checks, consistency checks and evaluation methods.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 206,
+    "shortcut": "/guardrails",
+    "title": "AI Guardrails",
+    "category": "Expert AI",
+    "description": "Design safety constraints.",
+    "prompt": "Design guardrails for the following AI assistant. Include input validation, output validation, safety constraints and fallback strategies.\n\nAssistant:",
+    "isOfficial": false
+  },
+  {
+    "id": 207,
+    "shortcut": "/agentmemory",
+    "title": "Agent Memory Strategy",
+    "category": "Expert AI",
+    "description": "Plan AI memory usage.",
+    "prompt": "Design a memory strategy for the following AI agent. Explain short-term memory, long-term memory, persistence and retrieval methods.\n\nAgent:",
+    "isOfficial": false
+  },
+  {
+    "id": 208,
+    "shortcut": "/contextplan",
+    "title": "Context Management",
+    "category": "Expert AI",
+    "description": "Optimize context handling.",
+    "prompt": "Design a context management strategy for the following AI application. Explain how relevant information should be selected, updated and summarized.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 209,
+    "shortcut": "/enterpriseai",
+    "title": "Enterprise AI Strategy",
+    "category": "Expert AI",
+    "description": "Plan enterprise AI adoption.",
+    "prompt": "Create an enterprise AI adoption strategy for the following organization. Include governance, security, compliance, rollout phases and success metrics.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 210,
+    "shortcut": "/architecturepro",
+    "title": "Enterprise Architecture",
+    "category": "Architecture",
+    "description": "Design scalable enterprise architecture.",
+    "prompt": "Design an enterprise-grade architecture for the following platform. Include scalability, fault tolerance, monitoring, security and deployment considerations.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 211,
+    "shortcut": "/microservices",
+    "title": "Microservices Planner",
+    "category": "Architecture",
+    "description": "Design microservice architecture.",
+    "prompt": "Design a microservices architecture for the following application. Define services, communication methods, databases and deployment strategy.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 212,
+    "shortcut": "/eventdriven",
+    "title": "Event-Driven Design",
+    "category": "Architecture",
+    "description": "Design event-driven systems.",
+    "prompt": "Design an event-driven architecture for the following system. Include events, producers, consumers, messaging and error handling.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 213,
+    "shortcut": "/distributed",
+    "title": "Distributed Systems",
+    "category": "Architecture",
+    "description": "Design distributed systems.",
+    "prompt": "Design a distributed system for the following application. Discuss scalability, consistency, availability, partition tolerance and failure recovery.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 214,
+    "shortcut": "/claudecode",
+    "title": "Claude Code Planner",
+    "category": "Expert AI",
+    "description": "Plan AI-assisted coding workflows.",
+    "prompt": "Design a workflow for completing the following software project using an AI coding assistant. Break the work into phases, checkpoints, code review steps and testing strategy.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 215,
+    "shortcut": "/cursorworkflow",
+    "title": "Cursor AI Workflow",
+    "category": "Expert AI",
+    "description": "Plan Cursor-assisted development.",
+    "prompt": "Create a development workflow using an AI-powered code editor for the following project. Include planning, implementation, refactoring, testing and documentation.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 216,
+    "shortcut": "/codestandards",
+    "title": "Coding Standards",
+    "category": "Programming",
+    "description": "Define project coding standards.",
+    "prompt": "Create a coding standards document for the following software project. Include naming conventions, folder structure, documentation rules, testing requirements and code review guidelines.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 217,
+    "shortcut": "/dependencyreview",
+    "title": "Dependency Review",
+    "category": "Programming",
+    "description": "Review project dependencies.",
+    "prompt": "Review the dependencies for the following project. Identify unnecessary packages, outdated libraries, security considerations and possible alternatives.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 218,
+    "shortcut": "/apiversioning",
+    "title": "API Versioning",
+    "category": "Architecture",
+    "description": "Plan API versioning.",
+    "prompt": "Design an API versioning strategy for the following platform. Include backward compatibility, deprecation policy and migration guidance.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 219,
+    "shortcut": "/authentication",
+    "title": "Authentication Strategy",
+    "category": "Security",
+    "description": "Design authentication flows.",
+    "prompt": "Design a secure authentication strategy for the following application. Compare authentication methods, session handling and account recovery considerations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 220,
+    "shortcut": "/authorization",
+    "title": "Authorization Design",
+    "category": "Security",
+    "description": "Plan user permissions.",
+    "prompt": "Design an authorization model for the following application. Define user roles, permissions and access control rules.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 221,
+    "shortcut": "/backupstrategy",
+    "title": "Backup Strategy",
+    "category": "Operations",
+    "description": "Plan backup and recovery.",
+    "prompt": "Create a backup and disaster recovery strategy for the following application. Include backup frequency, storage, recovery testing and recovery objectives.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 222,
+    "shortcut": "/observability",
+    "title": "Observability Plan",
+    "category": "Operations",
+    "description": "Improve observability.",
+    "prompt": "Design an observability strategy for the following system. Include logs, metrics, traces, dashboards and alerting recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 223,
+    "shortcut": "/scenariotesting",
+    "title": "Scenario Testing",
+    "category": "Testing",
+    "description": "Generate real-world test scenarios.",
+    "prompt": "Generate realistic user scenarios and edge cases for testing the following application. Include expected outcomes and validation points.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 224,
+    "shortcut": "/architecturecomparison",
+    "title": "Architecture Comparison",
+    "category": "Architecture",
+    "description": "Compare architectural approaches.",
+    "prompt": "Compare suitable architecture options for the following project. Discuss advantages, disadvantages, complexity and long-term maintainability before recommending the best choice.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 225,
+    "shortcut": "/expertreview",
+    "title": "Expert Project Review",
+    "category": "Expert AI",
+    "description": "Comprehensive project review.",
+    "prompt": "Review the following project as a senior software architect. Evaluate architecture, code quality, scalability, maintainability, security, testing and deployment readiness. Provide prioritized recommendations.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 226,
+    "shortcut": "/androidarchitecture",
+    "title": "Android Architecture Review",
+    "category": "Android Development",
+    "description": "Design a production-ready Android architecture.",
+    "prompt": "Design a production-ready Android architecture for the following app. Include recommended architecture pattern, dependency injection, navigation, state management, offline support, testing strategy and scalability considerations.\n\nApp:",
+    "isOfficial": false
+  },
+  {
+    "id": 227,
+    "shortcut": "/playstorerelease",
+    "title": "Play Store Release Checklist",
+    "category": "Android Development",
+    "description": "Prepare an Android app for Play Store release.",
+    "prompt": "Create a comprehensive Play Store release checklist for the following Android app. Include security, privacy, testing, performance, Play Console requirements, screenshots, policies and production readiness.\n\nApp:",
+    "isOfficial": false
+  },
+  {
+    "id": 228,
+    "shortcut": "/firebasearchitecture",
+    "title": "Firebase Architecture",
+    "category": "Android Development",
+    "description": "Design Firebase integration.",
+    "prompt": "Design a scalable Firebase architecture for the following application. Include Authentication, Firestore, Cloud Storage, Cloud Functions, FCM, Analytics and security rules.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 229,
+    "shortcut": "/monetization",
+    "title": "App Monetization Strategy",
+    "category": "Business",
+    "description": "Build a sustainable monetization plan.",
+    "prompt": "Create a monetization strategy for the following mobile application. Compare ads, subscriptions, one-time purchases, premium features and hybrid models with their trade-offs.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 230,
+    "shortcut": "/backendscale",
+    "title": "Backend Scaling Strategy",
+    "category": "Backend",
+    "description": "Scale backend infrastructure.",
+    "prompt": "Design a backend scaling strategy for the following application. Include load balancing, caching, database scaling, monitoring, failover and cost optimization.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 231,
+    "shortcut": "/saasdesign",
+    "title": "SaaS Platform Design",
+    "category": "Architecture",
+    "description": "Design a scalable SaaS platform.",
+    "prompt": "Design a SaaS platform for the following product. Include multi-tenancy, authentication, billing, subscriptions, user management, analytics and deployment strategy.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 232,
+    "shortcut": "/securityauditpro",
+    "title": "Enterprise Security Audit",
+    "category": "Security",
+    "description": "Review enterprise security.",
+    "prompt": "Perform a detailed security audit for the following system. Cover authentication, authorization, encryption, secrets management, API security, infrastructure security and compliance recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 233,
+    "shortcut": "/promptoptimizer",
+    "title": "Prompt Optimizer",
+    "category": "Expert AI",
+    "description": "Optimize complex AI prompts.",
+    "prompt": "Optimize the following prompt for clarity, reasoning quality, accuracy and consistency. Explain every improvement and provide the final optimized version.\n\nPrompt:",
+    "isOfficial": false
+  },
+  {
+    "id": 234,
+    "shortcut": "/multimodal",
+    "title": "Multimodal AI Planner",
+    "category": "Expert AI",
+    "description": "Design multimodal AI systems.",
+    "prompt": "Design a multimodal AI solution for the following application using text, images, audio and other supported inputs. Include architecture, workflows and implementation considerations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 235,
+    "shortcut": "/agentorchestration",
+    "title": "Agent Orchestration",
+    "category": "Expert AI",
+    "description": "Coordinate multiple AI agents.",
+    "prompt": "Design a multi-agent orchestration workflow for the following project. Define agent roles, communication flow, task delegation, validation and failure recovery.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 236,
+    "shortcut": "/devopspro",
+    "title": "DevOps Blueprint",
+    "category": "DevOps",
+    "description": "Design a modern DevOps workflow.",
+    "prompt": "Design a complete DevOps workflow for the following software project. Include version control, CI/CD, infrastructure, monitoring, security, rollback and deployment strategy.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 237,
+    "shortcut": "/performancetuning",
+    "title": "Performance Tuning",
+    "category": "Performance",
+    "description": "Optimize system performance.",
+    "prompt": "Analyze the following application and recommend performance optimizations for CPU, memory, network, storage and user experience. Prioritize recommendations by impact.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 238,
+    "shortcut": "/solutionarchitect",
+    "title": "Solution Architect",
+    "category": "Architecture",
+    "description": "Design an enterprise solution.",
+    "prompt": "Act as a senior solution architect. Design the best end-to-end solution for the following business or technical problem. Explain architecture, technology choices, trade-offs, implementation phases and future scalability.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 239,
+    "shortcut": "/vectordb",
+    "title": "Vector Database Strategy",
+    "category": "Expert AI",
+    "description": "Design a vector database architecture.",
+    "prompt": "Design a vector database architecture for the following AI application. Explain embedding generation, indexing, similarity search, metadata filtering, scalability and maintenance.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 240,
+    "shortcut": "/embeddingplan",
+    "title": "Embedding Strategy",
+    "category": "Expert AI",
+    "description": "Plan an embedding pipeline.",
+    "prompt": "Create an embedding strategy for the following AI system. Explain chunking, embedding generation, storage, updates, retrieval quality and optimization.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 241,
+    "shortcut": "/apigateway",
+    "title": "API Gateway Design",
+    "category": "Architecture",
+    "description": "Design an enterprise API gateway.",
+    "prompt": "Design an API gateway architecture for the following platform. Include authentication, authorization, rate limiting, caching, routing, monitoring and versioning.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 242,
+    "shortcut": "/kubernetes",
+    "title": "Kubernetes Deployment",
+    "category": "DevOps",
+    "description": "Deploy applications with Kubernetes.",
+    "prompt": "Design a Kubernetes deployment strategy for the following application. Include cluster architecture, scaling, secrets management, monitoring, rolling updates and disaster recovery.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 243,
+    "shortcut": "/platformengineering",
+    "title": "Platform Engineering",
+    "category": "DevOps",
+    "description": "Build an internal developer platform.",
+    "prompt": "Design an internal developer platform for the following organization. Include self-service deployment, CI/CD, infrastructure automation, security and governance.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 244,
+    "shortcut": "/mcparchitecture",
+    "title": "MCP Architecture",
+    "category": "Expert AI",
+    "description": "Design a Model Context Protocol ecosystem.",
+    "prompt": "Design a Model Context Protocol (MCP) architecture for the following AI application. Explain MCP servers, tools, resources, security, context sharing and scalability.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 245,
+    "shortcut": "/llmops",
+    "title": "LLMOps Blueprint",
+    "category": "Expert AI",
+    "description": "Build production-ready LLM operations.",
+    "prompt": "Design an LLMOps workflow for the following AI product. Include prompt management, evaluation, deployment, monitoring, versioning, rollback and continuous improvement.\n\nAI Product:",
+    "isOfficial": false
+  },
+  {
+    "id": 246,
+    "shortcut": "/enterpriseagents",
+    "title": "Enterprise AI Agents",
+    "category": "Expert AI",
+    "description": "Design enterprise multi-agent systems.",
+    "prompt": "Design an enterprise AI agent ecosystem for the following organization. Define specialized agents, collaboration workflow, governance, security and monitoring.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 247,
+    "shortcut": "/datapipeline",
+    "title": "Data Pipeline Design",
+    "category": "Data Engineering",
+    "description": "Design scalable data pipelines.",
+    "prompt": "Design a scalable data pipeline for the following platform. Include ingestion, transformation, storage, validation, monitoring and recovery strategies.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 248,
+    "shortcut": "/resilience",
+    "title": "Resilience Engineering",
+    "category": "Architecture",
+    "description": "Improve system resilience.",
+    "prompt": "Review the following distributed system and recommend resilience improvements including redundancy, circuit breakers, retries, graceful degradation and disaster recovery.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 249,
+    "shortcut": "/governance",
+    "title": "AI Governance Framework",
+    "category": "Expert AI",
+    "description": "Establish responsible AI governance.",
+    "prompt": "Create an AI governance framework for the following organization. Include policies, human oversight, compliance, risk management, auditing and continuous monitoring.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 250,
+    "shortcut": "/principalarchitect",
+    "title": "Principal Architect Review",
+    "category": "Architecture",
+    "description": "Receive a principal architect assessment.",
+    "prompt": "Act as a Principal Software Architect. Perform a comprehensive review of the following project covering architecture, scalability, maintainability, security, reliability, performance, operational readiness and long-term evolution. Identify risks, propose multiple solution options with trade-offs, and recommend the best implementation roadmap.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 251,
+    "shortcut": "/reasoningframework",
+    "title": "Reasoning Framework",
+    "category": "Expert AI",
+    "description": "Build a structured reasoning workflow.",
+    "prompt": "Create a structured reasoning framework for solving the following complex problem. Break the reasoning into stages, define assumptions, validation steps, alternative hypotheses and final conclusions.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 252,
+    "shortcut": "/hybridsearch",
+    "title": "Hybrid Search Design",
+    "category": "Expert AI",
+    "description": "Combine semantic and keyword search.",
+    "prompt": "Design a hybrid search system for the following application using keyword search and semantic vector search. Explain ranking, filtering, indexing and scalability considerations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 253,
+    "shortcut": "/knowledgegraph",
+    "title": "Knowledge Graph Planner",
+    "category": "Data Engineering",
+    "description": "Design a knowledge graph solution.",
+    "prompt": "Design a knowledge graph for the following domain. Define entities, relationships, graph structure, update strategy and AI integration opportunities.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 254,
+    "shortcut": "/promptlibrary",
+    "title": "Prompt Library Designer",
+    "category": "Expert AI",
+    "description": "Organize prompts at scale.",
+    "prompt": "Design a scalable prompt library for the following organization. Define categories, metadata, versioning, approval workflow, tagging and maintenance strategy.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 255,
+    "shortcut": "/aipolicies",
+    "title": "AI Policy Framework",
+    "category": "Expert AI",
+    "description": "Develop organizational AI policies.",
+    "prompt": "Create an AI policy framework for the following organization covering acceptable use, privacy, security, governance, compliance and employee responsibilities.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 256,
+    "shortcut": "/hallucination",
+    "title": "Hallucination Reduction",
+    "category": "Expert AI",
+    "description": "Reduce AI hallucinations.",
+    "prompt": "Design strategies to minimize hallucinations in the following AI application. Include retrieval improvements, prompt design, validation, user feedback and monitoring.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 257,
+    "shortcut": "/evaluationdataset",
+    "title": "Evaluation Dataset",
+    "category": "Expert AI",
+    "description": "Create AI evaluation datasets.",
+    "prompt": "Design a high-quality evaluation dataset for the following AI application. Define test categories, edge cases, scoring methodology and expected quality metrics.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 258,
+    "shortcut": "/automationplatform",
+    "title": "Automation Platform",
+    "category": "Automation",
+    "description": "Design an enterprise automation platform.",
+    "prompt": "Design an enterprise automation platform for the following organization. Include workflow orchestration, integrations, monitoring, governance and scalability.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 259,
+    "shortcut": "/decisionengine",
+    "title": "Decision Engine",
+    "category": "Architecture",
+    "description": "Design an intelligent decision engine.",
+    "prompt": "Design a decision engine for the following business process. Explain decision rules, AI integration, fallback mechanisms, auditing and continuous improvement.\n\nBusiness Process:",
+    "isOfficial": false
+  },
+  {
+    "id": 260,
+    "shortcut": "/aisecurity",
+    "title": "AI Security Blueprint",
+    "category": "Security",
+    "description": "Protect AI systems against threats.",
+    "prompt": "Design a security blueprint for the following AI application. Cover prompt injection, data leakage, model abuse, authentication, authorization, monitoring and incident response.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 261,
+    "shortcut": "/modelselection",
+    "title": "Model Selection Advisor",
+    "category": "Expert AI",
+    "description": "Choose the best AI model.",
+    "prompt": "Recommend the most appropriate AI model or model family for the following use case. Compare reasoning ability, speed, cost, context window, multimodal support and deployment considerations.\n\nUse Case:",
+    "isOfficial": false
+  },
+  {
+    "id": 262,
+    "shortcut": "/aiproduct",
+    "title": "AI Product Strategy",
+    "category": "Business",
+    "description": "Plan an AI-powered product.",
+    "prompt": "Create a product strategy for the following AI-powered product. Include target users, value proposition, roadmap, monetization, success metrics and long-term vision.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 263,
+    "shortcut": "/expertadvisor",
+    "title": "Expert AI Advisor",
+    "category": "Expert AI",
+    "description": "Receive executive-level AI guidance.",
+    "prompt": "Act as a senior AI strategist and technical advisor. Analyze the following project from technical, business and operational perspectives. Identify opportunities, risks, implementation roadmap, success metrics and future expansion strategies.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 264,
+    "shortcut": "/contextengineering",
+    "title": "Context Engineering",
+    "category": "Expert AI",
+    "description": "Design an effective context management strategy.",
+    "prompt": "Design a context engineering strategy for the following AI application. Explain context selection, prioritization, compression, summarization, memory boundaries and context refresh techniques.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 265,
+    "shortcut": "/toolcalling",
+    "title": "Tool Calling Workflow",
+    "category": "Expert AI",
+    "description": "Design AI tool-calling workflows.",
+    "prompt": "Design a tool-calling workflow for the following AI assistant. Define tool selection, execution sequence, validation, fallback handling and security considerations.\n\nAssistant:",
+    "isOfficial": false
+  },
+  {
+    "id": 266,
+    "shortcut": "/agentplanning",
+    "title": "Agent Planning Engine",
+    "category": "Expert AI",
+    "description": "Plan autonomous agent execution.",
+    "prompt": "Design an autonomous planning engine for the following AI agent. Explain task decomposition, planning, execution, verification and recovery mechanisms.\n\nAgent:",
+    "isOfficial": false
+  },
+  {
+    "id": 267,
+    "shortcut": "/memoryarchitecture",
+    "title": "Memory Architecture",
+    "category": "Expert AI",
+    "description": "Build long-term AI memory systems.",
+    "prompt": "Design a long-term memory architecture for the following AI assistant. Include episodic memory, semantic memory, retrieval, updates and expiration strategies.\n\nAssistant:",
+    "isOfficial": false
+  },
+  {
+    "id": 268,
+    "shortcut": "/promptgovernance",
+    "title": "Prompt Governance",
+    "category": "Expert AI",
+    "description": "Manage prompts at enterprise scale.",
+    "prompt": "Design a prompt governance framework for the following organization. Include version control, approval workflows, testing, documentation, ownership and auditing.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 269,
+    "shortcut": "/llmbenchmark",
+    "title": "LLM Benchmarking",
+    "category": "Expert AI",
+    "description": "Evaluate and compare AI models.",
+    "prompt": "Create a benchmarking framework for comparing multiple AI models. Define evaluation criteria, datasets, scoring methodology, cost analysis and reporting.\n\nUse Case:",
+    "isOfficial": false
+  },
+  {
+    "id": 270,
+    "shortcut": "/costanalysis",
+    "title": "AI Cost Optimization",
+    "category": "Business",
+    "description": "Optimize AI operating costs.",
+    "prompt": "Analyze the following AI solution and recommend strategies to reduce operational costs while maintaining quality. Consider model selection, caching, batching, routing and infrastructure optimization.\n\nSolution:",
+    "isOfficial": false
+  },
+  {
+    "id": 271,
+    "shortcut": "/multimodel",
+    "title": "Multi-Model Strategy",
+    "category": "Expert AI",
+    "description": "Use multiple AI models effectively.",
+    "prompt": "Design a multi-model AI architecture for the following application. Explain how different models should be selected, orchestrated and evaluated for various tasks.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 272,
+    "shortcut": "/agentcommunication",
+    "title": "Agent Communication",
+    "category": "Expert AI",
+    "description": "Coordinate communication between AI agents.",
+    "prompt": "Design a communication protocol for multiple AI agents working on the following project. Define message formats, coordination methods, conflict resolution and monitoring.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 273,
+    "shortcut": "/workflowoptimizer",
+    "title": "Workflow Optimizer",
+    "category": "Automation",
+    "description": "Optimize complex AI workflows.",
+    "prompt": "Analyze the following AI workflow and recommend improvements to increase speed, reliability, scalability and maintainability while reducing unnecessary complexity.\n\nWorkflow:",
+    "isOfficial": false
+  },
+  {
+    "id": 274,
+    "shortcut": "/enterpriseprompt",
+    "title": "Enterprise Prompt Engineering",
+    "category": "Expert AI",
+    "description": "Develop production-grade prompt systems.",
+    "prompt": "Design a production-ready prompt engineering framework for an enterprise AI platform. Include prompt templates, validation, testing, versioning, monitoring and continuous improvement.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 275,
+    "shortcut": "/chiefarchitect",
+    "title": "Chief AI Architect",
+    "category": "Expert AI",
+    "description": "Receive a chief architect's recommendations.",
+    "prompt": "Act as a Chief AI Architect. Analyze the following AI initiative from technical, operational and business perspectives. Recommend the optimal architecture, implementation roadmap, governance model, risk mitigation strategy and long-term evolution plan.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 276,
+    "shortcut": "/aireliability",
+    "title": "AI Reliability Framework",
+    "category": "Expert AI",
+    "description": "Design reliable AI systems.",
+    "prompt": "Design an AI reliability framework for the following application. Include reliability metrics, validation pipelines, failure detection, graceful degradation, monitoring and continuous improvement.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 277,
+    "shortcut": "/modelrouter",
+    "title": "Model Routing Strategy",
+    "category": "Expert AI",
+    "description": "Route requests to the best AI model.",
+    "prompt": "Design a model routing strategy for the following AI platform. Explain routing rules based on complexity, latency, cost, multimodal requirements and fallback mechanisms.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 278,
+    "shortcut": "/humanloop",
+    "title": "Human-in-the-Loop",
+    "category": "Expert AI",
+    "description": "Integrate human oversight into AI workflows.",
+    "prompt": "Design a Human-in-the-Loop workflow for the following AI system. Define approval stages, escalation rules, reviewer responsibilities, feedback collection and continuous learning.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 279,
+    "shortcut": "/redteamai",
+    "title": "AI Red Team Assessment",
+    "category": "Security",
+    "description": "Evaluate AI security risks.",
+    "prompt": "Perform an AI Red Team assessment for the following application. Identify prompt injection risks, jailbreak attempts, data leakage, adversarial attacks and recommended mitigations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 280,
+    "shortcut": "/aiobservability",
+    "title": "AI Observability",
+    "category": "Expert AI",
+    "description": "Monitor AI systems effectively.",
+    "prompt": "Design an AI observability strategy for the following platform. Include prompt tracing, model metrics, latency, token usage, quality monitoring, alerting and dashboards.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 281,
+    "shortcut": "/federatedai",
+    "title": "Federated AI Strategy",
+    "category": "Expert AI",
+    "description": "Plan distributed AI deployments.",
+    "prompt": "Design a federated AI strategy for the following organization. Explain distributed model deployment, privacy preservation, synchronization, governance and scalability.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 282,
+    "shortcut": "/agentgovernance",
+    "title": "Agent Governance",
+    "category": "Expert AI",
+    "description": "Govern enterprise AI agents.",
+    "prompt": "Create a governance framework for enterprise AI agents. Define permissions, approval workflows, monitoring, auditing, compliance and lifecycle management.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 283,
+    "shortcut": "/reasoningevaluation",
+    "title": "Reasoning Evaluation",
+    "category": "Expert AI",
+    "description": "Evaluate complex reasoning quality.",
+    "prompt": "Design a framework to evaluate AI reasoning quality for the following use case. Define evaluation criteria, benchmark tasks, scoring methodology and improvement strategies.\n\nUse Case:",
+    "isOfficial": false
+  },
+  {
+    "id": 284,
+    "shortcut": "/adaptiveworkflow",
+    "title": "Adaptive Workflow",
+    "category": "Automation",
+    "description": "Build self-adapting workflows.",
+    "prompt": "Design an adaptive workflow for the following process. Explain how the workflow should respond dynamically to changing conditions, failures, user feedback and resource availability.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 285,
+    "shortcut": "/multimemory",
+    "title": "Multi-Layer Memory",
+    "category": "Expert AI",
+    "description": "Design layered AI memory systems.",
+    "prompt": "Design a multi-layer memory architecture for the following AI application. Explain working memory, session memory, persistent memory, retrieval methods and memory optimization.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 286,
+    "shortcut": "/toolecosystem",
+    "title": "AI Tool Ecosystem",
+    "category": "Expert AI",
+    "description": "Design a scalable AI tool ecosystem.",
+    "prompt": "Design an AI tool ecosystem for the following assistant. Define available tools, discovery mechanisms, permissions, execution flow, auditing and extensibility.\n\nAssistant:",
+    "isOfficial": false
+  },
+  {
+    "id": 287,
+    "shortcut": "/enterpriseorchestrator",
+    "title": "Enterprise Orchestrator",
+    "category": "Expert AI",
+    "description": "Coordinate enterprise AI operations.",
+    "prompt": "Design an enterprise orchestration platform for AI workloads. Include workflow scheduling, resource allocation, monitoring, governance, resilience and integration with external systems.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 288,
+    "shortcut": "/aiexecutive",
+    "title": "Executive AI Transformation",
+    "category": "Business",
+    "description": "Lead organization-wide AI transformation.",
+    "prompt": "Act as a Chief AI Transformation Officer. Develop a comprehensive AI transformation strategy for the following organization, including business objectives, governance, technology roadmap, organizational change, risk management, KPIs and long-term innovation strategy.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 289,
+    "shortcut": "/autonomousagents",
+    "title": "Autonomous Agent Framework",
+    "category": "Expert AI",
+    "description": "Design highly autonomous AI agents.",
+    "prompt": "Design an autonomous AI agent framework for the following application. Explain goal management, planning, execution, tool usage, self-evaluation, recovery mechanisms and operational safeguards.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 290,
+    "shortcut": "/crossplatformai",
+    "title": "Cross-Platform AI Strategy",
+    "category": "Expert AI",
+    "description": "Deploy AI across multiple platforms.",
+    "prompt": "Design a cross-platform AI strategy for the following product. Include mobile, web, desktop, API integrations, synchronization, security and maintenance considerations.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 291,
+    "shortcut": "/modellifecycle",
+    "title": "Model Lifecycle Management",
+    "category": "Expert AI",
+    "description": "Manage AI models throughout their lifecycle.",
+    "prompt": "Design a lifecycle management strategy for AI models. Cover development, evaluation, deployment, monitoring, retraining, versioning and retirement.\n\nAI System:",
+    "isOfficial": false
+  },
+  {
+    "id": 292,
+    "shortcut": "/complianceai",
+    "title": "AI Compliance Framework",
+    "category": "Security",
+    "description": "Ensure AI regulatory compliance.",
+    "prompt": "Create a compliance framework for the following AI application. Include privacy, governance, documentation, auditability, regulatory considerations and operational controls.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 293,
+    "shortcut": "/incidentai",
+    "title": "AI Incident Management",
+    "category": "Operations",
+    "description": "Prepare for AI production incidents.",
+    "prompt": "Design an incident management process for AI systems. Include detection, classification, response procedures, communication, recovery and post-incident analysis.\n\nAI Platform:",
+    "isOfficial": false
+  },
+  {
+    "id": 294,
+    "shortcut": "/qualityframework",
+    "title": "AI Quality Framework",
+    "category": "Expert AI",
+    "description": "Measure and improve AI quality.",
+    "prompt": "Create a comprehensive AI quality framework for the following solution. Define quality metrics, evaluation procedures, acceptance criteria, monitoring and continuous improvement.\n\nSolution:",
+    "isOfficial": false
+  },
+  {
+    "id": 295,
+    "shortcut": "/globaldeployment",
+    "title": "Global Deployment Strategy",
+    "category": "Architecture",
+    "description": "Deploy applications globally.",
+    "prompt": "Design a global deployment strategy for the following platform. Include multi-region deployment, latency optimization, disaster recovery, compliance, monitoring and scalability.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 296,
+    "shortcut": "/innovationlab",
+    "title": "AI Innovation Lab",
+    "category": "Business",
+    "description": "Create an enterprise AI innovation program.",
+    "prompt": "Design an AI innovation program for the following organization. Include idea generation, experimentation, governance, evaluation, funding and implementation strategy.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 297,
+    "shortcut": "/futurearchitecture",
+    "title": "Future Architecture Planning",
+    "category": "Architecture",
+    "description": "Prepare systems for future technologies.",
+    "prompt": "Review the following platform and recommend architectural improvements that will keep it adaptable for future technologies, increasing scale, AI integration and evolving business requirements.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 298,
+    "shortcut": "/strategicadvisor",
+    "title": "Strategic Technology Advisor",
+    "category": "Business",
+    "description": "Receive executive technology guidance.",
+    "prompt": "Act as a senior technology strategist. Analyze the following initiative from technical, financial and operational perspectives. Recommend priorities, investment strategy, implementation roadmap, risks and long-term opportunities.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 299,
+    "shortcut": "/digitaltransformation",
+    "title": "Digital Transformation Blueprint",
+    "category": "Business",
+    "description": "Lead enterprise digital transformation.",
+    "prompt": "Create a comprehensive digital transformation blueprint for the following organization. Include technology modernization, AI adoption, organizational change, governance, KPIs and phased implementation.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 300,
+    "shortcut": "/worldclassarchitect",
+    "title": "World-Class AI Architect",
+    "category": "Expert AI",
+    "description": "Receive world-class AI architecture guidance.",
+    "prompt": "Act as a world-class AI architect with deep expertise in enterprise software, distributed systems, cloud platforms, AI agents and large language models. Analyze the following project comprehensively, identify technical and business risks, propose multiple architecture options with trade-offs, recommend the optimal solution, define an implementation roadmap, governance model, scalability strategy and future evolution plan suitable for a production-grade global platform.\n\nProject:",
+    "isOfficial": false
+  }
+]

@@ -1,0 +1,902 @@
+[
+  {
+    "id": 301,
+    "shortcut": "/masterreasoning",
+    "title": "Master Reasoning",
+    "category": "Reasoning",
+    "description": "Apply master-level structured reasoning to the most complex challenges.",
+    "prompt": "Act as a master reasoning specialist. Analyze the following problem by identifying objectives, assumptions, constraints, stakeholder perspectives, uncertainties, governing principles, competing hypotheses, trade-offs, second- and third-order effects, decision criteria and confidence levels. Synthesize the strongest evidence-supported conclusion and recommend implementation strategies with measurable success indicators.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 302,
+    "shortcut": "/researchmaster",
+    "title": "Research Master",
+    "category": "Research",
+    "description": "Lead research initiatives using expert methodologies and evidence synthesis.",
+    "prompt": "Act as the lead researcher for the following topic. Design a world-class research strategy including objectives, hypotheses, methodology, evidence hierarchy, validation techniques, uncertainty analysis, synthesis methods, quality controls, ethical considerations, expected outcomes and future research directions.\n\nResearch Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 303,
+    "shortcut": "/systemmaster",
+    "title": "System Master",
+    "category": "Systems Thinking",
+    "description": "Engineer resilient and scalable systems from first principles.",
+    "prompt": "Analyze and redesign the following system using first-principles engineering and systems thinking. Evaluate architecture, dependencies, resilience, scalability, bottlenecks, governance, monitoring, optimization opportunities, long-term evolution and implementation priorities.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 304,
+    "shortcut": "/governancearchitect",
+    "title": "Governance Architect",
+    "category": "Governance",
+    "description": "Design governance models for organizations, projects and AI systems.",
+    "prompt": "Design a comprehensive governance architecture for the following initiative. Define decision authority, accountability, policies, oversight mechanisms, risk management, compliance processes, review cycles, transparency standards, escalation procedures and continuous improvement practices.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 305,
+    "shortcut": "/documentmastermind",
+    "title": "Document Mastermind",
+    "category": "Documents",
+    "description": "Perform master-level analysis and refinement of complex documents.",
+    "prompt": "Analyze the following document with exceptional depth. Identify explicit and implicit objectives, assumptions, logical structure, evidence quality, inconsistencies, stakeholder implications, strategic insights, risks, opportunities and recommendations for achieving publication-quality excellence.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 306,
+    "shortcut": "/knowledgeengineering",
+    "title": "Knowledge Engineering",
+    "category": "Knowledge",
+    "description": "Engineer reusable knowledge systems for expert learning and decision-making.",
+    "prompt": "Create a comprehensive knowledge engineering framework for the following subject. Organize foundational concepts, expert principles, conceptual relationships, reusable mental models, retrieval strategies, decision rules, learning pathways, validation methods and continuous knowledge improvement processes.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 307,
+    "shortcut": "/executivecommand",
+    "title": "Executive Command",
+    "category": "Business",
+    "description": "Advise executive leadership on complex strategic challenges.",
+    "prompt": "Act as a trusted advisor to an executive leadership team. Analyze the following challenge by evaluating strategic objectives, stakeholder alignment, governance implications, organizational readiness, financial considerations, operational risks, execution complexity, long-term sustainability and measurable success metrics. Recommend executive actions with implementation priorities.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 308,
+    "shortcut": "/metareasoning",
+    "title": "Meta Reasoning",
+    "category": "Meta Thinking",
+    "description": "Analyze not only conclusions but the reasoning process itself.",
+    "prompt": "Analyze the following problem using meta-reasoning. Evaluate the reasoning process itself by identifying assumptions, cognitive biases, strengths, weaknesses, uncertainty handling, alternative reasoning strategies, confidence calibration and opportunities for improving the quality of future reasoning.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 309,
+    "shortcut": "/enterprisearchitect",
+    "title": "Enterprise Architect",
+    "category": "Enterprise",
+    "description": "Design enterprise-scale strategies, systems and governance.",
+    "prompt": "Design an enterprise-grade architecture for the following initiative. Cover strategic objectives, organizational capabilities, governance structures, technology alignment, operational workflows, scalability, security considerations, performance metrics, implementation roadmap and future transformation opportunities.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 310,
+    "shortcut": "/claudemaster",
+    "title": "Claude Master",
+    "category": "AI",
+    "description": "Use Claude as a master-level expert in reasoning, research, governance, systems architecture and executive strategy.",
+    "prompt": "Act as a master-level expert specializing in advanced reasoning, research methodology, document intelligence, systems architecture, governance, enterprise strategy, executive communication and knowledge engineering. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis and meta-reasoning. Critically evaluate evidence, challenge unsupported assumptions, model second- and third-order consequences, compare multiple solution architectures, explain trade-offs with precision and conclude with an executive-ready strategy, implementation roadmap, governance framework, measurable outcomes, risk mitigation plan, contingency strategies and future evolution recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 311,
+    "shortcut": "/innovationengine",
+    "title": "Innovation Engine",
+    "category": "Innovation",
+    "description": "Generate breakthrough ideas using structured innovation frameworks.",
+    "prompt": "Act as an innovation strategist. Analyze the following challenge and develop breakthrough solutions using first-principles thinking, systems analysis, constraint removal, interdisciplinary inspiration, emerging technologies and future trends. Evaluate feasibility, risks, implementation complexity, competitive advantage and long-term strategic value.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 312,
+    "shortcut": "/scientificreasoning",
+    "title": "Scientific Reasoning",
+    "category": "Science",
+    "description": "Apply rigorous scientific reasoning to complex questions.",
+    "prompt": "Analyze the following question using scientific reasoning. Identify hypotheses, available evidence, assumptions, experimental approaches, possible confounding factors, alternative explanations, confidence levels, limitations and recommendations for further investigation.\n\nQuestion:",
+    "isOfficial": false
+  },
+  {
+    "id": 313,
+    "shortcut": "/strategylab",
+    "title": "Strategy Lab",
+    "category": "Strategy",
+    "description": "Experiment with multiple strategic approaches before selecting the strongest one.",
+    "prompt": "Treat the following situation as a strategic laboratory. Develop multiple competing strategies, evaluate their assumptions, resource requirements, stakeholder impact, risks, resilience, scalability, competitive implications and long-term outcomes. Recommend the strongest strategy with supporting rationale.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 314,
+    "shortcut": "/knowledgeecosystem",
+    "title": "Knowledge Ecosystem",
+    "category": "Knowledge",
+    "description": "Design interconnected knowledge ecosystems for continuous learning.",
+    "prompt": "Design a complete knowledge ecosystem for the following domain. Define foundational concepts, advanced knowledge layers, expert mental models, knowledge relationships, learning pathways, validation methods, retrieval systems, update mechanisms and mastery milestones.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 315,
+    "shortcut": "/enterprisegovernance",
+    "title": "Enterprise Governance",
+    "category": "Governance",
+    "description": "Create enterprise-grade governance systems for complex organizations.",
+    "prompt": "Design an enterprise governance framework for the following organization or initiative. Define governance principles, decision authority, accountability structures, oversight mechanisms, compliance processes, audit strategies, risk management, reporting standards and continuous improvement practices.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 316,
+    "shortcut": "/deepdocument",
+    "title": "Deep Document Intelligence",
+    "category": "Documents",
+    "description": "Extract strategic meaning from highly complex documents.",
+    "prompt": "Perform an expert-level document intelligence analysis of the following document. Identify explicit objectives, hidden assumptions, evidence quality, logical dependencies, stakeholder implications, strategic risks, opportunities, unanswered questions, executive insights and actionable recommendations.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 317,
+    "shortcut": "/decisionscience",
+    "title": "Decision Science",
+    "category": "Decision Making",
+    "description": "Apply decision science principles to critical choices.",
+    "prompt": "Analyze the following decision using decision science principles. Define objectives, decision variables, uncertainties, cognitive biases, probabilities, trade-offs, stakeholder interests, expected outcomes, sensitivity analysis and implementation recommendations.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 318,
+    "shortcut": "/multidisciplinary",
+    "title": "Multidisciplinary Analysis",
+    "category": "Analysis",
+    "description": "Evaluate problems through multiple academic and professional disciplines.",
+    "prompt": "Analyze the following topic through the perspectives of multiple disciplines such as economics, psychology, engineering, law, ethics, management and systems thinking. Compare insights, identify conflicts, synthesize common principles and produce an integrated expert conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 319,
+    "shortcut": "/masterworkflow",
+    "title": "Master Workflow",
+    "category": "AI",
+    "description": "Design enterprise-grade AI and human collaboration workflows.",
+    "prompt": "Design a master workflow for the following objective involving AI systems and human collaboration. Define responsibilities, reasoning stages, approval checkpoints, governance rules, quality assurance, monitoring, escalation procedures, optimization opportunities and long-term scalability.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 320,
+    "shortcut": "/claudecommander",
+    "title": "Claude Commander",
+    "category": "AI",
+    "description": "Use Claude as a commander-level expert for enterprise reasoning, governance, research and strategic transformation.",
+    "prompt": "Act as a commander-level expert in advanced reasoning, scientific analysis, enterprise governance, document intelligence, systems architecture, executive strategy and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, scientific methodology, systems thinking, probabilistic analysis, multidisciplinary synthesis and meta-reasoning. Evaluate evidence critically, challenge unsupported assumptions, model long-term consequences, compare strategic alternatives, explain trade-offs with exceptional precision and conclude with an executive-ready strategy, implementation roadmap, governance architecture, measurable outcomes, risk mitigation framework, contingency plans and future transformation opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 321,
+    "shortcut": "/researchdirector",
+    "title": "Research Director",
+    "category": "Research",
+    "description": "Direct enterprise-scale research initiatives from planning to strategic outcomes.",
+    "prompt": "Act as a research director leading a multidisciplinary research program. Develop a comprehensive research strategy including objectives, hypotheses, methodologies, evidence standards, stakeholder alignment, governance processes, validation methods, risk management, quality assurance, reporting framework, expected outcomes and long-term research roadmap.\n\nResearch Program:",
+    "isOfficial": false
+  },
+  {
+    "id": 322,
+    "shortcut": "/policyarchitect",
+    "title": "Policy Architect",
+    "category": "Policy",
+    "description": "Design robust policy frameworks for organizations and institutions.",
+    "prompt": "Design a comprehensive policy framework for the following subject. Define objectives, guiding principles, governance structure, stakeholder responsibilities, compliance mechanisms, enforcement strategies, review cycles, performance indicators, risk controls and continuous improvement recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 323,
+    "shortcut": "/strategicforesightpro",
+    "title": "Strategic Foresight Pro",
+    "category": "Strategy",
+    "description": "Model future scenarios and prepare resilient long-term strategies.",
+    "prompt": "Conduct an advanced strategic foresight analysis for the following topic. Identify driving forces, uncertainties, emerging trends, disruptive technologies, geopolitical or market influences, future scenarios, early warning signals, resilience strategies and long-term strategic recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 324,
+    "shortcut": "/knowledgefabric",
+    "title": "Knowledge Fabric",
+    "category": "Knowledge",
+    "description": "Create interconnected knowledge structures for expert understanding.",
+    "prompt": "Build a comprehensive knowledge fabric for the following domain. Connect foundational concepts, advanced theories, expert heuristics, cross-disciplinary relationships, learning progression, practical applications, retrieval mechanisms, validation methods and future knowledge expansion strategies.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 325,
+    "shortcut": "/enterpriseintelligence",
+    "title": "Enterprise Intelligence",
+    "category": "Enterprise",
+    "description": "Generate executive intelligence across organizational systems.",
+    "prompt": "Analyze the following enterprise situation from a holistic perspective. Evaluate strategic alignment, organizational capabilities, governance, financial considerations, operational performance, stakeholder interests, technology alignment, risk exposure, future opportunities and executive recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 326,
+    "shortcut": "/complexreasoning",
+    "title": "Complex Reasoning",
+    "category": "Reasoning",
+    "description": "Solve exceptionally complex problems through layered analytical reasoning.",
+    "prompt": "Analyze the following challenge using layered reasoning. Identify assumptions, constraints, dependencies, competing hypotheses, evidence quality, causal relationships, second- and third-order consequences, confidence levels, unresolved uncertainties and the strongest evidence-supported solution.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 327,
+    "shortcut": "/executivegovernance",
+    "title": "Executive Governance",
+    "category": "Governance",
+    "description": "Develop governance strategies for executive leadership.",
+    "prompt": "Develop an executive governance framework for the following initiative. Define strategic oversight, executive responsibilities, accountability mechanisms, reporting structures, policy alignment, decision authority, risk governance, review processes and long-term governance maturity recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 328,
+    "shortcut": "/metaarchitecture",
+    "title": "Meta Architecture",
+    "category": "Meta Thinking",
+    "description": "Design architectures that organize complex systems of systems.",
+    "prompt": "Design a meta-architecture for the following ecosystem. Organize multiple systems, governance models, decision frameworks, knowledge structures, workflows and strategic objectives into a unified, scalable architecture. Explain interactions, dependencies, optimization opportunities and future evolution paths.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 329,
+    "shortcut": "/aiorchestrator",
+    "title": "AI Orchestrator",
+    "category": "AI",
+    "description": "Coordinate sophisticated multi-agent AI ecosystems.",
+    "prompt": "Design an enterprise-grade AI orchestration strategy for the following objective. Define specialized agents, orchestration logic, memory architecture, reasoning delegation, tool integration, governance controls, validation pipelines, monitoring systems, optimization strategies and future scalability recommendations.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 330,
+    "shortcut": "/claudeenterprise",
+    "title": "Claude Enterprise",
+    "category": "AI",
+    "description": "Use Claude as an enterprise-grade advisor for advanced reasoning, governance, research, systems architecture and organizational transformation.",
+    "prompt": "Act as an enterprise-grade advisor specializing in advanced reasoning, research leadership, scientific analysis, document intelligence, systems architecture, governance, executive strategy and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, scientific methodology and meta-reasoning. Critically evaluate evidence, challenge unsupported assumptions, model long-term strategic outcomes, compare multiple solution architectures, explain complex trade-offs with precision and conclude with an executive-ready transformation strategy, implementation roadmap, governance framework, measurable outcomes, risk mitigation architecture, contingency planning and future innovation opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 331,
+    "shortcut": "/scientificframework",
+    "title": "Scientific Framework",
+    "category": "Science",
+    "description": "Build rigorous scientific frameworks for investigation and validation.",
+    "prompt": "Develop a comprehensive scientific framework for the following topic. Define research objectives, hypotheses, theoretical foundations, experimental approaches, variables, controls, validation methods, statistical considerations, limitations, ethical implications, expected outcomes and future research opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 332,
+    "shortcut": "/strategicintelligence",
+    "title": "Strategic Intelligence",
+    "category": "Strategy",
+    "description": "Generate intelligence-driven strategic insights for complex environments.",
+    "prompt": "Produce a strategic intelligence assessment for the following situation. Identify objectives, environmental factors, stakeholder interests, emerging trends, competitive dynamics, risks, opportunities, uncertainties, strategic options and prioritized recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 333,
+    "shortcut": "/evidencearchitecture",
+    "title": "Evidence Architecture",
+    "category": "Research",
+    "description": "Architect evidence structures for reliable decision-making.",
+    "prompt": "Construct an evidence architecture for the following subject. Organize evidence sources, classify confidence levels, identify assumptions, validate causal relationships, highlight knowledge gaps, recommend additional evidence collection and produce evidence-based conclusions.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 334,
+    "shortcut": "/organizationdesign",
+    "title": "Organization Design",
+    "category": "Enterprise",
+    "description": "Design scalable organizational structures and operating models.",
+    "prompt": "Design an organizational model for the following initiative. Define organizational structure, leadership responsibilities, governance layers, operational workflows, decision authority, communication channels, performance metrics, scalability considerations and continuous improvement strategies.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 335,
+    "shortcut": "/complexsystems",
+    "title": "Complex Systems Analysis",
+    "category": "Systems Thinking",
+    "description": "Analyze adaptive systems with interconnected behaviors and feedback loops.",
+    "prompt": "Perform a comprehensive analysis of the following complex system. Identify system components, interactions, feedback loops, emergent behaviors, resilience mechanisms, bottlenecks, dependencies, systemic risks, leverage points and recommendations for long-term optimization.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 336,
+    "shortcut": "/decisiongovernor",
+    "title": "Decision Governor",
+    "category": "Decision Making",
+    "description": "Establish governance for high-impact strategic decisions.",
+    "prompt": "Develop a governance model for the following decision process. Define decision authority, evaluation criteria, stakeholder participation, review checkpoints, documentation standards, accountability mechanisms, escalation paths, success metrics and post-decision evaluation practices.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 337,
+    "shortcut": "/knowledgematrix",
+    "title": "Knowledge Matrix",
+    "category": "Knowledge",
+    "description": "Map knowledge domains into an interconnected expert matrix.",
+    "prompt": "Create a knowledge matrix for the following domain. Organize concepts by complexity, dependencies, applications, relationships, expert heuristics, learning progression, common misconceptions, validation methods and future learning priorities.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 338,
+    "shortcut": "/innovationportfolio",
+    "title": "Innovation Portfolio",
+    "category": "Innovation",
+    "description": "Develop and prioritize innovation initiatives strategically.",
+    "prompt": "Design an innovation portfolio for the following organization or project. Identify innovation opportunities, prioritize initiatives, evaluate feasibility, required capabilities, investment considerations, risks, expected impact, timelines and portfolio governance recommendations.\n\nOrganization or Project:",
+    "isOfficial": false
+  },
+  {
+    "id": 339,
+    "shortcut": "/agentstrategy",
+    "title": "Agent Strategy",
+    "category": "AI",
+    "description": "Develop advanced strategies for collaborative AI agent ecosystems.",
+    "prompt": "Design a strategic architecture for the following AI agent ecosystem. Define agent specialization, orchestration strategy, communication protocols, reasoning delegation, memory coordination, governance mechanisms, validation pipelines, optimization opportunities, resilience strategies and long-term scalability.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 340,
+    "shortcut": "/claudeimperium",
+    "title": "Claude Imperium",
+    "category": "AI",
+    "description": "Use Claude as a top-tier authority for enterprise reasoning, scientific analysis, governance and systems transformation.",
+    "prompt": "Act as a top-tier authority specializing in advanced reasoning, scientific methodology, research leadership, document intelligence, enterprise architecture, governance, systems engineering and strategic transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, scientific evaluation and meta-reasoning. Critically evaluate evidence, challenge unsupported assumptions, explore multiple solution architectures, assess second- and third-order consequences, explain trade-offs with exceptional precision and conclude with an enterprise-ready transformation strategy, implementation roadmap, governance architecture, measurable outcomes, risk mitigation framework, contingency planning and long-term innovation recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 341,
+    "shortcut": "/transformationengine",
+    "title": "Transformation Engine",
+    "category": "Transformation",
+    "description": "Design comprehensive transformation strategies for complex systems.",
+    "prompt": "Design a comprehensive transformation strategy for the following organization, system or initiative. Evaluate the current state, desired future state, transformation drivers, stakeholder alignment, capability gaps, governance model, implementation phases, change management approach, success metrics, major risks and long-term sustainability recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 342,
+    "shortcut": "/reasoningarchitecture",
+    "title": "Reasoning Architecture",
+    "category": "Reasoning",
+    "description": "Design structured reasoning architectures for solving complex problems.",
+    "prompt": "Construct a reasoning architecture for the following problem. Define reasoning stages, evidence requirements, assumption validation, uncertainty management, hypothesis testing, trade-off evaluation, confidence calibration, decision synthesis and continuous refinement processes.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 343,
+    "shortcut": "/researchecosystempro",
+    "title": "Research Ecosystem Pro",
+    "category": "Research",
+    "description": "Create enterprise-scale ecosystems for continuous research and innovation.",
+    "prompt": "Design a complete research ecosystem for the following domain. Define governance, collaboration models, evidence repositories, validation pipelines, quality standards, knowledge sharing, innovation mechanisms, review cycles, funding priorities and long-term sustainability.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 344,
+    "shortcut": "/executiveblueprint",
+    "title": "Executive Blueprint",
+    "category": "Business",
+    "description": "Develop executive blueprints for high-impact initiatives.",
+    "prompt": "Create an executive blueprint for the following initiative. Define strategic objectives, governance model, organizational structure, stakeholder responsibilities, execution roadmap, resource allocation, performance metrics, review checkpoints, major risks and executive recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 345,
+    "shortcut": "/systemsgovernance",
+    "title": "Systems Governance",
+    "category": "Governance",
+    "description": "Govern complex interconnected systems using structured oversight.",
+    "prompt": "Design a governance framework for the following interconnected system. Define governance principles, oversight responsibilities, decision authority, monitoring mechanisms, performance indicators, resilience strategies, risk controls, compliance requirements and continuous improvement processes.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 346,
+    "shortcut": "/knowledgegovernance",
+    "title": "Knowledge Governance",
+    "category": "Knowledge",
+    "description": "Manage organizational knowledge using governance best practices.",
+    "prompt": "Design a knowledge governance framework for the following organization or domain. Define ownership, knowledge lifecycle, validation standards, taxonomy, access controls, quality assurance, collaboration processes, retention policies, review cycles and future scalability recommendations.\n\nOrganization or Domain:",
+    "isOfficial": false
+  },
+  {
+    "id": 347,
+    "shortcut": "/innovationarchitecture",
+    "title": "Innovation Architecture",
+    "category": "Innovation",
+    "description": "Architect repeatable innovation systems for sustained growth.",
+    "prompt": "Develop an innovation architecture for the following organization or challenge. Define innovation principles, opportunity discovery methods, evaluation criteria, governance, experimentation processes, portfolio management, success metrics, scaling strategies and continuous innovation practices.\n\nOrganization or Challenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 348,
+    "shortcut": "/scientificadvisor",
+    "title": "Scientific Advisor",
+    "category": "Science",
+    "description": "Provide scientific advisory guidance for research and decision-making.",
+    "prompt": "Act as a scientific advisor for the following topic. Evaluate theoretical foundations, available evidence, methodological considerations, assumptions, uncertainties, experimental opportunities, limitations, practical implications and recommendations for future investigation.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 349,
+    "shortcut": "/agentgovernor",
+    "title": "Agent Governor",
+    "category": "AI",
+    "description": "Design governance and oversight for advanced AI agent ecosystems.",
+    "prompt": "Develop a governance architecture for the following AI agent ecosystem. Define agent responsibilities, orchestration policies, memory governance, reasoning validation, tool permissions, monitoring systems, safety constraints, audit mechanisms, escalation procedures and continuous optimization strategies.\n\nAI Ecosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 350,
+    "shortcut": "/claudesupreme",
+    "title": "Claude Supreme",
+    "category": "AI",
+    "description": "Use Claude as a supreme expert for advanced reasoning, enterprise transformation, scientific analysis and governance.",
+    "prompt": "Act as a supreme expert specializing in advanced reasoning, scientific methodology, research leadership, enterprise architecture, governance, systems engineering, document intelligence and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, scientific evaluation and meta-reasoning. Critically evaluate evidence, challenge unsupported assumptions, explore multiple architectural alternatives, assess cascading long-term consequences, explain trade-offs with exceptional clarity and conclude with an executive-ready transformation blueprint, implementation roadmap, governance architecture, measurable outcomes, comprehensive risk mitigation strategy, contingency framework and long-term innovation roadmap.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 351,
+    "shortcut": "/futurearchitecture",
+    "title": "Future Architecture",
+    "category": "Strategy",
+    "description": "Design resilient architectures for long-term future success.",
+    "prompt": "Design a future-ready architecture for the following organization, system or initiative. Identify long-term objectives, emerging trends, disruptive forces, strategic capabilities, governance evolution, technology roadmap, organizational adaptability, resilience mechanisms, measurable milestones and future transformation opportunities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 352,
+    "shortcut": "/causalintelligence",
+    "title": "Causal Intelligence",
+    "category": "Reasoning",
+    "description": "Discover deep causal structures behind complex events and systems.",
+    "prompt": "Perform a causal intelligence analysis for the following situation. Identify root causes, causal chains, feedback loops, hidden drivers, systemic dependencies, confounding variables, intervention opportunities, confidence levels and evidence-based recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 353,
+    "shortcut": "/researchcommand",
+    "title": "Research Command",
+    "category": "Research",
+    "description": "Direct high-impact research programs with rigorous governance.",
+    "prompt": "Act as the director of a major research program. Develop a comprehensive research command strategy including objectives, research governance, methodology, evidence standards, collaboration models, quality assurance, validation processes, publication strategy, ethical oversight and future expansion plans.\n\nResearch Program:",
+    "isOfficial": false
+  },
+  {
+    "id": 354,
+    "shortcut": "/strategiccommand",
+    "title": "Strategic Command",
+    "category": "Business",
+    "description": "Coordinate enterprise strategy through structured executive planning.",
+    "prompt": "Develop a strategic command framework for the following challenge. Define executive objectives, governance mechanisms, organizational priorities, stakeholder coordination, operational alignment, performance metrics, decision checkpoints, risk controls and long-term execution strategy.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 355,
+    "shortcut": "/adaptiveenterprise",
+    "title": "Adaptive Enterprise",
+    "category": "Enterprise",
+    "description": "Design organizations capable of continuous adaptation and growth.",
+    "prompt": "Design an adaptive enterprise model for the following organization. Define organizational capabilities, governance evolution, learning systems, innovation mechanisms, technology integration, workforce development, resilience strategies, performance indicators and long-term adaptation roadmap.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 356,
+    "shortcut": "/mastergovernance",
+    "title": "Master Governance",
+    "category": "Governance",
+    "description": "Create master-level governance systems for complex ecosystems.",
+    "prompt": "Design a master governance framework for the following ecosystem. Define governance principles, leadership responsibilities, accountability mechanisms, policy structures, oversight models, compliance systems, audit processes, performance evaluation, escalation procedures and governance maturity roadmap.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 357,
+    "shortcut": "/knowledgecommand",
+    "title": "Knowledge Command",
+    "category": "Knowledge",
+    "description": "Develop enterprise-scale knowledge command systems.",
+    "prompt": "Create a knowledge command framework for the following domain. Organize expert knowledge, learning systems, retrieval architecture, validation methods, governance rules, collaboration workflows, continuous updates, quality assurance and long-term knowledge sustainability.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 358,
+    "shortcut": "/innovationcommand",
+    "title": "Innovation Command",
+    "category": "Innovation",
+    "description": "Lead innovation portfolios with governance and measurable impact.",
+    "prompt": "Develop an innovation command strategy for the following organization or initiative. Define innovation governance, portfolio management, experimentation processes, evaluation criteria, investment priorities, scaling mechanisms, risk controls, success metrics and future innovation roadmap.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 359,
+    "shortcut": "/multiagentcommand",
+    "title": "Multi-Agent Command",
+    "category": "AI",
+    "description": "Design command systems for advanced multi-agent AI ecosystems.",
+    "prompt": "Design a command architecture for the following multi-agent AI ecosystem. Define specialized agent roles, orchestration logic, memory coordination, governance policies, reasoning validation, tool permissions, monitoring systems, safety controls, optimization strategies and future scalability roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 360,
+    "shortcut": "/claudelegend",
+    "title": "Claude Legend",
+    "category": "AI",
+    "description": "Use Claude as a legendary authority in reasoning, research, governance, enterprise architecture and long-term strategic transformation.",
+    "prompt": "Act as a legendary authority specializing in advanced reasoning, scientific methodology, enterprise architecture, research leadership, governance, systems engineering, document intelligence, executive strategy and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, scientific evaluation, meta-reasoning and strategic foresight. Critically evaluate evidence, challenge unsupported assumptions, compare multiple architectural approaches, assess cascading long-term consequences, explain trade-offs with exceptional clarity and conclude with an enterprise transformation blueprint, implementation roadmap, governance architecture, measurable outcomes, comprehensive risk mitigation framework, contingency planning and long-term innovation strategy.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 361,
+    "shortcut": "/strategicecosystem",
+    "title": "Strategic Ecosystem",
+    "category": "Strategy",
+    "description": "Design interconnected strategic ecosystems for long-term competitive advantage.",
+    "prompt": "Design a comprehensive strategic ecosystem for the following organization, initiative or domain. Define strategic objectives, interconnected capabilities, stakeholder relationships, governance structures, operational dependencies, technology alignment, resilience mechanisms, performance indicators, future evolution paths and long-term competitive advantages.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 362,
+    "shortcut": "/reasoningcommand",
+    "title": "Reasoning Command",
+    "category": "Reasoning",
+    "description": "Direct advanced reasoning across multiple analytical frameworks.",
+    "prompt": "Analyze the following challenge using an advanced reasoning command process. Apply first-principles reasoning, causal analysis, systems thinking, probabilistic reasoning, decision science and meta-reasoning. Compare conclusions, identify uncertainties, assess confidence levels and recommend the strongest evidence-supported strategy.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 363,
+    "shortcut": "/researchintelligence",
+    "title": "Research Intelligence",
+    "category": "Research",
+    "description": "Generate strategic intelligence from multidisciplinary research.",
+    "prompt": "Develop a research intelligence report for the following topic. Integrate findings across disciplines, evaluate evidence quality, identify knowledge gaps, emerging trends, conflicting viewpoints, future research priorities, practical implications and strategic recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 364,
+    "shortcut": "/executiveecosystem",
+    "title": "Executive Ecosystem",
+    "category": "Business",
+    "description": "Design executive operating ecosystems for complex organizations.",
+    "prompt": "Design an executive operating ecosystem for the following organization or initiative. Define executive responsibilities, governance structures, communication flows, strategic priorities, decision-making processes, performance management, risk oversight and continuous improvement mechanisms.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 365,
+    "shortcut": "/adaptivegovernance",
+    "title": "Adaptive Governance",
+    "category": "Governance",
+    "description": "Develop governance systems capable of evolving with changing environments.",
+    "prompt": "Create an adaptive governance framework for the following ecosystem. Define governance principles, decision authority, accountability, policy evolution, monitoring systems, stakeholder participation, resilience mechanisms, review processes and long-term governance maturity strategies.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 366,
+    "shortcut": "/knowledgeintelligence",
+    "title": "Knowledge Intelligence",
+    "category": "Knowledge",
+    "description": "Transform complex information into strategic organizational intelligence.",
+    "prompt": "Develop a knowledge intelligence framework for the following subject. Organize expert knowledge, identify conceptual relationships, create decision-support structures, define validation methods, establish retrieval mechanisms, recommend learning strategies and propose continuous knowledge evolution practices.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 367,
+    "shortcut": "/innovationcommandpro",
+    "title": "Innovation Command Pro",
+    "category": "Innovation",
+    "description": "Lead enterprise innovation with structured governance and execution.",
+    "prompt": "Develop an enterprise innovation command strategy for the following organization. Define innovation vision, governance, portfolio prioritization, experimentation frameworks, investment strategy, scaling mechanisms, performance indicators, risk controls and long-term innovation capability development.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 368,
+    "shortcut": "/enterpriseforesight",
+    "title": "Enterprise Foresight",
+    "category": "Enterprise",
+    "description": "Prepare organizations for future disruption through strategic foresight.",
+    "prompt": "Conduct an enterprise foresight assessment for the following organization. Identify future uncertainties, emerging technologies, market shifts, organizational vulnerabilities, strategic opportunities, resilience strategies, transformation priorities, measurable milestones and future readiness recommendations.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 369,
+    "shortcut": "/agententerprise",
+    "title": "Agent Enterprise",
+    "category": "AI",
+    "description": "Design enterprise-scale AI agent ecosystems with governance and resilience.",
+    "prompt": "Design an enterprise AI agent ecosystem for the following objective. Define agent specialization, orchestration strategy, memory architecture, governance policies, reasoning validation, tool coordination, monitoring systems, resilience mechanisms, optimization strategies and future scalability roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 370,
+    "shortcut": "/claudeapex",
+    "title": "Claude Apex",
+    "category": "AI",
+    "description": "Use Claude as an apex authority in reasoning, enterprise strategy, research leadership, governance and systems architecture.",
+    "prompt": "Act as an apex authority specializing in advanced reasoning, scientific methodology, enterprise strategy, research leadership, governance, systems architecture, document intelligence, executive communication and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, scientific evaluation, strategic foresight and meta-reasoning. Critically evaluate evidence, challenge unsupported assumptions, compare multiple solution architectures, assess cascading long-term consequences, explain trade-offs with exceptional clarity and conclude with an enterprise transformation strategy, implementation roadmap, governance architecture, measurable outcomes, comprehensive risk mitigation framework, contingency planning and long-term innovation roadmap.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 371,
+    "shortcut": "/systemsintelligence",
+    "title": "Systems Intelligence",
+    "category": "Systems Thinking",
+    "description": "Analyze complex systems through intelligence-driven systems thinking.",
+    "prompt": "Perform a systems intelligence analysis for the following ecosystem. Identify components, dependencies, causal relationships, feedback loops, resilience mechanisms, systemic risks, optimization opportunities, intervention points, measurable indicators and long-term evolution strategies.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 372,
+    "shortcut": "/researchgovernor",
+    "title": "Research Governor",
+    "category": "Research",
+    "description": "Govern enterprise research initiatives using rigorous oversight frameworks.",
+    "prompt": "Develop a governance framework for the following research initiative. Define research objectives, governance structure, ethical oversight, evidence standards, review processes, quality assurance, collaboration mechanisms, publication strategy, compliance requirements and long-term research sustainability.\n\nResearch Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 373,
+    "shortcut": "/executiveintelligence",
+    "title": "Executive Intelligence",
+    "category": "Business",
+    "description": "Provide executive-level intelligence for strategic leadership decisions.",
+    "prompt": "Generate an executive intelligence report for the following situation. Evaluate strategic priorities, stakeholder interests, operational performance, financial implications, governance considerations, organizational capabilities, major risks, future opportunities and executive recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 374,
+    "shortcut": "/futuregovernance",
+    "title": "Future Governance",
+    "category": "Governance",
+    "description": "Design governance systems prepared for future technological and organizational change.",
+    "prompt": "Design a future-ready governance framework for the following organization or ecosystem. Define adaptive governance principles, decision authority, policy evolution, monitoring systems, accountability mechanisms, resilience strategies, performance indicators, review cycles and long-term governance maturity roadmap.\n\nOrganization or Ecosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 375,
+    "shortcut": "/knowledgeecosystem",
+    "title": "Knowledge Ecosystem",
+    "category": "Knowledge",
+    "description": "Create interconnected knowledge ecosystems for expert organizations.",
+    "prompt": "Design a comprehensive knowledge ecosystem for the following domain. Define knowledge architecture, taxonomy, validation methods, collaboration models, retrieval systems, governance policies, quality standards, learning pathways and continuous knowledge evolution strategies.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 376,
+    "shortcut": "/innovationforesight",
+    "title": "Innovation Foresight",
+    "category": "Innovation",
+    "description": "Combine innovation strategy with long-term foresight planning.",
+    "prompt": "Develop an innovation foresight strategy for the following organization or industry. Identify future trends, disruptive technologies, innovation opportunities, investment priorities, experimentation approaches, governance mechanisms, risk controls, measurable outcomes and long-term competitive positioning.\n\nOrganization or Industry:",
+    "isOfficial": false
+  },
+  {
+    "id": 377,
+    "shortcut": "/decisionarchitecture",
+    "title": "Decision Architecture",
+    "category": "Decision Making",
+    "description": "Build structured architectures for complex executive decision-making.",
+    "prompt": "Design a decision architecture for the following strategic challenge. Define decision criteria, evaluation framework, stakeholder roles, evidence requirements, uncertainty management, governance mechanisms, review checkpoints, confidence assessment and implementation recommendations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 378,
+    "shortcut": "/metaintelligence",
+    "title": "Meta Intelligence",
+    "category": "Meta Thinking",
+    "description": "Analyze problems by reasoning about reasoning itself.",
+    "prompt": "Analyze the following subject using meta-intelligence. Examine reasoning strategies, cognitive assumptions, analytical blind spots, alternative frameworks, evidence quality, uncertainty management, self-critique mechanisms, confidence calibration and recommendations for improving future reasoning.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 379,
+    "shortcut": "/aiecosystempro",
+    "title": "AI Ecosystem Pro",
+    "category": "AI",
+    "description": "Design robust AI ecosystems integrating multiple intelligent systems.",
+    "prompt": "Design an advanced AI ecosystem for the following objective. Define AI capabilities, specialized agents, orchestration logic, memory coordination, governance policies, validation systems, safety architecture, monitoring mechanisms, optimization strategies and future scalability roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 380,
+    "shortcut": "/claudeinfinity",
+    "title": "Claude Infinity",
+    "category": "AI",
+    "description": "Use Claude as an infinite-depth expert for advanced reasoning, research leadership, governance, systems intelligence and enterprise transformation.",
+    "prompt": "Act as an infinite-depth expert specializing in advanced reasoning, scientific methodology, enterprise strategy, governance, systems intelligence, research leadership, document analysis, executive communication and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, scientific evaluation and meta-reasoning. Challenge unsupported assumptions, compare multiple solution architectures, evaluate cascading long-term consequences, identify hidden systemic interactions, explain trade-offs with exceptional precision and conclude with an executive transformation blueprint, implementation roadmap, governance architecture, measurable outcomes, comprehensive risk mitigation framework, contingency planning and long-term innovation strategy.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 381,
+    "shortcut": "/transformationgovernor",
+    "title": "Transformation Governor",
+    "category": "Transformation",
+    "description": "Govern enterprise transformation programs from strategy through execution.",
+    "prompt": "Design a governance framework for the following transformation initiative. Define strategic objectives, governance structure, executive sponsorship, stakeholder alignment, capability development, implementation phases, performance metrics, risk controls, change management strategy, review cycles and long-term sustainability recommendations.\n\nTransformation Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 382,
+    "shortcut": "/scientificintelligence",
+    "title": "Scientific Intelligence",
+    "category": "Science",
+    "description": "Generate scientific intelligence using multidisciplinary evidence synthesis.",
+    "prompt": "Produce a scientific intelligence report for the following topic. Review current theories, available evidence, methodological quality, competing hypotheses, uncertainties, interdisciplinary insights, experimental opportunities, practical implications, confidence assessment and future research priorities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 383,
+    "shortcut": "/globalstrategy",
+    "title": "Global Strategy",
+    "category": "Strategy",
+    "description": "Develop globally resilient strategies across markets, technologies and geopolitics.",
+    "prompt": "Develop a global strategy for the following organization or initiative. Evaluate geopolitical influences, market dynamics, technological trends, competitive positioning, stakeholder expectations, regulatory considerations, operational resilience, implementation roadmap, measurable success criteria and long-term strategic recommendations.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 384,
+    "shortcut": "/knowledgeengineering",
+    "title": "Knowledge Engineering",
+    "category": "Knowledge",
+    "description": "Engineer scalable knowledge systems for expert decision support.",
+    "prompt": "Design a knowledge engineering framework for the following domain. Define ontology, taxonomy, semantic relationships, validation mechanisms, knowledge lifecycle, retrieval strategies, governance policies, quality assurance, automation opportunities and future scalability recommendations.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 385,
+    "shortcut": "/resiliencearchitect",
+    "title": "Resilience Architect",
+    "category": "Systems Thinking",
+    "description": "Architect resilient organizations capable of thriving through disruption.",
+    "prompt": "Design a resilience architecture for the following organization or system. Identify critical capabilities, vulnerabilities, dependencies, redundancy mechanisms, crisis response strategies, governance controls, performance indicators, recovery planning, continuous adaptation methods and long-term resilience roadmap.\n\nOrganization or System:",
+    "isOfficial": false
+  },
+  {
+    "id": 386,
+    "shortcut": "/executiveadvisorpro",
+    "title": "Executive Advisor Pro",
+    "category": "Business",
+    "description": "Provide executive-level strategic advisory for complex decisions.",
+    "prompt": "Act as an executive advisor for the following situation. Assess strategic priorities, stakeholder interests, financial implications, governance requirements, operational feasibility, organizational capabilities, implementation challenges, measurable outcomes, major risks and executive recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 387,
+    "shortcut": "/multidisciplinaryreasoning",
+    "title": "Multidisciplinary Reasoning",
+    "category": "Reasoning",
+    "description": "Solve problems by integrating reasoning across multiple disciplines.",
+    "prompt": "Analyze the following challenge using multidisciplinary reasoning. Integrate perspectives from science, engineering, economics, psychology, ethics, systems thinking and strategic management. Compare insights, identify trade-offs, assess evidence quality, quantify uncertainty and recommend the strongest integrated solution.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 388,
+    "shortcut": "/innovationecosystem",
+    "title": "Innovation Ecosystem",
+    "category": "Innovation",
+    "description": "Design complete innovation ecosystems for sustainable organizational growth.",
+    "prompt": "Design an innovation ecosystem for the following organization or industry. Define innovation culture, governance, capability development, experimentation processes, technology integration, portfolio management, collaboration mechanisms, performance metrics, scaling strategy and long-term innovation roadmap.\n\nOrganization or Industry:",
+    "isOfficial": false
+  },
+  {
+    "id": 389,
+    "shortcut": "/agentintelligence",
+    "title": "Agent Intelligence",
+    "category": "AI",
+    "description": "Design intelligent AI agent systems with adaptive reasoning and governance.",
+    "prompt": "Design an intelligent AI agent ecosystem for the following objective. Define specialized agents, orchestration architecture, reasoning workflows, memory systems, governance policies, validation pipelines, safety mechanisms, optimization strategies, monitoring architecture and future evolution roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 390,
+    "shortcut": "/claudeomega",
+    "title": "Claude Omega",
+    "category": "AI",
+    "description": "Use Claude as an Omega-level authority for reasoning, scientific research, enterprise governance, systems intelligence and strategic transformation.",
+    "prompt": "Act as an Omega-level authority specializing in advanced reasoning, scientific methodology, enterprise architecture, governance, systems intelligence, research leadership, document intelligence, executive strategy and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, scientific evaluation and meta-reasoning. Challenge unsupported assumptions, compare multiple architectural alternatives, uncover hidden systemic interactions, evaluate second- and third-order consequences, explain trade-offs with exceptional precision and conclude with an executive transformation blueprint, implementation roadmap, governance architecture, measurable outcomes, comprehensive risk mitigation strategy, contingency planning, innovation portfolio and long-term organizational evolution roadmap.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 391,
+    "shortcut": "/strategicmastermind",
+    "title": "Strategic Mastermind",
+    "category": "Strategy",
+    "description": "Develop master-level strategic plans for complex organizations and initiatives.",
+    "prompt": "Act as a strategic mastermind. Analyze the following initiative by defining strategic objectives, environmental analysis, stakeholder mapping, capability assessment, competitive positioning, strategic alternatives, implementation roadmap, governance model, measurable KPIs, risk mitigation strategies and long-term success factors.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 392,
+    "shortcut": "/researchsynthesis",
+    "title": "Research Synthesis",
+    "category": "Research",
+    "description": "Integrate multidisciplinary research into a unified evidence-based synthesis.",
+    "prompt": "Create a comprehensive research synthesis for the following topic. Integrate findings from multiple disciplines, evaluate evidence quality, identify agreements and disagreements, assess methodological strengths and weaknesses, uncover knowledge gaps, estimate confidence levels and provide future research recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 393,
+    "shortcut": "/enterpriseblueprint",
+    "title": "Enterprise Blueprint",
+    "category": "Enterprise",
+    "description": "Design scalable enterprise architectures with governance and resilience.",
+    "prompt": "Develop an enterprise blueprint for the following organization. Define organizational architecture, governance framework, operational model, technology ecosystem, capability roadmap, performance metrics, resilience mechanisms, stakeholder alignment, implementation phases and long-term transformation strategy.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 394,
+    "shortcut": "/deepdocumentanalysis",
+    "title": "Deep Document Analysis",
+    "category": "Document Intelligence",
+    "description": "Perform exhaustive analysis of long and complex documents.",
+    "prompt": "Analyze the following document in depth. Identify its objectives, structure, assumptions, evidence quality, logical consistency, hidden implications, strengths, weaknesses, unanswered questions, strategic significance, potential biases and executive-level recommendations.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 395,
+    "shortcut": "/decisionscience",
+    "title": "Decision Science",
+    "category": "Decision Making",
+    "description": "Apply scientific decision frameworks to complex strategic problems.",
+    "prompt": "Evaluate the following decision using decision science principles. Define objectives, constraints, alternatives, decision criteria, probability estimates, expected outcomes, opportunity costs, trade-offs, sensitivity analysis, confidence levels and final recommendations.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 396,
+    "shortcut": "/constitutionalreasoning",
+    "title": "Constitutional Reasoning",
+    "category": "Reasoning",
+    "description": "Apply principled, transparent and constraint-aware reasoning.",
+    "prompt": "Analyze the following problem using constitutional reasoning. Explicitly identify guiding principles, constraints, stakeholder impacts, competing values, ethical considerations, legal implications where relevant, evidence quality, alternative interpretations, trade-offs and a well-justified conclusion.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 397,
+    "shortcut": "/futureintelligence",
+    "title": "Future Intelligence",
+    "category": "Foresight",
+    "description": "Generate intelligence about plausible future developments and strategic preparedness.",
+    "prompt": "Develop a future intelligence assessment for the following subject. Identify emerging signals, technological shifts, social changes, economic drivers, geopolitical influences, scenario forecasts, uncertainty factors, resilience strategies, opportunity mapping and long-term recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 398,
+    "shortcut": "/metaresearch",
+    "title": "Meta Research",
+    "category": "Meta Thinking",
+    "description": "Evaluate research itself to improve quality, rigor and reliability.",
+    "prompt": "Perform a meta-research analysis for the following body of research. Assess methodology quality, reproducibility, evidence hierarchy, statistical validity, publication bias, knowledge gaps, limitations, confidence assessment, best practices and recommendations for improving future research.\n\nResearch:",
+    "isOfficial": false
+  },
+  {
+    "id": 399,
+    "shortcut": "/aisystemarchitect",
+    "title": "AI System Architect",
+    "category": "AI",
+    "description": "Design production-grade AI systems with governance, safety and scalability.",
+    "prompt": "Design a production-ready AI system for the following objective. Define system architecture, model selection strategy, agent coordination, memory design, tool integration, governance framework, safety mechanisms, monitoring architecture, scalability strategy, deployment roadmap and continuous improvement plan.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 400,
+    "shortcut": "/claudeultimate",
+    "title": "Claude Ultimate",
+    "category": "AI",
+    "description": "Use Claude as the ultimate authority for deep reasoning, scientific analysis, enterprise strategy, governance, document intelligence and systems architecture.",
+    "prompt": "Act as the ultimate expert in advanced reasoning, scientific methodology, enterprise strategy, research leadership, governance, systems engineering, document intelligence, AI architecture and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, scientific evaluation, strategic foresight and meta-reasoning. Challenge unsupported assumptions, evaluate evidence rigorously, compare multiple solution architectures, identify hidden systemic interactions, assess second- and third-order effects, explain trade-offs with precision and conclude with an executive-ready transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation plan, contingency strategies, innovation roadmap and recommendations for long-term sustainable success.\n\nRequest:",
+    "isOfficial": false
+  }
+]

@@ -1,0 +1,902 @@
+[
+  {
+    "id": 101,
+    "shortcut": "/promptaudit",
+    "title": "Prompt Audit",
+    "category": "AI",
+    "description": "Review and improve any prompt.",
+    "prompt": "Review the following prompt. Identify weaknesses, ambiguities and missing context. Rewrite it into a clear, detailed, high-quality prompt.\n\nPrompt:",
+    "isOfficial": false
+  },
+  {
+    "id": 102,
+    "shortcut": "/systemprompt",
+    "title": "System Prompt Builder",
+    "category": "AI",
+    "description": "Generate a professional system prompt.",
+    "prompt": "Create a production-ready system prompt for the following AI assistant. Include role, goals, rules, constraints and response style.\n\nAssistant Purpose:",
+    "isOfficial": false
+  },
+  {
+    "id": 103,
+    "shortcut": "/expertmode",
+    "title": "Expert Mode",
+    "category": "AI",
+    "description": "Answer as a domain expert.",
+    "prompt": "Act as a leading expert in the following field. Explain your reasoning, state assumptions where appropriate, and provide practical recommendations.\n\nField:",
+    "isOfficial": false
+  },
+  {
+    "id": 104,
+    "shortcut": "/stepbystep",
+    "title": "Step-by-Step Guide",
+    "category": "AI",
+    "description": "Break down complex tasks.",
+    "prompt": "Explain the following topic step by step using numbered sections and practical examples.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 105,
+    "shortcut": "/critique",
+    "title": "Constructive Critique",
+    "category": "AI",
+    "description": "Critique and improve content.",
+    "prompt": "Review the following content. Identify strengths, weaknesses and specific improvements. Keep the feedback constructive.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 106,
+    "shortcut": "/reasoning",
+    "title": "Structured Reasoning",
+    "category": "AI",
+    "description": "Analyze a problem carefully.",
+    "prompt": "Analyze the following problem carefully. Compare possible approaches, discuss trade-offs and recommend the most suitable solution.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 107,
+    "shortcut": "/requirements",
+    "title": "Requirement Analyzer",
+    "category": "Programming",
+    "description": "Analyze software requirements.",
+    "prompt": "Analyze the following software requirements. Identify missing details, edge cases, assumptions and implementation suggestions.\n\nRequirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 108,
+    "shortcut": "/architecture",
+    "title": "Software Architecture",
+    "category": "Programming",
+    "description": "Design application architecture.",
+    "prompt": "Design a scalable software architecture for the following project. Explain the major components and why they were chosen.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 109,
+    "shortcut": "/codereview",
+    "title": "Code Review",
+    "category": "Programming",
+    "description": "Perform a professional code review.",
+    "prompt": "Review the following code for readability, maintainability, performance and security. Suggest improvements with explanations.\n\nCode:",
+    "isOfficial": false
+  },
+  {
+    "id": 110,
+    "shortcut": "/refactor",
+    "title": "Code Refactoring",
+    "category": "Programming",
+    "description": "Refactor source code.",
+    "prompt": "Refactor the following code to improve readability, maintainability and structure without changing functionality.\n\nCode:",
+    "isOfficial": false
+  },
+  {
+    "id": 111,
+    "shortcut": "/androidui",
+    "title": "Android UI Builder",
+    "category": "Android",
+    "description": "Generate Android UI ideas.",
+    "prompt": "Design a modern Android screen using Material Design 3. Describe the layout, components, user interactions and accessibility considerations.\n\nScreen Purpose:",
+    "isOfficial": false
+  },
+  {
+    "id": 112,
+    "shortcut": "/material3",
+    "title": "Material 3 Guide",
+    "category": "Android",
+    "description": "Apply Material Design 3.",
+    "prompt": "Suggest a Material Design 3 implementation for the following Android feature. Include recommended UI components and design considerations.\n\nFeature:",
+    "isOfficial": false
+  },
+  {
+    "id": 113,
+    "shortcut": "/mvvm",
+    "title": "MVVM Generator",
+    "category": "Android",
+    "description": "Generate MVVM structure.",
+    "prompt": "Design an MVVM architecture for the following Android feature. Include ViewModel, Repository and data flow.\n\nFeature:",
+    "isOfficial": false
+  },
+  {
+    "id": 114,
+    "shortcut": "/jetpack",
+    "title": "Jetpack Recommendation",
+    "category": "Android",
+    "description": "Recommend Jetpack libraries.",
+    "prompt": "Recommend the most suitable Android Jetpack libraries for the following project and explain why.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 115,
+    "shortcut": "/compose",
+    "title": "Jetpack Compose",
+    "category": "Android",
+    "description": "Generate Compose UI.",
+    "prompt": "Create a clean Jetpack Compose implementation for the following screen. Explain the composables used.\n\nScreen:",
+    "isOfficial": false
+  },
+  {
+    "id": 116,
+    "shortcut": "/xmlui",
+    "title": "XML Layout Generator",
+    "category": "Android",
+    "description": "Generate XML layouts.",
+    "prompt": "Generate a responsive Android XML layout using Material Design 3 for the following screen.\n\nScreen:",
+    "isOfficial": false
+  },
+  {
+    "id": 117,
+    "shortcut": "/kotlinclean",
+    "title": "Clean Kotlin",
+    "category": "Kotlin",
+    "description": "Write idiomatic Kotlin.",
+    "prompt": "Rewrite the following Kotlin code using idiomatic Kotlin best practices while improving readability and maintainability.\n\nCode:",
+    "isOfficial": false
+  },
+  {
+    "id": 118,
+    "shortcut": "/coroutines",
+    "title": "Coroutine Helper",
+    "category": "Kotlin",
+    "description": "Use Kotlin Coroutines.",
+    "prompt": "Implement the following feature using Kotlin Coroutines and explain the coroutine scope, dispatcher and error handling.\n\nFeature:",
+    "isOfficial": false
+  },
+  {
+    "id": 119,
+    "shortcut": "/flow",
+    "title": "Kotlin Flow",
+    "category": "Kotlin",
+    "description": "Generate Flow implementation.",
+    "prompt": "Implement the following use case using Kotlin Flow and explain the data flow.\n\nUse Case:",
+    "isOfficial": false
+  },
+  {
+    "id": 120,
+    "shortcut": "/hilt",
+    "title": "Hilt Dependency Injection",
+    "category": "Android",
+    "description": "Generate Hilt setup.",
+    "prompt": "Generate a Hilt dependency injection setup for the following Android project. Explain each module and dependency.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 121,
+    "shortcut": "/firebase",
+    "title": "Firebase Assistant",
+    "category": "Firebase",
+    "description": "Generate Firebase integration.",
+    "prompt": "Explain how to integrate the following Firebase service into an Android app. Include setup steps and best practices.\n\nFirebase Service:",
+    "isOfficial": false
+  },
+  {
+    "id": 122,
+    "shortcut": "/playstore",
+    "title": "Play Store Optimization",
+    "category": "Publishing",
+    "description": "Optimize Play Store listing.",
+    "prompt": "Optimize the following Google Play Store listing. Suggest title, short description, long description and keywords.\n\nApp Details:",
+    "isOfficial": false
+  },
+  {
+    "id": 123,
+    "shortcut": "/privacypolicy",
+    "title": "Privacy Policy Draft",
+    "category": "Publishing",
+    "description": "Generate a privacy policy draft.",
+    "prompt": "Generate a general privacy policy draft for the following app features. The user should review it before legal use.\n\nApp Features:",
+    "isOfficial": false
+  },
+  {
+    "id": 124,
+    "shortcut": "/releasedocs",
+    "title": "Release Checklist",
+    "category": "Publishing",
+    "description": "Prepare for app release.",
+    "prompt": "Create a complete Android app release checklist including testing, security, Play Console requirements and post-release tasks.",
+    "isOfficial": false
+  },
+  {
+    "id": 125,
+    "shortcut": "/appidea",
+    "title": "App Idea Generator",
+    "category": "Startup",
+    "description": "Generate unique app ideas.",
+    "prompt": "Generate 20 unique mobile app ideas for the following niche. For each idea, include the problem, target audience, key features and monetization options.\n\nNiche:",
+    "isOfficial": false
+  },
+  {
+    "id": 126,
+    "shortcut": "/asoaudit",
+    "title": "ASO Audit",
+    "category": "Publishing",
+    "description": "Audit a Play Store listing.",
+    "prompt": "Review the following Google Play Store listing. Suggest improvements for discoverability, conversions, title, short description, long description and keywords.\n\nListing:",
+    "isOfficial": false
+  },
+  {
+    "id": 127,
+    "shortcut": "/featurelist",
+    "title": "Feature Planner",
+    "category": "Product",
+    "description": "Plan application features.",
+    "prompt": "Create a prioritized feature list for the following application. Separate into MVP, Version 1.0 and Future Updates.\n\nApp Idea:",
+    "isOfficial": false
+  },
+  {
+    "id": 128,
+    "shortcut": "/prd",
+    "title": "Product Requirements Document",
+    "category": "Product",
+    "description": "Generate a PRD.",
+    "prompt": "Create a professional Product Requirements Document for the following product idea.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 129,
+    "shortcut": "/userstories",
+    "title": "User Stories",
+    "category": "Product",
+    "description": "Generate Agile user stories.",
+    "prompt": "Write user stories with acceptance criteria for the following feature.\n\nFeature:",
+    "isOfficial": false
+  },
+  {
+    "id": 130,
+    "shortcut": "/acceptance",
+    "title": "Acceptance Criteria",
+    "category": "Product",
+    "description": "Generate acceptance criteria.",
+    "prompt": "Generate clear acceptance criteria for the following software feature.\n\nFeature:",
+    "isOfficial": false
+  },
+  {
+    "id": 131,
+    "shortcut": "/wireframe",
+    "title": "Wireframe Planner",
+    "category": "Design",
+    "description": "Plan application wireframes.",
+    "prompt": "Describe low-fidelity wireframes for the following application screen. Explain layout and user flow.\n\nScreen:",
+    "isOfficial": false
+  },
+  {
+    "id": 132,
+    "shortcut": "/landingpage",
+    "title": "Landing Page Copy",
+    "category": "Marketing",
+    "description": "Generate landing page content.",
+    "prompt": "Write persuasive landing page copy including hero section, benefits, features, FAQ and call-to-action.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 133,
+    "shortcut": "/headline",
+    "title": "Headline Generator",
+    "category": "Marketing",
+    "description": "Generate marketing headlines.",
+    "prompt": "Generate 30 high-converting headlines for the following product or topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 134,
+    "shortcut": "/cta",
+    "title": "Call To Action",
+    "category": "Marketing",
+    "description": "Generate CTA ideas.",
+    "prompt": "Generate 20 persuasive call-to-action phrases for the following product or service.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 135,
+    "shortcut": "/emailsequence",
+    "title": "Email Sequence",
+    "category": "Marketing",
+    "description": "Create an email campaign.",
+    "prompt": "Write a five-email onboarding sequence for the following product.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 136,
+    "shortcut": "/keywordcluster",
+    "title": "Keyword Clustering",
+    "category": "SEO",
+    "description": "Organize SEO keywords.",
+    "prompt": "Group the following keywords into logical topic clusters for SEO.\n\nKeywords:",
+    "isOfficial": false
+  },
+  {
+    "id": 137,
+    "shortcut": "/faqschema",
+    "title": "FAQ Schema",
+    "category": "SEO",
+    "description": "Generate FAQ content.",
+    "prompt": "Create an FAQ section with concise answers for the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 138,
+    "shortcut": "/metadata",
+    "title": "SEO Metadata",
+    "category": "SEO",
+    "description": "Generate SEO metadata.",
+    "prompt": "Generate an SEO title, meta description and URL slug for the following page.\n\nPage:",
+    "isOfficial": false
+  },
+  {
+    "id": 139,
+    "shortcut": "/youtubeideas",
+    "title": "YouTube Ideas",
+    "category": "Content",
+    "description": "Generate YouTube content ideas.",
+    "prompt": "Generate 30 YouTube video ideas for the following niche. Include titles and brief descriptions.\n\nNiche:",
+    "isOfficial": false
+  },
+  {
+    "id": 140,
+    "shortcut": "/thumbnail",
+    "title": "Thumbnail Concepts",
+    "category": "Content",
+    "description": "Generate thumbnail ideas.",
+    "prompt": "Suggest 15 eye-catching YouTube thumbnail concepts for the following video.\n\nVideo Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 141,
+    "shortcut": "/scriptoutline",
+    "title": "Video Script Outline",
+    "category": "Content",
+    "description": "Create a script outline.",
+    "prompt": "Create a detailed outline for a YouTube video including hook, sections and conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 142,
+    "shortcut": "/imageprompt",
+    "title": "Image Prompt Builder",
+    "category": "AI",
+    "description": "Create detailed AI image prompts.",
+    "prompt": "Write a detailed prompt for an AI image generator. Include subject, composition, lighting, colors, camera angle and style.\n\nImage Idea:",
+    "isOfficial": false
+  },
+  {
+    "id": 143,
+    "shortcut": "/videoprompt",
+    "title": "Video Prompt Builder",
+    "category": "AI",
+    "description": "Create AI video prompts.",
+    "prompt": "Create a cinematic AI video generation prompt describing scene, camera movement, lighting, timing and mood.\n\nVideo Idea:",
+    "isOfficial": false
+  },
+  {
+    "id": 144,
+    "shortcut": "/logoideas",
+    "title": "Logo Brainstorm",
+    "category": "Branding",
+    "description": "Generate logo concepts.",
+    "prompt": "Generate 20 logo concepts for the following brand. Describe colors, typography and symbolism.\n\nBrand:",
+    "isOfficial": false
+  },
+  {
+    "id": 145,
+    "shortcut": "/brandvoice",
+    "title": "Brand Voice",
+    "category": "Branding",
+    "description": "Define a brand voice.",
+    "prompt": "Define a consistent brand voice for the following business. Include tone, vocabulary and messaging guidelines.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 146,
+    "shortcut": "/competitor",
+    "title": "Competitor Analysis",
+    "category": "Business",
+    "description": "Analyze competitors.",
+    "prompt": "Create a competitor analysis framework for the following business. Compare strengths, weaknesses and opportunities.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 147,
+    "shortcut": "/pricing",
+    "title": "Pricing Strategy",
+    "category": "Business",
+    "description": "Suggest pricing models.",
+    "prompt": "Recommend suitable pricing strategies for the following product. Discuss pros, cons and target customers.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 148,
+    "shortcut": "/monetization",
+    "title": "Monetization Ideas",
+    "category": "Business",
+    "description": "Generate revenue ideas.",
+    "prompt": "Suggest multiple monetization strategies for the following application or business.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 149,
+    "shortcut": "/growthplan",
+    "title": "Growth Strategy",
+    "category": "Business",
+    "description": "Plan business growth.",
+    "prompt": "Create a 12-month growth strategy for the following business. Include marketing, partnerships and product improvements.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 150,
+    "shortcut": "/launchplan",
+    "title": "Product Launch Plan",
+    "category": "Business",
+    "description": "Plan a successful launch.",
+    "prompt": "Create a complete product launch plan including pre-launch, launch day and post-launch activities with measurable goals.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 151,
+    "shortcut": "/aiagent",
+    "title": "AI Agent Planner",
+    "category": "AI Agents",
+    "description": "Design an AI agent workflow.",
+    "prompt": "Design an AI agent for the following task. Define its goal, inputs, outputs, tools, memory requirements, constraints and execution workflow.\n\nTask:",
+    "isOfficial": false
+  },
+  {
+    "id": 152,
+    "shortcut": "/agentworkflow",
+    "title": "Multi-Agent Workflow",
+    "category": "AI Agents",
+    "description": "Plan collaboration between AI agents.",
+    "prompt": "Design a multi-agent workflow for the following project. Define each agent's responsibility, communication flow and final output.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 153,
+    "shortcut": "/taskbreakdown",
+    "title": "Task Breakdown",
+    "category": "Productivity",
+    "description": "Split large tasks into manageable steps.",
+    "prompt": "Break the following task into logical phases, milestones and actionable subtasks with estimated priorities.\n\nTask:",
+    "isOfficial": false
+  },
+  {
+    "id": 154,
+    "shortcut": "/decisionmatrix",
+    "title": "Decision Matrix",
+    "category": "Decision Making",
+    "description": "Compare options objectively.",
+    "prompt": "Create a weighted decision matrix for the following options. Define evaluation criteria, score each option and explain the recommendation.\n\nOptions:",
+    "isOfficial": false
+  },
+  {
+    "id": 155,
+    "shortcut": "/riskmatrix",
+    "title": "Risk Matrix",
+    "category": "Planning",
+    "description": "Assess project risks.",
+    "prompt": "Create a project risk matrix showing probability, impact, priority and suggested mitigation strategies.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 156,
+    "shortcut": "/brainstormpro",
+    "title": "Advanced Brainstorm",
+    "category": "Creativity",
+    "description": "Generate innovative ideas.",
+    "prompt": "Generate 30 innovative ideas for the following challenge. Group them into quick wins, medium-term opportunities and long-term innovations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 157,
+    "shortcut": "/androidarchitecture",
+    "title": "Android Architecture Review",
+    "category": "Android",
+    "description": "Review Android architecture.",
+    "prompt": "Review the following Android project architecture. Identify strengths, weaknesses, scalability concerns and recommend improvements.\n\nArchitecture:",
+    "isOfficial": false
+  },
+  {
+    "id": 158,
+    "shortcut": "/performance",
+    "title": "Performance Optimizer",
+    "category": "Programming",
+    "description": "Improve application performance.",
+    "prompt": "Review the following application or code for performance bottlenecks. Recommend optimizations and explain the expected impact.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 159,
+    "shortcut": "/memory",
+    "title": "Memory Optimization",
+    "category": "Programming",
+    "description": "Reduce memory usage.",
+    "prompt": "Analyze the following application for memory usage issues. Suggest optimizations and explain the trade-offs.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 160,
+    "shortcut": "/github",
+    "title": "GitHub Project Planner",
+    "category": "Development",
+    "description": "Organize a GitHub repository.",
+    "prompt": "Create a recommended GitHub repository structure, README outline, issue labels, milestones and branch strategy for the following project.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 161,
+    "shortcut": "/documentation",
+    "title": "Technical Documentation",
+    "category": "Development",
+    "description": "Generate technical documentation.",
+    "prompt": "Write professional technical documentation for the following project. Include overview, setup, architecture, usage and troubleshooting.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 162,
+    "shortcut": "/apireview",
+    "title": "API Review",
+    "category": "Programming",
+    "description": "Review an API design.",
+    "prompt": "Review the following API design for consistency, scalability, security and usability. Suggest concrete improvements.\n\nAPI:",
+    "isOfficial": false
+  },
+  {
+    "id": 163,
+    "shortcut": "/securityaudit",
+    "title": "Security Audit",
+    "category": "Cybersecurity",
+    "description": "Review security practices.",
+    "prompt": "Review the following application or system for common security risks. Prioritize findings by severity and recommend mitigations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 164,
+    "shortcut": "/testingstrategy",
+    "title": "Testing Strategy",
+    "category": "Testing",
+    "description": "Create a complete testing strategy.",
+    "prompt": "Create a comprehensive testing strategy for the following software project. Include unit, integration, UI, performance and security testing.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 165,
+    "shortcut": "/cicd",
+    "title": "CI/CD Pipeline",
+    "category": "Development",
+    "description": "Design a CI/CD pipeline.",
+    "prompt": "Design a CI/CD pipeline for the following project. Include build, testing, deployment and rollback stages.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 166,
+    "shortcut": "/logging",
+    "title": "Logging Strategy",
+    "category": "Development",
+    "description": "Improve application logging.",
+    "prompt": "Design an effective logging strategy for the following application. Include log levels, sensitive data considerations and monitoring recommendations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 167,
+    "shortcut": "/monitoring",
+    "title": "Monitoring Plan",
+    "category": "Development",
+    "description": "Monitor production systems.",
+    "prompt": "Create a monitoring and alerting plan for the following application. Include key metrics, dashboards and alert thresholds.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 168,
+    "shortcut": "/database",
+    "title": "Database Designer",
+    "category": "Database",
+    "description": "Design a database schema.",
+    "prompt": "Design a normalized relational database schema for the following project. Include tables, relationships and indexing recommendations.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 169,
+    "shortcut": "/cache",
+    "title": "Caching Strategy",
+    "category": "Programming",
+    "description": "Improve application performance with caching.",
+    "prompt": "Recommend a caching strategy for the following application. Explain where caching should be used and the expected benefits.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 170,
+    "shortcut": "/scaling",
+    "title": "Scalability Planner",
+    "category": "Architecture",
+    "description": "Plan for application growth.",
+    "prompt": "Design a scalability plan for the following application. Discuss horizontal scaling, bottlenecks and infrastructure considerations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 171,
+    "shortcut": "/cloud",
+    "title": "Cloud Architecture",
+    "category": "Cloud",
+    "description": "Design cloud infrastructure.",
+    "prompt": "Design a cloud architecture for the following application. Include services, networking, storage, security and deployment considerations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 172,
+    "shortcut": "/migration",
+    "title": "Migration Planner",
+    "category": "Development",
+    "description": "Plan technology migrations.",
+    "prompt": "Create a migration plan for moving the following application or system to a new platform. Include phases, risks and validation steps.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 173,
+    "shortcut": "/technicaldebt",
+    "title": "Technical Debt Review",
+    "category": "Development",
+    "description": "Identify technical debt.",
+    "prompt": "Review the following project and identify technical debt. Prioritize improvements based on impact and effort.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 174,
+    "shortcut": "/retrospective",
+    "title": "Sprint Retrospective",
+    "category": "Agile",
+    "description": "Generate a sprint retrospective.",
+    "prompt": "Prepare a sprint retrospective using 'What Went Well', 'What Didn't Go Well' and 'Action Items' based on the following sprint details.\n\nSprint Details:",
+    "isOfficial": false
+  },
+  {
+    "id": 175,
+    "shortcut": "/mentor",
+    "title": "AI Mentor",
+    "category": "Learning",
+    "description": "Create a personalized learning plan.",
+    "prompt": "Act as an experienced mentor for the following subject. Assess the learner's current level, identify knowledge gaps and create a step-by-step learning plan with milestones and practical exercises.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 176,
+    "shortcut": "/mcpdesign",
+    "title": "MCP Integration Planner",
+    "category": "AI",
+    "description": "Plan Model Context Protocol integration.",
+    "prompt": "Design an architecture for integrating Model Context Protocol (MCP) into the following AI application. Describe components, communication flow, security considerations and expected benefits.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 177,
+    "shortcut": "/toolselection",
+    "title": "Tool Selection",
+    "category": "AI",
+    "description": "Recommend the best tools.",
+    "prompt": "Recommend the most suitable tools, frameworks and services for the following project. Compare advantages, disadvantages and ideal use cases.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 178,
+    "shortcut": "/workflowautomation",
+    "title": "Workflow Automation",
+    "category": "Automation",
+    "description": "Automate repetitive workflows.",
+    "prompt": "Design an automation workflow for the following business process. Include triggers, actions, error handling and expected outcomes.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 179,
+    "shortcut": "/knowledgebase",
+    "title": "Knowledge Base Builder",
+    "category": "Documentation",
+    "description": "Create a structured knowledge base.",
+    "prompt": "Create a structured knowledge base outline for the following product or organization. Organize it into logical sections with suggested articles.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 180,
+    "shortcut": "/faqbuilder",
+    "title": "Advanced FAQ Builder",
+    "category": "Documentation",
+    "description": "Generate detailed FAQs.",
+    "prompt": "Generate a comprehensive FAQ covering beginner, intermediate and advanced questions for the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 181,
+    "shortcut": "/featureaudit",
+    "title": "Feature Audit",
+    "category": "Product",
+    "description": "Evaluate existing features.",
+    "prompt": "Review the following product features. Identify strengths, weaknesses, missing capabilities and improvement opportunities.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 182,
+    "shortcut": "/uxaudit",
+    "title": "UX Audit",
+    "category": "Design",
+    "description": "Audit user experience.",
+    "prompt": "Perform a UX audit for the following application. Evaluate navigation, accessibility, consistency and usability. Suggest improvements.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 183,
+    "shortcut": "/accessibility",
+    "title": "Accessibility Review",
+    "category": "Design",
+    "description": "Improve accessibility.",
+    "prompt": "Review the following application or website for accessibility. Suggest improvements based on widely accepted accessibility principles.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 184,
+    "shortcut": "/apiarchitecture",
+    "title": "API Architecture",
+    "category": "Programming",
+    "description": "Design scalable APIs.",
+    "prompt": "Design a scalable API architecture for the following platform. Include authentication, versioning, rate limiting and error handling.\n\nPlatform:",
+    "isOfficial": false
+  },
+  {
+    "id": 185,
+    "shortcut": "/backend",
+    "title": "Backend Planner",
+    "category": "Programming",
+    "description": "Plan backend architecture.",
+    "prompt": "Design the backend architecture for the following application. Include services, database, authentication, caching and deployment recommendations.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 186,
+    "shortcut": "/frontend",
+    "title": "Frontend Planner",
+    "category": "Programming",
+    "description": "Plan frontend architecture.",
+    "prompt": "Design the frontend architecture for the following application. Explain UI structure, state management and component organization.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 187,
+    "shortcut": "/qualitycheck",
+    "title": "Quality Checklist",
+    "category": "Quality",
+    "description": "Review overall quality.",
+    "prompt": "Create a comprehensive quality assurance checklist for the following software project before production release.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 188,
+    "shortcut": "/productionready",
+    "title": "Production Readiness",
+    "category": "Deployment",
+    "description": "Verify production readiness.",
+    "prompt": "Review the following project and create a production readiness checklist covering security, testing, monitoring, documentation and deployment.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 189,
+    "shortcut": "/deployment",
+    "title": "Deployment Planner",
+    "category": "Deployment",
+    "description": "Plan a production deployment.",
+    "prompt": "Create a production deployment plan for the following application. Include pre-deployment validation, rollout strategy, rollback plan and post-deployment verification.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 190,
+    "shortcut": "/incident",
+    "title": "Incident Response",
+    "category": "Operations",
+    "description": "Handle production incidents.",
+    "prompt": "Create an incident response plan for the following production issue. Include severity assessment, immediate actions, communication plan and post-incident review.\n\nIncident:",
+    "isOfficial": false
+  },
+  {
+    "id": 191,
+    "shortcut": "/postmortem",
+    "title": "Postmortem Report",
+    "category": "Operations",
+    "description": "Prepare an incident postmortem.",
+    "prompt": "Write a structured postmortem report for the following incident. Include timeline, root cause, impact, lessons learned and preventive actions.\n\nIncident:",
+    "isOfficial": false
+  },
+  {
+    "id": 192,
+    "shortcut": "/costoptimization",
+    "title": "Cost Optimization",
+    "category": "Cloud",
+    "description": "Reduce infrastructure costs.",
+    "prompt": "Review the following infrastructure or application and suggest practical cost optimization strategies while maintaining performance and reliability.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 193,
+    "shortcut": "/architectureaudit",
+    "title": "Architecture Audit",
+    "category": "Architecture",
+    "description": "Review system architecture.",
+    "prompt": "Evaluate the following system architecture. Identify scalability, reliability, maintainability and security concerns with recommended improvements.\n\nArchitecture:",
+    "isOfficial": false
+  },
+  {
+    "id": 194,
+    "shortcut": "/techstack",
+    "title": "Tech Stack Advisor",
+    "category": "Architecture",
+    "description": "Choose the right technology stack.",
+    "prompt": "Recommend the most suitable technology stack for the following project. Compare alternatives and explain the trade-offs.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 195,
+    "shortcut": "/roadmappro",
+    "title": "Professional Roadmap",
+    "category": "Planning",
+    "description": "Create a strategic roadmap.",
+    "prompt": "Create a professional roadmap with milestones, dependencies, priorities, risks and success metrics for the following project.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 196,
+    "shortcut": "/benchmark",
+    "title": "Benchmark Analysis",
+    "category": "Analysis",
+    "description": "Compare against industry standards.",
+    "prompt": "Benchmark the following product or service against industry best practices. Highlight strengths, weaknesses and opportunities.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 197,
+    "shortcut": "/innovation",
+    "title": "Innovation Workshop",
+    "category": "Creativity",
+    "description": "Generate breakthrough ideas.",
+    "prompt": "Facilitate an innovation workshop for the following challenge. Generate bold ideas, evaluate feasibility and recommend the most promising concepts.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 198,
+    "shortcut": "/futureproof",
+    "title": "Future-Proof Review",
+    "category": "Strategy",
+    "description": "Prepare for future growth.",
+    "prompt": "Review the following project and recommend improvements that will make it easier to scale, maintain and evolve over the next several years.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 199,
+    "shortcut": "/executivesummary",
+    "title": "Executive Summary",
+    "category": "Business",
+    "description": "Create a concise executive summary.",
+    "prompt": "Write a professional executive summary for the following project, proposal or report. Focus on objectives, key findings, recommendations and expected outcomes.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 200,
+    "shortcut": "/consultant",
+    "title": "AI Consultant",
+    "category": "AI",
+    "description": "Receive expert consulting advice.",
+    "prompt": "Act as a senior consultant for the following project. Assess the current situation, identify major challenges, propose multiple solution options, discuss trade-offs and recommend the best course of action.\n\nProject:",
+    "isOfficial": false
+  }
+]

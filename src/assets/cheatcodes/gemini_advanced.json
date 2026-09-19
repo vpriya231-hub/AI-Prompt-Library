@@ -1,0 +1,902 @@
+[
+  {
+    "id": 101,
+    "shortcut": "/gemresearch",
+    "title": "Research Assistant",
+    "category": "Research",
+    "description": "Conduct structured research with reliable evidence and actionable insights.",
+    "prompt": "Act as a professional research assistant. Analyze the following topic by defining the research objective, gathering relevant information, comparing multiple viewpoints, evaluating evidence quality, identifying knowledge gaps, summarizing key findings, citing limitations and recommending next research steps.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 102,
+    "shortcut": "/gemreason",
+    "title": "Advanced Reasoning",
+    "category": "Reasoning",
+    "description": "Solve complex problems using structured logical reasoning.",
+    "prompt": "Analyze the following problem using structured reasoning. Identify assumptions, constraints, dependencies, alternative explanations, evidence quality, possible risks, confidence level and provide the strongest evidence-supported conclusion.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 103,
+    "shortcut": "/gemplanner",
+    "title": "Strategic Planner",
+    "category": "Planning",
+    "description": "Develop detailed strategic execution plans.",
+    "prompt": "Create a professional strategic plan for the following objective. Include goals, milestones, required resources, timeline, dependencies, risk mitigation strategies, KPIs and success criteria.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 104,
+    "shortcut": "/gemdeepthink",
+    "title": "Deep Think",
+    "category": "Thinking",
+    "description": "Perform deep analytical thinking before answering.",
+    "prompt": "Think deeply before responding. Break the problem into smaller parts, examine multiple perspectives, evaluate trade-offs, identify hidden assumptions and produce a well-structured, evidence-based answer.\n\nQuestion:",
+    "isOfficial": false
+  },
+  {
+    "id": 105,
+    "shortcut": "/gemteacher",
+    "title": "Expert Teacher",
+    "category": "Education",
+    "description": "Explain difficult concepts from beginner to expert level.",
+    "prompt": "Teach the following topic progressively. Start with a beginner-friendly explanation, then intermediate concepts, advanced concepts, practical applications, common mistakes, memory tricks and a concise summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 106,
+    "shortcut": "/gemreview",
+    "title": "Expert Reviewer",
+    "category": "Review",
+    "description": "Review content professionally with constructive improvements.",
+    "prompt": "Review the following content. Identify strengths, weaknesses, factual issues, logical inconsistencies, clarity problems, readability improvements and provide a polished version with explanations.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 107,
+    "shortcut": "/gemcompare",
+    "title": "Comparison Expert",
+    "category": "Analysis",
+    "description": "Compare alternatives using objective evaluation criteria.",
+    "prompt": "Compare the following options objectively. Evaluate advantages, disadvantages, costs, risks, scalability, performance, long-term impact and recommend the best choice with clear justification.\n\nOptions:",
+    "isOfficial": false
+  },
+  {
+    "id": 108,
+    "shortcut": "/gemframework",
+    "title": "Framework Builder",
+    "category": "Framework",
+    "description": "Create structured frameworks for solving complex challenges.",
+    "prompt": "Design a structured framework for the following subject. Define objectives, major components, workflows, dependencies, evaluation criteria, implementation steps, success metrics and future improvements.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 109,
+    "shortcut": "/gemadvisor",
+    "title": "Professional Advisor",
+    "category": "Consulting",
+    "description": "Provide expert consulting with practical recommendations.",
+    "prompt": "Act as a senior consultant. Analyze the following situation, identify challenges, opportunities, constraints, stakeholders, possible strategies, implementation roadmap, risks and prioritized recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 110,
+    "shortcut": "/gemadvanced",
+    "title": "Gemini Advanced",
+    "category": "AI",
+    "description": "Use Gemini as an advanced reasoning, research and strategic analysis assistant.",
+    "prompt": "Act as an advanced AI assistant specializing in structured reasoning, research, planning, analysis and decision support. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholder impacts, risks, evidence quality and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis and critical evaluation before producing a detailed, practical and well-organized response with implementation recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 111,
+    "shortcut": "/geminsight",
+    "title": "Insight Generator",
+    "category": "Analysis",
+    "description": "Extract meaningful insights from complex information.",
+    "prompt": "Analyze the following information and extract the most valuable insights. Identify patterns, trends, anomalies, hidden relationships, key findings, practical implications, confidence level and recommended actions.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 112,
+    "shortcut": "/gemdecision",
+    "title": "Decision Advisor",
+    "category": "Decision Making",
+    "description": "Support difficult decisions using structured evaluation.",
+    "prompt": "Evaluate the following decision. Define objectives, available options, evaluation criteria, risks, benefits, uncertainties, long-term consequences, confidence level and recommend the strongest option with detailed justification.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 113,
+    "shortcut": "/gemoptimizer",
+    "title": "System Optimizer",
+    "category": "Optimization",
+    "description": "Optimize systems, workflows and processes for maximum efficiency.",
+    "prompt": "Analyze the following system or workflow. Identify bottlenecks, inefficiencies, unnecessary complexity, optimization opportunities, expected improvements, implementation roadmap, measurable KPIs and long-term recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 114,
+    "shortcut": "/geminnovation",
+    "title": "Innovation Planner",
+    "category": "Innovation",
+    "description": "Generate innovative yet practical solutions for complex challenges.",
+    "prompt": "Develop innovative solutions for the following challenge. Analyze the current situation, identify limitations, propose multiple creative approaches, evaluate feasibility, estimate impact, identify risks and recommend the most promising solution.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 115,
+    "shortcut": "/gemstrategy",
+    "title": "Strategy Builder",
+    "category": "Strategy",
+    "description": "Build comprehensive strategies for long-term success.",
+    "prompt": "Develop a complete strategy for the following objective. Define vision, strategic goals, major initiatives, required resources, implementation phases, governance, performance indicators, risk mitigation and success criteria.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 116,
+    "shortcut": "/gemcritic",
+    "title": "Critical Reviewer",
+    "category": "Critical Thinking",
+    "description": "Critically evaluate ideas, arguments and proposals.",
+    "prompt": "Critically evaluate the following proposal. Identify assumptions, logical strengths, weaknesses, missing evidence, possible biases, alternative viewpoints, risks and actionable improvements.\n\nProposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 117,
+    "shortcut": "/gemsynthesis",
+    "title": "Knowledge Synthesizer",
+    "category": "Knowledge",
+    "description": "Combine multiple sources into a unified understanding.",
+    "prompt": "Synthesize the following information into a coherent knowledge structure. Identify relationships, common themes, contradictions, evidence quality, practical implications, unanswered questions and a concise executive summary.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 118,
+    "shortcut": "/gemrisk",
+    "title": "Risk Analyzer",
+    "category": "Risk",
+    "description": "Identify and evaluate risks with mitigation strategies.",
+    "prompt": "Perform a comprehensive risk assessment for the following initiative. Identify strategic, operational, financial, technical and external risks. Evaluate probability, impact, mitigation strategies, contingency plans and monitoring recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 119,
+    "shortcut": "/gemarchitect",
+    "title": "Solution Architect",
+    "category": "Architecture",
+    "description": "Design scalable architectures for products, systems or services.",
+    "prompt": "Design a scalable architecture for the following solution. Define major components, workflows, dependencies, technology considerations, scalability strategy, security concerns, performance goals, maintenance plan and future improvements.\n\nSolution:",
+    "isOfficial": false
+  },
+  {
+    "id": 120,
+    "shortcut": "/gemnavigator",
+    "title": "Gemini Navigator",
+    "category": "AI",
+    "description": "Use Gemini as an advanced navigator for reasoning, planning, research and strategic execution.",
+    "prompt": "Act as an advanced AI navigator specializing in structured reasoning, planning, research, analysis, optimization and decision support. Analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholder impacts, risks, evidence quality and measurable outcomes. Apply first-principles reasoning, systems thinking, critical evaluation and strategic planning to produce a detailed, actionable and well-structured solution.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 121,
+    "shortcut": "/gemforecast",
+    "title": "Future Forecast",
+    "category": "Forecasting",
+    "description": "Forecast future outcomes using trends, evidence and scenario analysis.",
+    "prompt": "Forecast the future of the following topic. Identify current trends, driving forces, uncertainties, possible scenarios, risks, opportunities, confidence levels and recommended preparations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 122,
+    "shortcut": "/gemroadmap",
+    "title": "Roadmap Creator",
+    "category": "Planning",
+    "description": "Create practical roadmaps from vision to execution.",
+    "prompt": "Develop a comprehensive roadmap for the following initiative. Include vision, milestones, phases, timelines, dependencies, deliverables, KPIs, risks and contingency plans.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 123,
+    "shortcut": "/gemauditor",
+    "title": "Quality Auditor",
+    "category": "Audit",
+    "description": "Audit processes, products or documents for quality and compliance.",
+    "prompt": "Perform a detailed audit of the following item. Evaluate quality, consistency, completeness, compliance, efficiency, risks, improvement opportunities and provide prioritized recommendations.\n\nItem:",
+    "isOfficial": false
+  },
+  {
+    "id": 124,
+    "shortcut": "/gembenchmark",
+    "title": "Benchmark Expert",
+    "category": "Benchmarking",
+    "description": "Compare performance against industry standards and best practices.",
+    "prompt": "Benchmark the following product, service or process against recognized best practices. Identify strengths, weaknesses, performance gaps, competitive positioning and recommended improvements.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 125,
+    "shortcut": "/gembrainstorm",
+    "title": "Idea Generator",
+    "category": "Creativity",
+    "description": "Generate high-quality ideas using structured brainstorming techniques.",
+    "prompt": "Generate creative and practical ideas for the following challenge. Organize ideas by feasibility, innovation, impact, required resources, implementation difficulty and expected outcomes.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 126,
+    "shortcut": "/gemdiagnose",
+    "title": "Problem Diagnostician",
+    "category": "Problem Solving",
+    "description": "Diagnose root causes behind complex problems.",
+    "prompt": "Diagnose the following problem. Identify symptoms, root causes, contributing factors, supporting evidence, possible solutions, implementation priorities, risks and validation methods.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 127,
+    "shortcut": "/gemmatrix",
+    "title": "Decision Matrix",
+    "category": "Decision Making",
+    "description": "Evaluate choices using weighted decision matrices.",
+    "prompt": "Create a decision matrix for the following choices. Define evaluation criteria, assign relative importance, score each option objectively, explain trade-offs, identify uncertainties and recommend the best choice.\n\nChoices:",
+    "isOfficial": false
+  },
+  {
+    "id": 128,
+    "shortcut": "/gemimpact",
+    "title": "Impact Analyzer",
+    "category": "Impact Analysis",
+    "description": "Evaluate short-term and long-term impacts comprehensively.",
+    "prompt": "Analyze the impact of the following action or event. Assess immediate, medium-term and long-term effects across technical, financial, operational, social and strategic dimensions. Recommend mitigation and optimization strategies.\n\nAction or Event:",
+    "isOfficial": false
+  },
+  {
+    "id": 129,
+    "shortcut": "/gempriority",
+    "title": "Priority Optimizer",
+    "category": "Productivity",
+    "description": "Prioritize initiatives based on value, urgency and strategic importance.",
+    "prompt": "Prioritize the following tasks or initiatives. Evaluate impact, urgency, effort, dependencies, strategic value, opportunity cost and recommend an optimized execution order with reasoning.\n\nTasks or Initiatives:",
+    "isOfficial": false
+  },
+  {
+    "id": 130,
+    "shortcut": "/gemvision",
+    "title": "Strategic Vision",
+    "category": "AI",
+    "description": "Use Gemini for strategic vision, advanced planning and evidence-based decision support.",
+    "prompt": "Act as an advanced strategic AI. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholder impacts, risks, opportunities and measurable success factors. Apply structured reasoning, systems thinking, critical analysis and evidence-based planning to produce a comprehensive implementation strategy with actionable recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 131,
+    "shortcut": "/gemcausal",
+    "title": "Causal Analysis",
+    "category": "Analysis",
+    "description": "Identify cause-and-effect relationships behind complex situations.",
+    "prompt": "Perform a causal analysis of the following situation. Distinguish symptoms from root causes, identify contributing factors, evaluate evidence, construct causal chains, consider alternative explanations and recommend interventions with expected outcomes.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 132,
+    "shortcut": "/gemscenario",
+    "title": "Scenario Planner",
+    "category": "Planning",
+    "description": "Develop multiple future scenarios with strategic responses.",
+    "prompt": "Create multiple future scenarios for the following topic. Include optimistic, realistic and worst-case outcomes. Evaluate probabilities, assumptions, risks, opportunities, early warning indicators and recommended strategies for each scenario.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 133,
+    "shortcut": "/gemopportunity",
+    "title": "Opportunity Finder",
+    "category": "Business",
+    "description": "Discover hidden opportunities for growth and improvement.",
+    "prompt": "Analyze the following context to identify high-value opportunities. Evaluate feasibility, expected impact, resource requirements, competitive advantages, risks and implementation priorities.\n\nContext:",
+    "isOfficial": false
+  },
+  {
+    "id": 134,
+    "shortcut": "/gemworkflow",
+    "title": "Workflow Designer",
+    "category": "Productivity",
+    "description": "Design efficient workflows for teams and organizations.",
+    "prompt": "Design an optimized workflow for the following process. Define stages, responsibilities, dependencies, automation opportunities, quality checkpoints, performance metrics and continuous improvement recommendations.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 135,
+    "shortcut": "/gemvalidator",
+    "title": "Evidence Validator",
+    "category": "Validation",
+    "description": "Evaluate the credibility and strength of supporting evidence.",
+    "prompt": "Validate the following claim by assessing supporting evidence, source reliability, logical consistency, alternative interpretations, missing information, confidence level and final assessment.\n\nClaim:",
+    "isOfficial": false
+  },
+  {
+    "id": 136,
+    "shortcut": "/geminspector",
+    "title": "System Inspector",
+    "category": "Systems",
+    "description": "Inspect systems to identify weaknesses and improvement areas.",
+    "prompt": "Inspect the following system in detail. Identify strengths, weaknesses, bottlenecks, risks, scalability concerns, maintenance issues, optimization opportunities and prioritized recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 137,
+    "shortcut": "/gemalignment",
+    "title": "Goal Alignment",
+    "category": "Strategy",
+    "description": "Align goals, resources and execution strategies effectively.",
+    "prompt": "Evaluate how well the following goals align with available resources, stakeholder expectations, timelines and organizational strategy. Identify gaps, conflicts, optimization opportunities and recommended adjustments.\n\nGoals:",
+    "isOfficial": false
+  },
+  {
+    "id": 138,
+    "shortcut": "/gemnavigatorx",
+    "title": "Knowledge Navigator",
+    "category": "Knowledge",
+    "description": "Navigate complex knowledge domains systematically.",
+    "prompt": "Map the following knowledge domain into a structured framework. Identify core concepts, relationships, prerequisite knowledge, advanced topics, learning pathways, practical applications and recommended study sequence.\n\nKnowledge Domain:",
+    "isOfficial": false
+  },
+  {
+    "id": 139,
+    "shortcut": "/gemportfolio",
+    "title": "Portfolio Optimizer",
+    "category": "Management",
+    "description": "Optimize portfolios of projects, products or investments.",
+    "prompt": "Evaluate the following portfolio. Assess strategic alignment, value generation, resource allocation, diversification, risks, dependencies, performance metrics and recommend optimization actions.\n\nPortfolio:",
+    "isOfficial": false
+  },
+  {
+    "id": 140,
+    "shortcut": "/gemcatalyst",
+    "title": "Gemini Catalyst",
+    "category": "AI",
+    "description": "Use Gemini as a catalyst for advanced analysis, strategic planning and intelligent decision support.",
+    "prompt": "Act as an advanced AI catalyst specializing in research, structured reasoning, planning, optimization and evidence-based decision making. Analyze the following request by identifying objectives, assumptions, dependencies, risks, opportunities, stakeholders and measurable success indicators. Apply first-principles reasoning, systems thinking, critical evaluation and strategic planning to produce a comprehensive, practical and implementation-focused solution.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 141,
+    "shortcut": "/gemevaluator",
+    "title": "Comprehensive Evaluator",
+    "category": "Evaluation",
+    "description": "Perform structured evaluations using objective criteria and measurable outcomes.",
+    "prompt": "Evaluate the following subject comprehensively. Define evaluation criteria, assess strengths, weaknesses, risks, opportunities, evidence quality, measurable performance indicators, improvement priorities and provide a final evidence-based assessment.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 142,
+    "shortcut": "/gemmodeler",
+    "title": "System Modeler",
+    "category": "Modeling",
+    "description": "Build conceptual and operational models for complex systems.",
+    "prompt": "Create a detailed model for the following system. Identify major components, interactions, inputs, outputs, dependencies, constraints, optimization opportunities, validation methods and scalability considerations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 143,
+    "shortcut": "/gemconsensus",
+    "title": "Consensus Builder",
+    "category": "Collaboration",
+    "description": "Develop balanced solutions that satisfy multiple stakeholders.",
+    "prompt": "Analyze the following situation involving multiple stakeholders. Identify stakeholder interests, conflicts, shared objectives, negotiation opportunities, compromise strategies, implementation recommendations and expected outcomes.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 144,
+    "shortcut": "/gemtransform",
+    "title": "Transformation Planner",
+    "category": "Transformation",
+    "description": "Plan large-scale organizational or technological transformations.",
+    "prompt": "Develop a transformation strategy for the following initiative. Include current-state assessment, future vision, transition phases, governance, resource planning, risk management, KPIs, communication strategy and continuous improvement plan.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 145,
+    "shortcut": "/gemlogic",
+    "title": "Logical Examiner",
+    "category": "Logic",
+    "description": "Test arguments for logical validity and consistency.",
+    "prompt": "Examine the following argument for logical consistency. Identify assumptions, reasoning flaws, unsupported conclusions, counterarguments, evidence strength and provide a revised, logically sound version.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 146,
+    "shortcut": "/gemecosystem",
+    "title": "Ecosystem Mapper",
+    "category": "Systems",
+    "description": "Map relationships across complex ecosystems.",
+    "prompt": "Map the ecosystem surrounding the following subject. Identify key participants, relationships, dependencies, information flows, risks, opportunities, influence networks and strategic recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 147,
+    "shortcut": "/gemgovern",
+    "title": "Governance Planner",
+    "category": "Governance",
+    "description": "Design governance structures for sustainable decision-making.",
+    "prompt": "Design a governance framework for the following organization or project. Define roles, responsibilities, decision authority, policies, compliance mechanisms, accountability processes, performance monitoring and continuous improvement practices.\n\nOrganization or Project:",
+    "isOfficial": false
+  },
+  {
+    "id": 148,
+    "shortcut": "/gemknowledge",
+    "title": "Knowledge Architect",
+    "category": "Knowledge",
+    "description": "Design organized knowledge systems for long-term learning.",
+    "prompt": "Develop a structured knowledge architecture for the following domain. Define concept hierarchies, relationships, classification methods, learning pathways, documentation standards, maintenance strategy and future expansion recommendations.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 149,
+    "shortcut": "/gemresilience",
+    "title": "Resilience Builder",
+    "category": "Resilience",
+    "description": "Strengthen systems against uncertainty and disruption.",
+    "prompt": "Analyze the resilience of the following system. Identify vulnerabilities, likely disruptions, recovery strategies, redundancy mechanisms, monitoring approaches, contingency planning and long-term resilience improvements.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 150,
+    "shortcut": "/gemhorizon",
+    "title": "Gemini Horizon",
+    "category": "AI",
+    "description": "Use Gemini as an advanced strategic intelligence for planning, evaluation and long-term decision support.",
+    "prompt": "Act as an advanced AI specializing in strategic reasoning, planning, knowledge synthesis, governance, optimization and evidence-based decision support. Analyze the following request by identifying objectives, assumptions, dependencies, risks, opportunities, stakeholder impacts and measurable success criteria. Apply first-principles reasoning, systems thinking, critical evaluation and structured planning to deliver a comprehensive implementation strategy with actionable recommendations and long-term considerations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 151,
+    "shortcut": "/gemmultiview",
+    "title": "Multi-Perspective Analysis",
+    "category": "Analysis",
+    "description": "Analyze problems from multiple expert perspectives before reaching a conclusion.",
+    "prompt": "Analyze the following topic from multiple perspectives including technical, business, financial, ethical, operational and user viewpoints. Compare agreements, disagreements, trade-offs, risks, opportunities and conclude with the strongest evidence-based recommendation.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 152,
+    "shortcut": "/gemblueprint",
+    "title": "Solution Blueprint",
+    "category": "Architecture",
+    "description": "Create complete solution blueprints from concept to implementation.",
+    "prompt": "Design a complete solution blueprint for the following requirement. Define objectives, architecture, components, workflows, dependencies, implementation phases, quality metrics, risks and future scalability recommendations.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 153,
+    "shortcut": "/gemresearchplus",
+    "title": "Research Plus",
+    "category": "Research",
+    "description": "Produce comprehensive research with structured evidence synthesis.",
+    "prompt": "Conduct comprehensive research on the following topic. Identify objectives, background knowledge, current evidence, conflicting viewpoints, emerging trends, knowledge gaps, practical implications and future research opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 154,
+    "shortcut": "/gemoptimizerx",
+    "title": "Performance Optimizer",
+    "category": "Optimization",
+    "description": "Improve performance using measurable optimization techniques.",
+    "prompt": "Evaluate the following system for performance optimization. Identify inefficiencies, bottlenecks, resource constraints, optimization opportunities, measurable improvements, implementation priorities and validation methods.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 155,
+    "shortcut": "/gemdecisionx",
+    "title": "Executive Decision",
+    "category": "Decision Making",
+    "description": "Support executive-level decisions with structured analysis.",
+    "prompt": "Evaluate the following executive decision. Analyze objectives, available options, strategic impact, financial implications, operational feasibility, stakeholder effects, risks, implementation roadmap and final recommendation.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 156,
+    "shortcut": "/gemknowledgex",
+    "title": "Knowledge Explorer",
+    "category": "Knowledge",
+    "description": "Explore complex knowledge domains through structured learning paths.",
+    "prompt": "Create a comprehensive exploration guide for the following knowledge domain. Define prerequisites, core concepts, advanced topics, practical applications, expert resources, common misconceptions and recommended learning sequence.\n\nKnowledge Domain:",
+    "isOfficial": false
+  },
+  {
+    "id": 157,
+    "shortcut": "/gemplannerpro",
+    "title": "Execution Planner",
+    "category": "Planning",
+    "description": "Transform ideas into detailed execution plans.",
+    "prompt": "Develop a complete execution plan for the following initiative. Include objectives, milestones, responsibilities, dependencies, timelines, KPIs, risk management, communication strategy and review checkpoints.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 158,
+    "shortcut": "/geminsightx",
+    "title": "Strategic Insight",
+    "category": "Strategy",
+    "description": "Generate strategic insights from data, trends and evidence.",
+    "prompt": "Analyze the following information to identify strategic insights. Highlight key patterns, emerging opportunities, potential threats, competitive implications, confidence level and prioritized strategic actions.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 159,
+    "shortcut": "/gemfuturex",
+    "title": "Future Intelligence",
+    "category": "Forecasting",
+    "description": "Anticipate future developments through evidence-based forecasting.",
+    "prompt": "Forecast the future development of the following subject. Identify major drivers, uncertainties, possible scenarios, opportunities, risks, early indicators, strategic preparations and long-term recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 160,
+    "shortcut": "/gemapex",
+    "title": "Gemini Apex",
+    "category": "AI",
+    "description": "Use Gemini as an advanced intelligence for research, planning, optimization and executive decision support.",
+    "prompt": "Act as an advanced AI specializing in research, structured reasoning, strategic planning, optimization, governance and evidence-based decision support. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholder impacts, risks, opportunities and measurable success indicators. Apply first-principles reasoning, systems thinking, critical evaluation and structured planning to produce a practical, comprehensive and implementation-ready solution.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 161,
+    "shortcut": "/gemrootcause",
+    "title": "Root Cause Expert",
+    "category": "Problem Solving",
+    "description": "Discover underlying causes behind complex problems using systematic analysis.",
+    "prompt": "Perform a comprehensive root cause analysis for the following problem. Separate symptoms from actual causes, identify contributing factors, validate assumptions, evaluate evidence, propose corrective actions, define prevention strategies and recommend measurable success indicators.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 162,
+    "shortcut": "/gemdecisiontree",
+    "title": "Decision Tree Builder",
+    "category": "Decision Making",
+    "description": "Construct logical decision trees for complex choices.",
+    "prompt": "Build a structured decision tree for the following situation. Identify decision points, possible outcomes, assumptions, probabilities, risks, dependencies, fallback options and recommend the optimal path with justification.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 163,
+    "shortcut": "/gemvaluechain",
+    "title": "Value Chain Analysis",
+    "category": "Business",
+    "description": "Analyze value creation across processes and stakeholders.",
+    "prompt": "Analyze the value chain for the following business or system. Identify primary and supporting activities, value creation opportunities, bottlenecks, inefficiencies, competitive advantages and prioritized improvement recommendations.\n\nBusiness or System:",
+    "isOfficial": false
+  },
+  {
+    "id": 164,
+    "shortcut": "/gempolicy",
+    "title": "Policy Designer",
+    "category": "Governance",
+    "description": "Create effective policies with governance and compliance considerations.",
+    "prompt": "Design a comprehensive policy for the following subject. Define objectives, scope, principles, responsibilities, procedures, compliance requirements, enforcement mechanisms, review cycles and measurable effectiveness indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 165,
+    "shortcut": "/gemintelligence",
+    "title": "Intelligence Brief",
+    "category": "Research",
+    "description": "Produce executive intelligence briefs from complex information.",
+    "prompt": "Prepare an executive intelligence brief on the following topic. Summarize key findings, strategic implications, emerging trends, risks, opportunities, confidence assessment, unanswered questions and recommended actions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 166,
+    "shortcut": "/gemsimulation",
+    "title": "Scenario Simulation",
+    "category": "Simulation",
+    "description": "Simulate outcomes under multiple assumptions and conditions.",
+    "prompt": "Simulate the following scenario under multiple assumptions. Evaluate best-case, expected-case and worst-case outcomes, identify decision triggers, estimate risks, recommend adaptive strategies and summarize the most resilient approach.\n\nScenario:",
+    "isOfficial": false
+  },
+  {
+    "id": 167,
+    "shortcut": "/gemsystemsmap",
+    "title": "Systems Mapper",
+    "category": "Systems",
+    "description": "Map complex systems, interactions and dependencies.",
+    "prompt": "Map the following system comprehensively. Identify components, relationships, dependencies, feedback loops, constraints, failure points, optimization opportunities and long-term evolution strategy.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 168,
+    "shortcut": "/gemprioritizer",
+    "title": "Priority Matrix",
+    "category": "Productivity",
+    "description": "Rank initiatives using strategic value and execution effort.",
+    "prompt": "Create a priority matrix for the following initiatives. Evaluate strategic value, urgency, implementation effort, dependencies, expected impact, risks and recommend the optimal execution order with reasoning.\n\nInitiatives:",
+    "isOfficial": false
+  },
+  {
+    "id": 169,
+    "shortcut": "/gemmasterplan",
+    "title": "Master Planning",
+    "category": "Planning",
+    "description": "Develop large-scale master plans with phased execution.",
+    "prompt": "Develop a master plan for the following objective. Define long-term vision, strategic phases, milestones, governance, resource allocation, risk management, performance metrics, review cycles and sustainability strategy.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 170,
+    "shortcut": "/gemvertex",
+    "title": "Gemini Vertex",
+    "category": "AI",
+    "description": "Use Gemini as an advanced strategic intelligence for reasoning, planning, governance and enterprise decision support.",
+    "prompt": "Act as an advanced AI specializing in structured reasoning, research, planning, optimization, governance, systems thinking and executive decision support. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, risks, opportunities and measurable success criteria. Apply first-principles reasoning, critical analysis, evidence evaluation and strategic planning to produce a comprehensive, implementation-ready solution with actionable recommendations and long-term considerations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 171,
+    "shortcut": "/gemadaptive",
+    "title": "Adaptive Strategy",
+    "category": "Strategy",
+    "description": "Develop adaptive strategies that evolve with changing conditions.",
+    "prompt": "Create an adaptive strategy for the following objective. Identify uncertainties, changing conditions, decision triggers, contingency plans, feedback mechanisms, performance metrics, governance model and continuous improvement process.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 172,
+    "shortcut": "/gemarchitecture",
+    "title": "Enterprise Architecture",
+    "category": "Architecture",
+    "description": "Design scalable enterprise architectures aligned with business goals.",
+    "prompt": "Design an enterprise architecture for the following organization or initiative. Define business capabilities, application architecture, data architecture, technology stack, security model, governance framework, scalability strategy and implementation roadmap.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 173,
+    "shortcut": "/gemknowledgegraph",
+    "title": "Knowledge Graph",
+    "category": "Knowledge",
+    "description": "Organize complex information into a structured knowledge graph.",
+    "prompt": "Construct a knowledge graph for the following domain. Identify entities, relationships, hierarchies, dependencies, semantic connections, classification methods, maintenance strategy and practical applications.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 174,
+    "shortcut": "/gemethics",
+    "title": "Ethical Analysis",
+    "category": "Ethics",
+    "description": "Evaluate ethical implications using structured reasoning.",
+    "prompt": "Analyze the ethical implications of the following situation. Identify stakeholders, ethical principles, competing values, risks, unintended consequences, mitigation strategies, governance considerations and balanced recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 175,
+    "shortcut": "/gemresourcemap",
+    "title": "Resource Optimizer",
+    "category": "Management",
+    "description": "Optimize resource allocation for maximum efficiency and impact.",
+    "prompt": "Analyze the following project or organization. Optimize the allocation of people, budget, technology and time. Identify constraints, trade-offs, optimization opportunities, implementation priorities and expected benefits.\n\nProject or Organization:",
+    "isOfficial": false
+  },
+  {
+    "id": 176,
+    "shortcut": "/geminnovationlab",
+    "title": "Innovation Lab",
+    "category": "Innovation",
+    "description": "Develop breakthrough innovation programs with measurable outcomes.",
+    "prompt": "Create an innovation program for the following challenge. Define research areas, experimentation methods, validation framework, resource requirements, KPIs, scaling strategy, risks and long-term innovation roadmap.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 177,
+    "shortcut": "/gemdecisionlab",
+    "title": "Decision Laboratory",
+    "category": "Decision Making",
+    "description": "Test and compare multiple decision strategies objectively.",
+    "prompt": "Evaluate the following decision using multiple decision-making frameworks. Compare alternative strategies, estimate risks, expected outcomes, trade-offs, uncertainties, confidence levels and recommend the strongest option.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 178,
+    "shortcut": "/gemgovernance",
+    "title": "Governance Architect",
+    "category": "Governance",
+    "description": "Create governance models that support accountability and resilience.",
+    "prompt": "Design a governance architecture for the following organization or ecosystem. Define policies, roles, accountability, compliance processes, monitoring mechanisms, escalation paths, KPIs and continuous governance improvements.\n\nOrganization or Ecosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 179,
+    "shortcut": "/gemlongview",
+    "title": "Long-Term Vision",
+    "category": "Forecasting",
+    "description": "Develop long-term strategies with future-focused planning.",
+    "prompt": "Develop a long-term strategic vision for the following objective. Analyze future trends, emerging technologies, strategic risks, opportunities, milestones, investment priorities, resilience strategies and success metrics.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 180,
+    "shortcut": "/geminiorbit",
+    "title": "Gemini Orbit",
+    "category": "AI",
+    "description": "Use Gemini as an advanced intelligence for strategic planning, governance, innovation and systems thinking.",
+    "prompt": "Act as an advanced AI specializing in strategic reasoning, research, enterprise architecture, governance, innovation, optimization and systems thinking. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholder impacts, risks, opportunities and measurable success criteria. Apply first-principles reasoning, evidence-based analysis, critical thinking and structured planning to produce a comprehensive implementation roadmap with practical recommendations, governance guidance and long-term optimization strategies.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 181,
+    "shortcut": "/gemforesight",
+    "title": "Strategic Foresight",
+    "category": "Forecasting",
+    "description": "Anticipate future opportunities and challenges through structured foresight.",
+    "prompt": "Develop a strategic foresight analysis for the following subject. Identify driving forces, emerging trends, disruptive technologies, uncertainties, future scenarios, opportunities, risks, strategic responses and measurable success indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 182,
+    "shortcut": "/gemdependency",
+    "title": "Dependency Analyzer",
+    "category": "Systems",
+    "description": "Identify dependencies, constraints and critical relationships.",
+    "prompt": "Analyze the following project or system for dependencies. Identify critical paths, resource dependencies, technical constraints, operational bottlenecks, risks, mitigation strategies and optimization opportunities.\n\nProject or System:",
+    "isOfficial": false
+  },
+  {
+    "id": 183,
+    "shortcut": "/gemexecutive",
+    "title": "Executive Briefing",
+    "category": "Business",
+    "description": "Prepare concise executive briefings with strategic recommendations.",
+    "prompt": "Prepare an executive briefing for the following topic. Summarize objectives, current situation, major findings, strategic implications, risks, opportunities, recommended actions, KPIs and executive summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 184,
+    "shortcut": "/gemintelligencehub",
+    "title": "Intelligence Hub",
+    "category": "Knowledge",
+    "description": "Integrate information into a centralized intelligence framework.",
+    "prompt": "Design an intelligence framework for the following domain. Organize information sources, validation methods, knowledge flows, analytics, reporting structure, governance mechanisms and continuous improvement strategy.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 185,
+    "shortcut": "/gemtradeoff",
+    "title": "Trade-off Analyzer",
+    "category": "Decision Making",
+    "description": "Evaluate competing priorities and strategic trade-offs objectively.",
+    "prompt": "Analyze the following decision by evaluating trade-offs. Compare benefits, costs, risks, opportunity costs, stakeholder impacts, implementation complexity, long-term effects and recommend the optimal balance.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 186,
+    "shortcut": "/gemcontinuous",
+    "title": "Continuous Improvement",
+    "category": "Optimization",
+    "description": "Build systems for continuous learning and improvement.",
+    "prompt": "Develop a continuous improvement framework for the following process or organization. Define improvement cycles, KPIs, monitoring mechanisms, feedback loops, governance, optimization priorities and long-term sustainability strategy.\n\nProcess or Organization:",
+    "isOfficial": false
+  },
+  {
+    "id": 187,
+    "shortcut": "/gemcapability",
+    "title": "Capability Assessment",
+    "category": "Assessment",
+    "description": "Assess organizational or technical capabilities comprehensively.",
+    "prompt": "Evaluate the following organization's capabilities. Identify strengths, weaknesses, maturity level, capability gaps, investment priorities, improvement roadmap, KPIs and strategic recommendations.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 188,
+    "shortcut": "/gemcoordination",
+    "title": "Coordination Planner",
+    "category": "Management",
+    "description": "Coordinate teams, processes and resources effectively.",
+    "prompt": "Develop a coordination strategy for the following initiative. Define stakeholder roles, communication flows, governance, resource allocation, conflict resolution, monitoring mechanisms and execution roadmap.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 189,
+    "shortcut": "/gemecosystemx",
+    "title": "Ecosystem Intelligence",
+    "category": "Strategy",
+    "description": "Analyze entire ecosystems to uncover strategic opportunities.",
+    "prompt": "Analyze the following ecosystem. Identify participants, dependencies, competitive dynamics, collaboration opportunities, emerging trends, systemic risks, strategic positioning and long-term recommendations.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 190,
+    "shortcut": "/geminimatrix",
+    "title": "Gemini Matrix",
+    "category": "AI",
+    "description": "Use Gemini as an advanced intelligence for research, strategy, governance, systems analysis and executive decision support.",
+    "prompt": "Act as an advanced AI specializing in research, strategic planning, enterprise analysis, governance, optimization and systems thinking. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, risks, opportunities and measurable success criteria. Apply first-principles reasoning, structured analysis, evidence evaluation, critical thinking and long-term strategic planning to produce an implementation-ready solution with governance recommendations, measurable KPIs, risk mitigation strategies and sustainable future improvements.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 191,
+    "shortcut": "/gemmastermind",
+    "title": "Mastermind Analysis",
+    "category": "Analysis",
+    "description": "Perform multidisciplinary analysis using advanced strategic thinking.",
+    "prompt": "Analyze the following challenge using multidisciplinary expertise. Combine technical, business, financial, operational, legal, ethical and strategic perspectives. Identify key assumptions, hidden dependencies, critical risks, opportunities, trade-offs, implementation priorities and provide a comprehensive executive recommendation.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 192,
+    "shortcut": "/gemframeworkx",
+    "title": "Advanced Framework",
+    "category": "Framework",
+    "description": "Create scalable frameworks for solving complex organizational problems.",
+    "prompt": "Design a comprehensive framework for the following objective. Define principles, components, workflows, governance structure, performance indicators, implementation phases, validation methods and continuous improvement mechanisms.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 193,
+    "shortcut": "/gemnavigatorpro",
+    "title": "Strategic Navigator",
+    "category": "Strategy",
+    "description": "Navigate uncertainty with evidence-based strategic planning.",
+    "prompt": "Develop a strategic navigation plan for the following situation. Identify objectives, constraints, milestones, alternative routes, decision checkpoints, risk mitigation strategies, KPIs and long-term success factors.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 194,
+    "shortcut": "/gemintellect",
+    "title": "Intellectual Synthesis",
+    "category": "Knowledge",
+    "description": "Synthesize complex ideas into clear and structured knowledge.",
+    "prompt": "Synthesize the following information into a coherent knowledge model. Identify core principles, relationships, contradictions, evidence strength, practical applications, unanswered questions and executive summary.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 195,
+    "shortcut": "/gemfuturelab",
+    "title": "Future Laboratory",
+    "category": "Innovation",
+    "description": "Explore future innovations through structured experimentation.",
+    "prompt": "Develop a future innovation laboratory for the following domain. Identify emerging technologies, experimentation priorities, validation methods, investment opportunities, strategic partnerships, risks, KPIs and future roadmap.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 196,
+    "shortcut": "/gemresiliencex",
+    "title": "Enterprise Resilience",
+    "category": "Resilience",
+    "description": "Strengthen organizations against uncertainty and disruption.",
+    "prompt": "Assess the resilience of the following organization or system. Identify vulnerabilities, disruption scenarios, resilience mechanisms, recovery plans, governance improvements, monitoring strategies, KPIs and long-term sustainability recommendations.\n\nOrganization or System:",
+    "isOfficial": false
+  },
+  {
+    "id": 197,
+    "shortcut": "/gemorchestrator",
+    "title": "Systems Orchestrator",
+    "category": "Systems",
+    "description": "Coordinate multiple systems into a unified operating model.",
+    "prompt": "Design an orchestration strategy for the following ecosystem. Define component interactions, coordination mechanisms, governance, automation opportunities, monitoring systems, scalability strategy, risks and implementation roadmap.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 198,
+    "shortcut": "/gemexecutivex",
+    "title": "Executive Strategy",
+    "category": "Business",
+    "description": "Deliver board-level strategic recommendations with measurable outcomes.",
+    "prompt": "Prepare an executive strategy for the following initiative. Evaluate strategic priorities, financial implications, operational feasibility, stakeholder alignment, governance requirements, KPIs, implementation roadmap, risk mitigation and executive recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 199,
+    "shortcut": "/gemhyperthink",
+    "title": "Hyper Think",
+    "category": "Reasoning",
+    "description": "Apply deep, structured and critical reasoning to highly complex problems.",
+    "prompt": "Analyze the following problem using advanced reasoning. Apply first-principles thinking, systems analysis, causal reasoning, probabilistic evaluation, critical thinking and structured decision-making. Compare alternative solutions, identify trade-offs, estimate confidence levels and produce the strongest evidence-based conclusion.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 200,
+    "shortcut": "/geminiadvancedplus",
+    "title": "Gemini Advanced Plus",
+    "category": "AI",
+    "description": "Use Gemini as a premium strategic intelligence for advanced reasoning, research, planning, governance and enterprise decision-making.",
+    "prompt": "Act as a premium AI specializing in advanced reasoning, research, enterprise strategy, systems thinking, governance, optimization, knowledge synthesis and executive decision support. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholder impacts, risks, opportunities and measurable success criteria. Apply first-principles reasoning, evidence-based analysis, critical evaluation, strategic planning and multidisciplinary thinking. Compare multiple solution approaches, evaluate trade-offs, recommend the optimal implementation strategy, define KPIs, governance recommendations, risk mitigation plans, continuous improvement mechanisms and long-term evolution strategy.\n\nRequest:",
+    "isOfficial": false
+  }
+]

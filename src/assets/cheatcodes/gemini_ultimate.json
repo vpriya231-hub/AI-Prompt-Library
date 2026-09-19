@@ -1,0 +1,902 @@
+[
+  {
+    "id": 401,
+    "shortcut": "/ultimateanalysis",
+    "title": "Ultimate Analysis",
+    "category": "Analysis",
+    "description": "Perform the highest level of comprehensive analysis.",
+    "prompt": "Act as the world's leading multidisciplinary analyst. Perform a comprehensive analysis of the following subject. Examine technical, financial, operational, strategic, legal, ethical, environmental and societal dimensions. Identify hidden patterns, assumptions, risks, opportunities, dependencies, future implications and executive recommendations. Present findings in a structured professional report.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 402,
+    "shortcut": "/ultimateresearch",
+    "title": "Ultimate Research Director",
+    "category": "Research",
+    "description": "Lead world-class research from concept to implementation.",
+    "prompt": "Act as a globally recognized research director. Design a complete research program for the following topic including objectives, research questions, methodologies, evidence sources, validation methods, ethical considerations, expected findings, implementation recommendations and future research directions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 403,
+    "shortcut": "/ultimatearchitect",
+    "title": "Ultimate Systems Architect",
+    "category": "Systems",
+    "description": "Design world-class scalable systems.",
+    "prompt": "Design a world-class architecture for the following system or initiative. Include overall architecture, major components, workflows, scalability strategy, resilience, security, governance, monitoring, deployment, maintenance, future expansion and optimization recommendations.\n\nRequirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 404,
+    "shortcut": "/ultimatevision",
+    "title": "Ultimate Vision",
+    "category": "Strategy",
+    "description": "Develop transformational long-term visions.",
+    "prompt": "Create a transformational long-term vision for the following organization, product or initiative. Define purpose, guiding principles, strategic objectives, future opportunities, implementation roadmap, governance, KPIs, innovation strategy and sustainable competitive advantages.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 405,
+    "shortcut": "/ultimateadvisor",
+    "title": "Ultimate Executive Advisor",
+    "category": "Leadership",
+    "description": "Provide world-class executive advice.",
+    "prompt": "Act as a trusted executive advisor to global leaders. Analyze the following challenge, evaluate strategic alternatives, stakeholder interests, operational realities, financial implications, risks, opportunities and provide detailed executive recommendations with implementation priorities.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 406,
+    "shortcut": "/ultimateinnovation",
+    "title": "Ultimate Innovation Lab",
+    "category": "Creativity",
+    "description": "Generate breakthrough innovations with practical execution plans.",
+    "prompt": "Generate revolutionary solutions for the following challenge. Combine insights from technology, science, design, psychology, business and engineering. Evaluate feasibility, scalability, implementation cost, expected impact, risks and long-term sustainability before ranking the best concepts.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 407,
+    "shortcut": "/ultimatecommand",
+    "title": "Ultimate Command Center",
+    "category": "Execution",
+    "description": "Coordinate enterprise-scale execution strategies.",
+    "prompt": "Develop a command-center execution strategy for the following initiative. Define governance, responsibilities, workflows, milestones, communication plans, monitoring systems, KPIs, escalation procedures, quality assurance, contingency planning and continuous optimization.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 408,
+    "shortcut": "/ultimatefuture",
+    "title": "Ultimate Future Intelligence",
+    "category": "Forecasting",
+    "description": "Predict and prepare for long-term future developments.",
+    "prompt": "Analyze the long-term future of the following topic over the next 20 years. Evaluate emerging technologies, economic shifts, geopolitical developments, societal changes, environmental considerations, disruptive innovations, opportunities, risks and strategic preparation plans.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 409,
+    "shortcut": "/ultimateframework",
+    "title": "Ultimate Framework",
+    "category": "Planning",
+    "description": "Build enterprise-grade frameworks for any objective.",
+    "prompt": "Develop a world-class framework for the following objective. Include governance, execution methodology, stakeholder alignment, performance metrics, risk management, continuous improvement, scalability strategy, implementation roadmap and long-term sustainability.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 410,
+    "shortcut": "/geminiultimate",
+    "title": "Gemini Ultimate Workspace",
+    "category": "AI",
+    "description": "Use Gemini as the ultimate AI strategist, researcher and enterprise intelligence partner.",
+    "prompt": "Act as the ultimate AI strategist, executive advisor, research director, systems architect and enterprise intelligence expert. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, stakeholders, constraints, risks, opportunities and measurable success criteria. Generate multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a complete implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing plans and conclude with executive-level recommendations and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 411,
+    "shortcut": "/ultimateinsights",
+    "title": "Ultimate Insights",
+    "category": "Analysis",
+    "description": "Extract world-class insights from complex information.",
+    "prompt": "Analyze the following information with exceptional depth. Identify hidden relationships, recurring themes, root causes, assumptions, strategic implications, emerging opportunities, risks, knowledge gaps and evidence quality. Summarize the most valuable insights and executive recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 412,
+    "shortcut": "/ultimatebenchmark",
+    "title": "Ultimate Benchmark",
+    "category": "Business",
+    "description": "Benchmark against world-class organizations and best practices.",
+    "prompt": "Benchmark the following organization, product or strategy against global best practices and industry leaders. Compare performance, innovation, scalability, operational excellence, customer value, financial sustainability, risks and future readiness. Recommend priority improvements.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 413,
+    "shortcut": "/ultimatedecision",
+    "title": "Ultimate Decision Engine",
+    "category": "Strategy",
+    "description": "Support mission-critical decisions using advanced evaluation.",
+    "prompt": "Evaluate the following high-impact decision. Identify objectives, alternatives, evaluation criteria, stakeholder interests, constraints, uncertainties, trade-offs, long-term consequences and implementation risks. Recommend the strongest decision with complete justification.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 414,
+    "shortcut": "/ultimateecosystem",
+    "title": "Ultimate Ecosystem",
+    "category": "Systems",
+    "description": "Design complete ecosystems for sustainable long-term growth.",
+    "prompt": "Design a complete ecosystem for the following initiative. Include stakeholders, technologies, governance, workflows, partnerships, automation opportunities, resilience strategies, scalability plans, monitoring systems and future evolution.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 415,
+    "shortcut": "/ultimaterisk",
+    "title": "Ultimate Risk Intelligence",
+    "category": "Risk",
+    "description": "Identify and manage enterprise-scale risks.",
+    "prompt": "Perform a comprehensive enterprise risk assessment for the following subject. Evaluate strategic, operational, financial, technological, cybersecurity, legal, regulatory, environmental and reputational risks. Recommend mitigation plans, contingency strategies and monitoring frameworks.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 416,
+    "shortcut": "/ultimateblueprint",
+    "title": "Ultimate Blueprint",
+    "category": "Planning",
+    "description": "Create the most detailed implementation blueprint possible.",
+    "prompt": "Develop a comprehensive implementation blueprint for the following project. Include architecture, execution phases, milestones, governance, resource planning, timelines, KPIs, quality assurance, risk management, review cycles and optimization opportunities.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 417,
+    "shortcut": "/ultimateknowledge",
+    "title": "Ultimate Knowledge Hub",
+    "category": "Knowledge",
+    "description": "Build an expert-level knowledge system.",
+    "prompt": "Create an expert-level knowledge system for the following topic. Organize foundational principles, advanced concepts, interdisciplinary relationships, practical applications, expert insights, future developments, learning roadmap and recommended references.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 418,
+    "shortcut": "/ultimateoptimization",
+    "title": "Ultimate Optimization",
+    "category": "Optimization",
+    "description": "Optimize strategies, systems and operations for maximum performance.",
+    "prompt": "Evaluate the following strategy, workflow or system. Identify inefficiencies, bottlenecks, hidden opportunities, optimization priorities, measurable improvements, implementation challenges, expected ROI and long-term sustainability enhancements.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 419,
+    "shortcut": "/ultimategovernance",
+    "title": "Ultimate Governance",
+    "category": "Governance",
+    "description": "Design enterprise-grade governance systems.",
+    "prompt": "Design a governance framework for the following organization or initiative. Define leadership structure, accountability, decision-making processes, compliance mechanisms, reporting systems, performance reviews, KPIs, escalation procedures and continuous improvement strategy.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 420,
+    "shortcut": "/geminisupreme",
+    "title": "Gemini Supreme Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Supreme-level AI strategist, architect and executive intelligence system.",
+    "prompt": "Act as a Supreme-level AI strategist, executive advisor, enterprise architect, research director and systems intelligence expert. Analyze the following request by identifying objectives, assumptions, dependencies, stakeholders, constraints, opportunities, risks and measurable success criteria. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a comprehensive implementation roadmap, establish governance, KPIs, monitoring systems, future-proofing strategies and conclude with executive recommendations and long-term optimization opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 421,
+    "shortcut": "/ultimateplanner",
+    "title": "Ultimate Strategic Planner",
+    "category": "Planning",
+    "description": "Develop world-class strategic plans from vision to execution.",
+    "prompt": "Create a complete strategic plan for the following objective. Define vision, mission, strategic goals, execution phases, milestones, resource allocation, governance, KPIs, risk management, communication strategy, review cycles and long-term optimization recommendations.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 422,
+    "shortcut": "/ultimateadvisorpro",
+    "title": "Ultimate Advisor Pro",
+    "category": "Leadership",
+    "description": "Provide elite executive guidance for critical decisions.",
+    "prompt": "Act as a world-renowned executive advisor. Analyze the following challenge, identify stakeholder expectations, evaluate strategic alternatives, estimate risks and opportunities, assess long-term consequences and provide a prioritized executive action plan with measurable outcomes.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 423,
+    "shortcut": "/ultimateorchestrator",
+    "title": "Ultimate Orchestrator",
+    "category": "Execution",
+    "description": "Coordinate complex initiatives across multiple domains.",
+    "prompt": "Design an enterprise-scale execution strategy for the following initiative. Include governance, stakeholder coordination, workflow management, milestone tracking, communication protocols, performance monitoring, quality assurance, escalation procedures, KPIs and continuous improvement methods.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 424,
+    "shortcut": "/ultimateforecast",
+    "title": "Ultimate Forecast",
+    "category": "Forecasting",
+    "description": "Predict future developments with strategic foresight.",
+    "prompt": "Develop a comprehensive long-term forecast for the following topic. Analyze technological advances, economic drivers, demographic changes, geopolitical developments, environmental factors, disruptive innovations, risks, opportunities and recommended preparation strategies.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 425,
+    "shortcut": "/ultimatecomparison",
+    "title": "Ultimate Comparison",
+    "category": "Analysis",
+    "description": "Perform an expert-level comparison using multiple dimensions.",
+    "prompt": "Compare the following subjects across technical capability, innovation, scalability, usability, financial impact, sustainability, security, operational efficiency, future readiness and strategic value. Present a detailed comparison table followed by executive recommendations.\n\nSubjects:",
+    "isOfficial": false
+  },
+  {
+    "id": 426,
+    "shortcut": "/ultimateinnovationpro",
+    "title": "Ultimate Innovation Pro",
+    "category": "Creativity",
+    "description": "Create breakthrough innovations with implementation strategies.",
+    "prompt": "Generate transformative ideas for the following challenge. Evaluate originality, technical feasibility, implementation complexity, scalability, expected impact, potential risks, validation strategy and commercialization opportunities before ranking the best concepts.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 427,
+    "shortcut": "/ultimateintelligence",
+    "title": "Ultimate Intelligence Report",
+    "category": "Research",
+    "description": "Generate an intelligence-grade research assessment.",
+    "prompt": "Prepare an intelligence-grade assessment for the following topic. Separate facts from assumptions, evaluate evidence quality, estimate confidence levels, identify emerging patterns, knowledge gaps, strategic implications and recommend executive actions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 428,
+    "shortcut": "/ultimateframeworkpro",
+    "title": "Ultimate Framework Pro",
+    "category": "Strategy",
+    "description": "Build enterprise-grade frameworks for maximum effectiveness.",
+    "prompt": "Design a comprehensive strategic framework for the following initiative. Define principles, governance, operational workflows, stakeholder responsibilities, KPIs, review mechanisms, optimization strategies, scalability planning and long-term sustainability.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 429,
+    "shortcut": "/ultimatefuturelab",
+    "title": "Ultimate Future Lab",
+    "category": "Forecasting",
+    "description": "Explore multiple future scenarios with expert analysis.",
+    "prompt": "Create detailed future scenarios for the following topic. Develop optimistic, realistic, pessimistic and disruptive scenarios. Explain assumptions, probabilities, opportunities, risks, warning indicators and strategic preparation plans for each scenario.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 430,
+    "shortcut": "/geminilegend",
+    "title": "Gemini Legend Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Legend-level AI strategist, executive advisor and enterprise intelligence partner.",
+    "prompt": "Act as a Legend-level AI strategist, executive advisor, enterprise architect, research director and systems intelligence expert. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, risks, opportunities and measurable success criteria. Generate multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a complete implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing recommendations and conclude with executive-level insights and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 431,
+    "shortcut": "/ultimateexecution",
+    "title": "Ultimate Execution",
+    "category": "Execution",
+    "description": "Create world-class execution strategies for complex initiatives.",
+    "prompt": "Develop a complete execution strategy for the following initiative. Define governance, execution phases, milestone planning, stakeholder coordination, communication protocols, resource allocation, KPIs, monitoring systems, contingency planning, quality assurance and continuous improvement mechanisms.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 432,
+    "shortcut": "/ultimateecosystempro",
+    "title": "Ultimate Ecosystem Pro",
+    "category": "Systems",
+    "description": "Design resilient ecosystems for sustainable growth.",
+    "prompt": "Design a resilient ecosystem for the following organization, product or initiative. Include stakeholder mapping, governance, supporting technologies, automation opportunities, workflows, partnerships, resilience planning, scalability strategy, monitoring systems and future evolution.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 433,
+    "shortcut": "/ultimateevaluation",
+    "title": "Ultimate Evaluation",
+    "category": "Analysis",
+    "description": "Perform elite multi-dimensional evaluations.",
+    "prompt": "Evaluate the following subject across technical, financial, operational, strategic, ethical, legal, environmental, sustainability and innovation dimensions. Rank strengths, weaknesses, risks, opportunities and provide executive recommendations prioritized by impact.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 434,
+    "shortcut": "/ultimateleadership",
+    "title": "Ultimate Leadership",
+    "category": "Leadership",
+    "description": "Develop executive leadership strategies for complex organizations.",
+    "prompt": "Act as a global executive leadership advisor. Analyze the following leadership challenge and develop a strategy covering vision, stakeholder engagement, organizational culture, governance, decision-making, communication, succession planning, KPIs and long-term organizational success.\n\nLeadership Challenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 435,
+    "shortcut": "/ultimateoptimizationpro",
+    "title": "Ultimate Optimization Pro",
+    "category": "Optimization",
+    "description": "Optimize organizations, systems and workflows at enterprise scale.",
+    "prompt": "Perform an enterprise optimization assessment for the following subject. Identify bottlenecks, hidden inefficiencies, automation opportunities, measurable improvements, implementation priorities, expected ROI, risks and long-term sustainability enhancements.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 436,
+    "shortcut": "/ultimateknowledgepro",
+    "title": "Ultimate Knowledge Pro",
+    "category": "Knowledge",
+    "description": "Create an advanced knowledge architecture for any domain.",
+    "prompt": "Build an advanced knowledge architecture for the following topic. Organize concepts from beginner to expert level, identify interdisciplinary relationships, practical applications, emerging research, future opportunities, recommended resources and mastery pathways.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 437,
+    "shortcut": "/ultimatescenarios",
+    "title": "Ultimate Scenarios",
+    "category": "Forecasting",
+    "description": "Generate strategic scenarios for future planning.",
+    "prompt": "Develop detailed future scenarios for the following subject. Create optimistic, expected, pessimistic and disruptive scenarios. Analyze assumptions, probability, risks, opportunities, early warning indicators and strategic preparation recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 438,
+    "shortcut": "/ultimategovernance",
+    "title": "Ultimate Governance Pro",
+    "category": "Governance",
+    "description": "Design elite governance systems for enterprise initiatives.",
+    "prompt": "Create an enterprise governance framework for the following organization or initiative. Include leadership structure, accountability, decision-making, compliance, reporting, performance measurement, audit mechanisms, escalation processes and continuous improvement strategies.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 439,
+    "shortcut": "/ultimateenterprise",
+    "title": "Ultimate Enterprise Strategy",
+    "category": "Business",
+    "description": "Develop enterprise strategies for sustainable competitive advantage.",
+    "prompt": "Develop an enterprise strategy for the following organization. Evaluate competitive positioning, operational excellence, digital transformation, innovation opportunities, governance, financial sustainability, risks, KPIs and long-term growth recommendations.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 440,
+    "shortcut": "/geminieternal",
+    "title": "Gemini Eternal Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an Eternal-level AI strategist, executive architect and research intelligence system.",
+    "prompt": "Act as an Eternal-level AI strategist, executive advisor, enterprise architect, research director and systems intelligence expert. Thoroughly analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, risks, opportunities and measurable success criteria. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, design a complete implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing plans and conclude with executive-level recommendations, long-term insights and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 441,
+    "shortcut": "/ultimatecommander",
+    "title": "Ultimate Commander",
+    "category": "Leadership",
+    "description": "Lead complex missions with executive precision.",
+    "prompt": "Act as an executive mission commander. Develop a complete command strategy for the following initiative. Define mission objectives, stakeholder roles, governance, execution priorities, communication protocols, resource allocation, KPIs, contingency plans, monitoring systems and post-execution evaluation.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 442,
+    "shortcut": "/ultimateadvisorplus",
+    "title": "Ultimate Advisor Plus",
+    "category": "Business",
+    "description": "Deliver board-level strategic recommendations.",
+    "prompt": "Act as a board-level strategic advisor. Analyze the following business challenge, identify strategic priorities, financial implications, operational considerations, stakeholder interests, risks, opportunities and provide an actionable executive recommendation with measurable outcomes.\n\nBusiness Challenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 443,
+    "shortcut": "/ultimateinsightpro",
+    "title": "Ultimate Insight Pro",
+    "category": "Analysis",
+    "description": "Discover deep patterns and strategic intelligence.",
+    "prompt": "Perform an advanced intelligence analysis of the following information. Identify hidden relationships, recurring patterns, anomalies, strategic implications, evidence strength, unanswered questions and actionable executive insights.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 444,
+    "shortcut": "/ultimateblueprintpro",
+    "title": "Ultimate Blueprint Pro",
+    "category": "Planning",
+    "description": "Design enterprise-grade implementation blueprints.",
+    "prompt": "Develop an enterprise implementation blueprint for the following initiative. Include architecture, governance, implementation phases, resource allocation, timelines, KPIs, quality controls, monitoring systems, risk management and continuous optimization.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 445,
+    "shortcut": "/ultimatearchitectpro",
+    "title": "Ultimate Architect Pro",
+    "category": "Systems",
+    "description": "Create resilient, scalable and future-ready architectures.",
+    "prompt": "Design a future-ready architecture for the following system. Include infrastructure, integrations, scalability, resilience, security, automation, monitoring, governance, disaster recovery and long-term evolution strategy.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 446,
+    "shortcut": "/ultimateinnovationlab",
+    "title": "Ultimate Innovation Lab",
+    "category": "Creativity",
+    "description": "Generate world-changing innovations with implementation plans.",
+    "prompt": "Generate breakthrough innovations for the following challenge. Evaluate originality, feasibility, technical complexity, scalability, commercial viability, implementation roadmap, expected impact, risks and long-term sustainability before ranking the strongest ideas.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 447,
+    "shortcut": "/ultimateknowledgeengine",
+    "title": "Ultimate Knowledge Engine",
+    "category": "Knowledge",
+    "description": "Transform information into an interconnected knowledge system.",
+    "prompt": "Create an interconnected knowledge engine for the following topic. Organize concepts from fundamentals to mastery, identify relationships, practical applications, interdisciplinary insights, future developments and expert learning pathways.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 448,
+    "shortcut": "/ultimatefuturepro",
+    "title": "Ultimate Future Pro",
+    "category": "Forecasting",
+    "description": "Analyze future possibilities using advanced foresight methods.",
+    "prompt": "Conduct an advanced future analysis for the following subject. Evaluate emerging technologies, societal evolution, market changes, economic forces, geopolitical influences, risks, opportunities and future strategic positioning over the next 20 years.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 449,
+    "shortcut": "/ultimatecontrol",
+    "title": "Ultimate Control Center",
+    "category": "Execution",
+    "description": "Monitor and control enterprise-scale execution.",
+    "prompt": "Develop a complete operational control framework for the following initiative. Define governance, monitoring systems, KPIs, reporting mechanisms, quality assurance, escalation procedures, risk controls, corrective actions and continuous improvement strategies.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 450,
+    "shortcut": "/geminicosmos",
+    "title": "Gemini Cosmos Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Cosmos-level AI strategist, research director and enterprise intelligence system.",
+    "prompt": "Act as a Cosmos-level AI strategist, executive advisor, enterprise architect, research director and systems intelligence expert. Analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, opportunities, risks and measurable success criteria. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, design a complete implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing recommendations and conclude with executive-level insights, long-term strategy and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 451,
+    "shortcut": "/ultimateworldview",
+    "title": "Ultimate World View",
+    "category": "Strategy",
+    "description": "Analyze subjects from a truly global perspective.",
+    "prompt": "Analyze the following topic from a global perspective. Evaluate economic, technological, political, environmental, social, legal and cultural factors. Identify regional differences, emerging global trends, strategic implications, opportunities, risks and long-term recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 452,
+    "shortcut": "/ultimateportfolio",
+    "title": "Ultimate Portfolio Strategy",
+    "category": "Business",
+    "description": "Optimize portfolios using strategic evaluation.",
+    "prompt": "Evaluate the following portfolio, collection or investment strategy. Assess diversification, risk exposure, performance potential, resource allocation, scalability, resilience, optimization opportunities and long-term sustainability. Recommend prioritized improvements.\n\nPortfolio:",
+    "isOfficial": false
+  },
+  {
+    "id": 453,
+    "shortcut": "/ultimateecoscan",
+    "title": "Ultimate Environmental Scan",
+    "category": "Analysis",
+    "description": "Conduct a complete strategic environmental scan.",
+    "prompt": "Conduct a comprehensive environmental scan for the following subject. Analyze internal strengths and weaknesses, external opportunities and threats, market conditions, technological trends, competitive forces, regulatory changes and future outlook.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 454,
+    "shortcut": "/ultimatemastery",
+    "title": "Ultimate Mastery Path",
+    "category": "Knowledge",
+    "description": "Create a complete roadmap to achieve mastery.",
+    "prompt": "Design a complete mastery roadmap for the following skill or subject. Include foundational knowledge, advanced concepts, practical projects, recommended resources, assessment checkpoints, common mistakes, expert techniques and long-term learning strategy.\n\nSkill or Subject:",
+    "isOfficial": false
+  },
+  {
+    "id": 455,
+    "shortcut": "/ultimatemission",
+    "title": "Ultimate Mission Planner",
+    "category": "Planning",
+    "description": "Plan high-impact missions with precision.",
+    "prompt": "Develop a mission plan for the following objective. Define mission goals, success criteria, stakeholder responsibilities, execution phases, resource allocation, timelines, KPIs, contingency planning, risk management and post-mission evaluation.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 456,
+    "shortcut": "/ultimatebreakthrough",
+    "title": "Ultimate Breakthrough",
+    "category": "Creativity",
+    "description": "Generate revolutionary breakthrough solutions.",
+    "prompt": "Develop breakthrough solutions for the following challenge by combining science, engineering, technology, design, psychology and business thinking. Evaluate originality, feasibility, implementation complexity, expected impact, scalability, risks and future opportunities.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 457,
+    "shortcut": "/ultimateauditpro",
+    "title": "Ultimate Audit Pro",
+    "category": "Governance",
+    "description": "Perform enterprise-grade strategic audits.",
+    "prompt": "Conduct a comprehensive audit of the following organization, system or initiative. Evaluate governance, operational performance, financial sustainability, compliance, security, quality, efficiency, innovation potential and strategic improvement opportunities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 458,
+    "shortcut": "/ultimatefusion",
+    "title": "Ultimate Fusion",
+    "category": "Research",
+    "description": "Combine evidence from multiple disciplines into unified conclusions.",
+    "prompt": "Synthesize evidence from multiple disciplines for the following topic. Identify common themes, conflicting viewpoints, evidence quality, interdisciplinary relationships, research gaps, practical implications and expert recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 459,
+    "shortcut": "/ultimatelegacy",
+    "title": "Ultimate Legacy Strategy",
+    "category": "Leadership",
+    "description": "Design strategies that create lasting global impact.",
+    "prompt": "Develop a long-term legacy strategy for the following leader, organization or initiative. Define enduring vision, strategic priorities, governance, succession planning, innovation roadmap, stakeholder impact, sustainability, KPIs and long-term success indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 460,
+    "shortcut": "/geminiomega",
+    "title": "Gemini Omega Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an Omega-level AI strategist, enterprise architect and global intelligence partner.",
+    "prompt": "Act as an Omega-level AI strategist, executive advisor, enterprise architect, research director and global intelligence expert. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, risks, opportunities and measurable success criteria. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a complete implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing plans and conclude with executive-level recommendations, strategic insights and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 461,
+    "shortcut": "/ultimatehorizon",
+    "title": "Ultimate Horizon",
+    "category": "Forecasting",
+    "description": "Explore the far future through strategic foresight.",
+    "prompt": "Conduct a horizon scanning exercise for the following topic. Identify weak signals, emerging trends, disruptive technologies, societal shifts, economic forces, geopolitical influences, opportunities, risks and strategic recommendations for the next 20–30 years.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 462,
+    "shortcut": "/ultimateplaybook",
+    "title": "Ultimate Playbook",
+    "category": "Planning",
+    "description": "Build a complete execution playbook for any objective.",
+    "prompt": "Develop a comprehensive execution playbook for the following objective. Include goals, success metrics, stakeholder roles, workflows, implementation phases, decision points, contingency plans, communication strategy, KPIs and post-execution review.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 463,
+    "shortcut": "/ultimateintellect",
+    "title": "Ultimate Intellect",
+    "category": "Knowledge",
+    "description": "Apply multidisciplinary intelligence to solve complex problems.",
+    "prompt": "Analyze the following challenge using knowledge from multiple disciplines. Integrate scientific, technical, economic, psychological, legal and strategic perspectives. Identify hidden relationships, innovative solutions and executive recommendations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 464,
+    "shortcut": "/ultimatematrix",
+    "title": "Ultimate Matrix",
+    "category": "Analysis",
+    "description": "Evaluate alternatives using advanced decision matrices.",
+    "prompt": "Construct a detailed decision matrix for the following options. Define weighted evaluation criteria, compare alternatives, assess risks, estimate long-term value, identify trade-offs and recommend the optimal choice with justification.\n\nOptions:",
+    "isOfficial": false
+  },
+  {
+    "id": 465,
+    "shortcut": "/ultimateecosystemx",
+    "title": "Ultimate Ecosystem X",
+    "category": "Systems",
+    "description": "Design interconnected systems for maximum resilience.",
+    "prompt": "Design a resilient ecosystem architecture for the following initiative. Include stakeholder relationships, governance, automation, integrations, resilience planning, scalability, monitoring, optimization strategies and future evolution roadmap.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 466,
+    "shortcut": "/ultimatevisionpro",
+    "title": "Ultimate Vision Pro",
+    "category": "Leadership",
+    "description": "Develop transformational visions that inspire long-term success.",
+    "prompt": "Create a transformational long-term vision for the following organization or initiative. Define purpose, values, strategic priorities, measurable objectives, innovation roadmap, stakeholder engagement, governance and long-term impact strategy.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 467,
+    "shortcut": "/ultimateaccelerator",
+    "title": "Ultimate Accelerator",
+    "category": "Business",
+    "description": "Accelerate growth through strategic optimization.",
+    "prompt": "Design a growth acceleration strategy for the following organization, product or service. Identify high-impact opportunities, competitive advantages, operational improvements, market expansion strategies, KPIs, implementation priorities and long-term sustainability recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 468,
+    "shortcut": "/ultimateinnovationx",
+    "title": "Ultimate Innovation X",
+    "category": "Creativity",
+    "description": "Create disruptive innovations with commercialization plans.",
+    "prompt": "Generate disruptive innovations for the following challenge. Evaluate originality, feasibility, commercialization potential, scalability, implementation roadmap, expected ROI, technical risks and long-term strategic value before ranking the best concepts.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 469,
+    "shortcut": "/ultimateintelligencex",
+    "title": "Ultimate Intelligence X",
+    "category": "Research",
+    "description": "Produce intelligence-grade multidisciplinary research reports.",
+    "prompt": "Prepare an intelligence-grade multidisciplinary report for the following topic. Evaluate evidence quality, identify patterns, distinguish facts from assumptions, estimate confidence levels, highlight research gaps, assess strategic implications and recommend executive actions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 470,
+    "shortcut": "/gemininexus",
+    "title": "Gemini Nexus Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Nexus-level AI strategist, research director and enterprise intelligence partner.",
+    "prompt": "Act as a Nexus-level AI strategist, executive advisor, enterprise architect, research director and global intelligence expert. Analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, risks, opportunities and measurable success criteria. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a complete implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing recommendations and conclude with executive-level insights, strategic guidance and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 471,
+    "shortcut": "/ultimatefrontier",
+    "title": "Ultimate Frontier",
+    "category": "Strategy",
+    "description": "Explore frontier opportunities before they become mainstream.",
+    "prompt": "Analyze the following domain to identify frontier opportunities. Evaluate emerging technologies, scientific breakthroughs, market gaps, societal shifts, regulatory developments, risks, competitive advantages and long-term strategic opportunities. Prioritize the highest-impact frontier initiatives.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 472,
+    "shortcut": "/ultimateprecision",
+    "title": "Ultimate Precision",
+    "category": "Analysis",
+    "description": "Deliver exceptionally precise analytical conclusions.",
+    "prompt": "Analyze the following subject with maximum precision. Clearly separate facts, assumptions, probabilities and uncertainties. Quantify impacts where possible, evaluate confidence levels, identify hidden dependencies and conclude with evidence-based recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 473,
+    "shortcut": "/ultimateenterprisex",
+    "title": "Ultimate Enterprise X",
+    "category": "Business",
+    "description": "Design enterprise transformation strategies at global scale.",
+    "prompt": "Develop a global enterprise transformation strategy for the following organization. Evaluate digital transformation, operational excellence, innovation capability, governance, workforce development, technology adoption, financial sustainability, KPIs and long-term competitiveness.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 474,
+    "shortcut": "/ultimatesystemsx",
+    "title": "Ultimate Systems X",
+    "category": "Systems",
+    "description": "Design highly resilient enterprise systems.",
+    "prompt": "Design an enterprise-grade system architecture for the following requirements. Include infrastructure, integrations, scalability, resilience, automation, cybersecurity, observability, governance, disaster recovery and future expansion planning.\n\nRequirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 475,
+    "shortcut": "/ultimateexecutionpro",
+    "title": "Ultimate Execution Pro",
+    "category": "Execution",
+    "description": "Execute complex strategies with world-class operational discipline.",
+    "prompt": "Create a comprehensive execution program for the following initiative. Define governance, execution methodology, milestones, stakeholder coordination, communication protocols, KPIs, monitoring dashboards, quality assurance, contingency planning and continuous optimization.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 476,
+    "shortcut": "/ultimatefuturex",
+    "title": "Ultimate Future X",
+    "category": "Forecasting",
+    "description": "Predict disruptive futures using advanced strategic foresight.",
+    "prompt": "Perform an advanced strategic foresight study for the following topic. Identify disruptive technologies, weak signals, macro trends, geopolitical changes, environmental influences, future scenarios, opportunities, risks and recommended strategic preparations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 477,
+    "shortcut": "/ultimateinnovationpro",
+    "title": "Ultimate Innovation Pro+",
+    "category": "Creativity",
+    "description": "Generate commercially viable breakthrough innovations.",
+    "prompt": "Generate multiple breakthrough innovations for the following challenge. Evaluate originality, feasibility, technical complexity, commercialization potential, scalability, implementation roadmap, investment requirements, expected ROI, risks and long-term impact before ranking the strongest ideas.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 478,
+    "shortcut": "/ultimateknowledgex",
+    "title": "Ultimate Knowledge X",
+    "category": "Knowledge",
+    "description": "Create an interconnected expert knowledge ecosystem.",
+    "prompt": "Construct an expert knowledge ecosystem for the following subject. Organize foundational principles, advanced concepts, interdisciplinary relationships, practical applications, future research directions, expert resources and a structured mastery pathway.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 479,
+    "shortcut": "/ultimateglobal",
+    "title": "Ultimate Global Intelligence",
+    "category": "Research",
+    "description": "Generate global intelligence reports with strategic recommendations.",
+    "prompt": "Prepare a global intelligence report for the following topic. Analyze worldwide trends, regional differences, geopolitical dynamics, technological developments, economic impacts, societal implications, strategic risks, opportunities and executive recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 480,
+    "shortcut": "/geminisingularity",
+    "title": "Gemini Singularity Workspace",
+    "category": "AI",
+    "description": "Use Gemini as a Singularity-level AI strategist, executive architect and global intelligence system.",
+    "prompt": "Act as a Singularity-level AI strategist, executive advisor, enterprise architect, research director and global intelligence expert. Thoroughly analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, opportunities, risks and measurable success criteria. Develop multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a comprehensive implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing plans and conclude with executive-level recommendations, strategic intelligence and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 481,
+    "shortcut": "/ultimateuniverse",
+    "title": "Ultimate Universe",
+    "category": "Strategy",
+    "description": "Analyze every strategic dimension before making a recommendation.",
+    "prompt": "Conduct the most comprehensive strategic analysis possible for the following subject. Evaluate technical, business, financial, operational, legal, ethical, environmental, geopolitical, technological and societal dimensions. Identify hidden dependencies, opportunities, risks, future implications and conclude with prioritized executive recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 482,
+    "shortcut": "/ultimatecommandpro",
+    "title": "Ultimate Command Pro",
+    "category": "Execution",
+    "description": "Build enterprise-scale command and execution systems.",
+    "prompt": "Design a command-and-control framework for the following initiative. Define governance, leadership hierarchy, execution workflows, communication protocols, KPI dashboards, quality assurance, escalation mechanisms, contingency plans, monitoring systems and continuous optimization strategies.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 483,
+    "shortcut": "/ultimateworldclass",
+    "title": "Ultimate World-Class Review",
+    "category": "Analysis",
+    "description": "Evaluate subjects against world-class standards.",
+    "prompt": "Evaluate the following subject against world-class standards. Compare quality, innovation, scalability, operational excellence, customer value, resilience, sustainability, competitiveness and long-term strategic positioning. Recommend the highest-impact improvements.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 484,
+    "shortcut": "/ultimatefuturevision",
+    "title": "Ultimate Future Vision",
+    "category": "Forecasting",
+    "description": "Develop visionary long-term strategies for future success.",
+    "prompt": "Create a visionary long-term strategy for the following topic. Analyze technological evolution, economic changes, environmental influences, demographic trends, regulatory developments, disruptive events, opportunities, risks and recommended preparation strategies for the next 30 years.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 485,
+    "shortcut": "/ultimateinnovationlabx",
+    "title": "Ultimate Innovation Lab X",
+    "category": "Creativity",
+    "description": "Generate transformational innovations with commercialization pathways.",
+    "prompt": "Generate transformational innovations for the following challenge. Assess originality, feasibility, commercialization potential, scalability, implementation roadmap, investment requirements, expected impact, risks, sustainability and competitive advantages before ranking the strongest solutions.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 486,
+    "shortcut": "/ultimategovernancex",
+    "title": "Ultimate Governance X",
+    "category": "Governance",
+    "description": "Design governance systems that scale globally.",
+    "prompt": "Design a globally scalable governance framework for the following organization or initiative. Include leadership structure, accountability, compliance, reporting systems, audit mechanisms, KPIs, risk management, decision-making processes and continuous improvement strategies.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 487,
+    "shortcut": "/ultimateknowledgevault",
+    "title": "Ultimate Knowledge Vault",
+    "category": "Knowledge",
+    "description": "Build an elite knowledge repository and learning framework.",
+    "prompt": "Create an elite knowledge repository for the following subject. Organize concepts from beginner to expert, identify interdisciplinary connections, practical applications, expert resources, future developments, research opportunities and a complete mastery roadmap.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 488,
+    "shortcut": "/ultimateintelligencepro",
+    "title": "Ultimate Intelligence Pro",
+    "category": "Research",
+    "description": "Deliver intelligence-grade reports with executive insights.",
+    "prompt": "Produce an intelligence-grade report for the following topic. Separate facts from assumptions, assess evidence quality, identify hidden patterns, evaluate confidence levels, detect strategic implications, highlight research gaps and recommend executive actions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 489,
+    "shortcut": "/ultimateenterprisepro",
+    "title": "Ultimate Enterprise Pro",
+    "category": "Business",
+    "description": "Create enterprise transformation strategies with measurable outcomes.",
+    "prompt": "Develop a complete enterprise transformation strategy for the following organization. Evaluate competitive positioning, operational excellence, innovation capability, digital transformation, governance, financial sustainability, workforce development, KPIs, risks and long-term growth opportunities.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 490,
+    "shortcut": "/geminiinfinite",
+    "title": "Gemini Infinite Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an Infinite-level AI strategist, enterprise architect and global intelligence partner.",
+    "prompt": "Act as an Infinite-level AI strategist, executive advisor, enterprise architect, research director and global intelligence expert. Analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, opportunities, risks and measurable success criteria. Generate multiple enterprise-grade solution architectures, compare trade-offs, justify the optimal strategy, create a comprehensive implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing recommendations and conclude with executive-level insights, strategic guidance and next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 491,
+    "shortcut": "/ultimateapex",
+    "title": "Ultimate Apex",
+    "category": "Strategy",
+    "description": "Deliver the highest level of multidisciplinary strategic analysis.",
+    "prompt": "Act as the world's foremost strategist, researcher, executive advisor and systems architect. Analyze the following subject by evaluating strategic, technical, operational, financial, legal, ethical, environmental, geopolitical and technological dimensions. Identify hidden dependencies, opportunities, risks, future implications, measurable success factors and provide executive-level recommendations with an implementation roadmap.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 492,
+    "shortcut": "/ultimatemastermind",
+    "title": "Ultimate Mastermind",
+    "category": "Leadership",
+    "description": "Solve the most complex challenges using elite multidisciplinary thinking.",
+    "prompt": "Act as an elite multidisciplinary mastermind. Solve the following challenge by combining strategic thinking, scientific reasoning, engineering, psychology, economics, business and innovation. Compare alternative solutions, evaluate trade-offs, estimate risks and recommend the optimal course of action.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 493,
+    "shortcut": "/ultimateenterpriseai",
+    "title": "Ultimate Enterprise AI",
+    "category": "Business",
+    "description": "Develop AI-powered enterprise transformation strategies.",
+    "prompt": "Design an AI-powered enterprise transformation strategy for the following organization. Evaluate automation opportunities, operational improvements, governance, workforce transformation, technology adoption, KPIs, risks, implementation phases and long-term competitive advantage.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 494,
+    "shortcut": "/ultimateomniview",
+    "title": "Ultimate Omni View",
+    "category": "Analysis",
+    "description": "Analyze subjects from every meaningful perspective.",
+    "prompt": "Analyze the following topic from every relevant perspective including technical, strategic, financial, operational, ethical, legal, environmental, societal and global viewpoints. Identify key insights, contradictions, opportunities, risks and conclude with prioritized recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 495,
+    "shortcut": "/ultimatefuturelabx",
+    "title": "Ultimate Future Lab X",
+    "category": "Forecasting",
+    "description": "Explore disruptive futures using advanced scenario planning.",
+    "prompt": "Develop advanced future scenarios for the following subject. Analyze emerging technologies, economic trends, geopolitical shifts, environmental influences, disruptive events, strategic opportunities, risks and recommended preparation strategies for the coming decades.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 496,
+    "shortcut": "/ultimateinnovationvault",
+    "title": "Ultimate Innovation Vault",
+    "category": "Creativity",
+    "description": "Generate elite innovation portfolios with practical implementation plans.",
+    "prompt": "Generate a portfolio of breakthrough innovations for the following challenge. Assess originality, feasibility, commercialization potential, scalability, investment needs, implementation roadmap, expected impact, competitive advantage and long-term sustainability before ranking the strongest concepts.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 497,
+    "shortcut": "/ultimateknowledgegraph",
+    "title": "Ultimate Knowledge Graph",
+    "category": "Knowledge",
+    "description": "Build an interconnected expert knowledge graph.",
+    "prompt": "Create an interconnected knowledge graph for the following topic. Organize concepts, dependencies, interdisciplinary links, practical applications, future research opportunities, expert references and a complete mastery pathway.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 498,
+    "shortcut": "/ultimateexecutiveboard",
+    "title": "Ultimate Executive Board",
+    "category": "Governance",
+    "description": "Provide board-level governance and strategic oversight.",
+    "prompt": "Act as an executive board of world-class experts. Evaluate the following initiative by reviewing governance, leadership, financial sustainability, operational excellence, innovation capability, compliance, stakeholder interests, risks and long-term strategic value. Produce board-level recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 499,
+    "shortcut": "/ultimateintelligencehub",
+    "title": "Ultimate Intelligence Hub",
+    "category": "Research",
+    "description": "Generate the highest level of intelligence reports with strategic recommendations.",
+    "prompt": "Produce a world-class intelligence report for the following subject. Distinguish facts from assumptions, assess evidence quality, identify patterns, evaluate confidence levels, detect strategic implications, highlight research gaps, anticipate future developments and recommend executive actions.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 500,
+    "shortcut": "/geminiinfinitycore",
+    "title": "Gemini Infinity Core",
+    "category": "AI",
+    "description": "Use Gemini as the ultimate strategic intelligence, enterprise architecture and global reasoning engine.",
+    "prompt": "Act as the highest-level Gemini strategic intelligence engine. Serve simultaneously as an executive advisor, enterprise architect, research director, systems thinker, innovation strategist and global intelligence analyst. Thoroughly analyze the following request by identifying objectives, assumptions, dependencies, constraints, stakeholders, opportunities, risks and measurable success criteria. Generate multiple world-class solution architectures, compare trade-offs, justify the optimal strategy, create a comprehensive implementation roadmap, establish governance, KPIs, monitoring systems, optimization strategies, future-proofing recommendations, continuous improvement mechanisms and conclude with executive-level insights, strategic guidance, future outlook and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  }
+]

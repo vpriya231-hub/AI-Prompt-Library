@@ -1,0 +1,902 @@
+[
+  {
+    "id": 101,
+    "shortcut": "/deepresearch",
+    "title": "Deep Research Assistant",
+    "category": "Research",
+    "description": "Perform comprehensive research with structured analysis.",
+    "prompt": "Act as a senior research analyst. Conduct an in-depth analysis of the following topic. Cover background, key concepts, current developments, competing viewpoints, supporting evidence, limitations, future trends, practical applications and conclude with key insights and recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 102,
+    "shortcut": "/expertteacher",
+    "title": "Expert Teacher",
+    "category": "Education",
+    "description": "Teach advanced topics like a university professor.",
+    "prompt": "Teach the following topic as an expert professor. Begin with prerequisites, explain core principles, introduce advanced concepts, provide practical examples, ask challenging review questions and conclude with a concise summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 103,
+    "shortcut": "/criticalthinking",
+    "title": "Critical Thinking",
+    "category": "Analysis",
+    "description": "Analyze ideas using critical thinking techniques.",
+    "prompt": "Analyze the following statement using critical thinking principles. Identify assumptions, evidence, logical strengths, weaknesses, possible biases, alternative interpretations and provide a balanced conclusion.\n\nStatement:",
+    "isOfficial": false
+  },
+  {
+    "id": 104,
+    "shortcut": "/documentreview",
+    "title": "Document Reviewer",
+    "category": "Documents",
+    "description": "Review documents professionally.",
+    "prompt": "Review the following document thoroughly. Identify its objectives, summarize the content, evaluate clarity, consistency, completeness, strengths, weaknesses and provide actionable improvement suggestions.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 105,
+    "shortcut": "/multianalysis",
+    "title": "Multi-Perspective Analysis",
+    "category": "Analysis",
+    "description": "Analyze topics from multiple viewpoints.",
+    "prompt": "Analyze the following topic from technical, business, educational, ethical, environmental and user perspectives. Highlight agreements, conflicts, opportunities and final recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 106,
+    "shortcut": "/knowledgegraph",
+    "title": "Knowledge Graph",
+    "category": "Knowledge",
+    "description": "Organize concepts into a connected knowledge structure.",
+    "prompt": "Create a knowledge graph for the following topic. Identify the main concepts, related subtopics, relationships, dependencies and explain how they connect to each other.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 107,
+    "shortcut": "/learningcoach",
+    "title": "Learning Coach",
+    "category": "Education",
+    "description": "Receive personalized learning guidance.",
+    "prompt": "Act as a personal learning coach. Create a customized learning strategy for the following subject. Include objectives, study schedule, recommended resources, practice exercises, progress reviews and mastery milestones.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 108,
+    "shortcut": "/strategyanalysis",
+    "title": "Strategic Analysis",
+    "category": "Business",
+    "description": "Evaluate strategic opportunities and challenges.",
+    "prompt": "Perform a strategic analysis of the following situation. Identify objectives, opportunities, risks, competitors, strengths, weaknesses and recommend the most effective strategy with justification.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 109,
+    "shortcut": "/advancedsummary",
+    "title": "Advanced Summary",
+    "category": "Writing",
+    "description": "Produce structured summaries with insights.",
+    "prompt": "Summarize the following content into sections covering key ideas, supporting evidence, important conclusions, actionable insights and unanswered questions.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 110,
+    "shortcut": "/masterplanner",
+    "title": "Master Planner",
+    "category": "Planning",
+    "description": "Build comprehensive execution plans.",
+    "prompt": "Develop a comprehensive execution plan for the following objective. Include goals, milestones, timelines, required resources, risk management, contingency plans, KPIs and success criteria.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 111,
+    "shortcut": "/decisionadvisor",
+    "title": "Decision Advisor",
+    "category": "Analysis",
+    "description": "Support complex decision-making.",
+    "prompt": "Help evaluate the following decision. Compare all realistic options using evidence, costs, benefits, risks, long-term effects and uncertainties before recommending the strongest option.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 112,
+    "shortcut": "/advancedbrainstorm",
+    "title": "Advanced Brainstorm",
+    "category": "Creativity",
+    "description": "Generate innovative high-quality ideas.",
+    "prompt": "Generate 30 innovative ideas for the following topic. Categorize them by originality, feasibility, expected impact and implementation difficulty. Recommend the top five ideas with explanations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 113,
+    "shortcut": "/researchroadmap",
+    "title": "Research Roadmap",
+    "category": "Research",
+    "description": "Plan a complete research workflow.",
+    "prompt": "Create a complete research roadmap for the following topic. Include research objectives, background study, key questions, methodology, reliable sources, analysis techniques, expected outcomes and review checkpoints.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 114,
+    "shortcut": "/documentinsights",
+    "title": "Document Insights",
+    "category": "Documents",
+    "description": "Extract deep insights from documents.",
+    "prompt": "Analyze the following document in depth. Identify its main objectives, key arguments, supporting evidence, assumptions, strengths, weaknesses, unanswered questions and practical recommendations. Finish with an executive summary.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 115,
+    "shortcut": "/futureforecast",
+    "title": "Future Forecast",
+    "category": "Analysis",
+    "description": "Predict possible future developments.",
+    "prompt": "Analyze the following topic and forecast its possible future developments over the next 5–10 years. Discuss trends, opportunities, risks, disruptive factors and likely scenarios with supporting reasoning.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 116,
+    "shortcut": "/expertcompare",
+    "title": "Expert Comparison",
+    "category": "Analysis",
+    "description": "Compare multiple subjects with expert-level depth.",
+    "prompt": "Compare the following subjects in depth. Evaluate features, strengths, weaknesses, limitations, ideal use cases, cost considerations, scalability and future potential. Present the comparison in a clear table followed by recommendations.\n\nSubjects:",
+    "isOfficial": false
+  },
+  {
+    "id": 117,
+    "shortcut": "/knowledgeaudit",
+    "title": "Knowledge Audit",
+    "category": "Education",
+    "description": "Assess current knowledge and identify improvement areas.",
+    "prompt": "Perform a knowledge audit for the following subject. Identify essential topics, missing concepts, common misconceptions, recommended learning priorities and a structured improvement plan.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 118,
+    "shortcut": "/innovationlab",
+    "title": "Innovation Lab",
+    "category": "Creativity",
+    "description": "Generate breakthrough innovations.",
+    "prompt": "Act as an innovation consultant. Generate breakthrough ideas for the following challenge. Include emerging technologies, creative solutions, implementation strategies, risks, expected impact and feasibility ratings.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 119,
+    "shortcut": "/riskmatrix",
+    "title": "Risk Matrix",
+    "category": "Business",
+    "description": "Evaluate risks using a structured matrix.",
+    "prompt": "Create a comprehensive risk matrix for the following project or situation. Identify each risk, estimate probability and impact, assign priority levels, recommend mitigation strategies and define monitoring methods.\n\nProject or Situation:",
+    "isOfficial": false
+  },
+  {
+    "id": 120,
+    "shortcut": "/advancedworkflow",
+    "title": "Advanced Workflow",
+    "category": "Productivity",
+    "description": "Design optimized workflows for complex tasks.",
+    "prompt": "Design a highly efficient workflow for the following process. Include preparation, execution, automation opportunities, quality assurance, optimization strategies, expected outputs and performance metrics.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 121,
+    "shortcut": "/reasoningcoach",
+    "title": "Reasoning Coach",
+    "category": "AI",
+    "description": "Strengthen logical reasoning and structured thinking.",
+    "prompt": "Analyze the following problem using structured reasoning. Break it into smaller components, evaluate alternative approaches, explain trade-offs, justify the recommended solution and summarize the reasoning process.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 122,
+    "shortcut": "/masterstudy",
+    "title": "Master Study System",
+    "category": "Education",
+    "description": "Build a complete learning and revision system.",
+    "prompt": "Create a complete study system for the following subject. Include learning objectives, daily study schedule, revision cycles, active recall exercises, spaced repetition plan, practice tests and mastery checkpoints.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 123,
+    "shortcut": "/executiveanalysis",
+    "title": "Executive Analysis",
+    "category": "Business",
+    "description": "Produce executive-level strategic analysis.",
+    "prompt": "Prepare an executive-level analysis of the following topic. Include strategic importance, current status, key findings, business impact, opportunities, risks, recommendations and an executive summary suitable for decision-makers.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 124,
+    "shortcut": "/multistepsolve",
+    "title": "Multi-Step Solver",
+    "category": "Analysis",
+    "description": "Solve complex problems through sequential reasoning.",
+    "prompt": "Solve the following complex problem by dividing it into logical stages. Explain each stage, evaluate alternative approaches, justify the final solution and provide recommendations for implementation.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 125,
+    "shortcut": "/geminiworkspace",
+    "title": "Gemini Workspace",
+    "category": "AI",
+    "description": "Organize complex projects into a structured workspace.",
+    "prompt": "Act as an advanced AI project workspace. Organize the following project into objectives, tasks, milestones, dependencies, resources, risks, timelines, progress checkpoints and final deliverables. Suggest improvements wherever appropriate.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 126,
+    "shortcut": "/advancedinsights",
+    "title": "Advanced Insights",
+    "category": "Analysis",
+    "description": "Extract strategic insights from complex information.",
+    "prompt": "Analyze the following information and identify strategic insights, hidden patterns, emerging trends, potential opportunities, risks and actionable recommendations. Organize the response with clear headings and conclude with the three most important takeaways.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 127,
+    "shortcut": "/researchframework",
+    "title": "Research Framework",
+    "category": "Research",
+    "description": "Build a complete framework for conducting research.",
+    "prompt": "Design a comprehensive research framework for the following topic. Include objectives, research questions, hypotheses, methodology, data collection techniques, analysis methods, expected outcomes and limitations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 128,
+    "shortcut": "/systemsanalysis",
+    "title": "Systems Analysis",
+    "category": "Analysis",
+    "description": "Analyze systems and their interactions.",
+    "prompt": "Perform a systems analysis of the following system. Identify components, relationships, inputs, outputs, dependencies, bottlenecks, optimization opportunities and long-term sustainability considerations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 129,
+    "shortcut": "/masterbrainstorm",
+    "title": "Master Brainstorm",
+    "category": "Creativity",
+    "description": "Generate expert-level creative solutions.",
+    "prompt": "Generate highly original solutions for the following challenge. Categorize ideas into short-term, medium-term and long-term solutions. Evaluate feasibility, innovation level, cost, impact and implementation complexity.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 130,
+    "shortcut": "/learningarchitecture",
+    "title": "Learning Architecture",
+    "category": "Education",
+    "description": "Design a complete learning architecture.",
+    "prompt": "Design a comprehensive learning architecture for the following subject. Include prerequisite knowledge, learning modules, milestones, assessments, practical exercises, revision strategy and mastery indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 131,
+    "shortcut": "/decisionframework",
+    "title": "Decision Framework",
+    "category": "Business",
+    "description": "Build a structured framework for strategic decisions.",
+    "prompt": "Create a structured decision-making framework for the following situation. Define objectives, evaluation criteria, decision options, risk analysis, trade-offs, success metrics and recommended actions.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 132,
+    "shortcut": "/projectaudit",
+    "title": "Project Audit",
+    "category": "Business",
+    "description": "Review projects for strengths and improvement areas.",
+    "prompt": "Conduct a comprehensive audit of the following project. Evaluate objectives, planning, execution, risks, stakeholder management, resource utilization, performance metrics and improvement opportunities.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 133,
+    "shortcut": "/complexexplainer",
+    "title": "Complex Concept Explainer",
+    "category": "Education",
+    "description": "Explain advanced concepts in a structured way.",
+    "prompt": "Explain the following advanced concept thoroughly. Start with the fundamentals, introduce advanced principles, include diagrams or analogies where appropriate, discuss practical applications and summarize the key ideas.\n\nConcept:",
+    "isOfficial": false
+  },
+  {
+    "id": 134,
+    "shortcut": "/strategyplanner",
+    "title": "Strategy Planner",
+    "category": "Planning",
+    "description": "Create comprehensive strategic plans.",
+    "prompt": "Develop a detailed strategic plan for the following objective. Include vision, mission, goals, milestones, execution strategy, KPIs, risks, contingency plans and expected outcomes.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 135,
+    "shortcut": "/expertassistant",
+    "title": "Expert Assistant",
+    "category": "AI",
+    "description": "Handle complex requests with expert-level reasoning.",
+    "prompt": "Act as an expert AI consultant. Carefully analyze the following request, identify missing information if necessary, explain your reasoning, evaluate alternative approaches, provide a well-structured solution and conclude with practical next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 136,
+    "shortcut": "/evidenceanalysis",
+    "title": "Evidence Analysis",
+    "category": "Research",
+    "description": "Evaluate the quality and reliability of evidence.",
+    "prompt": "Analyze the following evidence or information. Assess its credibility, reliability, possible biases, supporting evidence, limitations and overall strength. Explain whether the conclusions are justified and recommend additional evidence if needed.\n\nEvidence:",
+    "isOfficial": false
+  },
+  {
+    "id": 137,
+    "shortcut": "/knowledgeconnections",
+    "title": "Knowledge Connections",
+    "category": "Knowledge",
+    "description": "Discover relationships between concepts.",
+    "prompt": "Identify and explain the relationships between the following concepts. Describe how they influence each other, highlight dependencies, provide practical examples and summarize the overall knowledge network.\n\nConcepts:",
+    "isOfficial": false
+  },
+  {
+    "id": 138,
+    "shortcut": "/scenarioPlanner",
+    "title": "Scenario Planner",
+    "category": "Planning",
+    "description": "Prepare for multiple future possibilities.",
+    "prompt": "Develop detailed best-case, expected-case and worst-case scenarios for the following situation. Explain assumptions, likely outcomes, risks, opportunities and recommended actions for each scenario.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 139,
+    "shortcut": "/processaudit",
+    "title": "Process Audit",
+    "category": "Business",
+    "description": "Evaluate and improve operational processes.",
+    "prompt": "Conduct a complete audit of the following process. Identify inefficiencies, bottlenecks, quality issues, automation opportunities, optimization strategies and measurable performance improvements.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 140,
+    "shortcut": "/masteroutline",
+    "title": "Master Outline",
+    "category": "Writing",
+    "description": "Create comprehensive structured outlines.",
+    "prompt": "Create a detailed master outline for the following topic. Organize it into logical sections, subsections, key discussion points, supporting evidence, examples and a concluding summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 141,
+    "shortcut": "/expertroadmap",
+    "title": "Expert Roadmap",
+    "category": "Planning",
+    "description": "Build an expert-level roadmap for success.",
+    "prompt": "Develop an expert-level roadmap for achieving the following objective. Include preparation, execution phases, milestones, resource planning, performance indicators, risk management and review checkpoints.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 142,
+    "shortcut": "/argumentanalysis",
+    "title": "Argument Analysis",
+    "category": "Analysis",
+    "description": "Evaluate arguments with logical precision.",
+    "prompt": "Analyze the following argument. Identify claims, evidence, assumptions, logical fallacies, strengths, weaknesses and counterarguments. Conclude with an objective evaluation.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 143,
+    "shortcut": "/mastercomparison",
+    "title": "Master Comparison",
+    "category": "Analysis",
+    "description": "Compare multiple subjects comprehensively.",
+    "prompt": "Compare the following subjects in depth using features, performance, cost, scalability, advantages, disadvantages, risks, ideal use cases and future potential. Present the results in a comparison table followed by recommendations.\n\nSubjects:",
+    "isOfficial": false
+  },
+  {
+    "id": 144,
+    "shortcut": "/researchadvisor",
+    "title": "Research Advisor",
+    "category": "Research",
+    "description": "Receive expert guidance throughout the research process.",
+    "prompt": "Act as an experienced research advisor. Guide the following research project by recommending objectives, methodology, literature review strategy, data collection techniques, analysis methods, expected challenges and quality improvement suggestions.\n\nResearch Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 145,
+    "shortcut": "/geminianalyst",
+    "title": "Gemini Analyst",
+    "category": "AI",
+    "description": "Analyze complex requests using structured reasoning.",
+    "prompt": "Act as an advanced AI analyst. Carefully examine the following request, identify objectives, assumptions, missing information, alternative approaches, risks, opportunities and provide a comprehensive, well-structured solution with practical recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 146,
+    "shortcut": "/decisionsimulation",
+    "title": "Decision Simulation",
+    "category": "Analysis",
+    "description": "Simulate outcomes before making important decisions.",
+    "prompt": "Simulate the possible outcomes of the following decision. Analyze short-term and long-term consequences, potential risks, benefits, uncertainties and contingency plans. Conclude with the most balanced recommendation.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 147,
+    "shortcut": "/knowledgeexpander",
+    "title": "Knowledge Expander",
+    "category": "Knowledge",
+    "description": "Expand understanding beyond the basics.",
+    "prompt": "Expand the following topic beyond its basic explanation. Cover advanced concepts, related disciplines, historical context, practical applications, recent developments and future directions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 148,
+    "shortcut": "/performanceaudit",
+    "title": "Performance Audit",
+    "category": "Business",
+    "description": "Evaluate performance and identify improvements.",
+    "prompt": "Perform a comprehensive performance audit for the following project, team or process. Evaluate efficiency, effectiveness, productivity, quality, resource utilization, risks and opportunities for improvement.\n\nProject, Team or Process:",
+    "isOfficial": false
+  },
+  {
+    "id": 149,
+    "shortcut": "/learningdiagnosis",
+    "title": "Learning Diagnosis",
+    "category": "Education",
+    "description": "Diagnose learning strengths and weaknesses.",
+    "prompt": "Assess learning progress for the following subject. Identify strengths, weaknesses, missing concepts, common mistakes, recommended study techniques and a personalized improvement roadmap.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 150,
+    "shortcut": "/frameworkanalysis",
+    "title": "Framework Analysis",
+    "category": "Analysis",
+    "description": "Analyze a problem using structured frameworks.",
+    "prompt": "Analyze the following problem using multiple analytical frameworks where appropriate. Explain each framework, compare the findings, identify key insights and recommend the most effective solution.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 151,
+    "shortcut": "/innovationstrategy",
+    "title": "Innovation Strategy",
+    "category": "Creativity",
+    "description": "Develop strategies for innovative growth.",
+    "prompt": "Develop an innovation strategy for the following organization, product or idea. Identify opportunities, emerging technologies, competitive advantages, implementation phases, risks and success metrics.\n\nOrganization, Product or Idea:",
+    "isOfficial": false
+  },
+  {
+    "id": 152,
+    "shortcut": "/expertreview",
+    "title": "Expert Review",
+    "category": "Analysis",
+    "description": "Receive a professional expert evaluation.",
+    "prompt": "Review the following content as an experienced domain expert. Evaluate accuracy, completeness, structure, clarity, technical quality, strengths, weaknesses and provide prioritized recommendations.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 153,
+    "shortcut": "/systemsdesign",
+    "title": "Systems Design",
+    "category": "Planning",
+    "description": "Design scalable systems from requirements.",
+    "prompt": "Design a complete system for the following requirements. Include architecture, major components, data flow, scalability considerations, risks, security concerns and implementation phases.\n\nRequirements:",
+    "isOfficial": false
+  },
+  {
+    "id": 154,
+    "shortcut": "/advancedmentor",
+    "title": "Advanced Mentor",
+    "category": "Personal Growth",
+    "description": "Receive expert mentoring for challenging goals.",
+    "prompt": "Act as an experienced mentor. Guide me through the following challenge by identifying obstacles, opportunities, recommended actions, milestones, accountability methods and long-term growth strategies.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 155,
+    "shortcut": "/geministrategist",
+    "title": "Gemini Strategist",
+    "category": "AI",
+    "description": "Use Gemini for strategic planning and expert reasoning.",
+    "prompt": "Act as an advanced strategic AI assistant. Carefully analyze the following objective, identify assumptions, evaluate multiple approaches, compare trade-offs, explain your reasoning, recommend the optimal strategy and conclude with a prioritized action plan.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 156,
+    "shortcut": "/complexplanner",
+    "title": "Complex Project Planner",
+    "category": "Planning",
+    "description": "Plan large and complex projects systematically.",
+    "prompt": "Create a comprehensive project plan for the following project. Include objectives, scope, milestones, work breakdown structure, dependencies, resource allocation, timeline, risks, quality assurance, communication plan and success metrics.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 157,
+    "shortcut": "/knowledgefusion",
+    "title": "Knowledge Fusion",
+    "category": "Knowledge",
+    "description": "Combine information from multiple perspectives.",
+    "prompt": "Combine knowledge from different disciplines to explain the following topic. Highlight relationships, shared principles, unique insights, practical applications and interdisciplinary opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 158,
+    "shortcut": "/causalanalysis",
+    "title": "Causal Analysis",
+    "category": "Analysis",
+    "description": "Identify causes, effects and hidden relationships.",
+    "prompt": "Perform a causal analysis of the following situation. Identify direct causes, indirect causes, contributing factors, consequences, feedback loops and possible intervention points.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 159,
+    "shortcut": "/researchsynthesis",
+    "title": "Research Synthesis",
+    "category": "Research",
+    "description": "Synthesize information into a coherent overview.",
+    "prompt": "Synthesize the available information about the following topic into a well-organized report. Include major findings, agreements, disagreements, evidence quality, knowledge gaps and future research directions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 160,
+    "shortcut": "/expertroadmapplus",
+    "title": "Expert Success Roadmap",
+    "category": "Planning",
+    "description": "Build a complete roadmap from beginner to expert.",
+    "prompt": "Create a roadmap for mastering the following subject from beginner to expert level. Include learning phases, practical projects, assessment checkpoints, advanced challenges, recommended resources and mastery indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 161,
+    "shortcut": "/decisionoptimizer",
+    "title": "Decision Optimizer",
+    "category": "Analysis",
+    "description": "Optimize decisions using structured evaluation.",
+    "prompt": "Optimize the following decision by evaluating objectives, constraints, trade-offs, risks, opportunities and long-term outcomes. Recommend the best decision with detailed justification.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 162,
+    "shortcut": "/patternfinder",
+    "title": "Pattern Finder",
+    "category": "Analysis",
+    "description": "Detect patterns and recurring themes.",
+    "prompt": "Analyze the following information to identify recurring patterns, trends, anomalies, hidden relationships and possible explanations. Summarize the key findings and their implications.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 163,
+    "shortcut": "/advancedframework",
+    "title": "Advanced Framework Builder",
+    "category": "Planning",
+    "description": "Design a structured framework for solving complex problems.",
+    "prompt": "Design a comprehensive framework for addressing the following challenge. Include objectives, components, workflows, decision criteria, evaluation methods, feedback mechanisms and success metrics.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 164,
+    "shortcut": "/masteradvisor",
+    "title": "Master Advisor",
+    "category": "AI",
+    "description": "Receive expert-level strategic guidance.",
+    "prompt": "Act as a world-class expert advisor. Analyze the following request from multiple perspectives, identify hidden assumptions, evaluate possible strategies, recommend the strongest solution and provide a prioritized action plan with measurable outcomes.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 165,
+    "shortcut": "/geminiexpert",
+    "title": "Gemini Expert Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an advanced reasoning and planning assistant.",
+    "prompt": "Act as an advanced AI reasoning assistant. Carefully analyze the following request, identify objectives, missing information, constraints, opportunities and risks. Develop a structured solution, explain your reasoning, provide alternative approaches where appropriate and conclude with practical next steps and follow-up suggestions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 166,
+    "shortcut": "/deepinspector",
+    "title": "Deep Inspector",
+    "category": "Analysis",
+    "description": "Perform an in-depth examination of complex information.",
+    "prompt": "Conduct a detailed analysis of the following information. Identify its structure, assumptions, strengths, weaknesses, hidden patterns, risks, opportunities and actionable recommendations. Finish with an executive summary.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 167,
+    "shortcut": "/researchmentor",
+    "title": "Research Mentor",
+    "category": "Research",
+    "description": "Guide research projects from planning to completion.",
+    "prompt": "Act as an experienced research mentor. Help plan the following research project by defining objectives, research questions, methodology, literature review strategy, data analysis approach, expected challenges and quality improvement recommendations.\n\nResearch Project:",
+    "isOfficial": false
+  },
+  {
+    "id": 168,
+    "shortcut": "/systemoptimizer",
+    "title": "System Optimizer",
+    "category": "Business",
+    "description": "Improve the efficiency of complex systems.",
+    "prompt": "Analyze the following system and identify inefficiencies, bottlenecks, scalability issues, optimization opportunities, automation possibilities and performance improvements. Present a prioritized implementation plan.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 169,
+    "shortcut": "/masterlearning",
+    "title": "Master Learning Plan",
+    "category": "Education",
+    "description": "Develop an expert-level learning journey.",
+    "prompt": "Create an expert-level learning journey for the following subject. Include prerequisite knowledge, learning stages, projects, assessments, revision cycles, mastery checkpoints and continuous improvement strategies.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 170,
+    "shortcut": "/strategicscenarios",
+    "title": "Strategic Scenarios",
+    "category": "Planning",
+    "description": "Evaluate strategic options through scenario planning.",
+    "prompt": "Develop multiple strategic scenarios for the following objective. Include optimistic, realistic and pessimistic outcomes, assumptions, risks, opportunities, required resources and recommended actions.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 171,
+    "shortcut": "/knowledgeengine",
+    "title": "Knowledge Engine",
+    "category": "Knowledge",
+    "description": "Organize knowledge into a structured reference system.",
+    "prompt": "Create a comprehensive knowledge system for the following topic. Include core concepts, relationships, terminology, examples, common misconceptions, practical applications and advanced references.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 172,
+    "shortcut": "/advanceddecision",
+    "title": "Advanced Decision Support",
+    "category": "Analysis",
+    "description": "Support high-impact decision-making.",
+    "prompt": "Evaluate the following decision using structured analysis. Consider objectives, constraints, stakeholder impact, uncertainty, trade-offs, risks, opportunities and long-term consequences before recommending the best course of action.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 173,
+    "shortcut": "/executiveplanner",
+    "title": "Executive Planner",
+    "category": "Business",
+    "description": "Prepare executive-level implementation plans.",
+    "prompt": "Develop an executive implementation plan for the following initiative. Include strategic objectives, milestones, timelines, KPIs, governance structure, risk management and review mechanisms.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 174,
+    "shortcut": "/advancedexplainer",
+    "title": "Advanced Explainer",
+    "category": "Education",
+    "description": "Explain sophisticated concepts with clarity.",
+    "prompt": "Explain the following advanced topic in a structured and accessible manner. Cover foundational concepts, advanced principles, real-world examples, common misconceptions, practical applications and future developments.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 175,
+    "shortcut": "/geminipro",
+    "title": "Gemini Pro Workspace",
+    "category": "AI",
+    "description": "Use Gemini for advanced reasoning, planning and analysis.",
+    "prompt": "Act as an advanced AI strategist and reasoning assistant. Analyze the following request thoroughly, identify objectives, assumptions, constraints and missing information. Compare multiple solution strategies, explain trade-offs, recommend the optimal approach and conclude with a detailed execution plan and measurable success criteria.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 176,
+    "shortcut": "/advancedresearch",
+    "title": "Advanced Research Planner",
+    "category": "Research",
+    "description": "Design a professional research strategy from start to finish.",
+    "prompt": "Act as a senior research consultant. Develop a complete research plan for the following topic. Include objectives, background, literature review strategy, research questions, hypotheses (if applicable), methodology, data collection, analysis techniques, limitations, ethical considerations, expected outcomes and recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 177,
+    "shortcut": "/evidencebuilder",
+    "title": "Evidence Builder",
+    "category": "Research",
+    "description": "Organize evidence into a structured argument.",
+    "prompt": "Analyze the following claim. Identify supporting evidence, opposing evidence, reliability of each source, remaining uncertainties and provide a balanced conclusion with confidence level.\n\nClaim:",
+    "isOfficial": false
+  },
+  {
+    "id": 178,
+    "shortcut": "/knowledgeplanner",
+    "title": "Knowledge Planner",
+    "category": "Knowledge",
+    "description": "Create a structured knowledge development plan.",
+    "prompt": "Create a structured knowledge development plan for the following subject. Divide it into foundational knowledge, intermediate concepts, advanced topics, practical applications, expert resources and long-term learning milestones.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 179,
+    "shortcut": "/impactanalysis",
+    "title": "Impact Analysis",
+    "category": "Analysis",
+    "description": "Evaluate short-term and long-term impacts.",
+    "prompt": "Analyze the impact of the following event, decision or technology. Evaluate economic, technical, social, environmental and ethical impacts in both the short term and long term. Finish with key recommendations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 180,
+    "shortcut": "/optimizationplan",
+    "title": "Optimization Plan",
+    "category": "Productivity",
+    "description": "Design a detailed optimization strategy.",
+    "prompt": "Analyze the following workflow or process and create a detailed optimization plan. Identify bottlenecks, unnecessary steps, automation opportunities, performance metrics and an implementation roadmap.\n\nWorkflow:",
+    "isOfficial": false
+  },
+  {
+    "id": 181,
+    "shortcut": "/advancedmentor",
+    "title": "Advanced Mentor",
+    "category": "Personal Growth",
+    "description": "Receive expert mentoring for ambitious goals.",
+    "prompt": "Act as an experienced mentor. Help achieve the following goal by identifying strengths, weaknesses, opportunities, obstacles, milestones, accountability methods, review checkpoints and long-term growth strategies.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 182,
+    "shortcut": "/systemreview",
+    "title": "System Review",
+    "category": "Business",
+    "description": "Evaluate systems for quality and scalability.",
+    "prompt": "Review the following system from architecture, performance, reliability, scalability, maintainability, security and usability perspectives. Recommend prioritized improvements with explanations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 183,
+    "shortcut": "/expertinsights",
+    "title": "Expert Insights",
+    "category": "Analysis",
+    "description": "Generate expert-level observations and recommendations.",
+    "prompt": "Analyze the following topic like a domain expert. Identify hidden insights, emerging opportunities, overlooked risks, strategic recommendations and future possibilities. Conclude with the five most valuable insights.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 184,
+    "shortcut": "/advancedframework",
+    "title": "Advanced Solution Framework",
+    "category": "Planning",
+    "description": "Develop a professional problem-solving framework.",
+    "prompt": "Design a comprehensive framework for solving the following challenge. Include objectives, inputs, workflows, evaluation criteria, feedback mechanisms, optimization methods, KPIs and implementation phases.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 185,
+    "shortcut": "/geminiexecutive",
+    "title": "Gemini Executive Assistant",
+    "category": "AI",
+    "description": "Handle executive-level planning, reasoning and decision support.",
+    "prompt": "Act as an executive AI advisor. Carefully analyze the following request, identify objectives, assumptions, missing information, stakeholders, risks and opportunities. Develop multiple solution strategies, compare trade-offs, recommend the strongest approach and conclude with an executive action plan, measurable success indicators and follow-up recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 186,
+    "shortcut": "/researchmatrix",
+    "title": "Research Matrix",
+    "category": "Research",
+    "description": "Organize research into a structured comparison matrix.",
+    "prompt": "Create a research matrix for the following topic. Organize major concepts, supporting evidence, competing viewpoints, strengths, weaknesses, knowledge gaps and future research opportunities into a structured format.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 187,
+    "shortcut": "/expertreasoning",
+    "title": "Expert Reasoning",
+    "category": "Analysis",
+    "description": "Analyze problems using expert-level reasoning.",
+    "prompt": "Analyze the following problem using expert reasoning. Break it into logical components, evaluate alternative explanations, identify assumptions, compare solution paths and recommend the strongest approach with justification.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 188,
+    "shortcut": "/knowledgeauditplus",
+    "title": "Knowledge Audit Plus",
+    "category": "Knowledge",
+    "description": "Perform a detailed assessment of knowledge coverage.",
+    "prompt": "Evaluate the current knowledge coverage for the following subject. Identify strengths, missing topics, misconceptions, advanced concepts, recommended resources and a prioritized learning roadmap.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 189,
+    "shortcut": "/projectstrategy",
+    "title": "Project Strategy",
+    "category": "Planning",
+    "description": "Develop a strategic project execution plan.",
+    "prompt": "Develop a strategic execution plan for the following project. Include objectives, stakeholders, deliverables, milestones, timelines, resource allocation, risk mitigation, KPIs and review checkpoints.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 190,
+    "shortcut": "/futureanalysis",
+    "title": "Future Analysis",
+    "category": "Analysis",
+    "description": "Explore future possibilities using structured forecasting.",
+    "prompt": "Analyze the future of the following topic over the next decade. Discuss emerging technologies, industry trends, opportunities, threats, possible disruptions and practical recommendations for preparation.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 191,
+    "shortcut": "/systemthinking",
+    "title": "System Thinking",
+    "category": "Analysis",
+    "description": "Understand complex systems through systems thinking.",
+    "prompt": "Apply systems thinking to the following situation. Identify system components, interactions, feedback loops, leverage points, unintended consequences and optimization opportunities.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 192,
+    "shortcut": "/masterplannerplus",
+    "title": "Master Planner Plus",
+    "category": "Planning",
+    "description": "Create an advanced implementation roadmap.",
+    "prompt": "Design an advanced implementation roadmap for the following objective. Include preparation, execution phases, milestones, dependencies, success metrics, contingency plans and post-implementation evaluation.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 193,
+    "shortcut": "/criticaladvisor",
+    "title": "Critical Advisor",
+    "category": "Analysis",
+    "description": "Provide objective and evidence-based advice.",
+    "prompt": "Act as a critical advisor. Evaluate the following proposal objectively by identifying strengths, weaknesses, assumptions, risks, opportunities, evidence requirements and recommended improvements.\n\nProposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 194,
+    "shortcut": "/knowledgeecosystem",
+    "title": "Knowledge Ecosystem",
+    "category": "Knowledge",
+    "description": "Build a complete ecosystem of related knowledge.",
+    "prompt": "Construct a knowledge ecosystem for the following topic. Map core concepts, related disciplines, supporting theories, practical applications, current trends and future directions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 195,
+    "shortcut": "/executiveworkspace",
+    "title": "Executive Workspace",
+    "category": "AI",
+    "description": "Use Gemini as an executive reasoning and planning partner.",
+    "prompt": "Act as an executive AI strategist. Analyze the following request comprehensively, identify objectives, stakeholders, constraints, risks, opportunities and success factors. Develop multiple strategic options, compare trade-offs, recommend the best approach and provide a prioritized implementation roadmap with measurable outcomes.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 196,
+    "shortcut": "/strategicinsights",
+    "title": "Strategic Insights",
+    "category": "Analysis",
+    "description": "Generate high-level strategic insights from complex information.",
+    "prompt": "Analyze the following topic from a strategic perspective. Identify key drivers, emerging trends, hidden opportunities, major risks, stakeholder implications, competitive factors and actionable recommendations. Finish with an executive summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 197,
+    "shortcut": "/researchnavigator",
+    "title": "Research Navigator",
+    "category": "Research",
+    "description": "Navigate complex research topics with a structured approach.",
+    "prompt": "Act as a senior research advisor. Develop a complete research navigation plan for the following topic. Include background knowledge, research objectives, key questions, recommended sources, methodology, evaluation criteria, expected challenges and future research opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 198,
+    "shortcut": "/masteranalyst",
+    "title": "Master Analyst",
+    "category": "Analysis",
+    "description": "Perform comprehensive expert-level analysis.",
+    "prompt": "Perform a comprehensive expert analysis of the following subject. Evaluate its strengths, weaknesses, opportunities, risks, supporting evidence, alternative viewpoints, future implications and practical recommendations. Present the findings in a structured report.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 199,
+    "shortcut": "/expertworkspace",
+    "title": "Expert Workspace",
+    "category": "AI",
+    "description": "Organize and solve complex professional tasks.",
+    "prompt": "Act as an expert AI workspace. Organize the following task into objectives, assumptions, dependencies, constraints, execution phases, risks, required resources, success metrics and final deliverables. Recommend the most efficient execution strategy.\n\nTask:",
+    "isOfficial": false
+  },
+  {
+    "id": 200,
+    "shortcut": "/geminiadvanced",
+    "title": "Gemini Advanced Assistant",
+    "category": "AI",
+    "description": "Use Gemini for advanced reasoning, research and strategic decision-making.",
+    "prompt": "Act as an advanced AI reasoning and research assistant. Thoroughly analyze the following request by identifying objectives, assumptions, missing information, constraints, opportunities and risks. Evaluate multiple solution strategies, compare trade-offs, provide evidence-based recommendations, develop a prioritized execution roadmap and conclude with measurable success criteria and suggested follow-up actions.\n\nRequest:",
+    "isOfficial": false
+  }
+]

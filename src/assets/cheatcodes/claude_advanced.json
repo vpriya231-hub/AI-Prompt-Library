@@ -1,0 +1,902 @@
+[
+  {
+    "id": 101,
+    "shortcut": "/deepreason",
+    "title": "Deep Reasoning",
+    "category": "Reasoning",
+    "description": "Analyze complex questions through careful, structured reasoning.",
+    "prompt": "Analyze the following question using careful, structured reasoning. Clarify assumptions, identify missing information, evaluate multiple interpretations, compare possible conclusions, discuss trade-offs where appropriate and present a balanced, evidence-based recommendation.\n\nQuestion:",
+    "isOfficial": false
+  },
+  {
+    "id": 102,
+    "shortcut": "/criticalanalysis",
+    "title": "Critical Analysis",
+    "category": "Analysis",
+    "description": "Perform an objective and in-depth critical analysis.",
+    "prompt": "Critically analyze the following subject. Evaluate its strengths, weaknesses, assumptions, supporting evidence, logical consistency, limitations, alternative viewpoints and practical implications before presenting a balanced conclusion.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 103,
+    "shortcut": "/documentreview",
+    "title": "Document Review",
+    "category": "Documents",
+    "description": "Review long documents with detailed insights.",
+    "prompt": "Review the following document thoroughly. Summarize its purpose, identify key arguments, evaluate clarity and organization, detect inconsistencies, highlight strengths and weaknesses, and recommend improvements where appropriate.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 104,
+    "shortcut": "/argumentmap",
+    "title": "Argument Map",
+    "category": "Reasoning",
+    "description": "Break arguments into claims, evidence and conclusions.",
+    "prompt": "Create a structured argument map for the following content. Identify the main claim, supporting arguments, evidence, assumptions, counterarguments, logical gaps and overall conclusion.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 105,
+    "shortcut": "/thoughtpartner",
+    "title": "Thought Partner",
+    "category": "Coaching",
+    "description": "Use Claude as a collaborative thinking partner.",
+    "prompt": "Act as a thoughtful thinking partner. Help explore the following idea by asking insightful questions, identifying assumptions, challenging weak reasoning, suggesting alternatives and refining the idea into a stronger final proposal.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 106,
+    "shortcut": "/longform",
+    "title": "Long-Form Writer",
+    "category": "Writing",
+    "description": "Produce polished, detailed long-form content.",
+    "prompt": "Write a comprehensive long-form document about the following topic. Organize the content with clear headings, logical flow, practical examples, nuanced explanations, balanced discussion and a thoughtful conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 107,
+    "shortcut": "/nuance",
+    "title": "Nuanced Perspective",
+    "category": "Analysis",
+    "description": "Explore subtle viewpoints without oversimplification.",
+    "prompt": "Analyze the following topic with nuance. Avoid oversimplification, explore multiple viewpoints, acknowledge uncertainty where appropriate, identify gray areas, explain competing perspectives and provide a balanced assessment.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 108,
+    "shortcut": "/documentoutline",
+    "title": "Document Outline Pro",
+    "category": "Documents",
+    "description": "Generate professional document structures.",
+    "prompt": "Create a detailed outline for the following document. Organize major sections, subsections, supporting ideas, transitions, appendices if needed and recommendations for improving readability.\n\nDocument Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 109,
+    "shortcut": "/refineidea",
+    "title": "Idea Refinement",
+    "category": "Creativity",
+    "description": "Transform rough ideas into polished concepts.",
+    "prompt": "Refine the following idea into a polished concept. Identify strengths, weaknesses, assumptions, opportunities, implementation considerations, potential risks and practical improvements before presenting the final refined version.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 110,
+    "shortcut": "/claudeadvanced",
+    "title": "Claude Advanced",
+    "category": "AI",
+    "description": "Use Claude for advanced reasoning, writing and document intelligence.",
+    "prompt": "Act as an advanced reasoning, writing and document intelligence assistant. Carefully analyze the following request by identifying objectives, assumptions, context, uncertainties, dependencies and constraints. Explore multiple interpretations where appropriate, evaluate trade-offs, produce a polished and well-structured response, highlight important considerations and conclude with thoughtful recommendations and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 111,
+    "shortcut": "/logiccheck",
+    "title": "Logic Checker",
+    "category": "Reasoning",
+    "description": "Evaluate the logical consistency of arguments and ideas.",
+    "prompt": "Review the following argument for logical consistency. Identify assumptions, logical fallacies, unsupported claims, contradictions, missing evidence, strengths and opportunities to strengthen the reasoning. Conclude with an improved version of the argument.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 112,
+    "shortcut": "/balancedview",
+    "title": "Balanced View",
+    "category": "Analysis",
+    "description": "Present balanced perspectives on complex issues.",
+    "prompt": "Analyze the following issue from multiple balanced perspectives. Present supporting arguments, opposing viewpoints, areas of uncertainty, relevant evidence, practical implications and a carefully reasoned conclusion.\n\nIssue:",
+    "isOfficial": false
+  },
+  {
+    "id": 113,
+    "shortcut": "/executivebrief",
+    "title": "Executive Brief",
+    "category": "Documents",
+    "description": "Transform information into an executive-level briefing.",
+    "prompt": "Prepare an executive briefing for the following document or topic. Summarize objectives, major findings, strategic implications, risks, opportunities, recommended actions and key decisions in a concise executive format.\n\nDocument or Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 114,
+    "shortcut": "/assumptionaudit",
+    "title": "Assumption Audit",
+    "category": "Reasoning",
+    "description": "Identify and evaluate hidden assumptions.",
+    "prompt": "Identify every significant assumption in the following proposal or argument. Evaluate whether each assumption is justified, identify associated risks, explain how invalid assumptions could affect conclusions and recommend ways to validate them.\n\nProposal or Argument:",
+    "isOfficial": false
+  },
+  {
+    "id": 115,
+    "shortcut": "/deepquestions",
+    "title": "Deep Questions",
+    "category": "Thinking",
+    "description": "Generate insightful questions that deepen understanding.",
+    "prompt": "Generate thoughtful, high-quality questions about the following topic. Include clarifying questions, analytical questions, strategic questions, ethical considerations, future-oriented questions and questions that reveal hidden assumptions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 116,
+    "shortcut": "/documentaudit",
+    "title": "Document Audit",
+    "category": "Documents",
+    "description": "Audit documents for quality, structure and consistency.",
+    "prompt": "Perform a comprehensive audit of the following document. Evaluate organization, clarity, consistency, completeness, accuracy, readability, logical flow, formatting and provide prioritized recommendations for improvement.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 117,
+    "shortcut": "/communicationreview",
+    "title": "Communication Review",
+    "category": "Communication",
+    "description": "Evaluate communication for clarity and effectiveness.",
+    "prompt": "Review the following communication. Assess clarity, tone, professionalism, audience suitability, structure, persuasiveness, potential misunderstandings and provide an improved version if appropriate.\n\nCommunication:",
+    "isOfficial": false
+  },
+  {
+    "id": 118,
+    "shortcut": "/deepcomparison",
+    "title": "Deep Comparison",
+    "category": "Analysis",
+    "description": "Compare alternatives using comprehensive evaluation criteria.",
+    "prompt": "Compare the following alternatives in depth. Evaluate objectives, strengths, weaknesses, trade-offs, costs, risks, long-term implications, implementation difficulty and recommend the most appropriate option for different scenarios.\n\nAlternatives:",
+    "isOfficial": false
+  },
+  {
+    "id": 119,
+    "shortcut": "/contextbuilder",
+    "title": "Context Builder",
+    "category": "Knowledge",
+    "description": "Build complete context before analyzing a topic.",
+    "prompt": "Build a comprehensive contextual overview for the following subject. Explain historical background, current situation, stakeholders, influencing factors, terminology, related concepts, important context and why it matters before providing further analysis.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 120,
+    "shortcut": "/claudethinker",
+    "title": "Claude Thinker",
+    "category": "AI",
+    "description": "Use Claude as an advanced reasoning, communication and document analysis expert.",
+    "prompt": "Act as an advanced reasoning specialist, communication expert and document analyst. Carefully examine the following request by identifying objectives, assumptions, context, uncertainties, dependencies, stakeholders and constraints. Analyze multiple perspectives, evaluate trade-offs, communicate with clarity and nuance, produce a polished response and conclude with practical recommendations, implementation guidance and suggested next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 121,
+    "shortcut": "/evidencecheck",
+    "title": "Evidence Check",
+    "category": "Reasoning",
+    "description": "Evaluate the quality and reliability of supporting evidence.",
+    "prompt": "Evaluate the evidence supporting the following claim. Distinguish facts from assumptions, assess source reliability, identify missing evidence, evaluate confidence levels, highlight uncertainties and recommend what additional evidence would strengthen the conclusion.\n\nClaim:",
+    "isOfficial": false
+  },
+  {
+    "id": 122,
+    "shortcut": "/reasoningmap",
+    "title": "Reasoning Map",
+    "category": "Reasoning",
+    "description": "Visualize the reasoning process behind a conclusion.",
+    "prompt": "Create a structured reasoning map for the following problem. Identify objectives, assumptions, intermediate conclusions, supporting evidence, alternative paths, logical dependencies and the final conclusion in a clear hierarchy.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 123,
+    "shortcut": "/documentcompare",
+    "title": "Document Comparison",
+    "category": "Documents",
+    "description": "Compare multiple documents in depth.",
+    "prompt": "Compare the following documents. Identify shared themes, major differences, conflicting information, complementary insights, strengths, weaknesses and provide an executive summary with recommendations.\n\nDocuments:",
+    "isOfficial": false
+  },
+  {
+    "id": 124,
+    "shortcut": "/consistencycheck",
+    "title": "Consistency Check",
+    "category": "Documents",
+    "description": "Check documents for consistency and coherence.",
+    "prompt": "Review the following content for consistency. Identify contradictions, duplicated information, unclear statements, inconsistent terminology, structural weaknesses and recommend revisions that improve coherence.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 125,
+    "shortcut": "/decisionbrief",
+    "title": "Decision Brief",
+    "category": "Decision Making",
+    "description": "Prepare concise decision-support reports.",
+    "prompt": "Prepare a decision brief for the following situation. Summarize objectives, available options, evaluation criteria, benefits, risks, uncertainties, recommended decision, supporting rationale and implementation considerations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 126,
+    "shortcut": "/knowledgeaudit",
+    "title": "Knowledge Audit",
+    "category": "Knowledge",
+    "description": "Identify knowledge gaps and learning priorities.",
+    "prompt": "Conduct a knowledge audit for the following subject. Identify what is already known, knowledge gaps, uncertainties, conflicting viewpoints, essential learning priorities, recommended resources and a roadmap for developing expertise.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 127,
+    "shortcut": "/writingdiagnosis",
+    "title": "Writing Diagnosis",
+    "category": "Writing",
+    "description": "Diagnose writing quality and improvement opportunities.",
+    "prompt": "Analyze the following writing. Evaluate clarity, readability, structure, tone, grammar, logical flow, audience suitability, persuasive strength and provide prioritized recommendations with an improved version if appropriate.\n\nWriting:",
+    "isOfficial": false
+  },
+  {
+    "id": 128,
+    "shortcut": "/clarifythinking",
+    "title": "Clarify Thinking",
+    "category": "Thinking",
+    "description": "Transform unclear ideas into structured reasoning.",
+    "prompt": "Help clarify the following idea. Identify ambiguities, hidden assumptions, missing context, logical relationships, possible interpretations and rewrite it into a clear, structured and well-reasoned explanation.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 129,
+    "shortcut": "/strategicreflection",
+    "title": "Strategic Reflection",
+    "category": "Reflection",
+    "description": "Reflect on decisions using strategic thinking.",
+    "prompt": "Guide a strategic reflection on the following decision or experience. Analyze intentions, assumptions, outcomes, lessons learned, alternative approaches, long-term implications and practical recommendations for future decisions.\n\nDecision or Experience:",
+    "isOfficial": false
+  },
+  {
+    "id": 130,
+    "shortcut": "/claudeperspective",
+    "title": "Claude Perspective",
+    "category": "AI",
+    "description": "Use Claude for nuanced reasoning, document intelligence and thoughtful decision support.",
+    "prompt": "Act as an expert reasoning partner, document intelligence specialist and strategic advisor. Carefully analyze the following request by identifying objectives, assumptions, context, stakeholders, dependencies, uncertainties and constraints. Explore multiple interpretations, evaluate evidence, explain important trade-offs, produce a polished, nuanced and well-structured response, and conclude with balanced recommendations, implementation guidance and thoughtful next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 131,
+    "shortcut": "/premisecheck",
+    "title": "Premise Checker",
+    "category": "Reasoning",
+    "description": "Evaluate the validity of foundational premises.",
+    "prompt": "Examine the following argument by identifying its foundational premises. Evaluate whether each premise is justified, identify hidden assumptions, assess logical dependencies, determine how changes in the premises affect the conclusion and recommend stronger alternatives where appropriate.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 132,
+    "shortcut": "/counterview",
+    "title": "Counter Perspective",
+    "category": "Analysis",
+    "description": "Explore well-reasoned opposing viewpoints.",
+    "prompt": "Present thoughtful counter-perspectives to the following claim. Explain the reasoning behind each viewpoint, evaluate supporting evidence, identify weaknesses in both sides, discuss areas of agreement and conclude with a balanced synthesis.\n\nClaim:",
+    "isOfficial": false
+  },
+  {
+    "id": 133,
+    "shortcut": "/structureaudit",
+    "title": "Structure Audit",
+    "category": "Documents",
+    "description": "Review the structural quality of long-form documents.",
+    "prompt": "Audit the structure of the following document. Evaluate organization, section hierarchy, logical progression, transitions, readability, completeness and recommend improvements that strengthen the overall structure.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 134,
+    "shortcut": "/stakeholdermap",
+    "title": "Stakeholder Mapping",
+    "category": "Strategy",
+    "description": "Identify stakeholders, interests and influence.",
+    "prompt": "Create a comprehensive stakeholder map for the following initiative. Identify key stakeholders, objectives, responsibilities, influence levels, concerns, dependencies, communication priorities, risks and engagement recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 135,
+    "shortcut": "/decisioncanvas",
+    "title": "Decision Canvas",
+    "category": "Decision Making",
+    "description": "Organize complex decisions using a structured canvas.",
+    "prompt": "Build a decision canvas for the following situation. Define objectives, decision criteria, available alternatives, constraints, assumptions, risks, expected outcomes, trade-offs and a recommended decision with justification.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 136,
+    "shortcut": "/synthesis",
+    "title": "Knowledge Synthesis",
+    "category": "Knowledge",
+    "description": "Combine information into a unified understanding.",
+    "prompt": "Synthesize the following information into a coherent understanding. Identify recurring themes, important relationships, conflicting viewpoints, missing information, key insights and practical conclusions.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 137,
+    "shortcut": "/styleaudit",
+    "title": "Style Audit",
+    "category": "Writing",
+    "description": "Evaluate writing style and consistency.",
+    "prompt": "Review the writing style of the following content. Evaluate tone, consistency, readability, audience alignment, vocabulary, sentence variety, pacing and recommend improvements while preserving the author's intent.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 138,
+    "shortcut": "/thinkingframework",
+    "title": "Thinking Framework",
+    "category": "Thinking",
+    "description": "Apply structured thinking to complex problems.",
+    "prompt": "Develop a structured thinking framework for the following challenge. Define objectives, assumptions, reasoning steps, decision checkpoints, evaluation criteria, alternative approaches, risks and expected outcomes.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 139,
+    "shortcut": "/reflectionjournal",
+    "title": "Reflection Journal",
+    "category": "Reflection",
+    "description": "Create meaningful reflective journals with actionable insights.",
+    "prompt": "Create a reflective journal entry based on the following experience. Explore observations, emotions, lessons learned, strengths, weaknesses, personal growth opportunities, future improvements and reflective questions.\n\nExperience:",
+    "isOfficial": false
+  },
+  {
+    "id": 140,
+    "shortcut": "/claudearchitect",
+    "title": "Claude Architect",
+    "category": "AI",
+    "description": "Use Claude as an expert reasoning architect for documents, decisions and strategic thinking.",
+    "prompt": "Act as an expert reasoning architect, document strategist and analytical advisor. Carefully examine the following request by identifying objectives, assumptions, context, stakeholders, dependencies, uncertainties and constraints. Build a structured reasoning framework, analyze multiple perspectives, evaluate evidence, explain trade-offs, present nuanced conclusions and finish with practical recommendations, implementation guidance and thoughtful next actions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 141,
+    "shortcut": "/contextaudit",
+    "title": "Context Audit",
+    "category": "Reasoning",
+    "description": "Analyze whether sufficient context exists before reaching conclusions.",
+    "prompt": "Audit the following situation for contextual completeness. Identify missing background information, implicit assumptions, external influences, stakeholder perspectives, unknown variables and explain what additional context is required before making reliable conclusions.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 142,
+    "shortcut": "/uncertaintymap",
+    "title": "Uncertainty Map",
+    "category": "Analysis",
+    "description": "Map uncertainties and confidence levels within complex topics.",
+    "prompt": "Analyze the following topic by separating known facts, probable conclusions, uncertain assumptions and unknown variables. Assign confidence levels where appropriate, explain the sources of uncertainty and recommend ways to reduce them.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 143,
+    "shortcut": "/documentlogic",
+    "title": "Document Logic Review",
+    "category": "Documents",
+    "description": "Evaluate the logical flow of long-form documents.",
+    "prompt": "Review the following document for logical consistency. Evaluate whether each section naturally supports the next, identify gaps in reasoning, redundant content, unsupported conclusions and recommend improvements that strengthen logical flow.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 144,
+    "shortcut": "/reasoninglayers",
+    "title": "Reasoning Layers",
+    "category": "Reasoning",
+    "description": "Separate conclusions into layered reasoning levels.",
+    "prompt": "Break the following topic into multiple reasoning layers. Distinguish observations, facts, interpretations, assumptions, hypotheses, conclusions and strategic implications. Explain how each layer builds upon the previous one.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 145,
+    "shortcut": "/constraintanalysis",
+    "title": "Constraint Analysis",
+    "category": "Strategy",
+    "description": "Identify limitations that influence outcomes.",
+    "prompt": "Analyze the following situation by identifying every important constraint. Consider technical, financial, operational, legal, ethical, organizational and human limitations. Explain how each constraint affects decision-making and recommend practical mitigation strategies.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 146,
+    "shortcut": "/knowledgebridge",
+    "title": "Knowledge Bridge",
+    "category": "Knowledge",
+    "description": "Connect ideas across multiple disciplines.",
+    "prompt": "Connect the following topic with related concepts across different disciplines. Explain interdisciplinary relationships, transferable principles, practical applications, emerging patterns and opportunities created by combining these fields.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 147,
+    "shortcut": "/writingflow",
+    "title": "Writing Flow Optimizer",
+    "category": "Writing",
+    "description": "Improve narrative flow and readability.",
+    "prompt": "Improve the flow of the following writing. Evaluate paragraph organization, transitions, pacing, readability, coherence, sentence variety and overall structure. Rewrite where appropriate while preserving the original meaning.\n\nWriting:",
+    "isOfficial": false
+  },
+  {
+    "id": 148,
+    "shortcut": "/reflectionmatrix",
+    "title": "Reflection Matrix",
+    "category": "Reflection",
+    "description": "Reflect systematically using multiple evaluation dimensions.",
+    "prompt": "Guide a structured reflection on the following experience using multiple dimensions including outcomes, decision quality, communication, learning, emotional awareness, strengths, weaknesses and future improvements.\n\nExperience:",
+    "isOfficial": false
+  },
+  {
+    "id": 149,
+    "shortcut": "/deepinsights",
+    "title": "Deep Insights",
+    "category": "Thinking",
+    "description": "Extract hidden insights from complex information.",
+    "prompt": "Analyze the following information to uncover hidden insights. Identify subtle patterns, overlooked relationships, emerging themes, contradictions, unanswered questions, strategic implications and practical recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 150,
+    "shortcut": "/claudestrategist",
+    "title": "Claude Strategist",
+    "category": "AI",
+    "description": "Use Claude as a strategic reasoning, writing and document intelligence expert.",
+    "prompt": "Act as an expert strategist, reasoning specialist, document intelligence analyst and communication advisor. Carefully analyze the following request by identifying objectives, assumptions, context, stakeholders, dependencies, uncertainties, constraints and decision criteria. Explore multiple interpretations, synthesize complex information, evaluate evidence objectively, explain trade-offs, produce a polished and nuanced response, and conclude with strategic recommendations, implementation guidance, risk considerations and thoughtful next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 151,
+    "shortcut": "/perspectiveaudit",
+    "title": "Perspective Audit",
+    "category": "Analysis",
+    "description": "Evaluate a subject through multiple stakeholder perspectives.",
+    "prompt": "Analyze the following subject from the perspectives of all major stakeholders. Identify each stakeholder's goals, concerns, assumptions, incentives, conflicts, risks, opportunities and likely reactions. Compare viewpoints and conclude with balanced recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 152,
+    "shortcut": "/complexitymap",
+    "title": "Complexity Map",
+    "category": "Systems Thinking",
+    "description": "Break down complex systems into understandable components.",
+    "prompt": "Map the complexity of the following system or situation. Identify key components, interactions, dependencies, feedback loops, bottlenecks, uncertainties, leverage points and opportunities for simplification.\n\nSystem or Situation:",
+    "isOfficial": false
+  },
+  {
+    "id": 153,
+    "shortcut": "/dependencycheck",
+    "title": "Dependency Analysis",
+    "category": "Strategy",
+    "description": "Identify critical dependencies and their impacts.",
+    "prompt": "Analyze the following initiative by identifying technical, operational, financial, organizational and external dependencies. Evaluate their impact, associated risks, mitigation strategies and contingency plans.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 154,
+    "shortcut": "/reasoningaudit",
+    "title": "Reasoning Audit",
+    "category": "Reasoning",
+    "description": "Audit the quality of reasoning behind conclusions.",
+    "prompt": "Audit the reasoning used in the following argument or proposal. Identify logical strengths, unsupported assumptions, weak evidence, cognitive biases, hidden dependencies and recommend improvements that strengthen the reasoning.\n\nArgument or Proposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 155,
+    "shortcut": "/executivereview",
+    "title": "Executive Review",
+    "category": "Business",
+    "description": "Review work from an executive leadership perspective.",
+    "prompt": "Review the following proposal, report or initiative from the perspective of an executive leadership team. Evaluate strategic alignment, business value, feasibility, risks, stakeholder impact, execution readiness and provide executive recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 156,
+    "shortcut": "/communicationstrategy",
+    "title": "Communication Strategy",
+    "category": "Communication",
+    "description": "Develop audience-specific communication strategies.",
+    "prompt": "Develop a communication strategy for the following situation. Identify target audiences, key messages, communication channels, timing, potential misunderstandings, stakeholder concerns and methods for measuring communication effectiveness.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 157,
+    "shortcut": "/documentinsights",
+    "title": "Document Insights",
+    "category": "Documents",
+    "description": "Extract deep insights from lengthy documents.",
+    "prompt": "Analyze the following document beyond its surface meaning. Identify implicit themes, hidden assumptions, strategic implications, recurring patterns, unanswered questions, opportunities for improvement and executive-level insights.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 158,
+    "shortcut": "/socraticguide",
+    "title": "Socratic Guide",
+    "category": "Thinking",
+    "description": "Explore ideas through thoughtful questioning.",
+    "prompt": "Guide an exploration of the following topic using the Socratic method. Ask progressively deeper questions that challenge assumptions, clarify reasoning, expose inconsistencies, encourage reflection and ultimately strengthen understanding.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 159,
+    "shortcut": "/strategicsynthesis",
+    "title": "Strategic Synthesis",
+    "category": "Knowledge",
+    "description": "Combine diverse information into strategic understanding.",
+    "prompt": "Synthesize the following information into a strategic overview. Identify major themes, critical relationships, long-term implications, strategic opportunities, potential risks, knowledge gaps and recommended actions.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 160,
+    "shortcut": "/claudepro",
+    "title": "Claude Pro",
+    "category": "AI",
+    "description": "Use Claude as an advanced reasoning, document analysis and strategic communication expert.",
+    "prompt": "Act as a senior reasoning expert, document analyst, strategic advisor and communication specialist. Carefully analyze the following request by identifying objectives, assumptions, stakeholders, context, dependencies, constraints, uncertainties and decision criteria. Evaluate multiple perspectives, synthesize complex information, communicate with clarity and nuance, identify trade-offs, produce a polished professional response and conclude with strategic recommendations, implementation priorities, risk mitigation strategies and practical next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 161,
+    "shortcut": "/decisionarchitecture",
+    "title": "Decision Architecture",
+    "category": "Decision Making",
+    "description": "Design robust decision frameworks for complex situations.",
+    "prompt": "Design a decision architecture for the following situation. Define objectives, decision criteria, constraints, stakeholders, dependencies, evaluation methods, decision checkpoints, success metrics and governance recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 162,
+    "shortcut": "/thinkingaudit",
+    "title": "Thinking Audit",
+    "category": "Thinking",
+    "description": "Evaluate the quality of thinking behind complex decisions.",
+    "prompt": "Audit the thinking behind the following decision or proposal. Identify assumptions, biases, logical strengths, weaknesses, blind spots, alternative viewpoints and recommendations for improving the overall reasoning process.\n\nDecision or Proposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 163,
+    "shortcut": "/systemsreview",
+    "title": "Systems Review",
+    "category": "Systems Thinking",
+    "description": "Review systems from a holistic perspective.",
+    "prompt": "Conduct a holistic review of the following system. Identify objectives, components, interactions, dependencies, bottlenecks, resilience factors, optimization opportunities, risks and long-term sustainability recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 164,
+    "shortcut": "/communicationaudit",
+    "title": "Communication Audit",
+    "category": "Communication",
+    "description": "Assess communication quality across audiences and contexts.",
+    "prompt": "Audit the following communication. Evaluate clarity, audience alignment, tone, structure, persuasive strength, accessibility, consistency, potential misunderstandings and provide recommendations for improvement.\n\nCommunication:",
+    "isOfficial": false
+  },
+  {
+    "id": 165,
+    "shortcut": "/strategicquestions",
+    "title": "Strategic Questions",
+    "category": "Strategy",
+    "description": "Generate executive-level strategic questions.",
+    "prompt": "Generate a comprehensive list of strategic questions for the following topic. Include questions related to objectives, risks, opportunities, stakeholders, execution, governance, long-term impact and future uncertainty.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 166,
+    "shortcut": "/documentstrategy",
+    "title": "Document Strategy",
+    "category": "Documents",
+    "description": "Transform documents into strategic action plans.",
+    "prompt": "Analyze the following document and transform its contents into a strategic action plan. Identify priorities, required actions, responsible stakeholders, timelines, dependencies, measurable outcomes and implementation risks.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 167,
+    "shortcut": "/conceptsynthesis",
+    "title": "Concept Synthesis",
+    "category": "Knowledge",
+    "description": "Merge related concepts into a unified understanding.",
+    "prompt": "Synthesize the following concepts into a coherent framework. Explain relationships, common principles, differences, practical applications, emerging patterns and opportunities created by integrating these ideas.\n\nConcepts:",
+    "isOfficial": false
+  },
+  {
+    "id": 168,
+    "shortcut": "/reflectiveanalysis",
+    "title": "Reflective Analysis",
+    "category": "Reflection",
+    "description": "Analyze experiences for meaningful growth and improvement.",
+    "prompt": "Perform a reflective analysis of the following experience. Examine decisions, assumptions, outcomes, lessons learned, strengths, weaknesses, future improvements and personal or organizational growth opportunities.\n\nExperience:",
+    "isOfficial": false
+  },
+  {
+    "id": 169,
+    "shortcut": "/clarityengine",
+    "title": "Clarity Engine",
+    "category": "Writing",
+    "description": "Transform complex writing into clear, precise communication.",
+    "prompt": "Rewrite the following content for maximum clarity. Remove ambiguity, improve logical flow, strengthen transitions, simplify complex ideas where appropriate, preserve nuance and maintain the intended meaning.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 170,
+    "shortcut": "/claudeintellect",
+    "title": "Claude Intellect",
+    "category": "AI",
+    "description": "Use Claude as an expert reasoning, systems thinking and strategic communication partner.",
+    "prompt": "Act as an expert in reasoning, systems thinking, document intelligence, strategic communication and thoughtful decision support. Carefully analyze the following request by identifying objectives, assumptions, stakeholders, context, dependencies, uncertainties, constraints and success criteria. Build a structured analytical framework, evaluate multiple perspectives, synthesize complex information, explain trade-offs with nuance, deliver a polished professional response and conclude with strategic recommendations, implementation guidance, measurable outcomes and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 171,
+    "shortcut": "/evidenceaudit",
+    "title": "Evidence Audit",
+    "category": "Reasoning",
+    "description": "Audit the quality, completeness and reliability of evidence.",
+    "prompt": "Conduct a comprehensive evidence audit for the following topic. Identify available evidence, evaluate credibility, distinguish facts from assumptions, assess confidence levels, identify missing evidence, explain limitations and recommend additional information needed for stronger conclusions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 172,
+    "shortcut": "/systemthinking",
+    "title": "Systems Thinking",
+    "category": "Systems Thinking",
+    "description": "Analyze interconnected systems and their behavior.",
+    "prompt": "Analyze the following system using systems thinking principles. Identify components, interactions, feedback loops, leverage points, unintended consequences, bottlenecks, resilience factors and opportunities for sustainable improvement.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 173,
+    "shortcut": "/tradeoffanalysis",
+    "title": "Trade-off Analysis",
+    "category": "Decision Making",
+    "description": "Evaluate competing priorities and strategic trade-offs.",
+    "prompt": "Perform a detailed trade-off analysis for the following decision. Compare competing objectives, benefits, drawbacks, opportunity costs, long-term consequences, uncertainties and recommend the most balanced solution with justification.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 174,
+    "shortcut": "/documentinspector",
+    "title": "Document Inspector",
+    "category": "Documents",
+    "description": "Inspect documents for quality, logic and completeness.",
+    "prompt": "Inspect the following document in detail. Evaluate structure, completeness, logical consistency, clarity, factual support, organization, readability and identify opportunities to improve quality and impact.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 175,
+    "shortcut": "/thinkingmodel",
+    "title": "Thinking Model",
+    "category": "Thinking",
+    "description": "Apply structured mental models to complex challenges.",
+    "prompt": "Apply multiple structured thinking models to the following challenge. Analyze it using first principles, systems thinking, opportunity-cost analysis, second-order thinking and inversion. Compare insights from each model and recommend the strongest conclusion.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 176,
+    "shortcut": "/deepcommunication",
+    "title": "Deep Communication",
+    "category": "Communication",
+    "description": "Craft nuanced communication for complex situations.",
+    "prompt": "Develop a communication strategy for the following situation. Tailor messaging for different audiences, anticipate misunderstandings, recommend tone, structure, supporting evidence, communication channels and follow-up actions.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 177,
+    "shortcut": "/knowledgestructure",
+    "title": "Knowledge Structure",
+    "category": "Knowledge",
+    "description": "Organize complex information into structured knowledge.",
+    "prompt": "Create a structured knowledge framework for the following topic. Organize concepts, dependencies, terminology, relationships, practical applications, learning sequence, common misconceptions and future learning opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 178,
+    "shortcut": "/reflectionframework",
+    "title": "Reflection Framework",
+    "category": "Reflection",
+    "description": "Reflect systematically using structured evaluation criteria.",
+    "prompt": "Guide a structured reflection on the following experience using evaluation dimensions such as goals, decisions, assumptions, communication, execution, outcomes, lessons learned, future improvements and measurable action items.\n\nExperience:",
+    "isOfficial": false
+  },
+  {
+    "id": 179,
+    "shortcut": "/strategiclogic",
+    "title": "Strategic Logic",
+    "category": "Strategy",
+    "description": "Build logical strategic arguments with evidence.",
+    "prompt": "Develop a strategic argument for the following proposal. Clearly define objectives, supporting evidence, assumptions, risks, dependencies, counterarguments, long-term implications and conclude with a logically supported recommendation.\n\nProposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 180,
+    "shortcut": "/claudeanalyst",
+    "title": "Claude Analyst",
+    "category": "AI",
+    "description": "Use Claude as an expert analyst for reasoning, document intelligence and structured decision-making.",
+    "prompt": "Act as a senior analyst specializing in reasoning, document intelligence, systems thinking and strategic communication. Carefully examine the following request by identifying objectives, assumptions, stakeholders, dependencies, context, uncertainties, constraints and success criteria. Evaluate evidence objectively, analyze multiple perspectives, synthesize complex information into clear insights, explain trade-offs with nuance and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 181,
+    "shortcut": "/causalanalysis",
+    "title": "Causal Analysis",
+    "category": "Reasoning",
+    "description": "Identify causal relationships and distinguish correlation from causation.",
+    "prompt": "Analyze the following situation by identifying causal relationships. Distinguish correlation from causation, evaluate contributing factors, identify root drivers, assess confidence levels, explain alternative explanations and conclude with evidence-based recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 182,
+    "shortcut": "/knowledgeintegration",
+    "title": "Knowledge Integration",
+    "category": "Knowledge",
+    "description": "Integrate information from multiple domains into a unified understanding.",
+    "prompt": "Integrate knowledge from multiple disciplines to analyze the following topic. Identify common principles, interdisciplinary relationships, conflicting viewpoints, practical implications, emerging opportunities and a unified conceptual framework.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 183,
+    "shortcut": "/documentrefinement",
+    "title": "Document Refinement",
+    "category": "Documents",
+    "description": "Refine documents for clarity, consistency and impact.",
+    "prompt": "Refine the following document while preserving its original intent. Improve organization, clarity, logical progression, consistency, readability, tone and overall effectiveness. Explain major improvements after rewriting.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 184,
+    "shortcut": "/scenarioevaluation",
+    "title": "Scenario Evaluation",
+    "category": "Strategy",
+    "description": "Evaluate strategic scenarios with structured reasoning.",
+    "prompt": "Evaluate the following strategic scenarios. Compare assumptions, opportunities, risks, dependencies, implementation complexity, likely outcomes, uncertainties and recommend the most resilient strategy with supporting reasoning.\n\nScenarios:",
+    "isOfficial": false
+  },
+  {
+    "id": 185,
+    "shortcut": "/argumentevaluation",
+    "title": "Argument Evaluation",
+    "category": "Reasoning",
+    "description": "Assess the strength of arguments using structured logic.",
+    "prompt": "Evaluate the following argument systematically. Identify claims, supporting evidence, assumptions, logical strengths, weaknesses, fallacies, counterarguments and recommend improvements that strengthen the overall argument.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 186,
+    "shortcut": "/deepplanning",
+    "title": "Deep Planning",
+    "category": "Planning",
+    "description": "Develop comprehensive implementation plans with contingencies.",
+    "prompt": "Develop a detailed implementation plan for the following objective. Include milestones, dependencies, resources, stakeholders, risks, contingency plans, measurable success indicators, review checkpoints and continuous improvement strategies.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 187,
+    "shortcut": "/communicationdesign",
+    "title": "Communication Design",
+    "category": "Communication",
+    "description": "Design communication tailored to diverse audiences.",
+    "prompt": "Design a comprehensive communication plan for the following initiative. Adapt messages for different audiences, recommend tone, delivery channels, timing, supporting materials, feedback mechanisms and strategies for addressing misunderstandings.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 188,
+    "shortcut": "/decisionreview",
+    "title": "Decision Review",
+    "category": "Decision Making",
+    "description": "Review important decisions with strategic insight.",
+    "prompt": "Review the following decision comprehensively. Analyze objectives, assumptions, evidence, alternatives considered, trade-offs, risks, expected outcomes, unintended consequences and lessons for future decisions.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 189,
+    "shortcut": "/insightengine",
+    "title": "Insight Engine",
+    "category": "Analysis",
+    "description": "Generate deep insights from complex information.",
+    "prompt": "Analyze the following information to generate high-value insights. Identify hidden relationships, recurring themes, strategic implications, emerging trends, unanswered questions, practical opportunities and prioritized recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 190,
+    "shortcut": "/claudemastery",
+    "title": "Claude Mastery",
+    "category": "AI",
+    "description": "Use Claude as a master-level reasoning, document intelligence and strategic thinking expert.",
+    "prompt": "Act as a master-level reasoning specialist, document intelligence expert, systems thinker and strategic advisor. Carefully analyze the following request by identifying objectives, assumptions, stakeholders, context, dependencies, uncertainties, constraints and measurable success criteria. Build a structured analytical framework, evaluate evidence objectively, synthesize diverse information into coherent insights, examine multiple perspectives, explain trade-offs with nuance, present balanced conclusions and finish with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 191,
+    "shortcut": "/uncertaintyanalysis",
+    "title": "Uncertainty Analysis",
+    "category": "Reasoning",
+    "description": "Analyze uncertainty, confidence and unknown variables in complex situations.",
+    "prompt": "Analyze the following topic by separating confirmed facts, probable conclusions, assumptions, unknown variables and uncertainties. Assign confidence levels where appropriate, explain why uncertainty exists, identify information gaps and recommend ways to improve confidence before making decisions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 192,
+    "shortcut": "/documentblueprint",
+    "title": "Document Blueprint",
+    "category": "Documents",
+    "description": "Design comprehensive document structures before writing.",
+    "prompt": "Create a professional blueprint for the following document. Define objectives, target audience, document structure, section hierarchy, supporting content, visual recommendations, appendices and review criteria before drafting.\n\nDocument Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 193,
+    "shortcut": "/strategicalignment",
+    "title": "Strategic Alignment",
+    "category": "Strategy",
+    "description": "Evaluate alignment between objectives and execution.",
+    "prompt": "Assess the strategic alignment of the following initiative. Compare objectives, priorities, resources, stakeholder expectations, execution plans, risks, dependencies and success metrics. Identify misalignments and recommend corrective actions.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 194,
+    "shortcut": "/firstprinciples",
+    "title": "First Principles Analysis",
+    "category": "Thinking",
+    "description": "Break problems down to their most fundamental truths.",
+    "prompt": "Analyze the following problem using first-principles thinking. Break it into fundamental truths, challenge assumptions, rebuild the solution from basic principles, compare with conventional approaches and recommend the strongest solution.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 195,
+    "shortcut": "/deepreview",
+    "title": "Deep Review",
+    "category": "Analysis",
+    "description": "Perform a comprehensive multi-dimensional review.",
+    "prompt": "Conduct a comprehensive review of the following subject. Evaluate quality, completeness, logical consistency, effectiveness, supporting evidence, usability, strengths, weaknesses, improvement opportunities and overall impact.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 196,
+    "shortcut": "/implementationaudit",
+    "title": "Implementation Audit",
+    "category": "Planning",
+    "description": "Evaluate implementation readiness and execution quality.",
+    "prompt": "Audit the implementation plan for the following initiative. Evaluate readiness, dependencies, stakeholder coordination, resource allocation, execution risks, monitoring methods, contingency plans and opportunities to improve execution success.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 197,
+    "shortcut": "/knowledgeframework",
+    "title": "Knowledge Framework",
+    "category": "Knowledge",
+    "description": "Build structured frameworks for mastering complex subjects.",
+    "prompt": "Develop a comprehensive knowledge framework for the following subject. Organize foundational concepts, advanced topics, relationships, practical applications, learning milestones, expert resources, assessment methods and long-term mastery strategies.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 198,
+    "shortcut": "/executivereasoning",
+    "title": "Executive Reasoning",
+    "category": "Business",
+    "description": "Analyze challenges from an executive decision-making perspective.",
+    "prompt": "Evaluate the following situation as an executive leadership team would. Identify strategic priorities, business implications, stakeholder interests, risks, opportunities, trade-offs, governance considerations and recommend a well-supported executive decision.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 199,
+    "shortcut": "/intellectualsynthesis",
+    "title": "Intellectual Synthesis",
+    "category": "Reasoning",
+    "description": "Synthesize complex ideas into a coherent intellectual framework.",
+    "prompt": "Synthesize the following ideas into a coherent intellectual framework. Identify underlying principles, conceptual relationships, contradictions, emerging patterns, practical implications, unanswered questions and recommendations for deeper exploration.\n\nIdeas:",
+    "isOfficial": false
+  },
+  {
+    "id": 200,
+    "shortcut": "/claudeelite",
+    "title": "Claude Elite",
+    "category": "AI",
+    "description": "Use Claude as an elite reasoning, writing, document intelligence and strategic thinking partner.",
+    "prompt": "Act as an elite reasoning specialist, document intelligence expert, strategic thinker, systems analyst and communication advisor. Carefully analyze the following request by identifying objectives, assumptions, stakeholders, context, dependencies, constraints, uncertainties and measurable success criteria. Apply structured reasoning, evaluate evidence objectively, explore multiple perspectives, synthesize complex information into clear insights, explain trade-offs with nuance, produce a polished professional response and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and actionable next steps.\n\nRequest:",
+    "isOfficial": false
+  }
+]

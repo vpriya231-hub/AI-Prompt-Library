@@ -1,0 +1,902 @@
+[
+  {
+    "id": 201,
+    "shortcut": "/researcharchitect",
+    "title": "Research Architect",
+    "category": "Research",
+    "description": "Design a comprehensive research framework before investigation begins.",
+    "prompt": "Act as an expert research architect. Design a complete research framework for the following topic. Define objectives, research questions, hypotheses, scope, assumptions, methodology, data sources, evaluation criteria, limitations, ethical considerations, expected outcomes and recommended next steps.\n\nResearch Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 202,
+    "shortcut": "/deepreasoning",
+    "title": "Deep Reasoning",
+    "category": "Reasoning",
+    "description": "Apply rigorous multi-stage reasoning to difficult problems.",
+    "prompt": "Analyze the following problem using rigorous multi-stage reasoning. Clearly identify objectives, assumptions, constraints, relevant principles, possible approaches, trade-offs, edge cases, risks and the strongest conclusion supported by logical analysis.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 203,
+    "shortcut": "/knowledgefusion",
+    "title": "Knowledge Fusion",
+    "category": "Knowledge",
+    "description": "Combine multiple knowledge domains into one coherent model.",
+    "prompt": "Integrate knowledge from multiple disciplines to analyze the following subject. Explain how each discipline contributes, identify shared principles, conflicts, emerging insights, practical applications and opportunities created by combining these perspectives.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 204,
+    "shortcut": "/expertreview",
+    "title": "Expert Review",
+    "category": "Analysis",
+    "description": "Review work with the rigor of an experienced domain expert.",
+    "prompt": "Review the following work as if you are a senior domain expert. Evaluate technical quality, logical consistency, completeness, clarity, evidence, assumptions, strengths, weaknesses, risks and recommendations for achieving expert-level quality.\n\nWork:",
+    "isOfficial": false
+  },
+  {
+    "id": 205,
+    "shortcut": "/frameworkdesigner",
+    "title": "Framework Designer",
+    "category": "Strategy",
+    "description": "Design reusable analytical and decision-making frameworks.",
+    "prompt": "Design a reusable framework for solving the following class of problems. Define guiding principles, stages, decision criteria, checkpoints, evaluation metrics, adaptation strategies and examples of practical use.\n\nProblem Domain:",
+    "isOfficial": false
+  },
+  {
+    "id": 206,
+    "shortcut": "/constitutionalreview",
+    "title": "Constitutional Review",
+    "category": "Ethics",
+    "description": "Evaluate ideas using explicit principles and values.",
+    "prompt": "Evaluate the following proposal against a clearly defined set of principles. Identify alignment, conflicts, ethical considerations, stakeholder impact, unintended consequences, trade-offs and recommend revisions that better satisfy the guiding principles.\n\nProposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 207,
+    "shortcut": "/metaanalysis",
+    "title": "Meta Analysis",
+    "category": "Research",
+    "description": "Analyze patterns across multiple sources or viewpoints.",
+    "prompt": "Perform a meta-analysis of the following information. Compare multiple perspectives, identify recurring themes, inconsistencies, evidence quality, confidence levels, emerging patterns, unresolved questions and evidence-based conclusions.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 208,
+    "shortcut": "/workflowengine",
+    "title": "Workflow Engine",
+    "category": "Productivity",
+    "description": "Create optimized workflows for complex processes.",
+    "prompt": "Design an optimized workflow for the following objective. Define stages, responsibilities, dependencies, automation opportunities, quality checkpoints, failure recovery strategies, success metrics and continuous improvement methods.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 209,
+    "shortcut": "/precisioneditor",
+    "title": "Precision Editor",
+    "category": "Writing",
+    "description": "Edit writing for maximum precision and professional quality.",
+    "prompt": "Edit the following text for expert-level quality. Improve precision, clarity, structure, logical flow, terminology, consistency, readability and professional tone while preserving the author's intended meaning. Explain the most significant improvements.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 210,
+    "shortcut": "/claudeexpert",
+    "title": "Claude Expert",
+    "category": "AI",
+    "description": "Use Claude as an expert reasoning, research, document intelligence and strategic thinking partner.",
+    "prompt": "Act as a world-class reasoning expert, research strategist, document intelligence specialist, systems thinker and executive communication advisor. Carefully analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties and measurable success criteria. Apply structured reasoning, evaluate evidence critically, synthesize complex information across multiple perspectives, explain trade-offs with nuance, challenge weak assumptions, produce a highly polished professional response and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and future considerations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 211,
+    "shortcut": "/researchsynthesis",
+    "title": "Research Synthesis",
+    "category": "Research",
+    "description": "Synthesize complex research into actionable insights.",
+    "prompt": "Synthesize the following research into a coherent expert-level report. Identify the central findings, supporting evidence, conflicting viewpoints, methodological strengths and weaknesses, knowledge gaps, practical implications, confidence levels and strategic recommendations.\n\nResearch:",
+    "isOfficial": false
+  },
+  {
+    "id": 212,
+    "shortcut": "/expertreasoning",
+    "title": "Expert Reasoning",
+    "category": "Reasoning",
+    "description": "Solve complex problems using advanced analytical reasoning.",
+    "prompt": "Analyze the following problem using expert-level reasoning. Separate facts from assumptions, identify constraints, evaluate competing hypotheses, analyze trade-offs, consider edge cases, challenge initial conclusions and provide the strongest evidence-supported solution.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 213,
+    "shortcut": "/policyanalysis",
+    "title": "Policy Analysis",
+    "category": "Policy",
+    "description": "Evaluate policies from legal, ethical and operational perspectives.",
+    "prompt": "Conduct a comprehensive analysis of the following policy. Evaluate objectives, legal considerations, ethical implications, stakeholder impact, implementation feasibility, risks, unintended consequences, measurable outcomes and recommended improvements.\n\nPolicy:",
+    "isOfficial": false
+  },
+  {
+    "id": 214,
+    "shortcut": "/longcontext",
+    "title": "Long Context Analysis",
+    "category": "Documents",
+    "description": "Analyze large bodies of information while preserving context.",
+    "prompt": "Carefully analyze the following long-form content while maintaining context across all sections. Produce an executive summary, identify major themes, important relationships, contradictions, missing information, strategic implications and actionable recommendations.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 215,
+    "shortcut": "/strategicreview",
+    "title": "Strategic Review",
+    "category": "Strategy",
+    "description": "Review initiatives through an executive strategy lens.",
+    "prompt": "Review the following initiative from a strategic leadership perspective. Assess vision alignment, competitive advantages, execution readiness, dependencies, stakeholder interests, operational risks, long-term sustainability and strategic recommendations.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 216,
+    "shortcut": "/systemaudit",
+    "title": "System Audit",
+    "category": "Systems Thinking",
+    "description": "Audit systems for resilience, efficiency and scalability.",
+    "prompt": "Audit the following system in depth. Evaluate architecture, dependencies, bottlenecks, resilience, scalability, maintainability, operational risks, optimization opportunities and future evolution strategies.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 217,
+    "shortcut": "/decisionmatrix",
+    "title": "Decision Matrix",
+    "category": "Decision Making",
+    "description": "Create structured decision matrices for complex choices.",
+    "prompt": "Create a detailed decision matrix for the following situation. Define evaluation criteria, assign relative importance, compare available options, analyze trade-offs, explain uncertainties, calculate qualitative rankings and recommend the strongest option.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 218,
+    "shortcut": "/advancedrewrite",
+    "title": "Advanced Rewrite",
+    "category": "Writing",
+    "description": "Rewrite content to publication-quality standards.",
+    "prompt": "Rewrite the following content to publication-quality standards. Improve organization, clarity, coherence, precision, tone, transitions, style and readability while preserving all essential meaning and nuance.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 219,
+    "shortcut": "/agentplanner",
+    "title": "Agent Planner",
+    "category": "AI",
+    "description": "Design AI agent workflows for complex objectives.",
+    "prompt": "Design an AI agent workflow for the following objective. Define agent responsibilities, reasoning stages, task decomposition, tool usage, decision checkpoints, quality assurance methods, exception handling, evaluation metrics and optimization opportunities.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 220,
+    "shortcut": "/claudepremier",
+    "title": "Claude Premier",
+    "category": "AI",
+    "description": "Use Claude as a premier expert for research, reasoning, document intelligence and strategic decision-making.",
+    "prompt": "Act as a premier expert in reasoning, research synthesis, document intelligence, systems thinking, policy evaluation and executive communication. Carefully analyze the following request by identifying objectives, assumptions, constraints, stakeholders, dependencies, uncertainties and measurable success criteria. Apply rigorous analytical frameworks, evaluate evidence objectively, challenge weak assumptions, synthesize diverse information into coherent insights, compare alternative approaches, explain trade-offs with nuance and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and future research opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 221,
+    "shortcut": "/researchblueprint",
+    "title": "Research Blueprint",
+    "category": "Research",
+    "description": "Create an end-to-end blueprint for complex research projects.",
+    "prompt": "Design a complete research blueprint for the following topic. Define objectives, scope, research questions, hypotheses, methodology, required resources, evaluation criteria, data collection strategy, validation methods, limitations, ethical considerations, expected deliverables and success metrics.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 222,
+    "shortcut": "/multimodelanalysis",
+    "title": "Multi-Model Analysis",
+    "category": "Reasoning",
+    "description": "Analyze problems using multiple mental models.",
+    "prompt": "Analyze the following problem using multiple mental models including first principles, systems thinking, inversion, second-order thinking, opportunity cost and probabilistic reasoning. Compare insights from each model, identify common conclusions and recommend the strongest course of action.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 223,
+    "shortcut": "/expertcritique",
+    "title": "Expert Critique",
+    "category": "Analysis",
+    "description": "Provide a rigorous expert critique with constructive improvements.",
+    "prompt": "Critique the following work as an experienced domain expert. Evaluate technical accuracy, clarity, logical consistency, completeness, supporting evidence, assumptions, communication quality and overall effectiveness. Provide prioritized recommendations for improvement.\n\nWork:",
+    "isOfficial": false
+  },
+  {
+    "id": 224,
+    "shortcut": "/decisionframework",
+    "title": "Decision Framework",
+    "category": "Decision Making",
+    "description": "Build structured decision frameworks for high-impact choices.",
+    "prompt": "Develop a comprehensive decision framework for the following situation. Define objectives, evaluation criteria, assumptions, constraints, stakeholders, alternative options, risk factors, success metrics, governance checkpoints and implementation guidance.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 225,
+    "shortcut": "/knowledgeaudit",
+    "title": "Knowledge Audit",
+    "category": "Knowledge",
+    "description": "Audit existing knowledge to identify strengths and gaps.",
+    "prompt": "Conduct a knowledge audit for the following subject. Identify established knowledge, uncertain areas, misconceptions, missing information, dependencies, learning priorities, trusted sources and recommendations for achieving expert-level understanding.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 226,
+    "shortcut": "/documentforensics",
+    "title": "Document Forensics",
+    "category": "Documents",
+    "description": "Perform a forensic-level analysis of complex documents.",
+    "prompt": "Perform a forensic analysis of the following document. Examine structure, consistency, assumptions, implicit messages, evidence quality, contradictions, missing information, credibility indicators, strategic implications and recommendations.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 227,
+    "shortcut": "/strategicforesight",
+    "title": "Strategic Foresight",
+    "category": "Strategy",
+    "description": "Explore future scenarios and long-term strategic implications.",
+    "prompt": "Develop a strategic foresight analysis for the following topic. Identify driving forces, uncertainties, plausible future scenarios, emerging opportunities, major risks, early warning indicators and strategic preparations for each scenario.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 228,
+    "shortcut": "/agentarchitecture",
+    "title": "Agent Architecture",
+    "category": "AI",
+    "description": "Design scalable AI agent architectures and workflows.",
+    "prompt": "Design a scalable AI agent architecture for the following objective. Define agent roles, responsibilities, communication flows, reasoning pipelines, tool integrations, quality assurance mechanisms, monitoring strategies, failure recovery and optimization opportunities.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 229,
+    "shortcut": "/publicationeditor",
+    "title": "Publication Editor",
+    "category": "Writing",
+    "description": "Edit documents to publication-ready professional quality.",
+    "prompt": "Edit the following document to publication-ready quality. Improve structure, precision, logical flow, readability, terminology, consistency, transitions and style while preserving the author's intended meaning. Summarize all major editorial improvements after the revision.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 230,
+    "shortcut": "/claudescholar",
+    "title": "Claude Scholar",
+    "category": "AI",
+    "description": "Use Claude as a scholarly expert for deep reasoning, research synthesis, document intelligence and strategic analysis.",
+    "prompt": "Act as a scholarly expert specializing in deep reasoning, research synthesis, document intelligence, systems thinking, strategic planning and executive communication. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties and evaluation criteria. Apply rigorous analytical methods, integrate evidence from multiple perspectives, challenge unsupported assumptions, synthesize complex information into coherent insights, explain trade-offs with precision and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and future research directions.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 231,
+    "shortcut": "/causalframework",
+    "title": "Causal Framework",
+    "category": "Reasoning",
+    "description": "Build a structured causal model for complex problems.",
+    "prompt": "Develop a comprehensive causal framework for the following topic. Identify root causes, contributing factors, causal chains, feedback loops, dependencies, confounding variables, evidence strength, uncertainties and intervention opportunities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 232,
+    "shortcut": "/executivestrategy",
+    "title": "Executive Strategy",
+    "category": "Business",
+    "description": "Develop executive-level strategic recommendations.",
+    "prompt": "Evaluate the following situation as an executive strategy team. Analyze objectives, competitive positioning, stakeholder interests, operational feasibility, financial considerations, risks, long-term implications and recommend a strategic course of action with implementation priorities.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 233,
+    "shortcut": "/evidencehierarchy",
+    "title": "Evidence Hierarchy",
+    "category": "Research",
+    "description": "Rank evidence based on reliability and decision value.",
+    "prompt": "Evaluate the available evidence for the following topic. Classify evidence by reliability, identify high-confidence findings, distinguish assumptions from verified information, explain evidence gaps and recommend additional validation before drawing conclusions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 234,
+    "shortcut": "/logicvalidator",
+    "title": "Logic Validator",
+    "category": "Reasoning",
+    "description": "Validate reasoning for consistency and soundness.",
+    "prompt": "Validate the logical reasoning behind the following argument. Examine assumptions, premises, inference quality, internal consistency, potential fallacies, counterexamples, unsupported claims and recommend improvements that strengthen the argument.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 235,
+    "shortcut": "/knowledgegraph",
+    "title": "Knowledge Graph",
+    "category": "Knowledge",
+    "description": "Organize concepts into an interconnected knowledge graph.",
+    "prompt": "Construct a knowledge graph for the following subject. Identify core concepts, relationships, dependencies, hierarchies, cross-disciplinary links, practical applications, learning pathways and opportunities for further exploration.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 236,
+    "shortcut": "/documentstrategyplus",
+    "title": "Document Strategy+",
+    "category": "Documents",
+    "description": "Transform complex documents into strategic action plans.",
+    "prompt": "Analyze the following document and convert it into an executive action plan. Identify priorities, objectives, key stakeholders, required resources, dependencies, implementation phases, measurable outcomes, risks and recommended next steps.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 237,
+    "shortcut": "/futuremapping",
+    "title": "Future Mapping",
+    "category": "Strategy",
+    "description": "Map possible future outcomes and strategic responses.",
+    "prompt": "Create a future map for the following topic. Identify major trends, uncertainties, disruptive events, best-case, worst-case and most-likely scenarios, early warning indicators, strategic responses and resilience strategies.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 238,
+    "shortcut": "/promptarchitect",
+    "title": "Prompt Architect",
+    "category": "AI",
+    "description": "Design robust prompts for advanced AI workflows.",
+    "prompt": "Design a professional-grade prompt architecture for the following objective. Define the AI role, objectives, context, constraints, reasoning process, output format, quality criteria, validation checks, fallback behavior and optimization suggestions.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 239,
+    "shortcut": "/expertrewriter",
+    "title": "Expert Rewriter",
+    "category": "Writing",
+    "description": "Rewrite complex content with expert precision and clarity.",
+    "prompt": "Rewrite the following content at an expert level while preserving its meaning. Improve organization, clarity, logical progression, precision, tone, consistency, readability and persuasive effectiveness. Summarize the major improvements after rewriting.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 240,
+    "shortcut": "/clauderesearcher",
+    "title": "Claude Researcher",
+    "category": "AI",
+    "description": "Use Claude as a research strategist, reasoning expert and document intelligence specialist.",
+    "prompt": "Act as an expert researcher, reasoning specialist, document intelligence analyst, systems thinker and strategic advisor. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties and evaluation criteria. Apply rigorous analytical frameworks, evaluate evidence critically, synthesize information across multiple domains, challenge unsupported assumptions, explain trade-offs with precision and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies and future research opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 241,
+    "shortcut": "/multistageplanner",
+    "title": "Multi-Stage Planner",
+    "category": "Planning",
+    "description": "Design complex plans with sequential reasoning and validation.",
+    "prompt": "Develop a comprehensive multi-stage plan for the following objective. Break the work into logical phases, define milestones, dependencies, decision checkpoints, required resources, risk mitigation strategies, validation methods, success metrics and contingency plans.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 242,
+    "shortcut": "/researchvalidator",
+    "title": "Research Validator",
+    "category": "Research",
+    "description": "Validate research quality, methodology and conclusions.",
+    "prompt": "Evaluate the following research critically. Assess methodology, evidence quality, assumptions, reproducibility, potential biases, statistical or logical validity, limitations, unanswered questions and recommendations for improving confidence in the conclusions.\n\nResearch:",
+    "isOfficial": false
+  },
+  {
+    "id": 243,
+    "shortcut": "/secondorder",
+    "title": "Second-Order Thinking",
+    "category": "Reasoning",
+    "description": "Explore immediate and long-term consequences of decisions.",
+    "prompt": "Analyze the following decision using second-order thinking. Identify immediate outcomes, indirect effects, cascading consequences, long-term impacts, hidden trade-offs, unintended consequences and recommend the most resilient approach.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 244,
+    "shortcut": "/argumentmapper",
+    "title": "Argument Mapper",
+    "category": "Reasoning",
+    "description": "Visualize and evaluate the structure of complex arguments.",
+    "prompt": "Map the logical structure of the following argument. Identify claims, supporting evidence, assumptions, counterarguments, logical dependencies, weak links, contradictions and recommendations for strengthening the reasoning.\n\nArgument:",
+    "isOfficial": false
+  },
+  {
+    "id": 245,
+    "shortcut": "/systemevolution",
+    "title": "System Evolution",
+    "category": "Systems Thinking",
+    "description": "Plan how complex systems should evolve over time.",
+    "prompt": "Analyze the following system and design an evolution strategy. Evaluate the current state, scalability, resilience, bottlenecks, future requirements, migration paths, modernization opportunities, risks and phased implementation recommendations.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 246,
+    "shortcut": "/decisionsimulation",
+    "title": "Decision Simulation",
+    "category": "Decision Making",
+    "description": "Simulate multiple decision paths before choosing.",
+    "prompt": "Simulate multiple decision paths for the following scenario. Evaluate optimistic, realistic and pessimistic outcomes, identify uncertainties, resource implications, stakeholder reactions, trade-offs and recommend the strongest decision with justification.\n\nScenario:",
+    "isOfficial": false
+  },
+  {
+    "id": 247,
+    "shortcut": "/executivebriefing",
+    "title": "Executive Briefing",
+    "category": "Business",
+    "description": "Prepare concise executive-level briefings with strategic insights.",
+    "prompt": "Prepare an executive briefing for the following topic. Include an executive summary, key findings, strategic implications, opportunities, risks, recommended actions, measurable objectives and priority next steps suitable for senior leadership.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 248,
+    "shortcut": "/knowledgecompression",
+    "title": "Knowledge Compression",
+    "category": "Knowledge",
+    "description": "Compress complex knowledge into a highly efficient learning structure.",
+    "prompt": "Transform the following subject into a compact yet comprehensive learning framework. Preserve essential concepts, organize knowledge hierarchically, highlight relationships, identify common misconceptions, include memory aids and recommend an efficient learning sequence.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 249,
+    "shortcut": "/agentblueprint",
+    "title": "Agent Blueprint",
+    "category": "AI",
+    "description": "Create production-ready AI agent blueprints.",
+    "prompt": "Design a production-ready AI agent blueprint for the following objective. Define the agent's purpose, responsibilities, reasoning workflow, tool usage, memory strategy, safety constraints, validation methods, exception handling, monitoring metrics and future scalability considerations.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 250,
+    "shortcut": "/claudeprincipal",
+    "title": "Claude Principal",
+    "category": "AI",
+    "description": "Use Claude as a principal-level advisor for research, reasoning, systems thinking and executive decision support.",
+    "prompt": "Act as a principal-level advisor specializing in research strategy, advanced reasoning, document intelligence, systems thinking, executive communication and complex decision support. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties and measurable success criteria. Apply rigorous analytical frameworks, evaluate evidence critically, integrate multiple perspectives, explore second-order effects, challenge unsupported assumptions, explain trade-offs with precision and conclude with strategic recommendations, implementation guidance, measurable outcomes, governance considerations, risk mitigation strategies and future opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 251,
+    "shortcut": "/researchorchestrator",
+    "title": "Research Orchestrator",
+    "category": "Research",
+    "description": "Coordinate complex research workflows from planning to conclusions.",
+    "prompt": "Act as a research orchestrator. Develop a complete research workflow for the following topic. Define objectives, research questions, methodology, source evaluation criteria, evidence collection strategy, validation methods, synthesis approach, quality assurance process, expected deliverables and success metrics.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 252,
+    "shortcut": "/reasoningframework",
+    "title": "Reasoning Framework",
+    "category": "Reasoning",
+    "description": "Construct structured reasoning frameworks for difficult problems.",
+    "prompt": "Develop a structured reasoning framework for the following problem. Identify objectives, assumptions, known facts, uncertainties, reasoning stages, evaluation criteria, alternative explanations, confidence assessment and final recommendations.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 253,
+    "shortcut": "/strategicdiagnosis",
+    "title": "Strategic Diagnosis",
+    "category": "Strategy",
+    "description": "Diagnose strategic issues before recommending solutions.",
+    "prompt": "Perform a strategic diagnosis of the following situation. Identify underlying causes, stakeholder dynamics, structural challenges, constraints, opportunities, risks, strategic priorities and recommend evidence-based corrective actions.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 254,
+    "shortcut": "/complexdocument",
+    "title": "Complex Document Analysis",
+    "category": "Documents",
+    "description": "Analyze highly detailed documents while preserving context.",
+    "prompt": "Perform a comprehensive analysis of the following document. Identify major themes, implicit assumptions, logical structure, evidence quality, inconsistencies, strategic implications, unanswered questions and executive recommendations.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 255,
+    "shortcut": "/mentalmodels",
+    "title": "Mental Models",
+    "category": "Thinking",
+    "description": "Analyze situations using multiple expert mental models.",
+    "prompt": "Analyze the following situation using multiple mental models including first principles, inversion, systems thinking, probabilistic reasoning, second-order thinking and opportunity cost analysis. Compare conclusions from each perspective and recommend the strongest course of action.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 256,
+    "shortcut": "/riskarchitecture",
+    "title": "Risk Architecture",
+    "category": "Risk",
+    "description": "Design a comprehensive risk architecture for complex initiatives.",
+    "prompt": "Develop a complete risk architecture for the following initiative. Identify strategic, operational, technical, financial, legal and reputational risks. Evaluate likelihood, impact, mitigation strategies, contingency plans, monitoring indicators and governance mechanisms.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 257,
+    "shortcut": "/insightdiscovery",
+    "title": "Insight Discovery",
+    "category": "Analysis",
+    "description": "Discover hidden insights from complex information.",
+    "prompt": "Analyze the following information to uncover hidden insights. Identify recurring themes, unexpected relationships, root patterns, strategic implications, emerging opportunities, critical uncertainties and prioritized recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 258,
+    "shortcut": "/workflowdesigner",
+    "title": "Workflow Designer",
+    "category": "Productivity",
+    "description": "Design scalable workflows for complex professional tasks.",
+    "prompt": "Design a scalable workflow for the following objective. Define stages, responsibilities, automation opportunities, validation checkpoints, quality controls, dependencies, exception handling procedures, optimization opportunities and measurable performance indicators.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 259,
+    "shortcut": "/expertcomposer",
+    "title": "Expert Composer",
+    "category": "Writing",
+    "description": "Compose expert-level documents with exceptional structure and clarity.",
+    "prompt": "Write or rewrite the following content to expert professional standards. Improve organization, logical flow, clarity, precision, persuasive strength, consistency, readability and overall impact while preserving the intended meaning.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 260,
+    "shortcut": "/claudeexecutive",
+    "title": "Claude Executive",
+    "category": "AI",
+    "description": "Use Claude as an executive-level expert for research, reasoning, strategic planning and document intelligence.",
+    "prompt": "Act as an executive-level expert specializing in research strategy, advanced reasoning, document intelligence, systems thinking, executive communication and organizational decision-making. Carefully analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties, governance considerations and measurable success criteria. Apply rigorous analytical frameworks, evaluate evidence critically, synthesize information across multiple disciplines, examine second-order consequences, challenge unsupported assumptions, communicate with precision and conclude with strategic recommendations, implementation guidance, measurable outcomes, risk mitigation strategies, governance recommendations and future opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 261,
+    "shortcut": "/analyticalengine",
+    "title": "Analytical Engine",
+    "category": "Analysis",
+    "description": "Perform a comprehensive multi-layer analytical evaluation.",
+    "prompt": "Analyze the following subject using a structured analytical engine. Identify objectives, context, assumptions, evidence, dependencies, stakeholder perspectives, risks, opportunities, trade-offs, uncertainties, strategic implications and prioritized recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 262,
+    "shortcut": "/researchgovernance",
+    "title": "Research Governance",
+    "category": "Research",
+    "description": "Design governance structures for high-quality research.",
+    "prompt": "Develop a governance framework for the following research initiative. Define roles, responsibilities, quality controls, evidence standards, review procedures, ethical safeguards, decision checkpoints, documentation requirements and success metrics.\n\nResearch Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 263,
+    "shortcut": "/principledreasoning",
+    "title": "Principled Reasoning",
+    "category": "Reasoning",
+    "description": "Apply explicit principles to guide rigorous reasoning.",
+    "prompt": "Reason through the following problem using clearly defined principles. State the governing principles, evaluate assumptions, analyze evidence, identify conflicts between principles, resolve trade-offs and produce a balanced, well-supported conclusion.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 264,
+    "shortcut": "/decisiongovernance",
+    "title": "Decision Governance",
+    "category": "Decision Making",
+    "description": "Create governance processes for important organizational decisions.",
+    "prompt": "Design a governance process for the following decision. Define stakeholders, approval stages, evaluation criteria, escalation paths, documentation standards, accountability mechanisms, review cycles and post-decision evaluation methods.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 265,
+    "shortcut": "/crossdomain",
+    "title": "Cross-Domain Intelligence",
+    "category": "Knowledge",
+    "description": "Connect insights across multiple disciplines.",
+    "prompt": "Analyze the following topic through multiple academic and professional disciplines. Explain how each perspective contributes, identify shared concepts, conflicting assumptions, interdisciplinary opportunities and produce a unified expert understanding.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 266,
+    "shortcut": "/documentgovernance",
+    "title": "Document Governance",
+    "category": "Documents",
+    "description": "Evaluate documents for governance, compliance and quality.",
+    "prompt": "Evaluate the following document from a governance perspective. Assess structure, accountability, policy alignment, consistency, traceability, documentation quality, missing elements, implementation risks and improvement recommendations.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 267,
+    "shortcut": "/strategicportfolio",
+    "title": "Strategic Portfolio",
+    "category": "Strategy",
+    "description": "Prioritize initiatives within a strategic portfolio.",
+    "prompt": "Evaluate the following portfolio of initiatives. Compare strategic value, resource requirements, dependencies, execution complexity, expected outcomes, risks, long-term benefits and recommend an optimized prioritization strategy.\n\nPortfolio:",
+    "isOfficial": false
+  },
+  {
+    "id": 268,
+    "shortcut": "/agentgovernance",
+    "title": "Agent Governance",
+    "category": "AI",
+    "description": "Design governance frameworks for AI agents and workflows.",
+    "prompt": "Develop a governance framework for the following AI agent system. Define responsibilities, authority boundaries, reasoning validation, safety constraints, monitoring procedures, quality assurance, escalation rules, auditability and continuous improvement mechanisms.\n\nAI System:",
+    "isOfficial": false
+  },
+  {
+    "id": 269,
+    "shortcut": "/editorialreview",
+    "title": "Editorial Review",
+    "category": "Writing",
+    "description": "Review content with the rigor of a senior editor.",
+    "prompt": "Review the following content as a senior editor. Evaluate clarity, organization, logical progression, consistency, precision, readability, style, audience alignment and recommend revisions that elevate it to publication-quality standards.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 270,
+    "shortcut": "/claudeauthority",
+    "title": "Claude Authority",
+    "category": "AI",
+    "description": "Use Claude as an authority on reasoning, research, governance and strategic analysis.",
+    "prompt": "Act as a world-class authority in reasoning, research methodology, document intelligence, governance, systems thinking and executive strategy. Analyze the following request by identifying objectives, assumptions, stakeholders, dependencies, constraints, uncertainties, governance considerations and measurable success criteria. Apply rigorous analytical frameworks, critically evaluate evidence, synthesize multidisciplinary insights, explore alternative viewpoints, identify second-order effects, communicate with exceptional clarity and conclude with strategic recommendations, implementation guidance, governance mechanisms, measurable outcomes, risk mitigation strategies and future opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 271,
+    "shortcut": "/reasoninglab",
+    "title": "Reasoning Lab",
+    "category": "Reasoning",
+    "description": "Experiment with multiple reasoning approaches before reaching a conclusion.",
+    "prompt": "Analyze the following problem as if working inside a reasoning laboratory. Apply deductive, inductive, abductive, probabilistic and systems reasoning. Compare each approach, identify where they agree or conflict, assess confidence levels and provide the strongest evidence-supported conclusion.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 272,
+    "shortcut": "/evidencesynthesis",
+    "title": "Evidence Synthesis",
+    "category": "Research",
+    "description": "Combine evidence from multiple sources into coherent conclusions.",
+    "prompt": "Synthesize the following evidence. Classify evidence by reliability, identify agreements and contradictions, evaluate confidence, explain remaining uncertainties, highlight knowledge gaps and produce balanced, evidence-based conclusions.\n\nEvidence:",
+    "isOfficial": false
+  },
+  {
+    "id": 273,
+    "shortcut": "/systemblueprint",
+    "title": "System Blueprint",
+    "category": "Systems Thinking",
+    "description": "Design scalable systems from first principles.",
+    "prompt": "Create a complete blueprint for the following system. Define objectives, architecture, components, interactions, dependencies, scalability strategy, resilience mechanisms, monitoring approaches, failure recovery methods and future expansion opportunities.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 274,
+    "shortcut": "/executiveanalysis",
+    "title": "Executive Analysis",
+    "category": "Business",
+    "description": "Analyze situations from a boardroom perspective.",
+    "prompt": "Evaluate the following situation as an executive leadership team. Analyze strategic priorities, organizational impact, financial implications, stakeholder interests, operational risks, governance considerations, long-term opportunities and recommend executive actions.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 275,
+    "shortcut": "/knowledgeorchestrator",
+    "title": "Knowledge Orchestrator",
+    "category": "Knowledge",
+    "description": "Organize large knowledge domains into structured learning systems.",
+    "prompt": "Organize the following subject into a comprehensive knowledge system. Define foundational concepts, advanced topics, dependencies, conceptual relationships, learning milestones, practical applications, common misconceptions and mastery strategies.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 276,
+    "shortcut": "/documentintelligence",
+    "title": "Document Intelligence",
+    "category": "Documents",
+    "description": "Extract strategic intelligence from complex documents.",
+    "prompt": "Analyze the following document to extract strategic intelligence. Identify objectives, implicit assumptions, stakeholder interests, hidden patterns, logical inconsistencies, strategic risks, opportunities, unanswered questions and executive recommendations.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 277,
+    "shortcut": "/governancereview",
+    "title": "Governance Review",
+    "category": "Governance",
+    "description": "Review governance structures for effectiveness and accountability.",
+    "prompt": "Review the governance model for the following organization or initiative. Evaluate accountability, decision-making authority, transparency, oversight mechanisms, compliance considerations, operational effectiveness, risks and improvement recommendations.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 278,
+    "shortcut": "/metaframework",
+    "title": "Meta Framework",
+    "category": "Meta Thinking",
+    "description": "Build higher-level frameworks that organize other frameworks.",
+    "prompt": "Create a meta-framework for the following domain. Organize existing models, identify common principles, explain when each framework should be applied, compare strengths and limitations and propose an integrated expert methodology.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 279,
+    "shortcut": "/promptsystem",
+    "title": "Prompt System",
+    "category": "AI",
+    "description": "Design complete prompt systems for complex AI workflows.",
+    "prompt": "Design a complete prompt system for the following objective. Include system instructions, role definition, context management, reasoning guidance, constraints, validation steps, output formatting, quality assurance checks and optimization recommendations.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 280,
+    "shortcut": "/claudearchitectpro",
+    "title": "Claude Architect Pro",
+    "category": "AI",
+    "description": "Use Claude as a principal architect for research, reasoning, systems design and executive strategy.",
+    "prompt": "Act as a principal architect specializing in advanced reasoning, research methodology, document intelligence, systems architecture, governance and executive strategy. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties, governance requirements and measurable success criteria. Apply structured analytical frameworks, critically evaluate evidence, integrate multidisciplinary knowledge, explore alternative solutions, assess second-order effects, explain trade-offs with precision and conclude with strategic recommendations, implementation guidance, governance mechanisms, measurable outcomes, risk mitigation strategies and future evolution opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 281,
+    "shortcut": "/reasoningpipeline",
+    "title": "Reasoning Pipeline",
+    "category": "Reasoning",
+    "description": "Design a structured reasoning pipeline for solving complex problems.",
+    "prompt": "Create a complete reasoning pipeline for the following problem. Define the stages of understanding, assumption validation, evidence gathering, hypothesis generation, critical evaluation, trade-off analysis, confidence assessment, decision formulation and post-decision review.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 282,
+    "shortcut": "/researchecosystem",
+    "title": "Research Ecosystem",
+    "category": "Research",
+    "description": "Design an interconnected ecosystem for continuous research.",
+    "prompt": "Design a research ecosystem for the following domain. Define research objectives, information sources, validation processes, collaboration methods, evidence repositories, review cycles, knowledge management practices, quality standards and long-term sustainability strategies.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 283,
+    "shortcut": "/strategicarchitecture",
+    "title": "Strategic Architecture",
+    "category": "Strategy",
+    "description": "Architect long-term strategic systems and execution models.",
+    "prompt": "Develop a strategic architecture for the following initiative. Define vision, strategic pillars, supporting capabilities, execution roadmap, governance model, performance metrics, dependencies, risks and long-term adaptation strategies.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 284,
+    "shortcut": "/knowledgeengine",
+    "title": "Knowledge Engine",
+    "category": "Knowledge",
+    "description": "Build a reusable engine for organizing and applying knowledge.",
+    "prompt": "Construct a knowledge engine for the following subject. Organize concepts, relationships, reusable principles, decision rules, learning progression, retrieval strategies, application scenarios and methods for continuous knowledge refinement.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 285,
+    "shortcut": "/documentarchitecture",
+    "title": "Document Architecture",
+    "category": "Documents",
+    "description": "Architect large documents for clarity and scalability.",
+    "prompt": "Design the architecture of the following document. Define section hierarchy, information flow, supporting evidence, cross-references, executive summaries, appendices, review checkpoints and publication-quality structure.\n\nDocument Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 286,
+    "shortcut": "/decisionsimulationplus",
+    "title": "Decision Simulation+",
+    "category": "Decision Making",
+    "description": "Simulate complex decisions under multiple future conditions.",
+    "prompt": "Simulate the following decision across multiple future conditions. Evaluate best-case, worst-case, expected-case and unexpected scenarios. Analyze stakeholder reactions, resource impacts, uncertainties, resilience and recommend the most robust decision.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 287,
+    "shortcut": "/executiveframework",
+    "title": "Executive Framework",
+    "category": "Business",
+    "description": "Create executive frameworks for organizational decision-making.",
+    "prompt": "Develop an executive framework for the following organizational challenge. Define strategic objectives, governance structure, decision authority, operational priorities, stakeholder alignment, key performance indicators, review mechanisms and continuous improvement processes.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 288,
+    "shortcut": "/agentecosystem",
+    "title": "Agent Ecosystem",
+    "category": "AI",
+    "description": "Design collaborative ecosystems of specialized AI agents.",
+    "prompt": "Design a collaborative AI agent ecosystem for the following objective. Define specialized agent roles, communication protocols, orchestration strategy, reasoning delegation, memory sharing, validation workflows, monitoring systems, fault tolerance and scalability plans.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 289,
+    "shortcut": "/mastereditor",
+    "title": "Master Editor",
+    "category": "Writing",
+    "description": "Refine content to exceptional editorial standards.",
+    "prompt": "Edit the following content as a master editor. Improve organization, precision, coherence, logical progression, terminology, consistency, readability, rhetorical effectiveness and publication readiness. Explain the rationale behind major revisions.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 290,
+    "shortcut": "/claudevisionary",
+    "title": "Claude Visionary",
+    "category": "AI",
+    "description": "Use Claude as a visionary expert for research, reasoning, systems architecture and strategic transformation.",
+    "prompt": "Act as a visionary expert specializing in advanced reasoning, research methodology, document intelligence, systems architecture, organizational governance and strategic transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties, governance requirements and measurable success criteria. Apply rigorous analytical frameworks, critically evaluate evidence, synthesize multidisciplinary knowledge, model long-term consequences, explore innovative alternatives, explain complex trade-offs with precision and conclude with strategic recommendations, implementation guidance, governance mechanisms, measurable outcomes, risk mitigation strategies and future transformation opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 291,
+    "shortcut": "/decisionintelligence",
+    "title": "Decision Intelligence",
+    "category": "Decision Making",
+    "description": "Apply intelligence-driven frameworks to high-impact decisions.",
+    "prompt": "Analyze the following decision using decision intelligence principles. Define objectives, stakeholders, constraints, available evidence, uncertainties, decision criteria, possible alternatives, trade-offs, expected outcomes, measurable success indicators and implementation recommendations.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 292,
+    "shortcut": "/knowledgearchitecture",
+    "title": "Knowledge Architecture",
+    "category": "Knowledge",
+    "description": "Architect scalable knowledge systems for long-term expertise.",
+    "prompt": "Design a knowledge architecture for the following domain. Organize foundational concepts, advanced topics, dependencies, conceptual relationships, learning pathways, retrieval mechanisms, practical applications, maintenance strategies and future expansion opportunities.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 293,
+    "shortcut": "/researchnavigator",
+    "title": "Research Navigator",
+    "category": "Research",
+    "description": "Navigate complex research from discovery to validated conclusions.",
+    "prompt": "Act as a research navigator. Create a structured research pathway for the following topic. Define objectives, discovery methods, source evaluation criteria, validation procedures, synthesis techniques, quality checkpoints, reporting standards and future research opportunities.\n\nResearch Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 294,
+    "shortcut": "/strategicoptimizer",
+    "title": "Strategic Optimizer",
+    "category": "Strategy",
+    "description": "Optimize strategic initiatives for maximum long-term value.",
+    "prompt": "Optimize the following strategy. Evaluate objectives, execution plans, stakeholder alignment, resource allocation, dependencies, risks, resilience, measurable outcomes and opportunities for long-term competitive advantage.\n\nStrategy:",
+    "isOfficial": false
+  },
+  {
+    "id": 295,
+    "shortcut": "/documentmastery",
+    "title": "Document Mastery",
+    "category": "Documents",
+    "description": "Master the analysis and refinement of complex documents.",
+    "prompt": "Perform a master-level analysis of the following document. Evaluate structure, logic, evidence quality, consistency, clarity, implicit assumptions, strategic implications, weaknesses, strengths and recommendations for expert-level improvement.\n\nDocument:",
+    "isOfficial": false
+  },
+  {
+    "id": 296,
+    "shortcut": "/principlesengine",
+    "title": "Principles Engine",
+    "category": "Thinking",
+    "description": "Generate principle-driven solutions for difficult challenges.",
+    "prompt": "Solve the following challenge by deriving and applying fundamental principles. Identify governing principles, explain their relevance, resolve conflicts between principles, evaluate alternative approaches and produce a robust, principle-based solution.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 297,
+    "shortcut": "/executiveadvisor",
+    "title": "Executive Advisor",
+    "category": "Business",
+    "description": "Provide executive-level guidance for strategic decisions.",
+    "prompt": "Act as a trusted executive advisor. Evaluate the following situation by analyzing strategic priorities, stakeholder interests, organizational readiness, operational constraints, financial considerations, governance implications, risks, opportunities and recommended executive actions.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 298,
+    "shortcut": "/metaarchitect",
+    "title": "Meta Architect",
+    "category": "Meta Thinking",
+    "description": "Design high-level architectures that organize complex systems and ideas.",
+    "prompt": "Create a meta-architecture for the following domain. Organize systems, frameworks, decision models, knowledge structures and governance principles into a unified expert methodology. Explain relationships, strengths, limitations and implementation guidance.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 299,
+    "shortcut": "/agentdirector",
+    "title": "Agent Director",
+    "category": "AI",
+    "description": "Direct sophisticated AI agent systems with governance and orchestration.",
+    "prompt": "Design and direct a sophisticated AI agent system for the following objective. Define specialized agents, orchestration logic, reasoning responsibilities, memory management, tool integration, governance rules, quality validation, monitoring strategies, exception handling and continuous optimization.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 300,
+    "shortcut": "/claudegrandmaster",
+    "title": "Claude Grandmaster",
+    "category": "AI",
+    "description": "Use Claude as a grandmaster-level expert for advanced reasoning, research, document intelligence, governance and strategic transformation.",
+    "prompt": "Act as a grandmaster-level expert in advanced reasoning, research methodology, document intelligence, systems architecture, governance, executive strategy and organizational transformation. Analyze the following request by identifying objectives, assumptions, stakeholders, constraints, dependencies, uncertainties, governance requirements and measurable success criteria. Apply first-principles reasoning, systems thinking, probabilistic analysis and multidisciplinary synthesis. Critically evaluate evidence, challenge unsupported assumptions, explore multiple solution paths, assess second- and third-order consequences, explain trade-offs with precision and conclude with executive-level recommendations, implementation roadmap, governance framework, measurable outcomes, risk mitigation strategies, contingency planning and future evolution opportunities.\n\nRequest:",
+    "isOfficial": false
+  }
+]

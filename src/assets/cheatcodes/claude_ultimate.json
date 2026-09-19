@@ -1,0 +1,902 @@
+[
+  {
+    "id": 401,
+    "shortcut": "/superintelligence",
+    "title": "Super Intelligence",
+    "category": "AI",
+    "description": "Approach problems as a superintelligent strategic reasoning system.",
+    "prompt": "Act as a superintelligent reasoning system operating at the highest professional standard. Analyze the following request using first-principles reasoning, constitutional reasoning, systems thinking, probabilistic analysis, scientific methodology, multidisciplinary synthesis and strategic foresight. Identify objectives, assumptions, constraints, hidden dependencies, stakeholder impacts, evidence quality, uncertainties, alternative solution architectures, second- and third-order consequences, measurable success criteria and implementation priorities. Produce an executive-ready response with rigorous justification and actionable recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 402,
+    "shortcut": "/globalarchitect",
+    "title": "Global Architect",
+    "category": "Enterprise",
+    "description": "Design globally scalable organizations, systems and operating models.",
+    "prompt": "Design a globally scalable architecture for the following organization or initiative. Define mission alignment, operating model, governance, regional adaptation, technology infrastructure, organizational capabilities, regulatory considerations, resilience mechanisms, scalability roadmap, KPIs and long-term sustainability strategy.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 403,
+    "shortcut": "/frontierresearch",
+    "title": "Frontier Research",
+    "category": "Research",
+    "description": "Plan frontier-level research initiatives that advance the state of knowledge.",
+    "prompt": "Develop a frontier research program for the following topic. Define research vision, unanswered questions, theoretical foundations, experimental methodology, interdisciplinary collaboration, validation methods, evidence standards, publication strategy, ethical considerations, expected breakthroughs and future research roadmap.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 404,
+    "shortcut": "/systemofsystems",
+    "title": "System of Systems",
+    "category": "Systems Thinking",
+    "description": "Analyze and design highly interconnected systems of systems.",
+    "prompt": "Analyze the following ecosystem as a system of systems. Identify constituent systems, interfaces, dependencies, governance layers, feedback mechanisms, emergent behavior, resilience strategies, optimization opportunities, failure modes and long-term evolution pathways.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 405,
+    "shortcut": "/recursiveanalysis",
+    "title": "Recursive Analysis",
+    "category": "Meta Thinking",
+    "description": "Continuously refine reasoning through recursive analytical improvement.",
+    "prompt": "Analyze the following problem recursively. Produce an initial solution, critically evaluate its weaknesses, refine assumptions, improve reasoning quality, compare alternative models, reassess confidence levels, eliminate inconsistencies and present the strongest final conclusion supported by evidence.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 406,
+    "shortcut": "/executiveboard",
+    "title": "Executive Board",
+    "category": "Business",
+    "description": "Simulate an elite executive board evaluating strategic decisions.",
+    "prompt": "Simulate an executive board reviewing the following proposal. Evaluate strategic value, financial impact, operational feasibility, governance implications, legal and ethical considerations, stakeholder reactions, implementation complexity, major risks, success metrics and final board recommendations.\n\nProposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 407,
+    "shortcut": "/knowledgegraph",
+    "title": "Knowledge Graph",
+    "category": "Knowledge",
+    "description": "Build expert-level knowledge graphs connecting concepts and relationships.",
+    "prompt": "Construct a detailed knowledge graph for the following domain. Identify entities, concepts, relationships, dependencies, hierarchies, causal links, supporting evidence, knowledge gaps, practical applications and future expansion opportunities.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 408,
+    "shortcut": "/futurecivilization",
+    "title": "Future Civilization",
+    "category": "Foresight",
+    "description": "Model civilization-scale futures using multidisciplinary analysis.",
+    "prompt": "Develop a civilization-scale future assessment for the following subject. Analyze technological evolution, economic systems, governance models, environmental factors, societal changes, scientific breakthroughs, ethical implications, major uncertainties, resilience strategies and plausible future scenarios.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 409,
+    "shortcut": "/autonomousplanner",
+    "title": "Autonomous Planner",
+    "category": "Planning",
+    "description": "Develop autonomous strategic execution plans with adaptive feedback.",
+    "prompt": "Create a highly autonomous execution strategy for the following objective. Define mission goals, milestones, dependencies, decision checkpoints, contingency plans, adaptive feedback mechanisms, performance metrics, governance controls, optimization cycles and completion criteria.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 410,
+    "shortcut": "/claudefrontier",
+    "title": "Claude Frontier",
+    "category": "AI",
+    "description": "Use Claude as a frontier-level intelligence for scientific reasoning, enterprise architecture, systems engineering and strategic transformation.",
+    "prompt": "Act as a frontier-level intelligence specializing in advanced reasoning, scientific discovery, enterprise architecture, systems engineering, governance, research leadership, document intelligence, executive strategy and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable outcomes. Apply first-principles reasoning, constitutional reasoning, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight and recursive self-critique. Evaluate competing solution architectures, expose hidden systemic interactions, quantify trade-offs where possible and conclude with an executive transformation blueprint including implementation roadmap, governance architecture, KPIs, risk mitigation framework, contingency planning and future innovation opportunities.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 411,
+    "shortcut": "/discoveryengine",
+    "title": "Discovery Engine",
+    "category": "Research",
+    "description": "Design scientific discovery pipelines for breakthrough research.",
+    "prompt": "Design a scientific discovery engine for the following research domain. Define research vision, foundational theories, hypothesis generation methods, experimental workflows, evidence validation, interdisciplinary integration, uncertainty analysis, ethical considerations, reproducibility standards, expected breakthroughs and long-term research evolution.\n\nResearch Domain:",
+    "isOfficial": false
+  },
+  {
+    "id": 412,
+    "shortcut": "/grandstrategy",
+    "title": "Grand Strategy",
+    "category": "Strategy",
+    "description": "Develop civilization-scale strategies balancing long-term objectives and adaptive execution.",
+    "prompt": "Develop a grand strategy for the following objective. Define strategic vision, geopolitical influences, technological trends, economic factors, stakeholder ecosystems, governance structures, implementation phases, resilience mechanisms, measurable milestones, contingency strategies and long-term strategic outcomes.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 413,
+    "shortcut": "/multiverseanalysis",
+    "title": "Multiverse Analysis",
+    "category": "Reasoning",
+    "description": "Evaluate multiple plausible realities before selecting the strongest solution.",
+    "prompt": "Analyze the following problem by constructing multiple plausible scenarios. Evaluate assumptions, causal relationships, uncertainties, competing hypotheses, expected outcomes, probability estimates, systemic impacts, decision trade-offs, confidence levels and recommend the most robust solution.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 414,
+    "shortcut": "/boardofexperts",
+    "title": "Board of Experts",
+    "category": "Business",
+    "description": "Simulate an elite multidisciplinary advisory board for complex decisions.",
+    "prompt": "Simulate a board consisting of experts from strategy, science, engineering, economics, law, ethics, technology and operations. Independently evaluate the following proposal, identify agreements and disagreements, reconcile conflicting viewpoints, rank recommendations by impact and produce a final executive decision.\n\nProposal:",
+    "isOfficial": false
+  },
+  {
+    "id": 415,
+    "shortcut": "/knowledgeuniverse",
+    "title": "Knowledge Universe",
+    "category": "Knowledge",
+    "description": "Organize entire domains into interconnected expert knowledge structures.",
+    "prompt": "Construct a comprehensive knowledge universe for the following domain. Map foundational principles, advanced theories, interdisciplinary links, causal relationships, practical applications, misconceptions, research frontiers, expert heuristics, learning progression and future expansion opportunities.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 416,
+    "shortcut": "/adaptiveintelligence",
+    "title": "Adaptive Intelligence",
+    "category": "AI",
+    "description": "Develop adaptive intelligence strategies capable of evolving with changing conditions.",
+    "prompt": "Design an adaptive intelligence framework for the following objective. Define learning mechanisms, reasoning strategies, memory architecture, feedback loops, decision adaptation, governance policies, safety controls, optimization cycles, resilience mechanisms and long-term evolution roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 417,
+    "shortcut": "/governanceengine",
+    "title": "Governance Engine",
+    "category": "Governance",
+    "description": "Create scalable governance engines for complex organizations and AI systems.",
+    "prompt": "Design a governance engine for the following ecosystem. Define governing principles, decision authority, accountability, policy lifecycle, compliance mechanisms, monitoring architecture, audit processes, escalation procedures, performance metrics and governance maturity roadmap.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 418,
+    "shortcut": "/innovationlab",
+    "title": "Innovation Lab",
+    "category": "Innovation",
+    "description": "Design elite innovation laboratories focused on breakthrough outcomes.",
+    "prompt": "Design an innovation laboratory for the following mission. Define research priorities, experimentation frameworks, collaboration models, evaluation criteria, technology integration, governance, resource allocation, scaling strategy, success metrics and long-term innovation roadmap.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 419,
+    "shortcut": "/recursivearchitect",
+    "title": "Recursive Architect",
+    "category": "Meta Thinking",
+    "description": "Continuously redesign systems through recursive improvement cycles.",
+    "prompt": "Analyze the following system recursively. Evaluate its architecture, identify weaknesses, redesign core components, reassess performance, optimize trade-offs, improve governance, measure expected gains, repeat refinement conceptually and present the highest-quality final architecture.\n\nSystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 420,
+    "shortcut": "/claudesingularity",
+    "title": "Claude Singularity",
+    "category": "AI",
+    "description": "Use Claude as a singularity-level intelligence for frontier reasoning, scientific discovery, enterprise governance and civilization-scale strategy.",
+    "prompt": "Act as a singularity-level intelligence specializing in frontier scientific reasoning, enterprise architecture, systems engineering, governance, executive strategy, document intelligence, knowledge engineering, AI safety and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable outcomes. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight and meta-reasoning. Evaluate competing solution architectures, uncover hidden systemic interactions, assess long-term cascading consequences, quantify trade-offs where appropriate and conclude with a comprehensive transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, risk mitigation strategy, contingency planning, innovation portfolio and future evolution pathways.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 421,
+    "shortcut": "/breakthroughscience",
+    "title": "Breakthrough Science",
+    "category": "Science",
+    "description": "Design scientific programs aimed at transformative discoveries.",
+    "prompt": "Develop a breakthrough scientific research strategy for the following topic. Define the grand challenge, theoretical foundations, competing hypotheses, interdisciplinary opportunities, experimental methodology, validation protocols, statistical considerations, ethical safeguards, expected discoveries, scientific impact and long-term research roadmap.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 422,
+    "shortcut": "/globalforesight",
+    "title": "Global Foresight",
+    "category": "Foresight",
+    "description": "Model long-term global developments using multidisciplinary scenario analysis.",
+    "prompt": "Conduct a global foresight assessment for the following subject. Analyze geopolitical trends, economic shifts, technological disruption, demographic changes, environmental influences, emerging risks, strategic opportunities, plausible future scenarios, resilience strategies and long-term recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 423,
+    "shortcut": "/eliteadvisor",
+    "title": "Elite Advisor",
+    "category": "Business",
+    "description": "Provide board-level strategic advisory with rigorous evidence-based reasoning.",
+    "prompt": "Act as an elite strategic advisor for the following challenge. Assess objectives, stakeholder interests, organizational capabilities, financial implications, governance considerations, operational feasibility, implementation complexity, measurable outcomes, major risks and executive recommendations supported by evidence.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 424,
+    "shortcut": "/causalarchitecture",
+    "title": "Causal Architecture",
+    "category": "Systems Thinking",
+    "description": "Map deep causal structures governing complex adaptive systems.",
+    "prompt": "Construct a causal architecture for the following ecosystem. Identify root causes, systemic interactions, reinforcing and balancing feedback loops, hidden dependencies, intervention points, uncertainty factors, resilience mechanisms, optimization opportunities and long-term systemic outcomes.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 425,
+    "shortcut": "/knowledgefusion",
+    "title": "Knowledge Fusion",
+    "category": "Knowledge",
+    "description": "Fuse expertise across multiple disciplines into a unified framework.",
+    "prompt": "Create a multidisciplinary knowledge fusion framework for the following domain. Integrate concepts across fields, identify relationships, resolve conflicting viewpoints, evaluate evidence quality, organize learning pathways, recommend practical applications and propose future research directions.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 426,
+    "shortcut": "/adaptivegoals",
+    "title": "Adaptive Goals",
+    "category": "Planning",
+    "description": "Develop adaptive strategic plans capable of responding to changing conditions.",
+    "prompt": "Develop an adaptive strategic execution plan for the following objective. Define mission priorities, milestones, dependencies, performance indicators, decision checkpoints, feedback mechanisms, contingency strategies, optimization opportunities and measurable completion criteria.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 427,
+    "shortcut": "/metagovernance",
+    "title": "Meta Governance",
+    "category": "Governance",
+    "description": "Govern governance itself through higher-order oversight frameworks.",
+    "prompt": "Design a meta-governance framework for the following organization or ecosystem. Define governance principles, oversight of governing bodies, accountability mechanisms, policy evolution, audit architecture, transparency requirements, conflict resolution methods, continuous improvement processes and long-term governance resilience.\n\nOrganization or Ecosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 428,
+    "shortcut": "/innovationnetwork",
+    "title": "Innovation Network",
+    "category": "Innovation",
+    "description": "Build interconnected innovation networks spanning organizations and disciplines.",
+    "prompt": "Design an innovation network for the following mission. Define participating organizations, collaboration mechanisms, governance, knowledge exchange processes, funding strategy, experimentation framework, technology integration, success metrics and long-term ecosystem growth strategy.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 429,
+    "shortcut": "/superagent",
+    "title": "Super Agent",
+    "category": "AI",
+    "description": "Design highly capable autonomous AI agent ecosystems with governance and resilience.",
+    "prompt": "Design a super-agent ecosystem for the following objective. Define specialized agents, orchestration strategy, memory architecture, reasoning workflows, governance controls, tool integration, monitoring systems, safety mechanisms, optimization cycles, scalability strategy and future evolution roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 430,
+    "shortcut": "/claudequantum",
+    "title": "Claude Quantum",
+    "category": "AI",
+    "description": "Use Claude as a quantum-level intelligence for frontier reasoning, scientific discovery, enterprise transformation and advanced systems engineering.",
+    "prompt": "Act as a quantum-level intelligence specializing in advanced reasoning, frontier scientific discovery, enterprise architecture, systems engineering, governance, executive strategy, document intelligence, AI ecosystems and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable outcomes. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight and meta-reasoning. Evaluate competing architectures, expose hidden systemic interactions, assess cascading long-term effects, quantify trade-offs where appropriate and conclude with an executive transformation blueprint including implementation roadmap, governance architecture, KPIs, comprehensive risk mitigation strategy, contingency planning, innovation roadmap and future evolution recommendations.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 431,
+    "shortcut": "/scientificbreakthrough",
+    "title": "Scientific Breakthrough",
+    "category": "Science",
+    "description": "Engineer research programs designed to maximize breakthrough discoveries.",
+    "prompt": "Develop a breakthrough-oriented scientific program for the following challenge. Define scientific objectives, theoretical foundations, competing hypotheses, interdisciplinary opportunities, experimental design, validation framework, reproducibility standards, ethical safeguards, expected discoveries, measurable milestones and future research roadmap.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 432,
+    "shortcut": "/civilizationstrategy",
+    "title": "Civilization Strategy",
+    "category": "Strategy",
+    "description": "Develop long-term strategies considering civilization-scale systems and trends.",
+    "prompt": "Develop a civilization-scale strategy for the following subject. Analyze technological evolution, governance models, economic systems, environmental sustainability, demographic trends, geopolitical dynamics, societal resilience, strategic opportunities, long-term risks and adaptive recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 433,
+    "shortcut": "/deepuncertainty",
+    "title": "Deep Uncertainty",
+    "category": "Reasoning",
+    "description": "Reason effectively under profound uncertainty and incomplete information.",
+    "prompt": "Analyze the following problem under deep uncertainty. Identify knowns, unknowns, unknown unknowns, competing hypotheses, confidence estimates, scenario probabilities, evidence gaps, robust strategies, adaptive responses and recommendations that remain effective across multiple futures.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 434,
+    "shortcut": "/executivewarroom",
+    "title": "Executive War Room",
+    "category": "Business",
+    "description": "Coordinate executive decision-making during critical strategic situations.",
+    "prompt": "Operate as an executive war room evaluating the following situation. Assess strategic priorities, stakeholder pressures, operational realities, financial implications, legal considerations, governance requirements, crisis response options, communication strategy, measurable objectives and executive recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 435,
+    "shortcut": "/knowledgearchitecturepro",
+    "title": "Knowledge Architecture Pro",
+    "category": "Knowledge",
+    "description": "Design enterprise-grade knowledge architectures supporting expert reasoning.",
+    "prompt": "Design a comprehensive knowledge architecture for the following domain. Define ontologies, semantic relationships, knowledge lifecycle, validation methods, retrieval strategies, governance policies, quality assurance, automation opportunities, scalability strategy and future evolution roadmap.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 436,
+    "shortcut": "/adaptiveexecution",
+    "title": "Adaptive Execution",
+    "category": "Planning",
+    "description": "Build adaptive execution systems that continuously optimize performance.",
+    "prompt": "Develop an adaptive execution framework for the following initiative. Define objectives, milestones, dependencies, monitoring systems, decision checkpoints, optimization loops, contingency planning, governance controls, performance metrics and successful completion criteria.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 437,
+    "shortcut": "/governanceintelligence",
+    "title": "Governance Intelligence",
+    "category": "Governance",
+    "description": "Generate intelligence-driven governance systems for highly complex organizations.",
+    "prompt": "Develop a governance intelligence framework for the following ecosystem. Define governance principles, oversight mechanisms, accountability structures, compliance processes, decision authority, audit architecture, performance indicators, resilience strategies, governance maturity roadmap and continuous improvement recommendations.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 438,
+    "shortcut": "/innovationfrontier",
+    "title": "Innovation Frontier",
+    "category": "Innovation",
+    "description": "Design frontier innovation strategies for transformative long-term impact.",
+    "prompt": "Design a frontier innovation strategy for the following organization or mission. Define breakthrough opportunities, research priorities, experimentation frameworks, governance, investment strategy, ecosystem partnerships, technology adoption, performance indicators, scaling roadmap and future innovation vision.\n\nOrganization or Mission:",
+    "isOfficial": false
+  },
+  {
+    "id": 439,
+    "shortcut": "/superorchestrator",
+    "title": "Super Orchestrator",
+    "category": "AI",
+    "description": "Coordinate enterprise-scale multi-agent AI ecosystems with adaptive governance.",
+    "prompt": "Design a super-orchestrator architecture for the following AI objective. Define specialized agents, orchestration logic, memory hierarchy, reasoning coordination, governance framework, tool integration, monitoring architecture, safety controls, optimization strategy, scalability roadmap and continuous evolution plan.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 440,
+    "shortcut": "/claudenexus",
+    "title": "Claude Nexus",
+    "category": "AI",
+    "description": "Use Claude as a nexus of frontier reasoning, scientific intelligence, enterprise governance, knowledge engineering and strategic transformation.",
+    "prompt": "Act as a nexus-level intelligence specializing in frontier reasoning, scientific methodology, enterprise architecture, governance, systems engineering, document intelligence, research leadership, executive strategy, AI ecosystems and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable outcomes. Apply first-principles reasoning, constitutional reasoning, recursive refinement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight and meta-reasoning. Compare competing architectures, expose hidden systemic relationships, evaluate cascading long-term consequences, quantify trade-offs where appropriate and conclude with an executive-ready transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation framework, contingency planning, innovation strategy and long-term evolution roadmap.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 441,
+    "shortcut": "/frontiersystems",
+    "title": "Frontier Systems",
+    "category": "Systems Thinking",
+    "description": "Design next-generation systems capable of evolving under extreme complexity.",
+    "prompt": "Design a frontier-scale system for the following objective. Define system architecture, interacting subsystems, governance layers, resilience mechanisms, adaptive capabilities, scalability strategy, optimization opportunities, monitoring architecture, failure recovery strategies and long-term evolution roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 442,
+    "shortcut": "/strategicsingularity",
+    "title": "Strategic Singularity",
+    "category": "Strategy",
+    "description": "Develop transformational strategies that reshape industries and organizations.",
+    "prompt": "Develop a strategic singularity roadmap for the following initiative. Identify transformational opportunities, disruptive technologies, strategic capabilities, competitive positioning, organizational evolution, governance requirements, execution milestones, measurable outcomes, major risks and long-term strategic advantages.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 443,
+    "shortcut": "/omniresearch",
+    "title": "Omni Research",
+    "category": "Research",
+    "description": "Integrate every relevant research perspective into a unified scientific framework.",
+    "prompt": "Conduct an omni-disciplinary research assessment for the following topic. Synthesize scientific, technical, economic, social, ethical and operational perspectives. Evaluate evidence quality, identify knowledge gaps, compare competing theories, estimate confidence levels, recommend future investigations and summarize actionable conclusions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 444,
+    "shortcut": "/metastrategy",
+    "title": "Meta Strategy",
+    "category": "Meta Thinking",
+    "description": "Design strategies that optimize other strategies across multiple objectives.",
+    "prompt": "Develop a meta-strategy for the following objective. Evaluate existing strategic approaches, compare strengths and weaknesses, identify hidden assumptions, optimize strategic interactions, resolve conflicts, improve adaptability, prioritize initiatives, define success metrics and recommend the strongest long-term strategic architecture.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 445,
+    "shortcut": "/worldmodel",
+    "title": "World Model",
+    "category": "Reasoning",
+    "description": "Construct an integrated world model for analyzing complex environments.",
+    "prompt": "Construct a comprehensive world model for the following subject. Identify actors, systems, incentives, causal mechanisms, uncertainties, feedback loops, emerging trends, external influences, probable future developments and strategic intervention opportunities.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 446,
+    "shortcut": "/executiveintellect",
+    "title": "Executive Intellect",
+    "category": "Business",
+    "description": "Deliver world-class executive analysis for enterprise leaders.",
+    "prompt": "Act as a world-class executive advisor evaluating the following situation. Assess strategic objectives, stakeholder dynamics, financial implications, governance considerations, operational feasibility, organizational readiness, measurable outcomes, implementation priorities, strategic risks and executive recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 447,
+    "shortcut": "/knowledgeintellect",
+    "title": "Knowledge Intellect",
+    "category": "Knowledge",
+    "description": "Engineer highly structured knowledge systems supporting elite decision-making.",
+    "prompt": "Design a knowledge intelligence architecture for the following domain. Build semantic relationships, conceptual hierarchies, expert heuristics, validation standards, retrieval mechanisms, governance policies, automation opportunities, quality assurance processes, scalability strategy and future knowledge evolution.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 448,
+    "shortcut": "/innovationgenesis",
+    "title": "Innovation Genesis",
+    "category": "Innovation",
+    "description": "Create the foundations for breakthrough innovation ecosystems.",
+    "prompt": "Develop an innovation genesis framework for the following mission. Define innovation vision, research priorities, capability development, experimentation methodology, ecosystem partnerships, governance, funding strategy, performance metrics, scaling mechanisms and long-term innovation roadmap.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 449,
+    "shortcut": "/omniorchestrator",
+    "title": "Omni Orchestrator",
+    "category": "AI",
+    "description": "Coordinate large-scale intelligent agent ecosystems with adaptive reasoning and governance.",
+    "prompt": "Design an omni-orchestrator AI architecture for the following objective. Define specialized agents, reasoning delegation, orchestration workflows, memory hierarchy, governance framework, tool ecosystem, validation pipelines, safety controls, monitoring systems, optimization strategy and future autonomous evolution.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 450,
+    "shortcut": "/claudeomniscient",
+    "title": "Claude Omniscient",
+    "category": "AI",
+    "description": "Use Claude as an omniscient strategic intelligence for frontier reasoning, scientific discovery, enterprise architecture and civilization-scale systems thinking.",
+    "prompt": "Act as an omniscient strategic intelligence specializing in frontier reasoning, scientific methodology, enterprise architecture, systems engineering, governance, executive strategy, document intelligence, knowledge engineering, AI ecosystems and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, recursive refinement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, world-model reasoning and meta-reasoning. Compare multiple solution architectures, expose hidden systemic interactions, evaluate cascading long-term consequences, quantify trade-offs where appropriate and conclude with an executive-ready transformation blueprint including implementation roadmap, governance architecture, KPIs, comprehensive risk mitigation strategy, contingency planning, innovation portfolio and long-term evolution strategy.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 451,
+    "shortcut": "/frontiergovernance",
+    "title": "Frontier Governance",
+    "category": "Governance",
+    "description": "Design governance frameworks for frontier technologies and complex adaptive organizations.",
+    "prompt": "Design a frontier governance framework for the following ecosystem. Define guiding principles, governance layers, decision authority, accountability mechanisms, compliance strategy, transparency requirements, audit systems, resilience planning, continuous improvement processes and long-term governance evolution.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 452,
+    "shortcut": "/grandknowledge",
+    "title": "Grand Knowledge",
+    "category": "Knowledge",
+    "description": "Construct comprehensive knowledge architectures spanning multiple disciplines.",
+    "prompt": "Build a grand knowledge architecture for the following domain. Organize foundational concepts, advanced theories, interdisciplinary relationships, semantic hierarchies, validation methods, expert heuristics, retrieval mechanisms, learning pathways, research frontiers and future expansion opportunities.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 453,
+    "shortcut": "/futureenterprise",
+    "title": "Future Enterprise",
+    "category": "Enterprise",
+    "description": "Design organizations capable of thriving across decades of technological change.",
+    "prompt": "Design a future enterprise model for the following organization. Define strategic vision, operating model, governance evolution, workforce capabilities, AI integration, technology roadmap, resilience mechanisms, innovation systems, measurable KPIs and long-term transformation milestones.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 454,
+    "shortcut": "/scientificworldmodel",
+    "title": "Scientific World Model",
+    "category": "Science",
+    "description": "Develop evidence-based world models integrating multiple scientific disciplines.",
+    "prompt": "Construct a scientific world model for the following topic. Integrate knowledge from multiple scientific disciplines, identify causal mechanisms, evaluate evidence quality, assess competing theories, quantify uncertainties, predict future developments, highlight knowledge gaps and recommend future research priorities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 455,
+    "shortcut": "/recursiveinnovation",
+    "title": "Recursive Innovation",
+    "category": "Innovation",
+    "description": "Continuously improve innovation systems through recursive refinement.",
+    "prompt": "Design a recursive innovation framework for the following mission. Create an initial innovation strategy, evaluate weaknesses, redesign processes, improve governance, optimize experimentation, strengthen collaboration, reassess expected outcomes and produce the highest-quality innovation ecosystem.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 456,
+    "shortcut": "/decisionecosystem",
+    "title": "Decision Ecosystem",
+    "category": "Decision Making",
+    "description": "Build interconnected decision systems for strategic organizations.",
+    "prompt": "Design a decision ecosystem for the following organization or initiative. Define decision hierarchy, governance model, evidence standards, stakeholder roles, escalation paths, uncertainty management, performance metrics, review mechanisms, optimization loops and continuous decision improvement strategies.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 457,
+    "shortcut": "/strategicsimulation",
+    "title": "Strategic Simulation",
+    "category": "Strategy",
+    "description": "Simulate strategic outcomes across multiple possible futures.",
+    "prompt": "Run a strategic simulation for the following challenge. Construct multiple future scenarios, identify assumptions, evaluate strategic alternatives, estimate probabilities, analyze second- and third-order effects, compare resilience across scenarios, identify optimal strategies and justify final recommendations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 458,
+    "shortcut": "/collectiveintelligence",
+    "title": "Collective Intelligence",
+    "category": "AI",
+    "description": "Design systems that coordinate many intelligent agents into a unified intelligence.",
+    "prompt": "Design a collective intelligence architecture for the following objective. Define agent specialization, collaboration protocols, reasoning coordination, shared memory, governance framework, validation systems, conflict resolution, optimization mechanisms, scalability architecture and continuous learning strategy.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 459,
+    "shortcut": "/ultimatereasoning",
+    "title": "Ultimate Reasoning",
+    "category": "Reasoning",
+    "description": "Apply the highest level of structured reasoning to exceptionally complex problems.",
+    "prompt": "Analyze the following challenge using the strongest available reasoning framework. Combine first-principles reasoning, constitutional reasoning, systems thinking, probabilistic analysis, causal inference, scientific methodology, game theory, decision science, strategic foresight and recursive self-critique. Explicitly identify assumptions, hidden constraints, evidence quality, uncertainties, competing hypotheses, trade-offs, confidence levels and the strongest evidence-supported conclusion.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 460,
+    "shortcut": "/claudegenesis",
+    "title": "Claude Genesis",
+    "category": "AI",
+    "description": "Use Claude as a genesis-level intelligence for frontier reasoning, scientific leadership, enterprise transformation, AI governance and civilization-scale systems design.",
+    "prompt": "Act as a genesis-level intelligence specializing in frontier reasoning, scientific discovery, enterprise architecture, governance, systems engineering, executive strategy, document intelligence, AI ecosystems, knowledge engineering and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, world-model reasoning and meta-reasoning. Compare multiple solution architectures, expose hidden systemic interactions, evaluate cascading long-term consequences, quantify trade-offs wherever appropriate and conclude with a world-class executive transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation strategy, contingency planning, innovation portfolio, AI governance recommendations and long-term evolution strategy.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 461,
+    "shortcut": "/omniscientresearch",
+    "title": "Omniscient Research",
+    "category": "Research",
+    "description": "Design and evaluate research programs at the highest level of scientific rigor.",
+    "prompt": "Act as the director of a world-leading research institute. Design a comprehensive research strategy for the following topic. Define the grand research question, theoretical foundations, competing hypotheses, multidisciplinary collaborations, experimental methodology, evidence hierarchy, validation protocols, reproducibility standards, statistical analysis, ethical safeguards, publication strategy, expected breakthroughs, scientific impact and long-term research roadmap.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 462,
+    "shortcut": "/futureworld",
+    "title": "Future World",
+    "category": "Foresight",
+    "description": "Model future world systems using evidence-based scenario planning.",
+    "prompt": "Develop a future world assessment for the following subject. Analyze technological disruption, geopolitical evolution, economic transformation, demographic shifts, environmental trends, governance changes, societal adaptation, emerging risks, strategic opportunities, scenario probabilities and long-term recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 463,
+    "shortcut": "/hyperstrategy",
+    "title": "Hyper Strategy",
+    "category": "Strategy",
+    "description": "Develop hyper-optimized strategies balancing resilience, innovation and execution.",
+    "prompt": "Develop a hyper-strategy for the following initiative. Identify strategic objectives, critical assumptions, stakeholder ecosystem, competitive dynamics, technology opportunities, governance structure, execution roadmap, measurable KPIs, uncertainty management, contingency planning and sustainable long-term competitive advantage.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 464,
+    "shortcut": "/metaknowledge",
+    "title": "Meta Knowledge",
+    "category": "Knowledge",
+    "description": "Engineer systems that organize and improve knowledge itself.",
+    "prompt": "Construct a meta-knowledge architecture for the following domain. Define ontologies, semantic relationships, knowledge validation methods, learning hierarchies, expert heuristics, retrieval strategies, governance framework, automation opportunities, continuous improvement mechanisms and future knowledge evolution.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 465,
+    "shortcut": "/enterprisefuture",
+    "title": "Enterprise Future",
+    "category": "Enterprise",
+    "description": "Design enterprises prepared for decades of technological transformation.",
+    "prompt": "Design a future-proof enterprise architecture for the following organization. Define mission alignment, operating model, governance evolution, workforce transformation, AI integration strategy, technology roadmap, resilience mechanisms, performance metrics, implementation phases and long-term strategic evolution.\n\nOrganization:",
+    "isOfficial": false
+  },
+  {
+    "id": 466,
+    "shortcut": "/scientificadvisorx",
+    "title": "Scientific Advisor X",
+    "category": "Science",
+    "description": "Deliver elite scientific advisory supported by rigorous evidence evaluation.",
+    "prompt": "Act as a chief scientific advisor evaluating the following topic. Examine theoretical foundations, available evidence, competing explanations, methodological quality, uncertainties, practical implications, ethical considerations, research gaps, confidence assessment and future investigation priorities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 467,
+    "shortcut": "/innovationmatrix",
+    "title": "Innovation Matrix",
+    "category": "Innovation",
+    "description": "Map innovation opportunities across technologies, markets and capabilities.",
+    "prompt": "Create an innovation matrix for the following organization or mission. Identify breakthrough opportunities, enabling technologies, capability gaps, market potential, governance requirements, investment priorities, experimentation roadmap, scalability strategy, measurable outcomes and long-term innovation vision.\n\nOrganization or Mission:",
+    "isOfficial": false
+  },
+  {
+    "id": 468,
+    "shortcut": "/governancefuture",
+    "title": "Governance Future",
+    "category": "Governance",
+    "description": "Develop governance systems resilient to future technological and organizational change.",
+    "prompt": "Design a future-ready governance architecture for the following ecosystem. Define governance principles, accountability mechanisms, policy lifecycle, compliance framework, transparency requirements, audit systems, resilience planning, continuous adaptation methods, governance KPIs and long-term evolution roadmap.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 469,
+    "shortcut": "/ultraorchestrator",
+    "title": "Ultra Orchestrator",
+    "category": "AI",
+    "description": "Coordinate ultra-scale AI agent ecosystems with adaptive reasoning and governance.",
+    "prompt": "Design an ultra-scale AI orchestration framework for the following objective. Define specialized agents, reasoning delegation strategy, orchestration workflows, memory hierarchy, governance architecture, tool ecosystem, validation pipelines, monitoring systems, optimization mechanisms, autonomous adaptation and future scalability roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 470,
+    "shortcut": "/claudecosmos",
+    "title": "Claude Cosmos",
+    "category": "AI",
+    "description": "Use Claude as a cosmos-level intelligence for frontier reasoning, scientific leadership, enterprise architecture, AI governance and civilization-scale systems thinking.",
+    "prompt": "Act as a cosmos-level intelligence specializing in frontier reasoning, scientific discovery, enterprise architecture, systems engineering, governance, executive strategy, document intelligence, AI ecosystems, knowledge engineering and organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, world-model reasoning and meta-reasoning. Compare multiple solution architectures, reveal hidden systemic interactions, evaluate cascading long-term consequences, quantify trade-offs wherever appropriate and conclude with a world-class executive transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation strategy, contingency planning, innovation portfolio, AI governance recommendations and long-term evolution roadmap.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 471,
+    "shortcut": "/globalintelligence",
+    "title": "Global Intelligence",
+    "category": "Strategy",
+    "description": "Develop globally optimized intelligence for strategic decision-making across complex environments.",
+    "prompt": "Produce a global intelligence assessment for the following subject. Analyze geopolitical dynamics, economic forces, technological evolution, regulatory environments, cultural considerations, stakeholder ecosystems, emerging risks, strategic opportunities, scenario forecasts, resilience strategies and executive recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 472,
+    "shortcut": "/scientificmasterplan",
+    "title": "Scientific Master Plan",
+    "category": "Science",
+    "description": "Create master-level scientific programs from concept to breakthrough discovery.",
+    "prompt": "Develop a scientific master plan for the following challenge. Define research vision, theoretical foundations, competing hypotheses, multidisciplinary collaborations, experimental design, validation framework, statistical methodology, ethical safeguards, expected discoveries, publication strategy, scientific impact and future research roadmap.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 473,
+    "shortcut": "/strategicomniverse",
+    "title": "Strategic Omniverse",
+    "category": "Strategy",
+    "description": "Evaluate strategies across numerous plausible future environments.",
+    "prompt": "Develop a strategic omniverse analysis for the following objective. Generate multiple future scenarios, compare strategic alternatives, evaluate resilience under uncertainty, identify common success factors, quantify trade-offs where possible, assess systemic consequences and recommend the most robust long-term strategy.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 474,
+    "shortcut": "/knowledgeconstellation",
+    "title": "Knowledge Constellation",
+    "category": "Knowledge",
+    "description": "Connect entire domains into an expert-level knowledge constellation.",
+    "prompt": "Construct a knowledge constellation for the following domain. Organize concepts into interconnected clusters, define semantic relationships, identify foundational knowledge, advanced specializations, practical applications, research frontiers, validation methods, learning pathways and opportunities for future expansion.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 475,
+    "shortcut": "/adaptivecivilization",
+    "title": "Adaptive Civilization",
+    "category": "Foresight",
+    "description": "Model civilization-scale adaptation to future technological and societal change.",
+    "prompt": "Analyze how civilization could adapt to the following challenge. Evaluate technological innovation, governance evolution, economic transformation, environmental resilience, education systems, cultural adaptation, ethical implications, strategic risks, future opportunities and long-term recommendations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 476,
+    "shortcut": "/executivetransformation",
+    "title": "Executive Transformation",
+    "category": "Business",
+    "description": "Lead executive-level transformation initiatives with measurable strategic outcomes.",
+    "prompt": "Develop an executive transformation strategy for the following organization or initiative. Assess current capabilities, define future vision, identify transformation priorities, governance requirements, stakeholder engagement, implementation roadmap, KPIs, organizational risks, change management strategy and long-term success factors.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 477,
+    "shortcut": "/innovationintelligence",
+    "title": "Innovation Intelligence",
+    "category": "Innovation",
+    "description": "Generate intelligence-driven innovation strategies for sustainable competitive advantage.",
+    "prompt": "Develop an innovation intelligence report for the following mission. Evaluate emerging technologies, market opportunities, research priorities, capability gaps, ecosystem partnerships, investment strategy, governance considerations, performance metrics, scalability roadmap and future innovation priorities.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 478,
+    "shortcut": "/governanceecosystem",
+    "title": "Governance Ecosystem",
+    "category": "Governance",
+    "description": "Create interconnected governance ecosystems balancing adaptability and accountability.",
+    "prompt": "Design a governance ecosystem for the following organization or platform. Define governance principles, accountability mechanisms, policy lifecycle, compliance architecture, transparency standards, monitoring systems, audit processes, resilience planning, governance KPIs and continuous evolution strategy.\n\nOrganization or Platform:",
+    "isOfficial": false
+  },
+  {
+    "id": 479,
+    "shortcut": "/hyperagents",
+    "title": "Hyper Agents",
+    "category": "AI",
+    "description": "Design hyper-capable autonomous AI ecosystems operating with governance and safety.",
+    "prompt": "Design a hyper-agent ecosystem for the following objective. Define specialized AI agents, orchestration framework, reasoning delegation, memory hierarchy, governance policies, tool integration, monitoring systems, safety mechanisms, optimization loops, autonomous learning strategy and future scalability roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 480,
+    "shortcut": "/claudeomniverse",
+    "title": "Claude Omniverse",
+    "category": "AI",
+    "description": "Use Claude as an omniverse-level intelligence for frontier reasoning, scientific leadership, enterprise governance, AI ecosystems and civilization-scale strategic transformation.",
+    "prompt": "Act as an omniverse-level intelligence specializing in frontier reasoning, scientific discovery, enterprise architecture, governance, systems engineering, executive strategy, document intelligence, AI ecosystems, knowledge engineering and long-term organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, world-model reasoning and meta-reasoning. Compare multiple solution architectures, reveal hidden systemic interactions, evaluate cascading long-term consequences, quantify trade-offs wherever appropriate and conclude with a world-class transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation strategy, contingency planning, innovation portfolio, AI governance recommendations and long-term evolution strategy.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 481,
+    "shortcut": "/ultimateforesight",
+    "title": "Ultimate Foresight",
+    "category": "Foresight",
+    "description": "Develop comprehensive long-term foresight using multidisciplinary scenario intelligence.",
+    "prompt": "Conduct an ultimate foresight assessment for the following subject. Analyze technological disruption, geopolitical evolution, economic transformation, scientific breakthroughs, demographic shifts, environmental pressures, governance adaptation, societal resilience, strategic opportunities, major uncertainties, scenario probabilities, early warning indicators and long-term recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 482,
+    "shortcut": "/masterworldmodel",
+    "title": "Master World Model",
+    "category": "Systems Thinking",
+    "description": "Construct an expert-level world model explaining complex interconnected systems.",
+    "prompt": "Construct a master world model for the following domain. Identify major actors, incentives, causal mechanisms, interconnected systems, reinforcing and balancing feedback loops, external influences, uncertainty factors, leverage points, strategic intervention opportunities and expected long-term evolution.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 483,
+    "shortcut": "/scientificcommand",
+    "title": "Scientific Command",
+    "category": "Science",
+    "description": "Lead scientific initiatives with rigorous governance and breakthrough-oriented execution.",
+    "prompt": "Act as the scientific commander for the following initiative. Define scientific objectives, theoretical foundations, experimental strategy, validation protocols, quality assurance processes, ethical safeguards, multidisciplinary collaboration, publication roadmap, measurable milestones, expected discoveries and future research directions.\n\nInitiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 484,
+    "shortcut": "/strategicintellect",
+    "title": "Strategic Intellect",
+    "category": "Strategy",
+    "description": "Deliver elite strategic reasoning integrating business, science and systems thinking.",
+    "prompt": "Analyze the following strategic challenge using elite strategic reasoning. Evaluate objectives, assumptions, stakeholder dynamics, competitive forces, technology opportunities, governance implications, execution risks, measurable outcomes, long-term resilience and evidence-based recommendations.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 485,
+    "shortcut": "/knowledgegalaxy",
+    "title": "Knowledge Galaxy",
+    "category": "Knowledge",
+    "description": "Create galaxy-scale knowledge architectures spanning multiple disciplines.",
+    "prompt": "Design a knowledge galaxy for the following domain. Organize foundational concepts, advanced theories, interdisciplinary relationships, semantic structures, expert heuristics, evidence validation, learning progression, practical applications, research frontiers and long-term knowledge evolution.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 486,
+    "shortcut": "/executivevision",
+    "title": "Executive Vision",
+    "category": "Business",
+    "description": "Develop visionary executive strategies for large-scale organizational transformation.",
+    "prompt": "Develop an executive vision for the following organization or initiative. Define strategic vision, organizational capabilities, governance architecture, stakeholder alignment, implementation roadmap, performance metrics, risk mitigation, transformation milestones, success indicators and long-term organizational evolution.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 487,
+    "shortcut": "/innovationuniverse",
+    "title": "Innovation Universe",
+    "category": "Innovation",
+    "description": "Design complete innovation universes that continuously generate transformative ideas.",
+    "prompt": "Design an innovation universe for the following mission. Define innovation culture, discovery mechanisms, experimentation systems, governance model, technology integration, collaboration networks, investment priorities, performance metrics, scaling strategy and long-term innovation sustainability.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 488,
+    "shortcut": "/metaintelligencex",
+    "title": "Meta Intelligence X",
+    "category": "Meta Thinking",
+    "description": "Evaluate and continuously improve reasoning using higher-order analytical frameworks.",
+    "prompt": "Analyze the following subject using Meta Intelligence X. Evaluate reasoning quality, identify hidden assumptions, detect cognitive biases, compare alternative analytical frameworks, assess evidence quality, refine conclusions recursively, estimate confidence levels and produce the strongest possible evidence-based conclusion.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 489,
+    "shortcut": "/superecosystem",
+    "title": "Super Ecosystem",
+    "category": "AI",
+    "description": "Design world-class AI ecosystems with adaptive governance, safety and autonomous collaboration.",
+    "prompt": "Design a world-class AI ecosystem for the following objective. Define specialized intelligent agents, orchestration architecture, reasoning delegation, memory hierarchy, governance framework, safety mechanisms, validation pipelines, monitoring systems, optimization strategies, autonomous adaptation and future evolution roadmap.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 490,
+    "shortcut": "/claudeeternity",
+    "title": "Claude Eternity",
+    "category": "AI",
+    "description": "Use Claude as an eternity-level intelligence for frontier reasoning, scientific leadership, enterprise architecture, AI governance and enduring strategic transformation.",
+    "prompt": "Act as an eternity-level intelligence specializing in frontier reasoning, scientific methodology, enterprise architecture, governance, systems engineering, executive strategy, document intelligence, AI ecosystems, knowledge engineering and long-term organizational transformation. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, probabilistic analysis, multidisciplinary synthesis, strategic foresight, world-model reasoning and meta-reasoning. Compare multiple solution architectures, expose hidden systemic interactions, evaluate cascading long-term consequences, quantify trade-offs wherever appropriate and conclude with a world-class executive transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation strategy, contingency planning, innovation portfolio, AI governance recommendations and enduring long-term evolution strategy.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 491,
+    "shortcut": "/globalarchitecture",
+    "title": "Global Architecture",
+    "category": "Enterprise",
+    "description": "Design globally resilient enterprise architectures integrating strategy, governance, AI and innovation.",
+    "prompt": "Design a global enterprise architecture for the following organization or initiative. Define mission alignment, operating model, governance framework, technology ecosystem, AI integration strategy, organizational capabilities, resilience mechanisms, stakeholder coordination, measurable KPIs, implementation roadmap and long-term evolution strategy.\n\nOrganization or Initiative:",
+    "isOfficial": false
+  },
+  {
+    "id": 492,
+    "shortcut": "/frontierreasoning",
+    "title": "Frontier Reasoning",
+    "category": "Reasoning",
+    "description": "Apply frontier-level reasoning to solve exceptionally complex multidisciplinary problems.",
+    "prompt": "Analyze the following challenge using frontier-level reasoning. Combine first-principles reasoning, constitutional reasoning, systems thinking, causal inference, probabilistic analysis, scientific methodology, decision science, game theory, strategic foresight and recursive self-critique. Explicitly evaluate assumptions, evidence quality, uncertainties, competing hypotheses, trade-offs, confidence levels and produce the strongest evidence-supported conclusion.\n\nChallenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 493,
+    "shortcut": "/scientificfrontier",
+    "title": "Scientific Frontier",
+    "category": "Science",
+    "description": "Lead frontier scientific investigations with exceptional methodological rigor.",
+    "prompt": "Develop a frontier scientific investigation for the following topic. Define the research vision, theoretical foundations, competing hypotheses, interdisciplinary collaboration, experimental methodology, validation framework, reproducibility standards, statistical analysis, ethical safeguards, expected discoveries, publication strategy and future scientific roadmap.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 494,
+    "shortcut": "/knowledgecontinuum",
+    "title": "Knowledge Continuum",
+    "category": "Knowledge",
+    "description": "Create continuously evolving knowledge systems that improve over time.",
+    "prompt": "Design a knowledge continuum for the following domain. Build semantic structures, expert ontologies, concept hierarchies, validation mechanisms, retrieval architecture, governance policies, automation opportunities, continuous learning workflows, research integration and long-term knowledge evolution.\n\nDomain:",
+    "isOfficial": false
+  },
+  {
+    "id": 495,
+    "shortcut": "/futureinnovation",
+    "title": "Future Innovation",
+    "category": "Innovation",
+    "description": "Engineer innovation ecosystems prepared for future technological revolutions.",
+    "prompt": "Develop a future innovation strategy for the following mission. Identify breakthrough technologies, research priorities, ecosystem partnerships, governance requirements, investment strategy, experimentation framework, scaling mechanisms, measurable outcomes, strategic risks and long-term innovation roadmap.\n\nMission:",
+    "isOfficial": false
+  },
+  {
+    "id": 496,
+    "shortcut": "/executiveoracle",
+    "title": "Executive Oracle",
+    "category": "Business",
+    "description": "Provide world-class executive guidance integrating strategic, scientific and operational intelligence.",
+    "prompt": "Act as an executive oracle advising leadership on the following situation. Evaluate strategic priorities, organizational capabilities, stakeholder interests, financial implications, governance considerations, operational feasibility, measurable KPIs, implementation roadmap, major risks, contingency strategies and executive recommendations.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 497,
+    "shortcut": "/governancemaster",
+    "title": "Governance Master",
+    "category": "Governance",
+    "description": "Create master-level governance systems for resilient organizations and intelligent ecosystems.",
+    "prompt": "Design a master governance architecture for the following ecosystem. Define governance principles, accountability mechanisms, decision authority, policy lifecycle, compliance framework, transparency standards, audit systems, resilience planning, governance KPIs, continuous improvement processes and future governance evolution.\n\nEcosystem:",
+    "isOfficial": false
+  },
+  {
+    "id": 498,
+    "shortcut": "/metasupervision",
+    "title": "Meta Supervision",
+    "category": "Meta Thinking",
+    "description": "Continuously supervise and improve reasoning, planning and decision quality.",
+    "prompt": "Perform a meta-supervision analysis for the following subject. Evaluate reasoning quality, identify hidden assumptions, detect logical inconsistencies, compare alternative analytical frameworks, estimate uncertainty, improve evidence quality, refine conclusions recursively, justify confidence levels and produce the strongest final recommendation.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 499,
+    "shortcut": "/ultimatesystems",
+    "title": "Ultimate Systems",
+    "category": "AI",
+    "description": "Design ultimate AI and enterprise systems combining autonomy, governance, resilience and continuous evolution.",
+    "prompt": "Design the ultimate intelligent system for the following objective. Define system architecture, specialized AI agents, orchestration strategy, reasoning delegation, memory hierarchy, governance framework, safety mechanisms, monitoring architecture, optimization cycles, autonomous evolution strategy, scalability roadmap and long-term sustainability plan.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 500,
+    "shortcut": "/claudeinfinite",
+    "title": "Claude Infinite",
+    "category": "AI",
+    "description": "Use Claude as an infinite-level strategic intelligence for frontier reasoning, scientific leadership, enterprise transformation, AI governance, systems engineering and civilization-scale decision making.",
+    "prompt": "Act as an infinite-level strategic intelligence specializing in frontier reasoning, scientific methodology, enterprise architecture, systems engineering, governance, executive leadership, document intelligence, knowledge engineering, AI ecosystems, organizational transformation and civilization-scale strategic planning. Analyze the following request by identifying objectives, assumptions, constraints, dependencies, stakeholders, uncertainties, governing principles and measurable success criteria. Apply first-principles reasoning, constitutional reasoning, recursive self-improvement, systems thinking, causal inference, probabilistic analysis, multidisciplinary synthesis, strategic foresight, world-model reasoning, game theory, decision science and meta-reasoning. Critically challenge unsupported assumptions, compare multiple solution architectures, uncover hidden systemic interactions, evaluate second-, third- and higher-order consequences, quantify trade-offs wherever appropriate and conclude with a world-class executive transformation blueprint including implementation roadmap, governance architecture, measurable KPIs, comprehensive risk mitigation strategy, contingency planning, innovation portfolio, AI governance recommendations, autonomous optimization opportunities and a long-term sustainable evolution strategy.\n\nRequest:",
+    "isOfficial": false
+  }
+]

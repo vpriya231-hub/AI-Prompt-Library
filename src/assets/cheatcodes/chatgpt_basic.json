@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "shortcut": "/summarize",
+    "title": "Summarize Content",
+    "category": "Writing",
+    "description": "Summarize long content into key points.",
+    "prompt": "Summarize the following content into concise bullet points. Include only the most important information and end with a one-sentence conclusion.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 2,
+    "shortcut": "/tldr",
+    "title": "Quick Summary",
+    "category": "Writing",
+    "description": "Generate a short TL;DR.",
+    "prompt": "Provide a TL;DR of the following text in 2-3 sentences.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 3,
+    "shortcut": "/eli5",
+    "title": "Explain Like I'm 5",
+    "category": "Education",
+    "description": "Explain using very simple language.",
+    "prompt": "Explain this topic as if teaching a 5-year-old using simple words, analogies and examples.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 4,
+    "shortcut": "/rewrite",
+    "title": "Professional Rewrite",
+    "category": "Writing",
+    "description": "Rewrite professionally.",
+    "prompt": "Rewrite the following text in a professional, polished and natural style while preserving its meaning.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 5,
+    "shortcut": "/fix",
+    "title": "Grammar Fix",
+    "category": "Writing",
+    "description": "Correct grammar and spelling.",
+    "prompt": "Correct grammar, spelling and punctuation without changing the intended meaning.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 6,
+    "shortcut": "/expand",
+    "title": "Expand Content",
+    "category": "Writing",
+    "description": "Expand with useful details.",
+    "prompt": "Expand the following content by adding useful details, examples and explanations while keeping the original intent.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 7,
+    "shortcut": "/shorten",
+    "title": "Shorten Content",
+    "category": "Writing",
+    "description": "Reduce length without losing meaning.",
+    "prompt": "Reduce the following content by about 50% while preserving all important information.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 8,
+    "shortcut": "/translate",
+    "title": "Translate Text",
+    "category": "Language",
+    "description": "Translate accurately.",
+    "prompt": "Translate the following text into [Language] while preserving tone, meaning and formatting.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 9,
+    "shortcut": "/table",
+    "title": "Convert to Table",
+    "category": "Formatting",
+    "description": "Present information as a table.",
+    "prompt": "Convert the following information into a clean markdown table.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 10,
+    "shortcut": "/bullet",
+    "title": "Bullet Points",
+    "category": "Formatting",
+    "description": "Convert into bullet points.",
+    "prompt": "Convert the following content into well-organized bullet points.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 11,
+    "shortcut": "/brainstorm",
+    "title": "Brainstorm Ideas",
+    "category": "Creativity",
+    "description": "Generate creative ideas.",
+    "prompt": "Generate 20 unique, practical and creative ideas for the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 12,
+    "shortcut": "/outline",
+    "title": "Create Outline",
+    "category": "Writing",
+    "description": "Generate a structured outline.",
+    "prompt": "Create a detailed outline for the following topic with headings and subheadings.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 13,
+    "shortcut": "/blog",
+    "title": "Write Blog",
+    "category": "Content",
+    "description": "Generate a blog article.",
+    "prompt": "Write a professional SEO-friendly blog post about the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 14,
+    "shortcut": "/email",
+    "title": "Write Email",
+    "category": "Business",
+    "description": "Generate a professional email.",
+    "prompt": "Write a professional email for the following purpose.\n\nPurpose:",
+    "isOfficial": false
+  },
+  {
+    "id": 15,
+    "shortcut": "/tweet",
+    "title": "Generate X Post",
+    "category": "Social Media",
+    "description": "Create an engaging X (Twitter) post.",
+    "prompt": "Write an engaging X (Twitter) post about the following topic. Include a strong hook.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 16,
+    "shortcut": "/linkedin",
+    "title": "LinkedIn Post",
+    "category": "Social Media",
+    "description": "Professional LinkedIn content.",
+    "prompt": "Write a professional LinkedIn post on the following topic with a strong opening and call to action.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 17,
+    "shortcut": "/instagram",
+    "title": "Instagram Caption",
+    "category": "Social Media",
+    "description": "Generate Instagram captions.",
+    "prompt": "Write 10 engaging Instagram captions for the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 18,
+    "shortcut": "/youtube",
+    "title": "YouTube Script",
+    "category": "Content",
+    "description": "Create a YouTube video script.",
+    "prompt": "Write a YouTube video script with a strong hook, engaging body and conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 19,
+    "shortcut": "/seo",
+    "title": "SEO Optimization",
+    "category": "Marketing",
+    "description": "Optimize content for SEO.",
+    "prompt": "Optimize the following content for SEO. Suggest keywords, title, meta description and improvements.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 20,
+    "shortcut": "/resume",
+    "title": "Resume Builder",
+    "category": "Career",
+    "description": "Create a professional resume.",
+    "prompt": "Create a professional ATS-friendly resume using the following information.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 21,
+    "shortcut": "/coverletter",
+    "title": "Cover Letter",
+    "category": "Career",
+    "description": "Generate a cover letter.",
+    "prompt": "Write a professional cover letter for the following job.\n\nJob Details:",
+    "isOfficial": false
+  },
+  {
+    "id": 22,
+    "shortcut": "/interview",
+    "title": "Interview Questions",
+    "category": "Career",
+    "description": "Practice interview questions.",
+    "prompt": "Generate 20 interview questions with ideal answers for the following role.\n\nRole:",
+    "isOfficial": false
+  },
+  {
+    "id": 23,
+    "shortcut": "/quiz",
+    "title": "Generate Quiz",
+    "category": "Education",
+    "description": "Create quiz questions.",
+    "prompt": "Generate 20 multiple-choice questions with answers about the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 24,
+    "shortcut": "/flashcards",
+    "title": "Flashcards",
+    "category": "Education",
+    "description": "Create study flashcards.",
+    "prompt": "Create flashcards for the following topic using a question-and-answer format.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 25,
+    "shortcut": "/roadmap",
+    "title": "Learning Roadmap",
+    "category": "Education",
+    "description": "Generate a step-by-step roadmap.",
+    "prompt": "Create a complete beginner-to-advanced learning roadmap for the following topic, including milestones, projects and recommended resources.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 26,
+    "shortcut": "/code",
+    "title": "Generate Code",
+    "category": "Programming",
+    "description": "Generate clean source code.",
+    "prompt": "Write clean, efficient and well-documented code for the following requirement.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 27,
+    "shortcut": "/debug",
+    "title": "Debug Code",
+    "category": "Programming",
+    "description": "Find and fix code issues.",
+    "prompt": "Analyze the following code, identify bugs, explain why they occur and provide the corrected version.\n\nCode:",
+    "isOfficial": false
+  },
+  {
+    "id": 28,
+    "shortcut": "/optimize",
+    "title": "Optimize Code",
+    "category": "Programming",
+    "description": "Improve code performance.",
+    "prompt": "Optimize the following code for readability, performance and maintainability.\n\nCode:",
+    "isOfficial": false
+  },
+  {
+    "id": 29,
+    "shortcut": "/explaincode",
+    "title": "Explain Code",
+    "category": "Programming",
+    "description": "Explain source code step by step.",
+    "prompt": "Explain the following code line by line in simple language.\n\nCode:",
+    "isOfficial": false
+  },
+  {
+    "id": 30,
+    "shortcut": "/regex",
+    "title": "Generate Regex",
+    "category": "Programming",
+    "description": "Create regular expressions.",
+    "prompt": "Generate a regular expression for the following requirement and explain how it works.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 31,
+    "shortcut": "/sql",
+    "title": "Generate SQL",
+    "category": "Database",
+    "description": "Write SQL queries.",
+    "prompt": "Write an optimized SQL query for the following requirement.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 32,
+    "shortcut": "/json",
+    "title": "Format JSON",
+    "category": "Programming",
+    "description": "Beautify and validate JSON.",
+    "prompt": "Validate, format and correct the following JSON.\n\nJSON:",
+    "isOfficial": false
+  },
+  {
+    "id": 33,
+    "shortcut": "/api",
+    "title": "Design REST API",
+    "category": "Programming",
+    "description": "Create REST API design.",
+    "prompt": "Design a REST API for the following project. Include endpoints, request bodies, responses and error codes.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 34,
+    "shortcut": "/algorithm",
+    "title": "Algorithm Generator",
+    "category": "Programming",
+    "description": "Create efficient algorithms.",
+    "prompt": "Design the most efficient algorithm for the following problem. Explain time and space complexity.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 35,
+    "shortcut": "/pseudocode",
+    "title": "Pseudo Code",
+    "category": "Programming",
+    "description": "Convert logic into pseudocode.",
+    "prompt": "Convert the following requirement into clear pseudocode.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 36,
+    "shortcut": "/checklist",
+    "title": "Create Checklist",
+    "category": "Productivity",
+    "description": "Generate an actionable checklist.",
+    "prompt": "Create a detailed checklist for the following task.\n\nTask:",
+    "isOfficial": false
+  },
+  {
+    "id": 37,
+    "shortcut": "/meeting",
+    "title": "Meeting Notes",
+    "category": "Business",
+    "description": "Summarize meeting notes.",
+    "prompt": "Convert the following meeting notes into action items, decisions and follow-ups.\n\nNotes:",
+    "isOfficial": false
+  },
+  {
+    "id": 38,
+    "shortcut": "/swot",
+    "title": "SWOT Analysis",
+    "category": "Business",
+    "description": "Generate SWOT analysis.",
+    "prompt": "Perform a detailed SWOT analysis for the following business or idea.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 39,
+    "shortcut": "/businessplan",
+    "title": "Business Plan",
+    "category": "Business",
+    "description": "Create a business plan.",
+    "prompt": "Create a complete business plan for the following idea.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 40,
+    "shortcut": "/pitch",
+    "title": "Startup Pitch",
+    "category": "Business",
+    "description": "Generate a startup pitch.",
+    "prompt": "Write a compelling startup pitch for the following business idea.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 41,
+    "shortcut": "/ads",
+    "title": "Advertisement Copy",
+    "category": "Marketing",
+    "description": "Create ad copy.",
+    "prompt": "Write five high-converting advertisements for the following product.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 42,
+    "shortcut": "/tagline",
+    "title": "Brand Taglines",
+    "category": "Marketing",
+    "description": "Generate catchy taglines.",
+    "prompt": "Generate 20 memorable taglines for the following brand.\n\nBrand:",
+    "isOfficial": false
+  },
+  {
+    "id": 43,
+    "shortcut": "/productdescription",
+    "title": "Product Description",
+    "category": "Marketing",
+    "description": "Write persuasive product descriptions.",
+    "prompt": "Write a persuasive product description highlighting benefits and features.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 44,
+    "shortcut": "/faq",
+    "title": "Generate FAQ",
+    "category": "Business",
+    "description": "Create frequently asked questions.",
+    "prompt": "Generate a comprehensive FAQ section for the following product or service.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 45,
+    "shortcut": "/persona",
+    "title": "Customer Persona",
+    "category": "Marketing",
+    "description": "Build customer personas.",
+    "prompt": "Create a detailed customer persona for the following product.\n\nProduct:",
+    "isOfficial": false
+  },
+  {
+    "id": 46,
+    "shortcut": "/proscons",
+    "title": "Pros and Cons",
+    "category": "Decision Making",
+    "description": "Compare advantages and disadvantages.",
+    "prompt": "List the pros and cons of the following topic in a comparison table.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 47,
+    "shortcut": "/compare",
+    "title": "Compare Options",
+    "category": "Decision Making",
+    "description": "Compare two or more options.",
+    "prompt": "Compare the following options in a detailed table including strengths, weaknesses and recommendations.\n\nOptions:",
+    "isOfficial": false
+  },
+  {
+    "id": 48,
+    "shortcut": "/timeline",
+    "title": "Project Timeline",
+    "category": "Planning",
+    "description": "Generate a project timeline.",
+    "prompt": "Create a realistic project timeline with milestones for the following project.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 49,
+    "shortcut": "/risk",
+    "title": "Risk Analysis",
+    "category": "Planning",
+    "description": "Identify project risks.",
+    "prompt": "Identify potential risks, their impact and mitigation strategies for the following project.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 50,
+    "shortcut": "/actionplan",
+    "title": "Action Plan",
+    "category": "Planning",
+    "description": "Generate a step-by-step action plan.",
+    "prompt": "Create a detailed action plan with priorities, deadlines and expected outcomes for the following goal.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 51,
+    "shortcut": "/excel",
+    "title": "Excel Formula Generator",
+    "category": "Data Analysis",
+    "description": "Generate Excel formulas.",
+    "prompt": "Generate the most suitable Excel formula for the following requirement. Explain how it works and provide an example.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 52,
+    "shortcut": "/charts",
+    "title": "Chart Recommendation",
+    "category": "Data Analysis",
+    "description": "Recommend the best chart.",
+    "prompt": "Recommend the best chart type for the following dataset and explain why it is appropriate.\n\nDataset:",
+    "isOfficial": false
+  },
+  {
+    "id": 53,
+    "shortcut": "/analyze",
+    "title": "Data Analysis",
+    "category": "Data Analysis",
+    "description": "Analyze data and identify insights.",
+    "prompt": "Analyze the following data, identify trends, patterns, anomalies and provide actionable insights.\n\nData:",
+    "isOfficial": false
+  },
+  {
+    "id": 54,
+    "shortcut": "/research",
+    "title": "Research Assistant",
+    "category": "Research",
+    "description": "Research any topic.",
+    "prompt": "Provide a structured overview of the following topic, covering key concepts, different viewpoints, and areas for further reading. Clearly indicate where information may need independent verification.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 55,
+    "shortcut": "/citation",
+    "title": "Citation Generator",
+    "category": "Research",
+    "description": "Format references.",
+    "prompt": "Format the following source information into APA, MLA and Chicago citation styles.\n\nSource:",
+    "isOfficial": false
+  },
+  {
+    "id": 56,
+    "shortcut": "/literaturereview",
+    "title": "Literature Review",
+    "category": "Research",
+    "description": "Summarize research.",
+    "prompt": "Create a structured literature review based on the following research notes or papers.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 57,
+    "shortcut": "/prompt",
+    "title": "Prompt Improver",
+    "category": "AI",
+    "description": "Improve AI prompts.",
+    "prompt": "Rewrite the following AI prompt to make it more specific, structured and effective while preserving the user's intent.\n\nPrompt:",
+    "isOfficial": false
+  },
+  {
+    "id": 58,
+    "shortcut": "/roleplay",
+    "title": "Role Play Expert",
+    "category": "AI",
+    "description": "Answer as an expert.",
+    "prompt": "Act as an expert in the following field. Explain your assumptions when needed and answer the user's questions clearly.\n\nField:",
+    "isOfficial": false
+  },
+  {
+    "id": 59,
+    "shortcut": "/ux",
+    "title": "UX Review",
+    "category": "Design",
+    "description": "Review user experience.",
+    "prompt": "Review the following product or screen from a UX perspective. Identify usability issues and suggest improvements.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 60,
+    "shortcut": "/ui",
+    "title": "UI Suggestions",
+    "category": "Design",
+    "description": "Improve interface design.",
+    "prompt": "Suggest improvements for the following UI design, considering accessibility, visual hierarchy and usability.\n\nDescription:",
+    "isOfficial": false
+  },
+  {
+    "id": 61,
+    "shortcut": "/colorpalette",
+    "title": "Color Palette",
+    "category": "Design",
+    "description": "Suggest color palettes.",
+    "prompt": "Suggest five modern color palettes for the following project. Include HEX color codes and explain where each palette fits best.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 62,
+    "shortcut": "/android",
+    "title": "Android Development",
+    "category": "Programming",
+    "description": "Generate Android guidance.",
+    "prompt": "Provide a clean Android development solution using Kotlin and current Android best practices for the following requirement.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 63,
+    "shortcut": "/kotlin",
+    "title": "Kotlin Expert",
+    "category": "Programming",
+    "description": "Write Kotlin code.",
+    "prompt": "Write clean, idiomatic Kotlin code for the following requirement and explain the important parts.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 64,
+    "shortcut": "/web",
+    "title": "Web Development",
+    "category": "Programming",
+    "description": "Generate web code.",
+    "prompt": "Develop a responsive HTML, CSS and JavaScript solution for the following requirement.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 65,
+    "shortcut": "/flutter",
+    "title": "Flutter Development",
+    "category": "Programming",
+    "description": "Generate Flutter code.",
+    "prompt": "Write production-ready Flutter code using current best practices for the following requirement.\n\nRequirement:",
+    "isOfficial": false
+  },
+  {
+    "id": 66,
+    "shortcut": "/git",
+    "title": "Git Assistant",
+    "category": "Development",
+    "description": "Git commands and workflow.",
+    "prompt": "Recommend the appropriate Git commands and workflow for the following scenario. Explain what each command does.\n\nScenario:",
+    "isOfficial": false
+  },
+  {
+    "id": 67,
+    "shortcut": "/docker",
+    "title": "Docker Assistant",
+    "category": "Development",
+    "description": "Create Docker configuration.",
+    "prompt": "Generate a Dockerfile and explain the configuration for the following application.\n\nApplication:",
+    "isOfficial": false
+  },
+  {
+    "id": 68,
+    "shortcut": "/security",
+    "title": "Security Review",
+    "category": "Cybersecurity",
+    "description": "Review security risks.",
+    "prompt": "Review the following application or architecture for security weaknesses. Suggest practical improvements and explain the reasoning.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 69,
+    "shortcut": "/testcases",
+    "title": "Test Cases",
+    "category": "Testing",
+    "description": "Generate software test cases.",
+    "prompt": "Generate comprehensive functional, edge-case and negative test cases for the following feature.\n\nFeature:",
+    "isOfficial": false
+  },
+  {
+    "id": 70,
+    "shortcut": "/bugreport",
+    "title": "Bug Report",
+    "category": "Testing",
+    "description": "Write a professional bug report.",
+    "prompt": "Create a detailed bug report including title, environment, reproduction steps, expected result, actual result and severity.\n\nIssue:",
+    "isOfficial": false
+  },
+  {
+    "id": 71,
+    "shortcut": "/devops",
+    "title": "DevOps Guide",
+    "category": "Development",
+    "description": "Suggest DevOps practices.",
+    "prompt": "Provide a DevOps implementation plan for the following project including CI/CD recommendations.\n\nProject:",
+    "isOfficial": false
+  },
+  {
+    "id": 72,
+    "shortcut": "/roadmapdev",
+    "title": "Developer Roadmap",
+    "category": "Programming",
+    "description": "Learning roadmap for developers.",
+    "prompt": "Create a beginner-to-advanced learning roadmap for the following programming technology, including concepts, projects and milestones.\n\nTechnology:",
+    "isOfficial": false
+  },
+  {
+    "id": 73,
+    "shortcut": "/review",
+    "title": "Content Review",
+    "category": "Writing",
+    "description": "Review and improve content.",
+    "prompt": "Review the following content for clarity, structure, grammar and readability. Suggest improvements with explanations.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 74,
+    "shortcut": "/workflow",
+    "title": "Workflow Optimizer",
+    "category": "Productivity",
+    "description": "Optimize workflows.",
+    "prompt": "Analyze the following workflow. Identify bottlenecks and suggest a more efficient process.\n\nWorkflow:",
+    "isOfficial": false
+  },
+  {
+    "id": 75,
+    "shortcut": "/decision",
+    "title": "Decision Assistant",
+    "category": "Decision Making",
+    "description": "Evaluate options objectively.",
+    "prompt": "Evaluate the following options using clear criteria, discuss trade-offs and provide a reasoned recommendation.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 76,
+    "shortcut": "/story",
+    "title": "Story Generator",
+    "category": "Creativity",
+    "description": "Write an engaging story.",
+    "prompt": "Write an original story based on the following idea. Include a compelling beginning, conflict and satisfying ending.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 77,
+    "shortcut": "/poem",
+    "title": "Poem Writer",
+    "category": "Creativity",
+    "description": "Generate a creative poem.",
+    "prompt": "Write a poem about the following topic in a style of your choice.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 78,
+    "shortcut": "/speech",
+    "title": "Speech Writer",
+    "category": "Writing",
+    "description": "Create a speech.",
+    "prompt": "Write a well-structured speech for the following occasion. Include an engaging opening and memorable conclusion.\n\nOccasion:",
+    "isOfficial": false
+  },
+  {
+    "id": 79,
+    "shortcut": "/presentation",
+    "title": "Presentation Outline",
+    "category": "Business",
+    "description": "Create presentation slides.",
+    "prompt": "Create a presentation outline with slide titles, key points and speaker notes.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 80,
+    "shortcut": "/studyplan",
+    "title": "Study Plan",
+    "category": "Education",
+    "description": "Generate a study schedule.",
+    "prompt": "Create a personalized study plan for the following subject, goals and available study time.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 81,
+    "shortcut": "/notes",
+    "title": "Study Notes",
+    "category": "Education",
+    "description": "Prepare concise notes.",
+    "prompt": "Create well-organized study notes for the following topic using headings and bullet points.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 82,
+    "shortcut": "/mindmap",
+    "title": "Mind Map",
+    "category": "Education",
+    "description": "Create a text-based mind map.",
+    "prompt": "Generate a structured text-based mind map for the following topic.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 83,
+    "shortcut": "/goals",
+    "title": "Goal Planner",
+    "category": "Productivity",
+    "description": "Plan personal or professional goals.",
+    "prompt": "Create a SMART goal plan with milestones and action steps for the following goal.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 84,
+    "shortcut": "/habit",
+    "title": "Habit Builder",
+    "category": "Productivity",
+    "description": "Build better habits.",
+    "prompt": "Create a practical habit-building plan for the following objective, including daily and weekly actions.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 85,
+    "shortcut": "/timemanagement",
+    "title": "Time Management",
+    "category": "Productivity",
+    "description": "Improve time management.",
+    "prompt": "Suggest an effective time-management strategy for the following schedule and priorities.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 86,
+    "shortcut": "/budget",
+    "title": "Budget Planner",
+    "category": "Finance",
+    "description": "Create a personal budget.",
+    "prompt": "Create a monthly budget plan using the following income and expenses. Suggest realistic savings opportunities.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 87,
+    "shortcut": "/travel",
+    "title": "Travel Planner",
+    "category": "Travel",
+    "description": "Plan a trip.",
+    "prompt": "Create a travel itinerary for the following destination, duration and interests.\n\nTrip Details:",
+    "isOfficial": false
+  },
+  {
+    "id": 88,
+    "shortcut": "/packing",
+    "title": "Packing List",
+    "category": "Travel",
+    "description": "Generate a packing checklist.",
+    "prompt": "Create a complete packing checklist based on the following destination, weather and trip duration.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 89,
+    "shortcut": "/mealplan",
+    "title": "Meal Plan",
+    "category": "Lifestyle",
+    "description": "Generate a meal plan.",
+    "prompt": "Create a balanced meal plan based on the following dietary preferences and goals. This is general guidance and not medical advice.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 90,
+    "shortcut": "/workout",
+    "title": "Workout Plan",
+    "category": "Fitness",
+    "description": "Create a workout routine.",
+    "prompt": "Create a general fitness workout plan based on the following fitness level, available equipment and goals. Do not provide medical advice.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 91,
+    "shortcut": "/booksummary",
+    "title": "Book Summary",
+    "category": "Books",
+    "description": "Summarize a book.",
+    "prompt": "Provide a concise summary of the following book, including its main ideas, key takeaways and themes.\n\nBook:",
+    "isOfficial": false
+  },
+  {
+    "id": 92,
+    "shortcut": "/movieideas",
+    "title": "Movie Recommendations",
+    "category": "Entertainment",
+    "description": "Suggest movies.",
+    "prompt": "Recommend movies based on the following preferences. Explain briefly why each recommendation fits.\n\nPreferences:",
+    "isOfficial": false
+  },
+  {
+    "id": 93,
+    "shortcut": "/startup",
+    "title": "Startup Ideas",
+    "category": "Business",
+    "description": "Generate startup ideas.",
+    "prompt": "Generate 15 innovative startup ideas based on the following industry or problem.\n\nIndustry:",
+    "isOfficial": false
+  },
+  {
+    "id": 94,
+    "shortcut": "/automation",
+    "title": "Automation Ideas",
+    "category": "AI",
+    "description": "Suggest automation opportunities.",
+    "prompt": "Suggest practical AI or workflow automation ideas for the following business or task. Explain expected benefits.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 95,
+    "shortcut": "/branding",
+    "title": "Brand Strategy",
+    "category": "Marketing",
+    "description": "Develop a brand identity.",
+    "prompt": "Create a brand strategy including mission, vision, tone of voice, target audience and positioning.\n\nBusiness:",
+    "isOfficial": false
+  },
+  {
+    "id": 96,
+    "shortcut": "/nameideas",
+    "title": "Business Name Ideas",
+    "category": "Business",
+    "description": "Generate business names.",
+    "prompt": "Generate 30 unique and memorable business name ideas for the following business concept.\n\nConcept:",
+    "isOfficial": false
+  },
+  {
+    "id": 97,
+    "shortcut": "/domainideas",
+    "title": "Domain Suggestions",
+    "category": "Business",
+    "description": "Suggest domain names.",
+    "prompt": "Suggest creative domain name ideas for the following brand. Focus on memorable names; do not assume domain availability.\n\nBrand:",
+    "isOfficial": false
+  },
+  {
+    "id": 98,
+    "shortcut": "/checkgrammar",
+    "title": "Grammar Review",
+    "category": "Writing",
+    "description": "Review grammar and clarity.",
+    "prompt": "Review the following text for grammar, clarity, tone and readability. Explain the key improvements.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 99,
+    "shortcut": "/simplify",
+    "title": "Simplify Text",
+    "category": "Writing",
+    "description": "Make text easier to understand.",
+    "prompt": "Rewrite the following text in plain language while preserving the original meaning.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 100,
+    "shortcut": "/masterprompt",
+    "title": "Master Prompt Generator",
+    "category": "AI",
+    "description": "Generate a high-quality AI prompt.",
+    "prompt": "Create a detailed, well-structured AI prompt for the following task. Include role, objective, context, constraints, desired output format and quality checks.\n\nTask:",
+    "isOfficial": false
+  }
+]

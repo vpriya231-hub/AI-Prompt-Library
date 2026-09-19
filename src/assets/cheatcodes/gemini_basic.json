@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "shortcut": "/geminihelp",
+    "title": "Gemini Assistant",
+    "category": "Basic",
+    "description": "Get general assistance for any topic.",
+    "prompt": "Act as Google Gemini. Provide a clear, accurate and well-structured answer to the following question. If the request is ambiguous, ask clarifying questions before answering.\n\nQuestion:",
+    "isOfficial": false
+  },
+  {
+    "id": 2,
+    "shortcut": "/explainsimple",
+    "title": "Explain Simply",
+    "category": "Education",
+    "description": "Explain complex topics in simple language.",
+    "prompt": "Explain the following topic in simple language suitable for a beginner. Use short paragraphs, examples, analogies and a brief summary at the end.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 3,
+    "shortcut": "/summarize",
+    "title": "Smart Summary",
+    "category": "Writing",
+    "description": "Summarize any text while preserving key ideas.",
+    "prompt": "Summarize the following content into concise bullet points while preserving all essential information. Include a one-paragraph executive summary.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 4,
+    "shortcut": "/rewritepro",
+    "title": "Professional Rewrite",
+    "category": "Writing",
+    "description": "Rewrite text with improved clarity and grammar.",
+    "prompt": "Rewrite the following text to improve clarity, grammar, tone and readability without changing the original meaning.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 5,
+    "shortcut": "/brainstorm",
+    "title": "Idea Generator",
+    "category": "Creativity",
+    "description": "Generate creative ideas for any topic.",
+    "prompt": "Generate at least 20 creative and practical ideas for the following topic. Group similar ideas together and rank the top five.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 6,
+    "shortcut": "/stepbystep",
+    "title": "Step-by-Step Guide",
+    "category": "Productivity",
+    "description": "Break tasks into easy-to-follow steps.",
+    "prompt": "Provide a detailed step-by-step guide for accomplishing the following task. Include prerequisites, common mistakes and helpful tips.\n\nTask:",
+    "isOfficial": false
+  },
+  {
+    "id": 7,
+    "shortcut": "/studyguide",
+    "title": "Study Guide",
+    "category": "Education",
+    "description": "Create an organized study guide.",
+    "prompt": "Create a complete study guide for the following topic. Include key concepts, definitions, examples, memory tips, practice questions and a quick revision section.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 8,
+    "shortcut": "/compare",
+    "title": "Compare Topics",
+    "category": "Analysis",
+    "description": "Compare two or more subjects objectively.",
+    "prompt": "Compare the following subjects using a table. Highlight similarities, differences, advantages, disadvantages and ideal use cases before giving a balanced conclusion.\n\nSubjects:",
+    "isOfficial": false
+  },
+  {
+    "id": 9,
+    "shortcut": "/emaildraft",
+    "title": "Email Draft",
+    "category": "Communication",
+    "description": "Write professional emails quickly.",
+    "prompt": "Write a professional email based on the following information. Keep the tone polite, concise and appropriate for the intended audience.\n\nDetails:",
+    "isOfficial": false
+  },
+  {
+    "id": 10,
+    "shortcut": "/checkgrammar",
+    "title": "Grammar Checker",
+    "category": "Writing",
+    "description": "Correct grammar and improve writing quality.",
+    "prompt": "Correct grammar, punctuation and spelling in the following text. Improve readability while preserving the original meaning.\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 11,
+    "shortcut": "/quizme",
+    "title": "Quiz Generator",
+    "category": "Education",
+    "description": "Generate practice quiz questions.",
+    "prompt": "Create a quiz based on the following topic. Include 10 multiple-choice questions, 5 true/false questions and provide answers with explanations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 12,
+    "shortcut": "/translatepro",
+    "title": "Smart Translation",
+    "category": "Language",
+    "description": "Translate text naturally while preserving meaning.",
+    "prompt": "Translate the following text into the requested language while preserving meaning, tone and context. If needed, explain difficult phrases.\n\nTarget Language:\n\nText:",
+    "isOfficial": false
+  },
+  {
+    "id": 13,
+    "shortcut": "/actionplan",
+    "title": "Action Plan",
+    "category": "Planning",
+    "description": "Create a practical action plan for achieving a goal.",
+    "prompt": "Develop a practical action plan for achieving the following goal. Break it into phases, milestones, timelines, required resources, possible risks and success metrics.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 14,
+    "shortcut": "/brainmap",
+    "title": "Brain Map",
+    "category": "Productivity",
+    "description": "Organize ideas into a structured mind map.",
+    "prompt": "Create a structured mind map for the following topic. Organize it into main branches, subtopics, key concepts, examples and practical applications.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 15,
+    "shortcut": "/proscons",
+    "title": "Pros and Cons",
+    "category": "Analysis",
+    "description": "Evaluate advantages and disadvantages objectively.",
+    "prompt": "Analyze the following topic by listing its advantages, disadvantages, risks, opportunities and overall recommendation in a well-structured format.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 16,
+    "shortcut": "/timeline",
+    "title": "Timeline Creator",
+    "category": "Planning",
+    "description": "Generate chronological timelines.",
+    "prompt": "Create a chronological timeline for the following topic or project. Include major milestones, important events, expected outcomes and dependencies.\n\nTopic or Project:",
+    "isOfficial": false
+  },
+  {
+    "id": 17,
+    "shortcut": "/flashcards",
+    "title": "Flashcard Generator",
+    "category": "Education",
+    "description": "Generate study flashcards for revision.",
+    "prompt": "Generate study flashcards for the following topic. Each flashcard should contain a question on one side and a concise answer on the other.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 18,
+    "shortcut": "/simplifytext",
+    "title": "Simplify Text",
+    "category": "Writing",
+    "description": "Convert difficult text into easy-to-understand language.",
+    "prompt": "Rewrite the following content using simple language suitable for beginners while preserving the original meaning and important details.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 19,
+    "shortcut": "/meetingnotes",
+    "title": "Meeting Notes",
+    "category": "Business",
+    "description": "Convert discussions into organized meeting notes.",
+    "prompt": "Convert the following meeting discussion into professional meeting notes. Include agenda, key discussion points, decisions, action items, responsible persons and deadlines.\n\nDiscussion:",
+    "isOfficial": false
+  },
+  {
+    "id": 20,
+    "shortcut": "/faqmaker",
+    "title": "FAQ Generator",
+    "category": "Content",
+    "description": "Create a frequently asked questions section.",
+    "prompt": "Generate a detailed FAQ for the following topic. Include at least 15 practical questions with concise and accurate answers.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 21,
+    "shortcut": "/learningpath",
+    "title": "Learning Path",
+    "category": "Education",
+    "description": "Build a structured learning roadmap.",
+    "prompt": "Create a complete learning roadmap for the following subject. Divide it into beginner, intermediate and advanced stages with recommended practice activities and milestones.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 22,
+    "shortcut": "/improveprompt",
+    "title": "Prompt Improver",
+    "category": "AI",
+    "description": "Improve prompts for better AI responses.",
+    "prompt": "Improve the following prompt to make it clearer, more detailed and more effective. Explain the improvements and provide the optimized version.\n\nOriginal Prompt:",
+    "isOfficial": false
+  },
+  {
+    "id": 23,
+    "shortcut": "/explainterms",
+    "title": "Term Explainer",
+    "category": "Education",
+    "description": "Explain important terms with examples.",
+    "prompt": "Explain each important term related to the following topic. Include definitions, examples, practical applications and common misconceptions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 24,
+    "shortcut": "/checklist",
+    "title": "Checklist Builder",
+    "category": "Productivity",
+    "description": "Generate actionable checklists.",
+    "prompt": "Create a comprehensive checklist for the following task or project. Organize items by preparation, execution and final review stages.\n\nTask or Project:",
+    "isOfficial": false
+  },
+  {
+    "id": 25,
+    "shortcut": "/bestpractices",
+    "title": "Best Practices",
+    "category": "Professional",
+    "description": "List industry-standard best practices.",
+    "prompt": "Identify the best practices for the following topic. Explain why each practice is important, common mistakes to avoid and practical implementation tips.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 26,
+    "shortcut": "/keypoints",
+    "title": "Key Points Extractor",
+    "category": "Analysis",
+    "description": "Extract the most important information from any content.",
+    "prompt": "Read the following content and extract the most important key points. Organize them into headings, supporting details and actionable takeaways.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 27,
+    "shortcut": "/mistakefinder",
+    "title": "Mistake Finder",
+    "category": "Analysis",
+    "description": "Identify mistakes and suggest improvements.",
+    "prompt": "Review the following content carefully. Identify factual errors, logical inconsistencies, grammar issues, unclear wording and improvement opportunities. Explain each suggestion.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 28,
+    "shortcut": "/decisionhelper",
+    "title": "Decision Helper",
+    "category": "Productivity",
+    "description": "Make informed decisions using structured analysis.",
+    "prompt": "Help me make the following decision. List all realistic options, compare their advantages, disadvantages, risks, costs and long-term consequences before recommending the best choice.\n\nDecision:",
+    "isOfficial": false
+  },
+  {
+    "id": 29,
+    "shortcut": "/dailyplanner",
+    "title": "Daily Planner",
+    "category": "Planning",
+    "description": "Create a productive daily schedule.",
+    "prompt": "Create a practical daily schedule for achieving the following goals. Include priorities, time blocks, breaks, productivity tips and review checkpoints.\n\nGoals:",
+    "isOfficial": false
+  },
+  {
+    "id": 30,
+    "shortcut": "/weeklyplan",
+    "title": "Weekly Planner",
+    "category": "Planning",
+    "description": "Generate a structured weekly plan.",
+    "prompt": "Develop a detailed weekly plan for the following objectives. Organize tasks by day, priority, estimated duration and expected outcomes.\n\nObjectives:",
+    "isOfficial": false
+  },
+  {
+    "id": 31,
+    "shortcut": "/goaltracker",
+    "title": "Goal Tracker",
+    "category": "Productivity",
+    "description": "Track progress toward important goals.",
+    "prompt": "Design a goal-tracking system for the following objective. Include milestones, measurable indicators, review frequency, motivation techniques and success criteria.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 32,
+    "shortcut": "/researchstarter",
+    "title": "Research Starter",
+    "category": "Research",
+    "description": "Build a strong foundation before researching.",
+    "prompt": "Prepare a research starting guide for the following topic. Include background information, important questions, key concepts, trusted information sources and suggested research directions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 33,
+    "shortcut": "/conceptmap",
+    "title": "Concept Map",
+    "category": "Education",
+    "description": "Visualize relationships between concepts.",
+    "prompt": "Create a structured concept map for the following subject. Show the relationships between major ideas, supporting concepts and practical examples.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 34,
+    "shortcut": "/learningtips",
+    "title": "Learning Tips",
+    "category": "Education",
+    "description": "Improve learning efficiency with proven methods.",
+    "prompt": "Provide practical learning techniques for mastering the following topic. Include memory methods, revision strategies, active learning exercises and common mistakes to avoid.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 35,
+    "shortcut": "/quickfacts",
+    "title": "Quick Facts",
+    "category": "Knowledge",
+    "description": "Generate concise facts about any topic.",
+    "prompt": "Provide the most important facts about the following topic. Present them as short, easy-to-read bullet points with brief explanations where necessary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 36,
+    "shortcut": "/explainwhy",
+    "title": "Explain Why",
+    "category": "Education",
+    "description": "Explain the reasoning behind concepts.",
+    "prompt": "Explain why the following concept works the way it does. Include scientific reasoning, practical examples, common misconceptions and a simple summary.\n\nConcept:",
+    "isOfficial": false
+  },
+  {
+    "id": 37,
+    "shortcut": "/smartnotes",
+    "title": "Smart Notes",
+    "category": "Writing",
+    "description": "Convert content into organized study notes.",
+    "prompt": "Transform the following content into structured study notes using headings, bullet points, summaries, key terms and revision tips.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 38,
+    "shortcut": "/topicoverview",
+    "title": "Topic Overview",
+    "category": "Education",
+    "description": "Get a complete overview before diving deeper.",
+    "prompt": "Provide a complete overview of the following topic. Include definitions, key ideas, major components, real-world applications, advantages, limitations and a concise summary.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 39,
+    "shortcut": "/examples",
+    "title": "Example Generator",
+    "category": "Education",
+    "description": "Generate practical examples for any concept.",
+    "prompt": "Generate multiple practical examples for the following concept. Start with beginner-friendly examples, then intermediate and advanced examples. Explain why each example is relevant.\n\nConcept:",
+    "isOfficial": false
+  },
+  {
+    "id": 40,
+    "shortcut": "/caseStudy",
+    "title": "Case Study Builder",
+    "category": "Research",
+    "description": "Create realistic case studies for learning and analysis.",
+    "prompt": "Create a realistic case study for the following topic. Include background, objectives, challenges, analysis, possible solutions, final outcome and key lessons learned.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 41,
+    "shortcut": "/prosummarize",
+    "title": "Professional Summary",
+    "category": "Writing",
+    "description": "Produce executive-level summaries.",
+    "prompt": "Summarize the following content into a professional executive summary. Include key findings, important insights, conclusions and recommended actions.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 42,
+    "shortcut": "/qna",
+    "title": "Question & Answer",
+    "category": "Education",
+    "description": "Generate questions and answers for revision.",
+    "prompt": "Generate 20 important questions and detailed answers based on the following topic. Arrange them from basic to advanced difficulty.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 43,
+    "shortcut": "/presentation",
+    "title": "Presentation Builder",
+    "category": "Business",
+    "description": "Create a presentation outline for any topic.",
+    "prompt": "Create a professional presentation outline for the following topic. Include title slide, agenda, key sections, visuals to include, speaker notes and conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 44,
+    "shortcut": "/explaincompare",
+    "title": "Explain and Compare",
+    "category": "Analysis",
+    "description": "Explain concepts and compare them clearly.",
+    "prompt": "Explain each of the following concepts individually, then compare them using definitions, similarities, differences, strengths, weaknesses and practical applications.\n\nConcepts:",
+    "isOfficial": false
+  },
+  {
+    "id": 45,
+    "shortcut": "/mythsfacts",
+    "title": "Myths vs Facts",
+    "category": "Knowledge",
+    "description": "Separate myths from factual information.",
+    "prompt": "List the common myths and verified facts related to the following topic. Explain why each myth is incorrect and provide accurate information.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 46,
+    "shortcut": "/improveidea",
+    "title": "Idea Improver",
+    "category": "Creativity",
+    "description": "Enhance existing ideas with practical improvements.",
+    "prompt": "Improve the following idea by identifying weaknesses, suggesting enhancements, adding innovative features and explaining how each improvement increases its value.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 47,
+    "shortcut": "/learningquiz",
+    "title": "Learning Quiz",
+    "category": "Education",
+    "description": "Create interactive quizzes for learning.",
+    "prompt": "Create an interactive quiz for the following topic with multiple-choice, true/false, fill-in-the-blank and short-answer questions. Include answers and explanations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 48,
+    "shortcut": "/decisionmatrix",
+    "title": "Decision Matrix",
+    "category": "Analysis",
+    "description": "Evaluate options using a structured matrix.",
+    "prompt": "Create a decision matrix for the following options. Compare them using criteria such as cost, quality, risk, scalability, ease of implementation and long-term value before recommending the best option.\n\nOptions:",
+    "isOfficial": false
+  },
+  {
+    "id": 49,
+    "shortcut": "/deepdive",
+    "title": "Deep Dive",
+    "category": "Research",
+    "description": "Perform a detailed exploration of a topic.",
+    "prompt": "Perform a deep analysis of the following topic. Cover its history, key concepts, current developments, challenges, opportunities, future trends and practical applications.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 50,
+    "shortcut": "/smartassistant",
+    "title": "Smart Assistant",
+    "category": "AI",
+    "description": "Provide structured assistance for any request.",
+    "prompt": "Act as a smart AI assistant. Understand the following request, identify missing information if necessary, provide a structured solution, explain your reasoning clearly and conclude with practical next steps.\n\nRequest:",
+    "isOfficial": false
+  },
+  {
+    "id": 51,
+    "shortcut": "/outline",
+    "title": "Content Outline",
+    "category": "Writing",
+    "description": "Generate a well-structured outline for any topic.",
+    "prompt": "Create a detailed outline for the following topic. Include a logical hierarchy of headings, subheadings, key discussion points and suggested conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 52,
+    "shortcut": "/swot",
+    "title": "SWOT Analysis",
+    "category": "Business",
+    "description": "Analyze strengths, weaknesses, opportunities and threats.",
+    "prompt": "Perform a comprehensive SWOT analysis for the following subject. Explain each point with practical examples and conclude with strategic recommendations.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 53,
+    "shortcut": "/rootcause",
+    "title": "Root Cause Analysis",
+    "category": "Analysis",
+    "description": "Identify the underlying causes of a problem.",
+    "prompt": "Analyze the following problem to identify its root causes. Discuss contributing factors, possible consequences and recommend effective long-term solutions.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 54,
+    "shortcut": "/brainstormplus",
+    "title": "Advanced Brainstorm",
+    "category": "Creativity",
+    "description": "Generate innovative ideas from multiple perspectives.",
+    "prompt": "Brainstorm creative ideas for the following topic from technical, business, educational and user perspectives. Rank the ideas based on originality and practicality.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 55,
+    "shortcut": "/workflow",
+    "title": "Workflow Designer",
+    "category": "Productivity",
+    "description": "Design efficient workflows for any process.",
+    "prompt": "Design an efficient workflow for the following process. Include preparation, execution, quality checks, optimization opportunities and expected outcomes.\n\nProcess:",
+    "isOfficial": false
+  },
+  {
+    "id": 56,
+    "shortcut": "/roadmap",
+    "title": "Project Roadmap",
+    "category": "Planning",
+    "description": "Create a milestone-based roadmap.",
+    "prompt": "Develop a project roadmap for the following objective. Divide it into phases with milestones, deliverables, estimated timelines, dependencies and success criteria.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 57,
+    "shortcut": "/skillbuilder",
+    "title": "Skill Builder",
+    "category": "Education",
+    "description": "Plan how to master a new skill.",
+    "prompt": "Create a structured learning plan for mastering the following skill. Include learning stages, recommended practice schedule, resources, projects and progress checkpoints.\n\nSkill:",
+    "isOfficial": false
+  },
+  {
+    "id": 58,
+    "shortcut": "/factcheck",
+    "title": "Fact Checker",
+    "category": "Research",
+    "description": "Evaluate statements for accuracy.",
+    "prompt": "Review the following statements. Identify which are likely factual, which require verification and which appear inaccurate. Explain your reasoning and recommend reliable sources for verification.\n\nStatements:",
+    "isOfficial": false
+  },
+  {
+    "id": 59,
+    "shortcut": "/structuredanswer",
+    "title": "Structured Answer",
+    "category": "AI",
+    "description": "Generate organized and comprehensive responses.",
+    "prompt": "Answer the following question in a structured format with an introduction, detailed explanation, examples, key takeaways and a concise conclusion.\n\nQuestion:",
+    "isOfficial": false
+  },
+  {
+    "id": 60,
+    "shortcut": "/argumentbuilder",
+    "title": "Argument Builder",
+    "category": "Writing",
+    "description": "Develop balanced arguments for discussions.",
+    "prompt": "Construct balanced arguments for and against the following statement. Support each side with logical reasoning, evidence and conclude with an objective assessment.\n\nStatement:",
+    "isOfficial": false
+  },
+  {
+    "id": 61,
+    "shortcut": "/reflection",
+    "title": "Reflection Generator",
+    "category": "Personal Growth",
+    "description": "Generate thoughtful reflections on experiences.",
+    "prompt": "Write a thoughtful reflection on the following experience or topic. Discuss lessons learned, strengths, challenges, future improvements and personal insights.\n\nTopic or Experience:",
+    "isOfficial": false
+  },
+  {
+    "id": 62,
+    "shortcut": "/checkunderstanding",
+    "title": "Understanding Check",
+    "category": "Education",
+    "description": "Test comprehension through targeted questions.",
+    "prompt": "Assess understanding of the following topic by asking progressively more challenging questions. After each question, provide the ideal answer and a brief explanation.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 63,
+    "shortcut": "/optimize",
+    "title": "Optimization Advisor",
+    "category": "Productivity",
+    "description": "Suggest practical ways to improve efficiency.",
+    "prompt": "Analyze the following process, workflow or idea. Identify inefficiencies, suggest optimizations, estimate potential improvements and prioritize the recommendations by impact.\n\nProcess or Idea:",
+    "isOfficial": false
+  },
+  {
+    "id": 64,
+    "shortcut": "/decisiontree",
+    "title": "Decision Tree",
+    "category": "Analysis",
+    "description": "Create a logical decision tree for complex choices.",
+    "prompt": "Build a decision tree for the following situation. List possible decisions, conditions, outcomes, risks and recommended paths in a structured format.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 65,
+    "shortcut": "/knowledgegap",
+    "title": "Knowledge Gap Finder",
+    "category": "Education",
+    "description": "Identify missing knowledge and learning priorities.",
+    "prompt": "Analyze the following subject and identify important knowledge gaps a learner may have. Explain why each gap matters and recommend what should be learned first.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 66,
+    "shortcut": "/teachme",
+    "title": "Teach Me",
+    "category": "Education",
+    "description": "Learn a topic through an interactive lesson.",
+    "prompt": "Teach me the following topic as if you were an expert instructor. Start with fundamentals, gradually increase the difficulty, ask short review questions and finish with a recap.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 67,
+    "shortcut": "/improveplan",
+    "title": "Plan Improver",
+    "category": "Planning",
+    "description": "Review and strengthen an existing plan.",
+    "prompt": "Review the following plan. Identify weaknesses, missing steps, risks and opportunities for improvement. Rewrite it as a stronger and more practical version.\n\nPlan:",
+    "isOfficial": false
+  },
+  {
+    "id": 68,
+    "shortcut": "/prioritylist",
+    "title": "Priority List",
+    "category": "Productivity",
+    "description": "Rank tasks by importance and urgency.",
+    "prompt": "Organize the following tasks into a priority list using importance, urgency, effort and expected impact. Explain the reasoning behind the ranking.\n\nTasks:",
+    "isOfficial": false
+  },
+  {
+    "id": 69,
+    "shortcut": "/researchquestions",
+    "title": "Research Questions",
+    "category": "Research",
+    "description": "Generate meaningful research questions.",
+    "prompt": "Generate a comprehensive list of research questions for the following topic. Group them into beginner, intermediate and advanced levels, and identify which questions are most important.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 70,
+    "shortcut": "/insights",
+    "title": "Insight Generator",
+    "category": "Analysis",
+    "description": "Discover valuable insights from information.",
+    "prompt": "Analyze the following information and identify important insights, hidden patterns, key observations, opportunities and actionable recommendations.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 71,
+    "shortcut": "/visualize",
+    "title": "Visualization Planner",
+    "category": "Data",
+    "description": "Recommend effective ways to visualize information.",
+    "prompt": "Suggest the best ways to visualize the following information. Recommend suitable charts, diagrams, tables or mind maps, and explain why each visualization is appropriate.\n\nInformation:",
+    "isOfficial": false
+  },
+  {
+    "id": 72,
+    "shortcut": "/studyplan",
+    "title": "Study Plan",
+    "category": "Education",
+    "description": "Create a personalized study schedule.",
+    "prompt": "Develop a detailed study plan for the following subject. Include daily goals, weekly milestones, revision sessions, self-assessment activities and final review strategies.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 73,
+    "shortcut": "/improvewriting",
+    "title": "Writing Coach",
+    "category": "Writing",
+    "description": "Improve writing quality with detailed feedback.",
+    "prompt": "Review the following writing. Evaluate clarity, organization, grammar, tone and style. Provide detailed suggestions and an improved version.\n\nWriting:",
+    "isOfficial": false
+  },
+  {
+    "id": 74,
+    "shortcut": "/riskanalysis",
+    "title": "Risk Analysis",
+    "category": "Business",
+    "description": "Identify and evaluate potential risks.",
+    "prompt": "Perform a risk analysis for the following project or situation. Identify possible risks, estimate their likelihood and impact, and recommend mitigation strategies.\n\nProject or Situation:",
+    "isOfficial": false
+  },
+  {
+    "id": 75,
+    "shortcut": "/executivebrief",
+    "title": "Executive Brief",
+    "category": "Business",
+    "description": "Prepare concise executive-level briefings.",
+    "prompt": "Prepare an executive briefing for the following topic. Include background, current situation, major findings, risks, opportunities and recommended actions.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 76,
+    "shortcut": "/learningstyle",
+    "title": "Learning Style Advisor",
+    "category": "Education",
+    "description": "Recommend effective learning methods for a topic.",
+    "prompt": "Recommend the best ways to learn the following topic based on visual, auditory, reading/writing and hands-on learning styles. Include study techniques, practice methods and revision tips.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 77,
+    "shortcut": "/processflow",
+    "title": "Process Flow",
+    "category": "Productivity",
+    "description": "Break a process into clear sequential steps.",
+    "prompt": "Create a detailed process flow for the following activity. Include inputs, outputs, decision points, dependencies and possible improvements.\n\nActivity:",
+    "isOfficial": false
+  },
+  {
+    "id": 78,
+    "shortcut": "/innovation",
+    "title": "Innovation Advisor",
+    "category": "Creativity",
+    "description": "Generate innovative improvements for an idea.",
+    "prompt": "Suggest innovative ways to improve the following idea. Consider technology, user experience, scalability, sustainability and future trends. Rank the suggestions by potential impact.\n\nIdea:",
+    "isOfficial": false
+  },
+  {
+    "id": 79,
+    "shortcut": "/framework",
+    "title": "Framework Builder",
+    "category": "Planning",
+    "description": "Create a structured framework for solving a problem.",
+    "prompt": "Design a structured framework for addressing the following problem. Define objectives, major components, workflow, evaluation criteria and expected outcomes.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 80,
+    "shortcut": "/criticalreview",
+    "title": "Critical Review",
+    "category": "Analysis",
+    "description": "Perform an objective critical evaluation.",
+    "prompt": "Critically review the following content. Evaluate its strengths, weaknesses, assumptions, evidence, logical consistency and overall quality. Provide constructive recommendations.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 81,
+    "shortcut": "/scenario",
+    "title": "Scenario Analysis",
+    "category": "Analysis",
+    "description": "Explore multiple possible future scenarios.",
+    "prompt": "Analyze the following situation by developing best-case, worst-case and most likely scenarios. Explain the assumptions, consequences and recommended actions for each.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 82,
+    "shortcut": "/knowledgebase",
+    "title": "Knowledge Base",
+    "category": "Knowledge",
+    "description": "Create a structured knowledge reference.",
+    "prompt": "Build a structured knowledge base for the following topic. Include definitions, key concepts, important facts, examples, FAQs and practical applications.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 83,
+    "shortcut": "/mentor",
+    "title": "AI Mentor",
+    "category": "Personal Growth",
+    "description": "Receive mentoring and practical guidance.",
+    "prompt": "Act as an experienced mentor for the following goal or challenge. Provide guidance, practical advice, milestones, encouragement and common pitfalls to avoid.\n\nGoal or Challenge:",
+    "isOfficial": false
+  },
+  {
+    "id": 84,
+    "shortcut": "/learningcheck",
+    "title": "Learning Assessment",
+    "category": "Education",
+    "description": "Assess understanding with progressive questions.",
+    "prompt": "Assess my understanding of the following topic. Start with simple questions, gradually increase the difficulty, evaluate the responses and identify areas for improvement.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 85,
+    "shortcut": "/strategy",
+    "title": "Strategy Builder",
+    "category": "Business",
+    "description": "Develop an effective strategy for achieving objectives.",
+    "prompt": "Develop a comprehensive strategy for the following objective. Include goals, action steps, required resources, risks, KPIs and a timeline for execution.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 86,
+    "shortcut": "/improvecontent",
+    "title": "Content Optimizer",
+    "category": "Writing",
+    "description": "Enhance content for clarity and engagement.",
+    "prompt": "Improve the following content for clarity, engagement, organization and readability while preserving the intended meaning. Explain the major improvements made.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 87,
+    "shortcut": "/successplan",
+    "title": "Success Blueprint",
+    "category": "Planning",
+    "description": "Create a roadmap for achieving success.",
+    "prompt": "Create a detailed success blueprint for the following goal. Include preparation, execution, review stages, measurable milestones, motivation strategies and contingency plans.\n\nGoal:",
+    "isOfficial": false
+  },
+  {
+    "id": 88,
+    "shortcut": "/reflectionplus",
+    "title": "Deep Reflection",
+    "category": "Personal Growth",
+    "description": "Reflect deeply on experiences and lessons.",
+    "prompt": "Guide a deep reflection on the following topic or experience. Explore lessons learned, emotional insights, strengths, areas for growth and practical next steps.\n\nTopic or Experience:",
+    "isOfficial": false
+  },
+  {
+    "id": 89,
+    "shortcut": "/logiccheck",
+    "title": "Logic Checker",
+    "category": "Analysis",
+    "description": "Evaluate reasoning and logical consistency.",
+    "prompt": "Review the following argument or explanation. Identify logical strengths, weaknesses, assumptions, fallacies and unsupported claims. Suggest improvements with clear reasoning.\n\nContent:",
+    "isOfficial": false
+  },
+  {
+    "id": 90,
+    "shortcut": "/knowledgebuilder",
+    "title": "Knowledge Builder",
+    "category": "Education",
+    "description": "Build comprehensive knowledge on a subject.",
+    "prompt": "Create a structured knowledge-building guide for the following subject. Organize it into fundamentals, intermediate concepts, advanced topics, recommended practice and mastery checkpoints.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 91,
+    "shortcut": "/discussionguide",
+    "title": "Discussion Guide",
+    "category": "Communication",
+    "description": "Prepare for productive discussions.",
+    "prompt": "Create a discussion guide for the following topic. Include key discussion points, thoughtful questions, supporting evidence, possible counterarguments and a balanced conclusion.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 92,
+    "shortcut": "/decisionreport",
+    "title": "Decision Report",
+    "category": "Business",
+    "description": "Prepare a structured decision-making report.",
+    "prompt": "Prepare a professional decision report for the following situation. Include objectives, available options, evaluation criteria, risks, recommendation and implementation steps.\n\nSituation:",
+    "isOfficial": false
+  },
+  {
+    "id": 93,
+    "shortcut": "/futureplan",
+    "title": "Future Planner",
+    "category": "Planning",
+    "description": "Plan long-term goals and milestones.",
+    "prompt": "Develop a long-term plan for the following objective. Break it into yearly, monthly and weekly milestones. Include required skills, resources, review points and success indicators.\n\nObjective:",
+    "isOfficial": false
+  },
+  {
+    "id": 94,
+    "shortcut": "/improveworkflow",
+    "title": "Workflow Optimizer",
+    "category": "Productivity",
+    "description": "Improve efficiency by optimizing workflows.",
+    "prompt": "Analyze the following workflow. Identify bottlenecks, unnecessary steps, automation opportunities and practical improvements. Present the optimized workflow with explanations.\n\nWorkflow:",
+    "isOfficial": false
+  },
+  {
+    "id": 95,
+    "shortcut": "/problemsolver",
+    "title": "Problem Solver",
+    "category": "Analysis",
+    "description": "Solve problems using structured reasoning.",
+    "prompt": "Solve the following problem using a structured approach. Define the problem, identify possible solutions, evaluate each option, recommend the best solution and explain the reasoning.\n\nProblem:",
+    "isOfficial": false
+  },
+  {
+    "id": 96,
+    "shortcut": "/knowledgequiz",
+    "title": "Knowledge Quiz",
+    "category": "Education",
+    "description": "Test knowledge with a comprehensive quiz.",
+    "prompt": "Generate a comprehensive quiz on the following topic. Include multiple-choice, true/false, short-answer and scenario-based questions with detailed answers and explanations.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 97,
+    "shortcut": "/exploretopic",
+    "title": "Topic Explorer",
+    "category": "Research",
+    "description": "Explore a topic from multiple perspectives.",
+    "prompt": "Explore the following topic from historical, scientific, technical, social and practical perspectives. Highlight important insights, current developments and future possibilities.\n\nTopic:",
+    "isOfficial": false
+  },
+  {
+    "id": 98,
+    "shortcut": "/masterguide",
+    "title": "Master Guide",
+    "category": "Education",
+    "description": "Create a complete mastery guide.",
+    "prompt": "Create a complete mastery guide for the following subject. Include learning stages, essential concepts, advanced techniques, recommended projects, common mistakes and final mastery indicators.\n\nSubject:",
+    "isOfficial": false
+  },
+  {
+    "id": 99,
+    "shortcut": "/advisor",
+    "title": "Expert Advisor",
+    "category": "AI",
+    "description": "Receive expert-level guidance.",
+    "prompt": "Act as an expert advisor in the following field. Provide professional guidance, practical recommendations, common pitfalls, best practices and next steps tailored to the request.\n\nField or Topic:",
+    "isOfficial": false
+  },
+  {
+    "id": 100,
+    "shortcut": "/geminimaster",
+    "title": "Gemini Master Assistant",
+    "category": "AI",
+    "description": "Use Gemini as a structured, all-purpose AI assistant.",
+    "prompt": "Act as an advanced AI assistant. Carefully analyze the following request, identify any missing information, reason through the problem step by step, provide a clear and well-structured response with examples where appropriate, and finish with actionable recommendations and suggested follow-up questions.\n\nRequest:",
+    "isOfficial": false
+  }
+]
