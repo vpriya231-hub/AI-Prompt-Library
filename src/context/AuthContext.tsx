@@ -12,10 +12,13 @@ import { auth, googleProvider, db } from '../lib/firebase';
 import { UnauthorizedDomainModal } from '../components/UnauthorizedDomainModal';
 
 interface AuthContextType {
+  user: User | null;
   currentUser: User | null;
-  isProUser: boolean;
+  isLoggedIn: boolean;
+  loading: boolean;
   authLoading: boolean;
   isLoggingIn: boolean;
+  isProUser: boolean;
   showUnauthorizedModal: boolean;
   setShowUnauthorizedModal: (show: boolean) => void;
   signInWithGoogle: () => Promise<User | null>;
@@ -26,10 +29,13 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType>({
+  user: null,
   currentUser: null,
-  isProUser: false,
+  isLoggedIn: false,
+  loading: true,
   authLoading: true,
   isLoggingIn: false,
+  isProUser: false,
   showUnauthorizedModal: false,
   setShowUnauthorizedModal: () => {},
   signInWithGoogle: async () => null,
@@ -42,9 +48,10 @@ const AuthContext = createContext<AuthContextType>({
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const [isProUser, setIsProUser] = useState(false);
-  const [authLoading, setAuthLoading] = useState(true);
+  const [currentUser, setCurrentUser] = useState<User | null>(auth.currentUser);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(Boolean(auth.currentUser));
+  const [isProUser, setIsProUser] = useState<boolean>(false);
+  const [authLoading, setAuthLoading] = useState<boolean>(!auth.currentUser);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [showUnauthorizedModal, setShowUnauthorizedModal] = useState(false);
 
@@ -111,13 +118,36 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       });
 
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      console.log('Firebase onAuthStateChanged triggered:', user ? user.email : 'No user');
       if (user) {
+        // User is signed in!
         sessionStorage.removeItem('ai_prompt_preview_user');
         setCurrentUser(user);
-        await checkProStatus(user);
-      } else if (!sessionStorage.getItem('ai_prompt_preview_user')) {
-        setCurrentUser(null);
-        setIsProUser(false);
+        setIsLoggedIn(true);
+        try {
+          await checkProStatus(user);
+        } catch (e) {
+          console.warn('PRO check error:', e);
+        }
+      } else {
+        const savedPreview = sessionStorage.getItem('ai_prompt_preview_user');
+        if (savedPreview) {
+          try {
+            const parsed = JSON.parse(savedPreview);
+            setCurrentUser(parsed.user as User);
+            setIsLoggedIn(true);
+            setIsProUser(Boolean(parsed.isPro));
+          } catch {
+            setCurrentUser(null);
+            setIsLoggedIn(false);
+            setIsProUser(false);
+          }
+        } else {
+          // User is signed out
+          setCurrentUser(null);
+          setIsLoggedIn(false);
+          setIsProUser(false);
+        }
       }
       setAuthLoading(false);
     });
@@ -152,6 +182,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.log('Google Sign-In successful for:', user.email);
       sessionStorage.removeItem('ai_prompt_preview_user');
       setCurrentUser(user);
+      setIsLoggedIn(true);
+      setAuthLoading(false);
       await checkProStatus(user);
       return user;
     } catch (error: unknown) {
@@ -212,7 +244,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       sessionStorage.removeItem('ai_prompt_preview_user');
       await signOut(auth);
       setCurrentUser(null);
+      setIsLoggedIn(false);
       setIsProUser(false);
+      setAuthLoading(false);
       console.log('User signed out successfully');
     } catch (error) {
       console.error('Sign-out error:', error);
@@ -223,10 +257,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   return (
     <AuthContext.Provider
       value={{
+        user: currentUser,
         currentUser,
-        isProUser,
+        isLoggedIn,
+        loading: authLoading,
         authLoading,
         isLoggingIn,
+        isProUser,
         showUnauthorizedModal,
         setShowUnauthorizedModal,
         signInWithGoogle,

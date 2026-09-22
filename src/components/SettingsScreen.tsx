@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ChevronRight, RotateCcw, Info, Sparkles } from 'lucide-react';
+import { ArrowLeft, ChevronRight, RotateCcw, Info, Sparkles, LogOut } from 'lucide-react';
 import { deleteUser } from 'firebase/auth';
 import { useAuth } from '../context/AuthContext';
 import { GoogleIcon } from './GoogleIcon';
@@ -18,7 +18,19 @@ export function SettingsScreen({
   hasUnlockedPro: _hasUnlockedPro, 
   onProStatusChange 
 }: SettingsScreenProps) {
-  const { currentUser, isProUser, signInWithGoogle, signOutUser, checkProStatus } = useAuth();
+  const { 
+    user, 
+    currentUser, 
+    loading, 
+    authLoading, 
+    isProUser, 
+    signInWithGoogle, 
+    signOutUser, 
+    checkProStatus 
+  } = useAuth();
+  const activeUser = user || currentUser;
+  const isAuthChecking = Boolean(authLoading ?? loading);
+
   const [signingIn, setSigningIn] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [restoreNotice, setRestoreNotice] = useState<string | null>(null);
@@ -67,7 +79,7 @@ export function SettingsScreen({
   };
 
   const handleContributeClick = async () => {
-    if (!currentUser || currentUser.isAnonymous || !currentUser.email) {
+    if (!activeUser || activeUser.isAnonymous || !activeUser.email) {
       triggerToast('Please sign in with Google to contribute a prompt');
       setSigningIn(true);
       try {
@@ -106,7 +118,7 @@ export function SettingsScreen({
   const handleRestorePurchases = async () => {
     setRestoring(true);
     try {
-      let targetUser = currentUser;
+      let targetUser = activeUser;
       if (!targetUser) {
         triggerToast('Please sign in with your Google account to restore purchases...');
         targetUser = await signInWithGoogle();
@@ -160,7 +172,7 @@ export function SettingsScreen({
   };
 
   const handleDeleteAccount = async () => {
-    if (!currentUser) return;
+    if (!activeUser) return;
     if (isProUser) {
       triggerToast('Pro account cannot be deleted while premium access is active.');
       setShowDeleteConfirm(false);
@@ -169,7 +181,7 @@ export function SettingsScreen({
 
     setDeletingAccount(true);
     try {
-      await deleteUser(currentUser);
+      await deleteUser(activeUser);
       await signOutUser();
       setShowDeleteConfirm(false);
       triggerToast('Account deleted successfully');
@@ -225,13 +237,19 @@ export function SettingsScreen({
             </p>
           </section>
 
-          {/* 1. Dynamic Account Card matching Screenshot 1 */}
+            {/* 1. Dynamic Account Card matching Screenshot 1 */}
           <div 
             id="settings-account-card"
             className="bg-[#EFE8F6] rounded-[22px] p-5 border border-[#E6DBEE] space-y-4 shadow-2xs transition-all"
           >
-            {/* Not Signed In State */}
-            {!currentUser ? (
+            {isAuthChecking && !activeUser ? (
+              /* Loading State: Wait for Firebase auth verification to avoid premature button flash */
+              <div className="py-4 flex items-center justify-center gap-3">
+                <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                <span className="text-[13.5px] text-[#6B7280] font-medium">Checking account session...</span>
+              </div>
+            ) : !activeUser ? (
+              /* Only show Continue with Google if user is strictly null and loading is false */
               <div className="space-y-3.5">
                 <div className="flex items-start justify-between">
                   <div>
@@ -261,7 +279,7 @@ export function SettingsScreen({
                   ) : (
                     <>
                       <GoogleIcon className="w-5 h-5 flex-shrink-0" />
-                      <span>Sign in with Google</span>
+                      <span>Continue with Google</span>
                     </>
                   )}
                 </button>
@@ -296,51 +314,51 @@ export function SettingsScreen({
 
                 {/* Profile Info with Avatar */}
                 <div className="flex items-center gap-3">
-                  {currentUser.photoURL ? (
+                  {activeUser.photoURL ? (
                     <img 
-                      src={currentUser.photoURL} 
-                      alt={currentUser.displayName || 'User avatar'} 
-                      className="w-10 h-10 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
+                      src={activeUser.photoURL} 
+                      alt={activeUser.displayName || 'User avatar'} 
+                      className="w-11 h-11 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
                       referrerPolicy="no-referrer"
                     />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-2xs">
-                      {(currentUser.displayName || currentUser.email || 'U')[0].toUpperCase()}
+                    <div className="w-11 h-11 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-2xs">
+                      {(activeUser.displayName || activeUser.email || 'U')[0].toUpperCase()}
                     </div>
                   )}
 
                   <div className="min-w-0 flex-1">
                     <p className="text-[15px] font-bold text-[#1E1B22] truncate leading-tight">
-                      {currentUser.displayName || 'Google Account'}
+                      {activeUser.displayName || 'Google Account'}
                     </p>
                     <p className="text-[12.5px] text-[#6B7280] truncate leading-tight mt-0.5">
-                      {currentUser.email}
+                      {activeUser.email}
                     </p>
                   </div>
                 </div>
 
-                {/* Signed In Action Buttons: Sign Out, Restore, and Delete Account */}
-                <div className="pt-3 border-t border-[#E3D6ED] space-y-2">
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center gap-2">
-                      <button
-                        id="settings-signout-btn"
-                        onClick={handleSignOut}
-                        className="text-xs font-semibold text-[#4B5563] hover:text-[#1E1B22] bg-white/70 hover:bg-white px-3.5 py-1.5 rounded-xl border border-[#D8C7E7] transition-colors cursor-pointer"
-                      >
-                        Sign Out
-                      </button>
-                      <button
-                        id="settings-account-restore-btn"
-                        onClick={handleRestorePurchases}
-                        disabled={restoring}
-                        className="text-xs font-semibold text-[#654A9E] hover:text-[#533B84] bg-white/70 hover:bg-white px-3 py-1.5 rounded-xl border border-[#D8C7E7] transition-colors cursor-pointer flex items-center gap-1.5 disabled:opacity-60"
-                        title="Sync active PRO status from your Google account"
-                      >
-                        <RotateCcw className={`w-3.5 h-3.5 ${restoring ? 'animate-spin' : ''}`} />
-                        <span>{restoring ? 'Checking...' : 'Restore'}</span>
-                      </button>
-                    </div>
+                {/* Replace Continue with Google button with a clean Sign Out button */}
+                <div className="pt-2 space-y-2.5">
+                  <button
+                    id="settings-signout-btn"
+                    onClick={handleSignOut}
+                    className="w-full bg-white hover:bg-gray-50 active:bg-gray-100 text-[#843A4B] hover:text-[#722A3A] font-semibold text-[14px] py-2.5 px-4 rounded-full border border-[#D8C7E7] transition-all cursor-pointer flex items-center justify-center gap-2 shadow-2xs hover:shadow-xs"
+                  >
+                    <LogOut className="w-4 h-4 stroke-[2.2]" />
+                    <span>Sign Out</span>
+                  </button>
+
+                  <div className="flex items-center justify-between gap-2 pt-1 border-t border-[#E3D6ED] flex-wrap">
+                    <button
+                      id="settings-account-restore-btn"
+                      onClick={handleRestorePurchases}
+                      disabled={restoring}
+                      className="text-xs font-semibold text-[#654A9E] hover:text-[#533B84] bg-white/70 hover:bg-white px-3 py-1.5 rounded-xl border border-[#D8C7E7] transition-colors cursor-pointer flex items-center gap-1.5 disabled:opacity-60"
+                      title="Sync active PRO status from your Google account"
+                    >
+                      <RotateCcw className={`w-3.5 h-3.5 ${restoring ? 'animate-spin' : ''}`} />
+                      <span>{restoring ? 'Checking...' : 'Restore'}</span>
+                    </button>
 
                     {isProUser ? (
                       <button
@@ -625,8 +643,8 @@ export function SettingsScreen({
         isOpen={showContributeModal}
         onClose={() => setShowContributeModal(false)}
         onSuccess={(msg) => triggerToast(msg)}
-        currentUser={currentUser}
-        currentUserEmail={currentUser?.email}
+        currentUser={activeUser}
+        currentUserEmail={activeUser?.email}
         onRequireSignIn={handleGoogleSignIn}
       />
 

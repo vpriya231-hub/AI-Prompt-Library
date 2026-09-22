@@ -33,7 +33,19 @@ const UNLOCK_ITEMS = [
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.aipromptlibrary.app';
 
 export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast }: ProScreenProps) {
-  const { currentUser, isProUser, signInWithGoogle, signOutUser, checkProStatus } = useAuth();
+  const { 
+    user, 
+    currentUser, 
+    authLoading, 
+    loading, 
+    isProUser, 
+    signInWithGoogle, 
+    signOutUser, 
+    checkProStatus 
+  } = useAuth();
+  const activeUser = user || currentUser;
+  const isAuthChecking = Boolean(authLoading ?? loading);
+
   const [signingIn, setSigningIn] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
@@ -43,7 +55,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
 
   // Check PRO Status strictly: user must be authenticated and have active pro status
   const isPro = Boolean(isProUser || hasUnlockedPro);
-  const hasProAccess = Boolean(currentUser && isPro);
+  const hasProAccess = Boolean(activeUser && isPro);
 
   const triggerToast = (msg: string) => {
     setLocalToast(msg);
@@ -115,7 +127,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
   const handleRestorePurchase = async () => {
     setRestoring(true);
     try {
-      let targetUser = currentUser;
+      let targetUser = activeUser;
       if (!targetUser) {
         triggerToast('Please sign in with Google to restore purchases...');
         targetUser = await signInWithGoogle();
@@ -189,7 +201,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
           </h1>
 
           <div className="w-8 flex justify-end" aria-hidden="true">
-            {currentUser && (
+            {activeUser && (
               <button
                 onClick={handleSignOut}
                 className="p-1 rounded-full text-gray-500 hover:text-gray-800 hover:bg-[#E5DCEF] transition-colors"
@@ -219,26 +231,26 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
           </section>
 
           {/* User Sign-In Banner if logged in */}
-          {currentUser && (
+          {activeUser && (
             <div className="bg-[#EFE8F6] border border-[#E0D3EC] rounded-2xl p-3 px-4 flex items-center justify-between text-sm">
               <div className="flex items-center gap-2.5 overflow-hidden">
-                {currentUser.photoURL ? (
+                {activeUser.photoURL ? (
                   <img 
-                    src={currentUser.photoURL} 
-                    alt={currentUser.displayName || 'User'} 
+                    src={activeUser.photoURL} 
+                    alt={activeUser.displayName || 'User'} 
                     className="w-8 h-8 rounded-full border border-purple-200 object-cover flex-shrink-0"
                     referrerPolicy="no-referrer"
                   />
                 ) : (
                   <div className="w-8 h-8 rounded-full bg-[#654A9E] text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
-                    {(currentUser.displayName || currentUser.email || 'U')[0].toUpperCase()}
+                    {(activeUser.displayName || activeUser.email || 'U')[0].toUpperCase()}
                   </div>
                 )}
                 <div className="truncate">
                   <p className="font-semibold text-[#1E1B22] text-xs truncate">
-                    {currentUser.displayName || currentUser.email}
+                    {activeUser.displayName || activeUser.email}
                   </p>
-                  <p className="text-[11px] text-gray-500 truncate">{currentUser.email}</p>
+                  <p className="text-[11px] text-gray-500 truncate">{activeUser.email}</p>
                 </div>
               </div>
 
@@ -389,27 +401,27 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
                 <span>✓ PRO Lifetime Active</span>
               </div>
 
-              {currentUser && (
+              {activeUser && (
                 <div className="bg-[#EFE8F6] rounded-2xl p-3 px-4 border border-[#E4D7EE] flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2.5 min-w-0">
-                    {currentUser.photoURL ? (
+                    {activeUser.photoURL ? (
                       <img 
-                        src={currentUser.photoURL} 
-                        alt={currentUser.displayName || 'User'} 
+                        src={activeUser.photoURL} 
+                        alt={activeUser.displayName || 'User'} 
                         className="w-8 h-8 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
                         referrerPolicy="no-referrer"
                       />
                     ) : (
                       <div className="w-8 h-8 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-xs font-bold flex-shrink-0 shadow-2xs">
-                        {(currentUser.displayName || currentUser.email || 'U')[0].toUpperCase()}
+                        {(activeUser.displayName || activeUser.email || 'U')[0].toUpperCase()}
                       </div>
                     )}
                     <div className="min-w-0">
                       <p className="text-[13px] font-bold text-[#1E1B22] truncate leading-tight">
-                        {currentUser.displayName || 'Google Account'}
+                        {activeUser.displayName || 'Google Account'}
                       </p>
                       <p className="text-[11.5px] text-[#6B7280] truncate leading-tight">
-                        {currentUser.email}
+                        {activeUser.email}
                       </p>
                     </div>
                   </div>
@@ -453,7 +465,12 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
 
               {/* Authentication / Restore Section */}
               <div className="pt-2 border-t border-[#E8DEF2] space-y-2.5">
-                {!currentUser ? (
+                {isAuthChecking && !activeUser ? (
+                  <div className="py-4 flex items-center justify-center gap-2.5">
+                    <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                    <span className="text-[13px] text-[#6B7280]">Checking account session...</span>
+                  </div>
+                ) : !activeUser ? (
                   /* User NOT Logged In: Prominent Google Sign-In Button */
                   <div className="space-y-2 text-center">
                     <button
@@ -470,7 +487,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
                       ) : (
                         <>
                           <GoogleIcon className="w-5 h-5 flex-shrink-0" />
-                          <span>Sign in with Google</span>
+                          <span>Continue with Google</span>
                         </>
                       )}
                     </button>
@@ -483,24 +500,24 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
                   <div className="space-y-2.5">
                     <div className="bg-[#EFE8F6] rounded-2xl p-3 px-4 border border-[#E4D7EE] flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5 min-w-0">
-                        {currentUser.photoURL ? (
+                        {activeUser.photoURL ? (
                           <img 
-                            src={currentUser.photoURL} 
-                            alt={currentUser.displayName || 'User'} 
+                            src={activeUser.photoURL} 
+                            alt={activeUser.displayName || 'User'} 
                             className="w-8 h-8 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
                             referrerPolicy="no-referrer"
                           />
                         ) : (
                           <div className="w-8 h-8 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-xs font-bold flex-shrink-0 shadow-2xs">
-                            {(currentUser.displayName || currentUser.email || 'U')[0].toUpperCase()}
+                            {(activeUser.displayName || activeUser.email || 'U')[0].toUpperCase()}
                           </div>
                         )}
                         <div className="min-w-0">
                           <p className="text-[13px] font-bold text-[#1E1B22] truncate leading-tight">
-                            {currentUser.displayName || 'Google Account'}
+                            {activeUser.displayName || 'Google Account'}
                           </p>
                           <p className="text-[11.5px] text-[#6B7280] truncate leading-tight">
-                            {currentUser.email}
+                            {activeUser.email}
                           </p>
                         </div>
                       </div>
@@ -658,7 +675,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
                 <span>Upgrade to PRO on Google Play (₹599)</span>
               </button>
 
-              {!currentUser && (
+              {!activeUser && (
                 <button
                   onClick={() => {
                     setLockedModalItem(null);

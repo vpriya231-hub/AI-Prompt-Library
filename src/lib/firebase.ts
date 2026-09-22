@@ -1,5 +1,11 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { 
+  getAuth, 
+  GoogleAuthProvider, 
+  setPersistence, 
+  browserLocalPersistence, 
+  browserSessionPersistence 
+} from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -14,6 +20,13 @@ const firebaseConfig = {
 // Initialize Firebase only once
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+
+// Explicitly ensure browser persistence is active so user stays logged in across refreshes / navigation
+setPersistence(auth, browserLocalPersistence).catch((err) => {
+  console.warn('Could not set browserLocalPersistence, trying browserSessionPersistence:', err);
+  setPersistence(auth, browserSessionPersistence).catch(console.warn);
+});
+
 export const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
   prompt: 'select_account'
