@@ -93,12 +93,17 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
       if (error?.code === 'auth/unauthorized-domain') {
         // Modal automatically triggered by AuthContext
         console.warn('Unauthorized domain detected. Modal opened.');
-      } else if (error?.code === 'auth/popup-blocked') {
-        const msg = 'Popup was blocked by your browser. Please allow popups for Google Sign-In.';
+      } else if (
+        error?.code === 'auth/popup-blocked' ||
+        error?.code === 'auth/popup-timeout' ||
+        error?.code === 'auth/cancelled-popup-request' ||
+        error?.message?.includes('timed out')
+      ) {
+        const msg = 'Sign-in window could not open automatically. Please try again or open in your browser.';
         setAuthError(msg);
         triggerToast(msg);
       } else if (error?.code !== 'auth/popup-closed-by-user') {
-        const msg = error?.message || 'Failed to sign in with Google. Please try again.';
+        const msg = error?.message || 'Sign-in window could not open automatically. Please try again or open in your browser.';
         setAuthError(msg);
         triggerToast(msg);
       }
@@ -137,7 +142,14 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
     } catch (err: unknown) {
       console.error('Restore purchase failed:', err);
       const error = err as { code?: string; message?: string };
-      if (error?.code !== 'auth/popup-closed-by-user') {
+      if (
+        error?.code === 'auth/popup-blocked' ||
+        error?.code === 'auth/popup-timeout' ||
+        error?.code === 'auth/cancelled-popup-request' ||
+        error?.message?.includes('timed out')
+      ) {
+        triggerToast('Sign-in window could not open automatically. Please try again or open in your browser.');
+      } else if (error?.code !== 'auth/popup-closed-by-user') {
         triggerToast(error?.message || 'Failed to restore purchase.');
       }
     } finally {

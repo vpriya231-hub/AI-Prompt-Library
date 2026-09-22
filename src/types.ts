@@ -6,6 +6,8 @@ export interface CheatCodePrompt {
   description: string;
   prompt: string;
   isOfficial?: boolean;
+  isCommunity?: boolean;
+  contributor?: string;
 }
 
 export type CollectionTierId = 'basic' | 'advanced' | 'expert' | 'master' | 'ultimate';

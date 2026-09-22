@@ -1,5 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { X, Copy, Check, Search } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { X, Copy, Check, Search, Sparkles } from 'lucide-react';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../lib/firebase';
 import { CollectionTier, AIModel, CheatCodePrompt } from '../types';
 import { getCheatCodes } from '../data/cheatCodesLoader';
 
@@ -19,11 +21,122 @@ export function PromptCollectionSheet({
   const [copiedId, setCopiedId] = useState<number | null>(null);
   const [searchFilter, setSearchFilter] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('All');
+  const [communityPrompts, setCommunityPrompts] = useState<CheatCodePrompt[]>([]);
 
-  // Dynamically load prompts matching the active model and selected tier
+  // Fetch approved community prompts for the active model and tier from Firestore
+  useEffect(() => {
+    let isCancelled = false;
+
+    async function fetchApprovedCommunityPrompts() {
+      try {
+        const q = query(
+          collection(db, 'community_contributions'),
+          where('status', '==', 'approved'),
+          where('aiModel', '==', activeModel.name),
+          where('tier', '==', selectedCollection.name)
+        );
+
+        const snapshot = await getDocs(q);
+        if (isCancelled) return;
+
+        const results: CheatCodePrompt[] = [];
+        let index = 1;
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const rawCode = (data.cheatCode || '').trim().toLowerCase();
+          const shortcut = rawCode ? (rawCode.startsWith('/') ? rawCode : `/${rawCode}`) : '/community';
+          const title = shortcut.startsWith('/') ? shortcut.slice(1) : shortcut;
+          results.push({
+            id: 800000 + index++,
+            shortcut: shortcut,
+            title: title || 'Community Cheat Code',
+            category: 'Community',
+            description: `Contributed by ${data.contributor || 'Community Member'}`,
+            prompt: data.prompt || '',
+            isOfficial: false,
+            isCommunity: true,
+            contributor: data.contributor || 'Community Member'
+          });
+        });
+
+        setCommunityPrompts(results);
+      } catch (err) {
+        console.warn('Unable to query community prompts from Firestore:', err);
+        // Local queue fallback for testing or offline support
+        try {
+          const localQueue = JSON.parse(localStorage.getItem('pending_community_contributions') || '[]');
+          const matchingApproved = localQueue
+            .filter((p: any) => p.status === 'approved' && p.aiModel === activeModel.name && p.tier === selectedCollection.name)
+            .map((data: any, idx: number) => {
+              const rawCode = (data.cheatCode || '').trim().toLowerCase();
+              const shortcut = rawCode ? (rawCode.startsWith('/') ? rawCode : `/${rawCode}`) : '/community';
+              const title = shortcut.startsWith('/') ? shortcut.slice(1) : shortcut;
+              return {
+                id: 850000 + idx + 1,
+                shortcut: shortcut,
+                title: title || 'Community Cheat Code',
+                category: 'Community',
+                description: `Contributed by ${data.contributor || 'Community Member'}`,
+                prompt: data.prompt || '',
+                isOfficial: false,
+                isCommunity: true,
+                contributor: data.contributor || 'Community Member'
+              };
+            });
+          if (!isCancelled && matchingApproved.length > 0) {
+            setCommunityPrompts(matchingApproved);
+          }
+        } catch {
+          // ignore
+        }
+      }
+    }
+
+    fetchApprovedCommunityPrompts();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [activeModel.name, selectedCollection.name]);
+
+  // Dynamically load prompts matching the active model and selected tier, merged safely with approved community prompts
   const prompts: CheatCodePrompt[] = useMemo(() => {
-    return getCheatCodes(activeModel.id, selectedCollection.id);
-  }, [activeModel.id, selectedCollection.id]);
+    const staticPrompts = getCheatCodes(activeModel.id, selectedCollection.id);
+
+    // Build a Set of normalized cheat codes (case-insensitive, standardized with leading '/') from the static prompts
+    const staticCodes = new Set<string>();
+    staticPrompts.forEach((p) => {
+      const code = (p.shortcut || '').trim().toLowerCase();
+      if (code) {
+        staticCodes.add(code.startsWith('/') ? code : `/${code}`);
+      }
+    });
+
+    // Strictly filter community prompts:
+    // Only include approved community items whose cheatCode (case-insensitive) does NOT already exist in the static list.
+    // If there is any collision with an existing core prompt, the static one takes precedence and the duplicate community prompt is skipped.
+    const seenCommunityCodes = new Set<string>();
+    const safeCommunityPrompts = communityPrompts.filter((cp) => {
+      const code = (cp.shortcut || '').trim().toLowerCase();
+      if (!code) return false;
+      const normalizedCode = code.startsWith('/') ? code : `/${code}`;
+
+      // Collision with static core prompt: static takes precedence, community skipped
+      if (staticCodes.has(normalizedCode)) {
+        return false;
+      }
+
+      // Deduplicate among community contributions as well
+      if (seenCommunityCodes.has(normalizedCode)) {
+        return false;
+      }
+
+      seenCommunityCodes.add(normalizedCode);
+      return true;
+    });
+
+    return [...staticPrompts, ...safeCommunityPrompts];
+  }, [activeModel.id, selectedCollection.id, communityPrompts]);
 
   // Extract unique categories for quick filtering chips
   const categories = useMemo(() => {
@@ -165,6 +278,12 @@ export function PromptCollectionSheet({
                         {item.shortcut && (
                           <span className="font-mono text-[11px] bg-[#EFEBF5] text-[#5B4296] font-semibold px-2 py-0.5 rounded-md">
                             {item.shortcut}
+                          </span>
+                        )}
+                        {item.isCommunity && (
+                          <span className="inline-flex items-center gap-1 font-semibold text-[11px] bg-[#EFE8F6] text-[#654A9E] border border-[#DDD0EC] px-2 py-0.5 rounded-md">
+                            <Sparkles className="w-3 h-3 text-[#654A9E]" />
+                            <span>{item.contributor ? `By ${item.contributor}` : 'Community'}</span>
                           </span>
                         )}
                       </div>

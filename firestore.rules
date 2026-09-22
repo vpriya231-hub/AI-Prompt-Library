@@ -1,0 +1,58 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Default-Deny Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isValidContribution(data) {
+      return data.keys().hasAll(['aiModel', 'tier', 'cheatCode', 'prompt', 'status', 'contributor', 'submittedAt', 'userEmail'])
+        && data.keys().hasOnly(['aiModel', 'tier', 'cheatCode', 'prompt', 'status', 'contributor', 'submittedAt', 'userEmail'])
+        && data.aiModel is string
+        && data.aiModel in ['ChatGPT', 'Gemini', 'Claude', 'Grok', 'Perplexity', 'Microsoft Copilot']
+        && data.tier is string
+        && data.tier in ['Basic', 'Advanced', 'Expert', 'Master', 'Ultimate']
+        && data.cheatCode is string
+        && data.cheatCode.size() > 1
+        && data.cheatCode.size() <= 128
+        && data.prompt is string
+        && data.prompt.size() > 0
+        && data.prompt.size() <= 10000
+        && data.status == 'pending'
+        && data.contributor is string
+        && data.contributor.size() <= 128
+        && data.userEmail is string
+        && data.userEmail.size() <= 256
+        && data.submittedAt == request.time;
+    }
+
+    // User profiles & PRO subscriptions
+    match /users/{userId} {
+      allow get: if isValidId(userId) && isOwner(userId);
+      allow list: if false;
+      allow write: if false;
+    }
+
+    // Community contributions submitted for review
+    match /community_contributions/{contributionId} {
+      allow get, list: if resource.data.status == 'approved';
+      allow update, delete: if false;
+      allow create: if isValidId(contributionId) && isValidContribution(request.resource.data);
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile and PRO subscription status",
+      "type": "object",
+      "properties": {
+        "isPro": {
+          "type": "boolean",
+          "description": "Whether the user has active PRO status"
+        },
+        "proUser": {
+          "type": "boolean",
+          "description": "Legacy flag for PRO status"
+        },
+        "pro": {
+          "type": "boolean",
+          "description": "Alternative flag for PRO status"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name"
+        }
+      }
+    },
+    "CommunityContribution": {
+      "title": "CommunityContribution",
+      "description": "User-contributed AI prompt cheat code submitted for community review",
+      "type": "object",
+      "properties": {
+        "aiModel": {
+          "type": "string",
+          "description": "Target AI model (e.g. ChatGPT, Gemini, Claude, Grok, Perplexity, Microsoft Copilot)",
+          "enum": ["ChatGPT", "Gemini", "Claude", "Grok", "Perplexity", "Microsoft Copilot"]
+        },
+        "tier": {
+          "type": "string",
+          "description": "Prompt difficulty tier",
+          "enum": ["Basic", "Advanced", "Expert", "Master", "Ultimate"]
+        },
+        "cheatCode": {
+          "type": "string",
+          "description": "Slash command or cheat code name",
+          "maxLength": 128
+        },
+        "prompt": {
+          "type": "string",
+          "description": "Full prompt template content",
+          "maxLength": 10000
+        },
+        "contributor": {
+          "type": "string",
+          "description": "Name or handle of contributor",
+          "maxLength": 128
+        },
+        "status": {
+          "type": "string",
+          "description": "Review status of contribution",
+          "enum": ["pending", "approved", "rejected"]
+        },
+        "submittedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the prompt was submitted"
+        },
+        "userEmail": {
+          "type": "string",
+          "description": "Email of submitting user or guest",
+          "maxLength": 256
+        }
+      },
+      "required": ["aiModel", "tier", "cheatCode", "prompt", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores user profiles and subscription status"
+    },
+    "/community_contributions/{contributionId}": {
+      "schema": "CommunityContribution",
+      "description": "Stores community submitted prompt cheat codes for review"
+    }
+  }
+}

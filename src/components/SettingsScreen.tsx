@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ChevronRight, RotateCcw, Info } from 'lucide-react';
+import { ArrowLeft, ChevronRight, RotateCcw, Info, Sparkles } from 'lucide-react';
 import { deleteUser } from 'firebase/auth';
 import { useAuth } from '../context/AuthContext';
 import { GoogleIcon } from './GoogleIcon';
+import { ContributePromptModal } from './ContributePromptModal';
 
 interface SettingsScreenProps {
   onBack: () => void;
@@ -24,6 +25,7 @@ export function SettingsScreen({
   const [localToast, setLocalToast] = useState<string | null>(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deletingAccount, setDeletingAccount] = useState(false);
+  const [showContributeModal, setShowContributeModal] = useState(false);
 
   const triggerToast = (message: string) => {
     setLocalToast(message);
@@ -49,14 +51,56 @@ export function SettingsScreen({
       if (err?.code === 'auth/unauthorized-domain') {
         // Modal automatically triggered by AuthContext
         console.warn('Unauthorized domain detected. Modal opened.');
-      } else if (err?.code === 'auth/popup-blocked') {
-        triggerToast('Popup was blocked by your browser. Please allow popups for Google Sign-In.');
+      } else if (
+        err?.code === 'auth/popup-blocked' ||
+        err?.code === 'auth/popup-timeout' ||
+        err?.code === 'auth/cancelled-popup-request' ||
+        err?.message?.includes('timed out')
+      ) {
+        triggerToast('Sign-in window could not open automatically. Please try again or open in your browser.');
       } else if (err?.code !== 'auth/popup-closed-by-user') {
-        triggerToast(err?.message || 'Google Sign-In failed. Please try again.');
+        triggerToast(err?.message || 'Sign-in window could not open automatically. Please try again or open in your browser.');
       }
     } finally {
       setSigningIn(false);
     }
+  };
+
+  const handleContributeClick = async () => {
+    if (!currentUser || currentUser.isAnonymous || !currentUser.email) {
+      triggerToast('Please sign in with Google to contribute a prompt');
+      setSigningIn(true);
+      try {
+        const signedInUser = await signInWithGoogle();
+        if (signedInUser && signedInUser.email) {
+          triggerToast(`Signed in as ${signedInUser.email}`);
+          const proActive = await checkProStatus(signedInUser);
+          if (proActive && onProStatusChange) {
+            onProStatusChange(true);
+          }
+          setShowContributeModal(true);
+        }
+      } catch (error: unknown) {
+        console.error('Sign-in failed:', error);
+        const err = error as { code?: string; message?: string };
+        if (err?.code === 'auth/unauthorized-domain') {
+          console.warn('Unauthorized domain detected. Modal opened.');
+        } else if (
+          err?.code === 'auth/popup-blocked' ||
+          err?.code === 'auth/popup-timeout' ||
+          err?.code === 'auth/cancelled-popup-request' ||
+          err?.message?.includes('timed out')
+        ) {
+          triggerToast('Sign-in window could not open automatically. Please try again or open in your browser.');
+        } else if (err?.code !== 'auth/popup-closed-by-user') {
+          triggerToast(err?.message || 'Sign-in window could not open automatically. Please try again or open in your browser.');
+        }
+      } finally {
+        setSigningIn(false);
+      }
+      return;
+    }
+    setShowContributeModal(true);
   };
 
   const handleRestorePurchases = async () => {
@@ -89,7 +133,14 @@ export function SettingsScreen({
     } catch (err: unknown) {
       console.error('Restore purchase error:', err);
       const error = err as { code?: string; message?: string };
-      if (error?.code !== 'auth/popup-closed-by-user') {
+      if (
+        error?.code === 'auth/popup-blocked' ||
+        error?.code === 'auth/popup-timeout' ||
+        error?.code === 'auth/cancelled-popup-request' ||
+        error?.message?.includes('timed out')
+      ) {
+        triggerToast('Sign-in window could not open automatically. Please try again or open in your browser.');
+      } else if (error?.code !== 'auth/popup-closed-by-user') {
         triggerToast(error?.message || 'Failed to restore purchases. Please try again.');
       }
     } finally {
@@ -421,7 +472,29 @@ export function SettingsScreen({
               <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
             </a>
 
-            {/* 4. Disclaimer Card */}
+            {/* 4. Contribute a Prompt */}
+            <div 
+              id="menu-contribute-prompt"
+              onClick={handleContributeClick}
+              className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs group"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center text-[#654A9E] flex-shrink-0 group-hover:bg-white group-hover:scale-105 transition-all shadow-2xs">
+                  <Sparkles className="w-5 h-5 stroke-[2.2]" />
+                </div>
+                <div>
+                  <h4 className="text-[15px] font-bold text-[#1E1B22] leading-tight">
+                    Contribute a Prompt
+                  </h4>
+                  <p className="text-[13px] text-[#6B7280] mt-0.5">
+                    Submit your favorite cheat code for community review
+                  </p>
+                </div>
+              </div>
+              <ChevronRight className="w-4 h-4 text-[#9CA3AF]" />
+            </div>
+
+            {/* 5. Disclaimer Card */}
             <div 
               id="settings-disclaimer-card"
               className="bg-[#EFE8F6]/80 rounded-[22px] p-4 sm:p-5 border border-[#E6DBEE] space-y-2.5 shadow-2xs mt-2"
@@ -546,6 +619,16 @@ export function SettingsScreen({
           </div>
         </div>
       )}
+
+      {/* Contribute a Prompt Modal Dialog */}
+      <ContributePromptModal
+        isOpen={showContributeModal}
+        onClose={() => setShowContributeModal(false)}
+        onSuccess={(msg) => triggerToast(msg)}
+        currentUser={currentUser}
+        currentUserEmail={currentUser?.email}
+        onRequireSignIn={handleGoogleSignIn}
+      />
 
       {/* Local Screen Toast */}
       {localToast && (

@@ -1,5 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { User, signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
+import { 
+  User, 
+  signInWithPopup, 
+  signInWithRedirect, 
+  getRedirectResult, 
+  signOut, 
+  onAuthStateChanged 
+} from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 import { auth, googleProvider, db } from '../lib/firebase';
 import { UnauthorizedDomainModal } from '../components/UnauthorizedDomainModal';
@@ -8,6 +15,7 @@ interface AuthContextType {
   currentUser: User | null;
   isProUser: boolean;
   authLoading: boolean;
+  isLoggingIn: boolean;
   showUnauthorizedModal: boolean;
   setShowUnauthorizedModal: (show: boolean) => void;
   signInWithGoogle: () => Promise<User | null>;
@@ -21,6 +29,7 @@ const AuthContext = createContext<AuthContextType>({
   currentUser: null,
   isProUser: false,
   authLoading: true,
+  isLoggingIn: false,
   showUnauthorizedModal: false,
   setShowUnauthorizedModal: () => {},
   signInWithGoogle: async () => null,
@@ -36,6 +45,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [isProUser, setIsProUser] = useState(false);
   const [authLoading, setAuthLoading] = useState(true);
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [showUnauthorizedModal, setShowUnauthorizedModal] = useState(false);
 
   // Check Firestore users/{uid} for PRO status matching Android schema
@@ -63,7 +73,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  // Sync auth state across whole app
+  // Sync auth state across whole app and handle redirect result
   useEffect(() => {
     // Check if a preview user is saved in sessionStorage
     const savedPreview = sessionStorage.getItem('ai_prompt_preview_user');
@@ -77,6 +87,28 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.warn('Failed to parse preview user', e);
       }
     }
+
+    // Handle redirect result on app load (critical for WebView2 / Windows Store PWA redirect flow)
+    getRedirectResult(auth)
+      .then(async (result) => {
+        if (result && result.user) {
+          console.log('Redirect sign-in successful for:', result.user.email);
+          sessionStorage.removeItem('ai_prompt_preview_user');
+          setCurrentUser(result.user);
+          await checkProStatus(result.user);
+        }
+      })
+      .catch((error) => {
+        console.warn('Redirect sign-in check notice:', error);
+        const err = error as { code?: string; message?: string };
+        if (err?.code === 'auth/unauthorized-domain') {
+          console.warn('Firebase error: auth/unauthorized-domain. Showing authorization modal.');
+          setShowUnauthorizedModal(true);
+        }
+      })
+      .finally(() => {
+        setAuthLoading(false);
+      });
 
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
@@ -94,9 +126,28 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const signInWithGoogle = async (): Promise<User | null> => {
+    setIsLoggingIn(true);
+    let timeoutTimer: ReturnType<typeof setTimeout> | null = null;
+
     try {
-      console.log('Initiating Google Sign-In with popup...');
-      const result = await signInWithPopup(auth, googleProvider);
+      console.log('Initiating Google Sign-In with 12s timeout failsafe...');
+
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        timeoutTimer = setTimeout(() => {
+          const timeoutErr = new Error('Sign-in popup timed out after 12 seconds');
+          (timeoutErr as { code?: string }).code = 'auth/popup-timeout';
+          reject(timeoutErr);
+        }, 12000);
+      });
+
+      // Race signInWithPopup against a strict 12-second timeout
+      const result = await Promise.race([
+        signInWithPopup(auth, googleProvider),
+        timeoutPromise
+      ]);
+
+      if (timeoutTimer) clearTimeout(timeoutTimer);
+
       const user = result.user;
       console.log('Google Sign-In successful for:', user.email);
       sessionStorage.removeItem('ai_prompt_preview_user');
@@ -104,13 +155,41 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       await checkProStatus(user);
       return user;
     } catch (error: unknown) {
-      console.error('Sign-in failed:', error);
+      if (timeoutTimer) clearTimeout(timeoutTimer);
+      console.error('Sign-in attempt failed or timed out:', error);
       const err = error as { code?: string; message?: string };
+
       if (err?.code === 'auth/unauthorized-domain') {
         console.warn('Firebase error: auth/unauthorized-domain. Showing authorization modal.');
         setShowUnauthorizedModal(true);
+        throw error;
       }
+
+      // If popup takes >12s, or throws auth/popup-blocked, auth/cancelled-popup-request, or auth/popup-timeout:
+      const isPopupFailure =
+        err?.code === 'auth/popup-blocked' ||
+        err?.code === 'auth/cancelled-popup-request' ||
+        err?.code === 'auth/popup-timeout' ||
+        err?.message?.includes('timed out');
+
+      if (isPopupFailure) {
+        console.warn('Popup blocked/timed out in WebView2/PWA. Attempting fallback or redirect...');
+        try {
+          // Attempt signInWithRedirect as fallback
+          await signInWithRedirect(auth, googleProvider);
+          return null;
+        } catch (redirectErr) {
+          console.warn('signInWithRedirect fallback could not proceed in this container:', redirectErr);
+          const fallbackToastError = new Error('Sign-in window could not open automatically. Please try again or open in your browser.');
+          (fallbackToastError as { code?: string }).code = 'auth/popup-blocked';
+          throw fallbackToastError;
+        }
+      }
+
       throw error;
+    } finally {
+      // Immediately reset loading state so the button never stays stuck
+      setIsLoggingIn(false);
     }
   };
 
@@ -147,6 +226,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         currentUser,
         isProUser,
         authLoading,
+        isLoggingIn,
         showUnauthorizedModal,
         setShowUnauthorizedModal,
         signInWithGoogle,
