@@ -138,7 +138,7 @@ export function SettingsScreen({
         triggerToast('✓ PRO restored successfully! Lifetime access active.');
       } else {
         const email = targetUser.email || 'your account';
-        const msg = `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account used on Google Play Store.`;
+        const msg = `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account linked to your mobile upgrade, or redeem a promo code.`;
         setRestoreNotice(msg);
         triggerToast(`No active PRO license found for ${email}.`);
       }
@@ -599,7 +599,7 @@ export function SettingsScreen({
                   No Active PRO License Found
                 </h3>
                 <p className="text-[12px] text-[#6B7280]">
-                  Google Play License Check
+                  Cloud License Verification
                 </p>
               </div>
             </div>
@@ -609,7 +609,7 @@ export function SettingsScreen({
             </p>
 
             <div className="bg-[#EFE8F6] p-3.5 rounded-2xl text-xs text-[#5B4296] font-medium leading-relaxed border border-[#E3D4EE]">
-              💡 <strong>Tip:</strong> If you recently upgraded via Google Play in the Android app, ensure you are signed in with the same Google account.
+              💡 <strong>Tip:</strong> If you recently upgraded on your mobile device, ensure you are signed in with the same Google account.
             </div>
 
             <div className="space-y-2 pt-2">

@@ -50,17 +50,32 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<User | null>(auth.currentUser);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(Boolean(auth.currentUser));
-  const [isProUser, setIsProUser] = useState<boolean>(false);
+  const [isProUser, setIsProUserState] = useState<boolean>(() => {
+    return typeof window !== 'undefined' && localStorage.getItem('ai_prompt_pro_unlocked') === 'true';
+  });
   const [authLoading, setAuthLoading] = useState<boolean>(!auth.currentUser);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [showUnauthorizedModal, setShowUnauthorizedModal] = useState(false);
 
+  const setIsProUser = (pro: boolean) => {
+    setIsProUserState(pro);
+    if (typeof window !== 'undefined') {
+      if (pro) {
+        localStorage.setItem('ai_prompt_pro_unlocked', 'true');
+      } else {
+        localStorage.removeItem('ai_prompt_pro_unlocked');
+      }
+    }
+  };
+
   // Check Firestore users/{uid} for PRO status matching Android schema
   const checkProStatus = async (userToCheck?: User | null): Promise<boolean> => {
     const targetUser = userToCheck !== undefined ? userToCheck : currentUser;
+    const isLocalPro = typeof window !== 'undefined' && localStorage.getItem('ai_prompt_pro_unlocked') === 'true';
+
     if (!targetUser) {
-      setIsProUser(false);
-      return false;
+      setIsProUser(isLocalPro);
+      return isLocalPro;
     }
 
     try {
@@ -68,15 +83,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (userDoc.exists()) {
         const data = userDoc.data();
         const pro = Boolean(data?.isPro === true || data?.proUser === true || data?.pro === true);
-        setIsProUser(pro);
-        return pro;
+        if (pro) {
+          setIsProUser(true);
+          return true;
+        }
       }
-      setIsProUser(false);
-      return false;
+      setIsProUser(isLocalPro);
+      return isLocalPro;
     } catch (err) {
       console.warn('Firestore PRO status check warning (failed gracefully):', err);
-      setIsProUser(false);
-      return false;
+      setIsProUser(isLocalPro);
+      return isLocalPro;
     }
   };
 

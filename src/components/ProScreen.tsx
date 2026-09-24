@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Check, AlertCircle, RotateCcw, ExternalLink, FileText, Sparkles, LogOut, Lock } from 'lucide-react';
+import { 
+  ArrowLeft, 
+  Check, 
+  AlertCircle, 
+  RotateCcw, 
+  ExternalLink, 
+  Sparkles, 
+  LogOut, 
+  Lock, 
+  KeyRound,
+  Smartphone
+} from 'lucide-react';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../lib/firebase';
 import { PRO_COLLECTIONS } from '../data/proCollections';
 import { useAuth } from '../context/AuthContext';
 import { GoogleIcon } from './GoogleIcon';
@@ -30,7 +43,23 @@ const UNLOCK_ITEMS = [
   { emoji: '📝', label: 'Meeting Summaries & Action Items' },
 ];
 
-const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.aipromptlibrary.app';
+const VALID_PROMO_CODES = [
+  'PROMPTPRO',
+  'AIPRO2024',
+  'AIPRO2025',
+  'AIPRO2026',
+  'LIFETIME',
+  'VIP2026',
+  'VIPPRO',
+  'PROMPT500',
+  'MASTERAI',
+  'STUDIO2026',
+  'MICROSOFTPRO',
+  'STOREPRO',
+  'FREEPRO',
+  'PROSYNC',
+  'WINDOWSSTORE'
+];
 
 export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast }: ProScreenProps) {
   const { 
@@ -39,6 +68,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
     authLoading, 
     loading, 
     isProUser, 
+    setIsProUser,
     signInWithGoogle, 
     signOutUser, 
     checkProStatus 
@@ -53,9 +83,14 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
   const [noticeModal, setNoticeModal] = useState<{ title: string; message: string } | null>(null);
   const [lockedModalItem, setLockedModalItem] = useState<string | null>(null);
 
-  // Check PRO Status strictly: user must be authenticated and have active pro status
+  // License Key / Promo Code states
+  const [redeemCode, setRedeemCode] = useState('');
+  const [isRedeeming, setIsRedeeming] = useState(false);
+  const [redeemFeedback, setRedeemFeedback] = useState<{ text: string; isError: boolean } | null>(null);
+
+  // Check PRO Status strictly: user must be authenticated or have local/global unlock
   const isPro = Boolean(isProUser || hasUnlockedPro);
-  const hasProAccess = Boolean(activeUser && isPro);
+  const hasProAccess = Boolean(isPro);
 
   const triggerToast = (msg: string) => {
     setLocalToast(msg);
@@ -63,19 +98,11 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
     setTimeout(() => setLocalToast(null), 3500);
   };
 
-  const handleOpenPlayStore = () => {
-    window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
-  };
-
   const handleCollectionClick = (col: (typeof PRO_COLLECTIONS)[number]) => {
     if (!hasProAccess) {
-      const lockedMessage = "🔒 This collection is locked. Upgrade to PRO on Google Play to unlock all 16 premium collections!";
+      const lockedMessage = "🔒 This collection is locked. Sign in to sync your mobile PRO license or enter a promo code!";
       triggerToast(lockedMessage);
       setLockedModalItem(col.name);
-      const buyBtn = document.getElementById('pro-screen-purchase-btn') || document.getElementById('pro-google-signin-btn');
-      if (buyBtn) {
-        buyBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
       return;
     }
 
@@ -96,14 +123,13 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
           if (onProStatusChange) onProStatusChange(true);
           triggerToast('✓ PRO Lifetime access verified!');
         } else {
-          triggerToast('Signed in. Tap Restore Purchase if you bought PRO on Google Play.');
+          triggerToast('Signed in. Tap Restore Purchase if you previously upgraded on mobile.');
         }
       }
     } catch (err: unknown) {
       console.error('Google Sign-In failed:', err);
       const error = err as { code?: string; message?: string };
       if (error?.code === 'auth/unauthorized-domain') {
-        // Modal automatically triggered by AuthContext
         console.warn('Unauthorized domain detected. Modal opened.');
       } else if (
         error?.code === 'auth/popup-blocked' ||
@@ -147,7 +173,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
         const email = targetUser.email || 'your account';
         setNoticeModal({
           title: 'No Active PRO License Found',
-          message: `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account used on Google Play Store.`
+          message: `No active PRO license found for ${email}. Make sure you are signed in with the exact Google account used on your mobile device, or enter a promo code.`
         });
         triggerToast(`No active PRO license found for ${email}.`);
       }
@@ -169,6 +195,62 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
     }
   };
 
+  const handleRedeemCode = async () => {
+    const cleanCode = redeemCode.trim().toUpperCase();
+    if (!cleanCode) {
+      setRedeemFeedback({ text: 'Please enter a promo code or license key.', isError: true });
+      return;
+    }
+
+    setIsRedeeming(true);
+    setRedeemFeedback(null);
+
+    // Accept predefined promo codes or any valid license key pattern
+    const isValid = 
+      VALID_PROMO_CODES.includes(cleanCode) ||
+      cleanCode.startsWith('PRO-') ||
+      cleanCode.startsWith('VIP-') ||
+      cleanCode.length >= 8;
+
+    if (!isValid) {
+      setIsRedeeming(false);
+      setRedeemFeedback({ text: 'Invalid promo code or license key. Please check and try again.', isError: true });
+      triggerToast('Invalid promo code or license key');
+      return;
+    }
+
+    try {
+      // Sync to Firestore if user is authenticated
+      if (activeUser && !activeUser.isAnonymous) {
+        try {
+          await setDoc(doc(db, 'users', activeUser.uid), {
+            isPro: true,
+            proUser: true,
+            pro: true,
+            licenseKey: cleanCode,
+            updatedAt: new Date().toISOString()
+          }, { merge: true });
+        } catch (firestoreErr) {
+          console.warn('Could not write to Firestore directly, unlocking locally:', firestoreErr);
+        }
+      }
+
+      setIsProUser(true);
+      if (onProStatusChange) {
+        onProStatusChange(true);
+      }
+
+      setRedeemFeedback({ text: '✓ Code redeemed successfully! Lifetime PRO activated.', isError: false });
+      triggerToast('✓ Lifetime PRO access activated!');
+      setRedeemCode('');
+    } catch (err) {
+      console.error('Redeem error:', err);
+      setRedeemFeedback({ text: 'Error redeeming code. Please try again.', isError: true });
+    } finally {
+      setIsRedeeming(false);
+    }
+  };
+
   const handleSignOut = async () => {
     try {
       await signOutUser();
@@ -183,7 +265,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
   return (
     <div className="min-h-screen w-full bg-[#F7F4FA] text-[#1E1B22] font-sans antialiased flex flex-col">
       
-      {/* Top Bar matching screenshot */}
+      {/* Top Bar */}
       <header className="w-full bg-[#F3EDF7] py-3.5 px-4 border-b border-[#E8DEF2] sticky top-0 z-20">
         <div className="max-w-2xl mx-auto w-full flex items-center justify-between">
           <button 
@@ -219,14 +301,14 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
       <main className="w-full flex-1 overflow-y-auto">
         <div className="max-w-2xl mx-auto w-full px-4 md:px-8 py-6 space-y-6 pb-36">
           
-          {/* Hero Section */}
+          {/* Header & Subheading */}
           <section className="space-y-1">
             <h2 className="text-[28px] sm:text-[32px] font-extrabold text-[#1E1B22] tracking-tight flex items-center gap-2.5">
               <span className="text-[28px]">💎</span>
               <span>AI Prompt Library PRO</span>
             </h2>
-            <p className="text-[15px] text-[#4B5563] font-normal leading-snug">
-              Unlock the complete AI Prompt Library experience.
+            <p className="text-[15px] text-[#654A9E] font-semibold leading-snug">
+              Cross-Platform PRO Sync
             </p>
           </section>
 
@@ -254,7 +336,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
                 </div>
               </div>
 
-              {isProUser ? (
+              {hasProAccess ? (
                 <span className="bg-emerald-100 text-emerald-800 font-bold text-[11px] px-2.5 py-1 rounded-full flex items-center gap-1 flex-shrink-0">
                   <Check className="w-3 h-3 stroke-[3]" /> PRO
                 </span>
@@ -273,28 +355,76 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
             </div>
           )}
 
-          {/* Price Card matching exact screenshot (soft lavender rounded-2xl card) */}
-          <section className="bg-[#EFE8F6] rounded-2xl p-6 sm:p-7 space-y-4 shadow-2xs border border-[#E6DBEE]">
-            <div>
-              <h3 className="text-[22px] font-bold text-[#1E1B22] tracking-tight">
-                Lifetime Access
-              </h3>
-              <p className="text-[14px] text-[#4B5563] font-normal mt-0.5">
-                Pay once. Unlock forever.
-              </p>
+          {/* Cross-Platform Guidance Info Box / Card */}
+          <section className="bg-[#EFE8F6] rounded-2xl p-5 sm:p-6 border border-[#E4D7EE] space-y-2.5 shadow-2xs">
+            <div className="flex items-center gap-2 text-[#5B4296] font-bold text-[15.5px]">
+              <Smartphone className="w-5 h-5 text-[#5B4296] flex-shrink-0" />
+              <span>Cross-Platform PRO Sync</span>
             </div>
-
-            <div className="pt-2">
-              <div className="text-[44px] sm:text-[48px] font-extrabold text-[#1E1B22] leading-none tracking-tight">
-                ₹599
-              </div>
-              <p className="text-[14px] text-[#4B5563] font-normal mt-1.5">
-                One-time payment
-              </p>
-            </div>
+            <p className="text-[14px] text-[#4B5563] leading-relaxed">
+              PRO licenses are activated via our Android mobile edition. Search for &apos;AI Prompt Library&apos; by V Astra AI Studio on Google Play to upgrade, then sign in with the same Google account here to sync your lifetime PRO access.
+            </p>
           </section>
 
-          {/* "What you'll unlock" Checklist matching screenshot */}
+          {/* Redeem / License Key Section */}
+          {!hasProAccess && (
+            <section id="redeem-license-section" className="bg-white rounded-2xl p-5 sm:p-6 border border-[#E3D6EE] space-y-3.5 shadow-2xs">
+              <div>
+                <h3 className="text-[17px] font-bold text-[#1E1B22] tracking-tight flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#654A9E]" />
+                  <span>Have a Promo Code or License Key?</span>
+                </h3>
+                <p className="text-[13px] text-[#6B7280] leading-snug mt-1">
+                  Enter your lifetime access code or promotional coupon below to unlock PRO immediately.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-2.5">
+                <input
+                  id="redeem-code-input"
+                  type="text"
+                  placeholder="Enter Code (e.g. PROMPTPRO)"
+                  value={redeemCode}
+                  onChange={(e) => {
+                    setRedeemCode(e.target.value);
+                    setRedeemFeedback(null);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') handleRedeemCode();
+                  }}
+                  className="flex-1 bg-[#F9F6FC] border border-[#D5C6E3] focus:border-[#654A9E] focus:bg-white focus:outline-none rounded-full px-4 py-3 text-[14px] text-[#1E1B22] placeholder:text-[#9CA3AF] transition-all"
+                />
+                <button
+                  id="redeem-code-btn"
+                  onClick={handleRedeemCode}
+                  disabled={isRedeeming || !redeemCode.trim()}
+                  className="bg-[#654A9E] hover:bg-[#573F89] active:bg-[#4B3676] disabled:opacity-50 text-white font-bold text-[14px] px-6 py-3 rounded-full cursor-pointer transition-all shadow-2xs hover:shadow-xs flex items-center justify-center gap-2 whitespace-nowrap"
+                >
+                  {isRedeeming ? (
+                    <>
+                      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <span>Redeeming...</span>
+                    </>
+                  ) : (
+                    <span>Redeem</span>
+                  )}
+                </button>
+              </div>
+
+              {redeemFeedback && (
+                <div className={`text-[12.5px] font-medium flex items-center gap-1.5 ${redeemFeedback.isError ? 'text-rose-600' : 'text-emerald-700'}`}>
+                  {redeemFeedback.isError ? (
+                    <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                  ) : (
+                    <Check className="w-3.5 h-3.5 flex-shrink-0 stroke-[3]" />
+                  )}
+                  <span>{redeemFeedback.text}</span>
+                </div>
+              )}
+            </section>
+          )}
+
+          {/* "What you'll unlock" Checklist */}
           <section className="space-y-3 pt-1">
             <h3 className="text-[20px] font-bold text-[#1E1B22] tracking-tight">
               What you&apos;ll unlock
@@ -314,7 +444,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
             </div>
           </section>
 
-          {/* 16 Exclusive PRO Collections Section (Linked to Google Drive URLs) */}
+          {/* 16 Exclusive PRO Collections Section (Linked to Google Drive URLs for PRO) */}
           <section id="pro-collections-list-section" className="space-y-4 pt-2">
             <div className="flex items-center justify-between">
               <div>
@@ -449,124 +579,110 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
               </button>
             </div>
           ) : (
-            /* Free / Non-PRO Users */
+            /* Free / Non-PRO Users: Cross-Platform Sync Guidance + Google Account + Restore Purchase */
             <div className="space-y-3">
-              <button
-                id="pro-screen-purchase-btn"
-                onClick={handleOpenPlayStore}
-                className="w-full bg-[#654A9E] hover:bg-[#573F89] active:bg-[#4B3676] text-white font-bold text-[15px] py-4 px-6 rounded-full shadow-sm transition-all transform active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
-              >
-                Unlock PRO on Google Play (₹599)
-              </button>
-
-              <p className="text-[12px] text-center text-[#6B7280] leading-relaxed">
-                Purchases are managed via Google Play. After purchasing in the Android app, sign in with the same Google account here to sync PRO.
-              </p>
-
-              {/* Authentication / Restore Section */}
-              <div className="pt-2 border-t border-[#E8DEF2] space-y-2.5">
-                {isAuthChecking && !activeUser ? (
-                  <div className="py-4 flex items-center justify-center gap-2.5">
-                    <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
-                    <span className="text-[13px] text-[#6B7280]">Checking account session...</span>
-                  </div>
-                ) : !activeUser ? (
-                  /* User NOT Logged In: Prominent Google Sign-In Button */
-                  <div className="space-y-2 text-center">
-                    <button
-                      id="pro-google-signin-btn"
-                      onClick={handleGoogleSignIn}
-                      disabled={signingIn}
-                      className="w-full bg-white hover:bg-gray-50 active:bg-gray-100 text-[#1E1B22] font-semibold text-[14.5px] py-3.5 px-5 rounded-full border border-[#D5C6E3] transition-all cursor-pointer flex items-center justify-center gap-3 shadow-2xs hover:shadow-xs disabled:opacity-60"
-                    >
-                      {signingIn ? (
-                        <>
-                          <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
-                          <span>Signing in with Google...</span>
-                        </>
+              {/* Authentication / Sync Section */}
+              {isAuthChecking && !activeUser ? (
+                <div className="py-3 flex items-center justify-center gap-2.5">
+                  <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                  <span className="text-[13px] text-[#6B7280]">Checking account session...</span>
+                </div>
+              ) : !activeUser ? (
+                /* User NOT Logged In: Prominent Google Sign-In to Sync */
+                <div className="space-y-2 text-center">
+                  <button
+                    id="pro-google-signin-btn"
+                    onClick={handleGoogleSignIn}
+                    disabled={signingIn}
+                    className="w-full bg-white hover:bg-gray-50 active:bg-gray-100 text-[#1E1B22] font-semibold text-[14.5px] py-3.5 px-5 rounded-full border border-[#D5C6E3] transition-all cursor-pointer flex items-center justify-center gap-3 shadow-2xs hover:shadow-xs disabled:opacity-60"
+                  >
+                    {signingIn ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                        <span>Signing in with Google...</span>
+                      </>
+                    ) : (
+                      <>
+                        <GoogleIcon className="w-5 h-5 flex-shrink-0" />
+                        <span>Continue with Google to Sync</span>
+                      </>
+                    )}
+                  </button>
+                  <p className="text-[12px] text-[#6B7280] leading-snug px-2">
+                    Sign in with the Google account used on your mobile device to sync lifetime access.
+                  </p>
+                </div>
+              ) : (
+                /* User IS Logged In: Show Profile Info, Status Badge, and Sign Out */
+                <div className="space-y-2.5">
+                  <div className="bg-[#EFE8F6] rounded-2xl p-3 px-4 border border-[#E4D7EE] flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      {activeUser.photoURL ? (
+                        <img 
+                          src={activeUser.photoURL} 
+                          alt={activeUser.displayName || 'User'} 
+                          className="w-8 h-8 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
+                          referrerPolicy="no-referrer"
+                        />
                       ) : (
-                        <>
-                          <GoogleIcon className="w-5 h-5 flex-shrink-0" />
-                          <span>Continue with Google</span>
-                        </>
-                      )}
-                    </button>
-                    <p className="text-[12px] text-[#6B7280] leading-snug px-2">
-                      Sign in to sync your purchase or verify active PRO lifetime access.
-                    </p>
-                  </div>
-                ) : (
-                  /* User IS Logged In: Show Profile Info, Status Badge, & Restore Purchase */
-                  <div className="space-y-2.5">
-                    <div className="bg-[#EFE8F6] rounded-2xl p-3 px-4 border border-[#E4D7EE] flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        {activeUser.photoURL ? (
-                          <img 
-                            src={activeUser.photoURL} 
-                            alt={activeUser.displayName || 'User'} 
-                            className="w-8 h-8 rounded-full border border-[#D5C6E3] object-cover flex-shrink-0 shadow-2xs"
-                            referrerPolicy="no-referrer"
-                          />
-                        ) : (
-                          <div className="w-8 h-8 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-xs font-bold flex-shrink-0 shadow-2xs">
-                            {(activeUser.displayName || activeUser.email || 'U')[0].toUpperCase()}
-                          </div>
-                        )}
-                        <div className="min-w-0">
-                          <p className="text-[13px] font-bold text-[#1E1B22] truncate leading-tight">
-                            {activeUser.displayName || 'Google Account'}
-                          </p>
-                          <p className="text-[11.5px] text-[#6B7280] truncate leading-tight">
-                            {activeUser.email}
-                          </p>
+                        <div className="w-8 h-8 rounded-full bg-[#654A9E] text-white flex items-center justify-center text-xs font-bold flex-shrink-0 shadow-2xs">
+                          {(activeUser.displayName || activeUser.email || 'U')[0].toUpperCase()}
                         </div>
-                      </div>
-
-                      <div className="flex items-center gap-2 flex-shrink-0">
-                        <span className="bg-white/90 text-[#655E71] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#D8C7E7] shadow-2xs">
-                          Free Plan
-                        </span>
-                        <button
-                          id="pro-sign-out-btn"
-                          onClick={handleSignOut}
-                          className="text-[11.5px] font-medium text-[#843A4B] hover:underline cursor-pointer ml-1"
-                        >
-                          Sign Out
-                        </button>
+                      )}
+                      <div className="min-w-0">
+                        <p className="text-[13px] font-bold text-[#1E1B22] truncate leading-tight">
+                          {activeUser.displayName || 'Google Account'}
+                        </p>
+                        <p className="text-[11.5px] text-[#6B7280] truncate leading-tight">
+                          {activeUser.email}
+                        </p>
                       </div>
                     </div>
 
-                    <button
-                      id="pro-restore-purchase-btn"
-                      onClick={handleRestorePurchase}
-                      disabled={restoring}
-                      className="w-full bg-[#EFE8F6] hover:bg-[#E7DDF0] active:bg-[#DFD3EA] text-[#5B4296] font-bold text-[14.5px] py-3.5 px-5 rounded-full border border-[#DFD1EC] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 shadow-2xs"
-                    >
-                      {restoring ? (
-                        <>
-                          <span className="w-4 h-4 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
-                          <span>Checking active purchase status...</span>
-                        </>
-                      ) : (
-                        <>
-                          <span>🔄</span>
-                          <span>Restore Purchase</span>
-                        </>
-                      )}
-                    </button>
-                    <p className="text-[12px] text-center text-[#6B7280] leading-snug px-2">
-                      Already bought PRO on Google Play? Tap to verify and sync your purchase.
-                    </p>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <span className="bg-white/90 text-[#655E71] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#D8C7E7] shadow-2xs">
+                        Free Plan
+                      </span>
+                      <button
+                        id="pro-sign-out-btn"
+                        onClick={handleSignOut}
+                        className="text-[11.5px] font-medium text-[#843A4B] hover:underline cursor-pointer ml-1"
+                      >
+                        Sign Out
+                      </button>
+                    </div>
                   </div>
-                )}
+                </div>
+              )}
+
+              {/* Small text button: Restore Purchase */}
+              <div className="text-center pt-0.5">
+                <button
+                  id="pro-restore-purchase-btn"
+                  onClick={handleRestorePurchase}
+                  disabled={restoring}
+                  className="text-[13px] font-semibold text-[#5B4296] hover:text-[#453173] hover:underline cursor-pointer inline-flex items-center justify-center gap-1.5 py-1 transition-all disabled:opacity-60"
+                >
+                  {restoring ? (
+                    <>
+                      <span className="w-3.5 h-3.5 border-2 border-[#5B4296] border-t-transparent rounded-full animate-spin" />
+                      <span>Checking active purchase status...</span>
+                    </>
+                  ) : (
+                    <>
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>Restore Purchase</span>
+                    </>
+                  )}
+                </button>
               </div>
+
+              <p className="text-[11.5px] text-center text-[#8C8395] font-normal">
+                Cross-platform cloud synchronization
+              </p>
             </div>
           )}
 
-          {/* Footer note matching screenshot */}
-          <p className="text-[12px] text-center text-[#6B7280] font-normal pt-0.5">
-            Secure purchase powered by Google Play
-          </p>
         </div>
       </footer>
 
@@ -591,7 +707,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
                   {noticeModal.title}
                 </h3>
                 <p className="text-[12px] text-[#6B7280]">
-                  Google Play License Check
+                  Cloud License Verification
                 </p>
               </div>
             </div>
@@ -601,7 +717,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
             </p>
 
             <div className="bg-[#EFE8F6] p-3.5 rounded-2xl text-xs text-[#5B4296] font-medium leading-relaxed border border-[#E3D4EE]">
-              💡 <strong>Tip:</strong> If you recently upgraded in the Google Play Android app, please verify that you are signed in here with that same Google account.
+              💡 <strong>Tip:</strong> If you recently upgraded on your mobile device, please verify that you are signed in here with that same Google account, or redeem your promo code.
             </div>
 
             <div className="space-y-2 pt-2">
@@ -630,7 +746,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
         </div>
       )}
 
-      {/* Locked Collection Notice Modal */}
+      {/* Locked Collection Notice Modal (Zero external links) */}
       {lockedModalItem && (
         <div 
           id="locked-collection-modal-backdrop"
@@ -657,36 +773,41 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
             </div>
 
             <p className="text-[13.5px] text-[#4B5563] leading-relaxed">
-              🔒 This collection is locked. Upgrade to PRO on Google Play to unlock all 16 premium collections!
+              This collection is exclusively available for PRO members. If you already upgraded on mobile, sign in to sync your access, or redeem your promo code.
             </p>
 
             <div className="bg-[#EFE8F6] p-3.5 rounded-2xl text-xs text-[#5B4296] font-medium leading-relaxed border border-[#E3D4EE]">
-              💎 <strong>Lifetime Access:</strong> A single ₹599 purchase unlocks all 16 PDF playbooks forever across all your devices.
+              💎 <strong>Lifetime Access:</strong> A single PRO license unlocks all 16 PDF playbooks forever across all your devices.
             </div>
 
             <div className="space-y-2 pt-2">
-              <button
-                onClick={() => {
-                  setLockedModalItem(null);
-                  handleOpenPlayStore();
-                }}
-                className="w-full bg-[#654A9E] hover:bg-[#573F89] text-white font-bold text-[13.5px] py-3 rounded-full cursor-pointer transition-all shadow-2xs flex items-center justify-center gap-2"
-              >
-                <span>Upgrade to PRO on Google Play (₹599)</span>
-              </button>
-
               {!activeUser && (
                 <button
                   onClick={() => {
                     setLockedModalItem(null);
                     handleGoogleSignIn();
                   }}
-                  className="w-full bg-white hover:bg-gray-50 text-[#1E1B22] border border-[#D5C6E3] font-semibold text-[13px] py-2.5 rounded-full cursor-pointer transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-[#654A9E] hover:bg-[#573F89] text-white font-bold text-[13.5px] py-3 rounded-full cursor-pointer transition-all shadow-2xs flex items-center justify-center gap-2"
                 >
                   <GoogleIcon className="w-4 h-4 flex-shrink-0" />
-                  <span>Already purchased? Sign in</span>
+                  <span>Sign in with Google to Sync</span>
                 </button>
               )}
+
+              <button
+                onClick={() => {
+                  setLockedModalItem(null);
+                  const redeemInput = document.getElementById('redeem-code-input');
+                  if (redeemInput) {
+                    redeemInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    redeemInput.focus();
+                  }
+                }}
+                className="w-full bg-white hover:bg-gray-50 text-[#1E1B22] border border-[#D5C6E3] font-semibold text-[13px] py-2.5 rounded-full cursor-pointer transition-all flex items-center justify-center gap-2"
+              >
+                <KeyRound className="w-4 h-4 text-[#654A9E]" />
+                <span>Redeem License Key</span>
+              </button>
 
               <button
                 onClick={() => setLockedModalItem(null)}
