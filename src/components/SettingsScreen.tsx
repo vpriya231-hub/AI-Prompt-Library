@@ -423,7 +423,7 @@ export function SettingsScreen({
             {/* 1. App Version */}
             <div 
               id="menu-app-version"
-              onClick={() => showToast('App is up to date')}
+              onClick={() => showToast('App is up to date • Developer: V Astra AI Technologies')}
               className="bg-[#EFE8F6] hover:bg-[#EAE2F2] active:bg-[#E3D9EC] rounded-[22px] p-4 border border-[#E6DBEE] flex items-center justify-between cursor-pointer transition-all duration-150 shadow-2xs"
             >
               <div className="flex items-center gap-3.5">
@@ -435,7 +435,7 @@ export function SettingsScreen({
                     App Version
                   </h4>
                   <p className="text-[13px] text-[#6B7280] mt-0.5">
-                    Version 1.0.0 (Build 1)
+                    Version 1.0.0 (Build 1) • V Astra AI Technologies
                   </p>
                 </div>
               </div>
@@ -526,9 +526,12 @@ export function SettingsScreen({
               <p className="text-[12.5px] text-[#4B5563] leading-relaxed">
                 AI Prompt Library is an independent educational and productivity tool. We are not affiliated with, endorsed by, or associated with OpenAI (ChatGPT), Google (Gemini), Anthropic (Claude), or xAI (Grok). All trademarks, logos, and brand names belong to their respective owners.
               </p>
-              <div className="pt-1.5 border-t border-[#E2D5EC]/70">
+              <div className="pt-1.5 border-t border-[#E2D5EC]/70 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                 <p className="text-[11.5px] text-[#6B7280] font-medium">
-                  © 2026 AI Prompt Library • All rights reserved.
+                  © 2026 V Astra AI Technologies • All rights reserved.
+                </p>
+                <p className="text-[11.5px] text-[#6B7280] font-medium">
+                  Developer: V Astra AI Technologies
                 </p>
               </div>
             </div>

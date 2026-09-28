@@ -362,7 +362,7 @@ export function ProScreen({ onBack, hasUnlockedPro, onProStatusChange, showToast
               <span>Cross-Platform PRO Sync</span>
             </div>
             <p className="text-[14px] text-[#4B5563] leading-relaxed">
-              PRO licenses are activated via our Android mobile edition. Search for &apos;AI Prompt Library&apos; by V Astra AI Studio on Google Play to upgrade, then sign in with the same Google account here to sync your lifetime PRO access.
+              PRO licenses are activated via our Android mobile edition. Search for &apos;AI Prompt Library&apos; by V Astra AI Technologies on Google Play to upgrade, then sign in with the same Google account here to sync your lifetime PRO access.
             </p>
           </section>
 
