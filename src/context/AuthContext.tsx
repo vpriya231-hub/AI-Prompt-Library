@@ -19,6 +19,7 @@ interface AuthContextType {
   authLoading: boolean;
   isLoggingIn: boolean;
   isProUser: boolean;
+  isPro: boolean;
   showUnauthorizedModal: boolean;
   setShowUnauthorizedModal: (show: boolean) => void;
   signInWithGoogle: () => Promise<User | null>;
@@ -36,6 +37,7 @@ const AuthContext = createContext<AuthContextType>({
   authLoading: true,
   isLoggingIn: false,
   isProUser: false,
+  isPro: false,
   showUnauthorizedModal: false,
   setShowUnauthorizedModal: () => {},
   signInWithGoogle: async () => null,
@@ -281,6 +283,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         authLoading,
         isLoggingIn,
         isProUser,
+        isPro: isProUser,
         showUnauthorizedModal,
         setShowUnauthorizedModal,
         signInWithGoogle,

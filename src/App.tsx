@@ -16,6 +16,8 @@ import { CollectionTier, AIModel } from './types';
 import { PromptCollectionSheet } from './components/PromptCollectionSheet';
 import { ProScreen } from './components/ProScreen';
 import { SettingsScreen } from './components/SettingsScreen';
+import { MonetagAdManager } from './components/MonetagAdManager';
+import { useMonetagAds } from './hooks/useMonetagAds';
 import { useAuth } from './context/AuthContext';
 
 // Custom precision arrow icon matching the exact Android screenshot glyph (>|)
@@ -344,6 +346,9 @@ export default function App() {
   const hasUnlockedPro = isProUser;
   const setHasUnlockedPro = setIsProUser;
 
+  // Manage Monetag In-Page Push & Vignette ads with strict PRO exclusion
+  useMonetagAds(hasUnlockedPro);
+
   // Real-time case-insensitive instant search matching both model name and developer/company
   const filteredModels = useMemo(() => {
     const trimmed = searchQuery.trim().toLowerCase();
@@ -408,6 +413,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full bg-[#F7F4FA] text-[#1E1B22] font-sans antialiased flex flex-col selection:bg-purple-200">
+      <MonetagAdManager isPro={hasUnlockedPro} />
       
       {/* Dynamic Top Header Band */}
       {activeModel ? (
