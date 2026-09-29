@@ -1,31 +1,43 @@
 import { useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 
-interface MonetagAdConfig {
-  inPagePush: {
-    src: string;
-    zoneId: string;
-    elementId: string;
-  };
-  vignette: {
-    src: string;
-    zoneId: string;
-    elementId: string;
-  };
+interface MonetagVignetteConfig {
+  src: string;
+  zoneId: string;
+  elementId: string;
 }
 
-const MONETAG_CONFIG: MonetagAdConfig = {
-  inPagePush: {
-    src: 'https://nap5k.com/tag.min.js',
-    zoneId: '11844075',
-    elementId: 'monetag-inpage-push-script',
-  },
-  vignette: {
-    src: 'https://n6wxm.com/vignette.min.js',
-    zoneId: '11844078',
-    elementId: 'monetag-vignette-script',
-  },
+const VIGNETTE_CONFIG: MonetagVignetteConfig = {
+  src: 'https://n6wxm.com/vignette.min.js',
+  zoneId: '11844078',
+  elementId: 'monetag-vignette-script',
 };
+
+// Legacy In-Page Push identifiers to purge completely
+const LEGACY_IN_PAGE_PUSH_SELECTORS = [
+  '#monetag-inpage-push-script',
+  'script[data-zone="11844075"]',
+  'script[src*="nap5k.com"]',
+  '[data-zone="11844075"]',
+  'iframe[src*="nap5k.com"]',
+];
+
+/**
+ * Purges any leftover or active In-Page Push scripts, tags, or DOM elements.
+ */
+export function cleanupLegacyInPagePush(): void {
+  if (typeof document === 'undefined') return;
+
+  LEGACY_IN_PAGE_PUSH_SELECTORS.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      try {
+        el.remove();
+      } catch (err) {
+        console.warn('Error cleaning up legacy In-Page Push element:', err);
+      }
+    });
+  });
+}
 
 /**
  * Removes all Monetag ad scripts and related injected DOM elements.
@@ -33,33 +45,31 @@ const MONETAG_CONFIG: MonetagAdConfig = {
 export function removeMonetagAds(): void {
   if (typeof document === 'undefined') return;
 
-  // 1. Remove specific script tags by ID and selector
-  const scriptSelectors = [
-    `#${MONETAG_CONFIG.inPagePush.elementId}`,
-    `#${MONETAG_CONFIG.vignette.elementId}`,
-    `script[data-zone="${MONETAG_CONFIG.inPagePush.zoneId}"]`,
-    `script[data-zone="${MONETAG_CONFIG.vignette.zoneId}"]`,
-    'script[src*="nap5k.com"]',
+  // 1. Purge legacy In-Page Push elements
+  cleanupLegacyInPagePush();
+
+  // 2. Remove Vignette script tags
+  const vignetteSelectors = [
+    `#${VIGNETTE_CONFIG.elementId}`,
+    `script[data-zone="${VIGNETTE_CONFIG.zoneId}"]`,
     'script[src*="n6wxm.com"]',
   ];
 
-  scriptSelectors.forEach((selector) => {
+  vignetteSelectors.forEach((selector) => {
     document.querySelectorAll(selector).forEach((el) => {
       try {
         el.remove();
       } catch (err) {
-        console.warn('Error removing Monetag script tag:', err);
+        console.warn('Error removing Monetag Vignette script tag:', err);
       }
     });
   });
 
-  // 2. Remove any injected ad containers, floating overlays, or vignettes
+  // 3. Remove any active vignette overlays or containers
   const adElementSelectors = [
-    `[data-zone="${MONETAG_CONFIG.inPagePush.zoneId}"]:not(script)`,
-    `[data-zone="${MONETAG_CONFIG.vignette.zoneId}"]:not(script)`,
+    `[data-zone="${VIGNETTE_CONFIG.zoneId}"]:not(script)`,
     '[id*="monetag"]',
     '[class*="monetag"]',
-    'iframe[src*="nap5k.com"]',
     'iframe[src*="n6wxm.com"]',
   ];
 
@@ -75,70 +85,67 @@ export function removeMonetagAds(): void {
 }
 
 /**
- * Injects a single Monetag script tag if it doesn't already exist.
+ * Injects the Monetag Vignette script if not already present.
  */
-function injectScript(src: string, zoneId: string, elementId: string): void {
+function injectVignetteScript(): void {
   if (typeof document === 'undefined') return;
 
   // Check if script is already injected
   const exists =
-    document.getElementById(elementId) ||
-    document.querySelector(`script[data-zone="${zoneId}"]`) ||
-    document.querySelector(`script[src="${src}"]`);
+    document.getElementById(VIGNETTE_CONFIG.elementId) ||
+    document.querySelector(`script[data-zone="${VIGNETTE_CONFIG.zoneId}"]`) ||
+    document.querySelector(`script[src="${VIGNETTE_CONFIG.src}"]`);
 
   if (exists) {
     return;
   }
 
   const script = document.createElement('script');
-  script.id = elementId;
-  script.src = src;
-  script.setAttribute('data-zone', zoneId);
+  script.id = VIGNETTE_CONFIG.elementId;
+  script.src = VIGNETTE_CONFIG.src;
+  script.setAttribute('data-zone', VIGNETTE_CONFIG.zoneId);
   script.async = true;
 
   script.onerror = (error) => {
     // Graceful error handling without crashing UI or blocking execution
-    console.warn(`Monetag Ad Script failed to load (${src}, zone ${zoneId}):`, error);
+    console.warn(
+      `Monetag Vignette script failed to load (${VIGNETTE_CONFIG.src}, zone ${VIGNETTE_CONFIG.zoneId}):`,
+      error
+    );
   };
 
   try {
     document.head.appendChild(script);
   } catch (err) {
-    console.warn(`Failed to append Monetag script (${src}):`, err);
+    console.warn(`Failed to append Monetag Vignette script (${VIGNETTE_CONFIG.src}):`, err);
   }
 }
 
 /**
- * Hook to manage Monetag ads lifecycle with strict PRO user exclusion.
- * - When isPro is true: guarantees NO scripts are loaded and cleans up any existing tags.
- * - When isPro is false: dynamically loads In-Page Push and Vignette scripts asynchronously.
+ * Hook to manage Monetag ads lifecycle:
+ * - Completely removes In-Page Push format (Zone 11844075 / nap5k.com)
+ * - Retains ONLY Vignette Banner (Zone 11844078 / n6wxm.com)
+ * - Strict PRO user exclusion: if isPro === true, no ads are loaded and all scripts are removed.
  */
 export function useMonetagAds(proOverride?: boolean): void {
   const { isPro, isProUser } = useAuth();
   const effectiveIsPro = proOverride !== undefined ? proOverride : (isPro ?? isProUser);
 
   useEffect(() => {
-    // STRICT RULE: If PRO user, remove all scripts and never inject
+    // STRICT RULE: If PRO user, purge all ads immediately
     if (effectiveIsPro) {
       removeMonetagAds();
       return;
     }
 
-    // Non-PRO user: inject In-Page Push & Vignette scripts safely
-    injectScript(
-      MONETAG_CONFIG.inPagePush.src,
-      MONETAG_CONFIG.inPagePush.zoneId,
-      MONETAG_CONFIG.inPagePush.elementId
-    );
+    // Non-PRO user: Ensure any legacy In-Page Push is purged
+    cleanupLegacyInPagePush();
 
-    injectScript(
-      MONETAG_CONFIG.vignette.src,
-      MONETAG_CONFIG.vignette.zoneId,
-      MONETAG_CONFIG.vignette.elementId
-    );
+    // Inject ONLY Vignette banner
+    injectVignetteScript();
 
     return () => {
-      // Clean up when component unmounts or status changes to PRO
+      // Clean up when unmounting or transitioning to PRO
       if (effectiveIsPro) {
         removeMonetagAds();
       }

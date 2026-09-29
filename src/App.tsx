@@ -346,7 +346,7 @@ export default function App() {
   const hasUnlockedPro = isProUser;
   const setHasUnlockedPro = setIsProUser;
 
-  // Manage Monetag In-Page Push & Vignette ads with strict PRO exclusion
+  // Manage Monetag Vignette ads with strict PRO exclusion
   useMonetagAds(hasUnlockedPro);
 
   // Real-time case-insensitive instant search matching both model name and developer/company

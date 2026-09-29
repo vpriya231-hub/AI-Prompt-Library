@@ -7,8 +7,9 @@ interface MonetagAdManagerProps {
 
 /**
  * MonetagAdManager
- * Root layout component that dynamically injects Monetag In-Page Push and Vignette ads
- * for free users, with strict, immediate exclusion & DOM cleanup for PRO users.
+ * Root layout component that dynamically injects the Monetag Vignette Banner
+ * for non-PRO users, with strict, immediate exclusion & DOM cleanup for PRO users.
+ * In-Page Push has been completely removed.
  */
 export const MonetagAdManager: React.FC<MonetagAdManagerProps> = ({ isPro }) => {
   useMonetagAds(isPro);
