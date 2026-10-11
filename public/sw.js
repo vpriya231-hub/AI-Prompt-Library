@@ -53,13 +53,22 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
 
-  // Allow external API / auth / monetization calls to pass straight through
+  // Completely block any In-Page Push requests or legacy push zones
+  if (
+    url.hostname.includes('nap5k.com') ||
+    url.pathname.includes('tag.min.js') ||
+    url.href.includes('11844075')
+  ) {
+    event.respondWith(new Response('', { status: 204, statusText: 'Blocked' }));
+    return;
+  }
+
+  // Allow external API / auth calls to pass straight through
   if (
     url.hostname.includes('firebaseio.com') ||
     url.hostname.includes('googleapis.com') ||
     url.hostname.includes('identitytoolkit') ||
     url.hostname.includes('n6wxm.com') ||
-    url.hostname.includes('nap5k.com') ||
     url.hostname.includes('monetag')
   ) {
     return;

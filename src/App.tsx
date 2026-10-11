@@ -17,7 +17,6 @@ import { PromptCollectionSheet } from './components/PromptCollectionSheet';
 import { ProScreen } from './components/ProScreen';
 import { SettingsScreen } from './components/SettingsScreen';
 import { MonetagAdManager } from './components/MonetagAdManager';
-import { useMonetagAds } from './hooks/useMonetagAds';
 import { useAuth } from './context/AuthContext';
 
 // Custom precision arrow icon matching the exact Android screenshot glyph (>|)
@@ -345,9 +344,6 @@ export default function App() {
   const { isProUser, setIsProUser } = useAuth();
   const hasUnlockedPro = isProUser;
   const setHasUnlockedPro = setIsProUser;
-
-  // Manage Monetag Vignette ads with strict PRO exclusion
-  useMonetagAds(hasUnlockedPro);
 
   // Real-time case-insensitive instant search matching both model name and developer/company
   const filteredModels = useMemo(() => {

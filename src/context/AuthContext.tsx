@@ -47,6 +47,24 @@ const AuthContext = createContext<AuthContextType>({
   setIsProUser: () => {},
 });
 
+/**
+ * Unified PRO access detector
+ * Checks if a user or user record has PRO access across all schemas:
+ * Firestore documents (isPro: true, proUser: true, pro: true, tier: 'pro' | 'ultimate'),
+ * Android Google Play In-App Purchase records (pro: true), or tier strings.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const checkIsPro = (user: any): boolean => {
+  if (!user) return false;
+  return Boolean(
+    user.isPro === true ||
+    user.pro === true ||
+    user.proUser === true ||
+    user.tier === 'pro' ||
+    user.tier === 'ultimate'
+  );
+};
+
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -70,7 +88,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  // Check Firestore users/{uid} for PRO status matching Android schema
+  // Check Firestore users/{uid} for PRO status matching Android and Firestore schemas
   const checkProStatus = async (userToCheck?: User | null): Promise<boolean> => {
     const targetUser = userToCheck !== undefined ? userToCheck : currentUser;
     const isLocalPro = typeof window !== 'undefined' && localStorage.getItem('ai_prompt_pro_unlocked') === 'true';
@@ -84,8 +102,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const userDoc = await getDoc(doc(db, 'users', targetUser.uid));
       if (userDoc.exists()) {
         const data = userDoc.data();
-        const pro = Boolean(data?.isPro === true || data?.proUser === true || data?.pro === true);
-        if (pro) {
+        if (checkIsPro(data)) {
           setIsProUser(true);
           return true;
         }
@@ -107,7 +124,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       try {
         const parsed = JSON.parse(savedPreview);
         setCurrentUser(parsed.user as User);
-        setIsProUser(Boolean(parsed.isPro));
+        setIsProUser(checkIsPro(parsed) || checkIsPro(parsed.user));
         setAuthLoading(false);
       } catch (e) {
         console.warn('Failed to parse preview user', e);
@@ -155,17 +172,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const parsed = JSON.parse(savedPreview);
             setCurrentUser(parsed.user as User);
             setIsLoggedIn(true);
-            setIsProUser(Boolean(parsed.isPro));
+            setIsProUser(checkIsPro(parsed) || checkIsPro(parsed.user));
           } catch {
             setCurrentUser(null);
             setIsLoggedIn(false);
             setIsProUser(false);
           }
         } else {
-          // User is signed out
+          // User is signed out of Google / unauthenticated session
           setCurrentUser(null);
           setIsLoggedIn(false);
-          setIsProUser(false);
+          // Preserve local PRO lifetime access if activated via Promo Code or License Key
+          const isLocalPro = typeof window !== 'undefined' && localStorage.getItem('ai_prompt_pro_unlocked') === 'true';
+          setIsProUserState(isLocalPro);
         }
       }
       setAuthLoading(false);
